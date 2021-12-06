@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"markdownlint.config": {
+			"MD028": false,
+			"MD025": {
+				"front_matter_title": ""
+			}
+		},
+		"workbench.colorCustomizations": {
+			"activityBar.activeBackground": "#d79757",
+			"activityBar.activeBorder": "#ccf3df",
+			"activityBar.background": "#d79757",
+			"activityBar.foreground": "#15202b",
+			"activityBar.inactiveForeground": "#15202b99",
+			"activityBarBadge.background": "#ccf3df",
+			"activityBarBadge.foreground": "#15202b",
+			"sash.hoverBorder": "#d79757",
+			"statusBar.background": "#cb7e30",
+			"statusBar.foreground": "#15202b",
+			"statusBarItem.hoverBackground": "#a26426",
+			"statusBarItem.remoteBackground": "#cb7e30",
+			"statusBarItem.remoteForeground": "#15202b",
+			"titleBar.activeBackground": "#cb7e30",
+			"titleBar.activeForeground": "#15202b",
+			"titleBar.inactiveBackground": "#cb7e3099",
+			"titleBar.inactiveForeground": "#15202b99"
+		},
+		"peacock.color": "#CB7E30"
+	}
+}

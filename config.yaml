@@ -2,7 +2,7 @@ baseURL: 'http://example.org/'
 enableGitInfo: true
 languageCode: 'en-us'
 title: Open Ecoacoustics
-theme: hugo-book
+theme: hugo-book-custom
 markup:
     goldmark:
         parser:

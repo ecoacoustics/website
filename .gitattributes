@@ -52,6 +52,10 @@
 *.ico      binary
 # SVG treated as text by default.
 *.svg      text
+# Fonts
+*.ttf filter=lfs diff=lfs merge=lfs -text
+*.woff filter=lfs diff=lfs merge=lfs -text
+*.woff2 filter=lfs diff=lfs merge=lfs -text
 # If you want to treat it as binary,
 # use the following line instead.
 # *.svg    binary

@@ -1,0 +1,28 @@
+{{ partial "before_main" . }}
+  <main aria-role="main" class="home-page">
+      <header class="book-header">
+        {{ block "header" . }}
+        <!-- Mobile layout header -->
+        {{end}}
+      </header>
+      {{ partial "docs/inject/content-before" . }}
+      {{ block "main" . }}
+      <!-- Page Content -->
+      {{end}}
+      {{ partial "docs/inject/content-after" . }}
+
+      <footer class="footer">
+        {{ block "footer" . }}
+        <!-- Footer under page content -->
+        {{ end }}
+        {{ partial "docs/inject/footer" . }}
+      </footer>
+
+      {{ template "comments" . }} <!-- Comments block -->
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+  </main>
+
+{{ partial "after_main" . }}
+
+

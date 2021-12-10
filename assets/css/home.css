@@ -1,0 +1,86 @@
+.home-page {
+    font-family: var(--oe-fancy-font);
+
+    width: 100%;
+}
+
+.home-page p {
+    line-height: 1.5;
+}
+
+.home-page h1,h2,h3,h4,h5,h6 {
+    font-weight: 500;
+    font-size: 200%;
+}
+
+.home-page .book-columns {
+    text-align: center;
+}
+
+.home-page .column {
+    text-align: center;
+    margin: var(--oe-padding-small);
+}
+
+.home-page .column sl-icon {
+    border-radius: 50%;
+    border-color: var(--oe-theme-color);
+    border-width: 0.07em;
+    padding: 0.1em;
+    border-style: solid;
+    font-size: 300%;
+    display: inline-block;
+}
+
+.home-page .column p:not(:first-child) {
+    text-align: justify;
+}
+
+.home-page a.anchor {
+    display: none;
+}
+
+.home-page .partners {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.home-page .partners>*:first-child {
+    flex: 1 1 70%;
+    text-align: center;
+}
+
+.home-page .partners>* {
+    flex: 1 1 30%;
+    text-align: left;
+}
+
+
+.home-page .logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: center;
+}
+
+.home-page .logos img {
+    margin: 1em;
+    padding: 1em;
+    background-color: #FFF;
+}
+
+
+.home-page section {
+    width: 100%;
+    padding-left: var(--oe-padding);
+    padding-right: var(--oe-padding);
+    padding-bottom: var(--oe-padding-large);
+    padding-top: var(--oe-padding-large);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

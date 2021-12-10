@@ -14,5 +14,5 @@ You need to install the following:
 - PowerShell
 - A package manager
   - Chocolatey on Windows
-  - Your default manager on Linux
+  - Snap on Linux
   - Homebrew on MacOS

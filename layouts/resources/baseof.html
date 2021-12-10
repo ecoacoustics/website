@@ -1,0 +1,49 @@
+{{ partial "before_main" . }}
+  <main class="container flex resources">
+    <aside class="book-menu">
+      <div class="">
+        <h1>
+            {{$section_heading := .Site.GetPage "section" .Section }}
+            {{with $section_heading}}
+            {{- .Title -}}
+            {{end}}
+        </h1>
+        {{ block "menu" . }}
+        <!-- Left menu Content -->
+        {{ partial "docs/menu" . }}
+        {{ end }}
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        {{ block "header" . }}
+        <!-- Mobile layout header -->
+        {{end}}
+      </header>
+
+      <!-- {{ partial "hero.html" . }} -->
+
+      {{ partial "docs/inject/content-before" . }}
+      {{ block "main" . }}
+      <!-- Page Content -->
+      {{end}}
+      {{ partial "docs/inject/content-after" . }}
+
+      {{ template "comments" . }} <!-- Comments block -->
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+
+      <footer class="footer">
+        {{ block "footer" . }}
+        <!-- Footer under page content -->
+        {{ end }}
+        {{ partial "docs/inject/footer" . }}
+      </footer>
+    </div>
+
+    {{ block "toc" . }}
+        <!-- Table of Contents -->
+    {{end }}
+</main>
+{{ partial "after_main" . }}

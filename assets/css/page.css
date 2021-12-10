@@ -1,0 +1,29 @@
+.page {
+    flex-grow: 1;
+    display: flex;
+    padding: 0 var(--oe-padding-large);
+    flex-direction: column;
+    overflow-x: hidden;
+    min-height: 100%;
+}
+
+.page-hero-image {
+    width: 100vw;
+    height: 15em;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: var(--oe-padding-large);
+    padding-left: var(--oe-padding-large);
+    padding-right: var(--oe-padding-large);
+    padding-bottom: var(--oe-padding);
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    right: 50%;
+    margin-right: -50vw;
+    display: flex;
+    justify-content: start;
+    margin-bottom: var(--oe-padding-large);
+}
+

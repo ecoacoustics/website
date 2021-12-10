@@ -7,10 +7,10 @@ git lfs pull
 
 Write-Output "Installing Hugo..."
 if ($IsWindows) {
-    gsudo choco install hugo
+    gsudo choco install hugo-extended
 }
 elseif ($IsLinux) {
-    sudo apt-get install hugo
+    snap install hugo --channel=extended
 }
 elseif ($IsMac) {
     brew install hugo

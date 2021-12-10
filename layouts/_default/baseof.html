@@ -1,0 +1,33 @@
+{{ partial "before_main" . }}
+<main class="container flex">
+    <div class="page">
+        <header class="book-header">
+            {{ block "header" . }}
+            <!-- Mobile layout header -->
+            {{end}}
+        </header>
+        {{ partial "hero.html" . }}
+
+        {{ partial "docs/inject/content-before" . }}
+        {{ block "main" . }}
+        <!-- Page Content -->
+        {{end}}
+        {{ partial "docs/inject/content-after" . }}
+
+
+
+        {{ block "comments" . }}
+        <!-- Comments block -->
+        {{ end }}
+
+        <label for="menu-control" class="hidden book-menu-overlay"></label>
+        <footer class="book-footer">
+            {{ block "footer" . }}
+            <!-- Footer under page content -->
+            {{ end }}
+            {{ partial "docs/inject/footer" . }}
+        </footer>
+    </div>
+</main>
+
+{{ partial "after_main" . }}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import "common";
+@import "theme/auto";
+@import "home";
+@import "page";
+@import "resources";
+@import "layout";
+
+/* Added a second definition to separate templated values from not so syntax
+  highlighting will work */
+:root {
+    --theme-color-raw: {{ .Site.Params.ThemeColorHsl }};
+
+    {{ range $key, $value := .Site.Params.ThemeShades }}
+    --sl-color-primary-{{ $key }}: rgb({{ $value }});
+    {{ end }}
+}
+
+:root {
+    --theme-color: hsl(var(--theme-color-raw));
+
+    --oe-theme-color: var(--theme-color);
+    /* https://shoelace.style/tokens/spacing */
+    --oe-padding: var(--sl-spacing-2x-large);
+
+    --oe-padding-large: var(--sl-spacing-4x-large);
+    --oe-padding-small: var(--sl-spacing-large);
+    --oe-fancy-font: 'Montserrat', sans-serif;
+    --oe-navbar-height: 5em;
+    --oe-panel-opacity: 0.66;
+    --oe-panel-color-with-alpha: hsla(var(--theme-color-raw), var(--oe-panel-opacity));
+    --oe-panel-red-with-alpha: rgba(180, 52, 52, 0.66);
+
+}
+

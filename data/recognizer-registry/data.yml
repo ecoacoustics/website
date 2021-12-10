@@ -1,0 +1,31 @@
+- author: Anthony
+  orcid: 0000-0003-1110-1483
+  targets:
+    - name: Koala
+      taxonomic: Phascolarctos cinereus
+      calls: [ 'grunt', 'inhale']
+    - name: Kangaroo
+      taxonomic: Macropus giganteus
+  performance:
+    accuracy: 98%
+    population: 30
+  repository: https://github.com/QutEcoacoustics/audio-analysis/
+  documentation: https://ap.qut.ecoacoustics.info/
+  project: https://research.ecosounds.org
+  citation: Blah blah blah
+  license: Apache-2.0
+- author: Nina
+  orcid: 0000-0003-1110-1483
+  targets:
+    - name: Grey shrikethrush
+      taxonomic: Colluricincla harmonica
+      calls: [ 'grunt', 'inhale']
+  performance:
+    accuracy: 98%
+    population: 30
+  repository: https://github.com/QutEcoacoustics/audio-analysis/
+  documentation: https://ap.qut.ecoacoustics.info/
+  project: https://research.ecosounds.org
+  citation: Blah blah blah
+  license: MIT
+

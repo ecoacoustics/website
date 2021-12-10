@@ -1,0 +1,19 @@
+.resources {
+
+}
+
+
+.resources aside {
+    background-color: var(--oe-background-color-darker);
+    padding: var(--oe-padding-small);
+    margin-top: 2em;
+}
+
+
+.resources aside h1,h2,h3,h4,h5,h6 {
+    /* margin: 0.5em auto 0.5em auto; */
+    font-size: 100%;
+    font-weight: 600;
+}
+
+

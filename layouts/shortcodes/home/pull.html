@@ -1,0 +1,6 @@
+{{ $pull := cond   .IsNamedParams (.Get "side" | default "left") (.Get 0 | default "left") }}
+<div class="pull pull-{{ $pull }} {{ with .Get "class"}}{{ . }}{{ end }}">
+    <div {{ with .Get "style" }}style="{{ . | safeCSS }}"{{ end }}>
+    {{- .Inner  | safeHTML -}}
+    </div>
+</div>

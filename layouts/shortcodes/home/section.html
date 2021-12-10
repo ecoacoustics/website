@@ -1,0 +1,8 @@
+<section {{ with .Get "image"  -}}
+{{- $image := resources.Get . -}}
+style="background-image: url('{{ $image.RelPermalink }}');"
+{{- end -}}
+{{- with .Get "class" -}}class="{{ . }}"{{- end -}}
+>
+    {{.Inner  | $.Page.RenderString }}
+</section>

@@ -9,7 +9,8 @@
 			"MD028": false,
 			"MD025": {
 				"front_matter_title": ""
-			}
+			},
+			"MD033": false
 		},
 		"workbench.colorCustomizations": {
 			"activityBar.activeBackground": "#d79757",
@@ -30,6 +31,25 @@
 			"titleBar.inactiveBackground": "#cb7e3099",
 			"titleBar.inactiveForeground": "#15202b99"
 		},
-		"peacock.color": "#CB7E30"
+		"peacock.color": "#CB7E30",
+		"[markdown]": {
+			"editor.quickSuggestions": true,
+
+		},
+		"cSpell.words": [
+            "behaviour",
+            "Ecoacoustic",
+            "Ecoacoustics",
+            "organisations",
+            "recognisers",
+            "standardised"
+        ]
+	},
+	"extensions": {
+		"recommendations": [
+			"kaellarkin.hugo-shortcode-syntax",
+			"editorconfig.editorconfig",
+			"budparr.language-hugo-vscode"
+		]
 	}
 }

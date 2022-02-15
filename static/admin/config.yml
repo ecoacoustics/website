@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: ecoacoustics/website
   branch: main # Branch to update (optional; defaults to master)
 media_folder: static/images
 public_folder: /images

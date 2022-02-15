@@ -1,4 +1,4 @@
-baseURL: 'open.ecoacoustics.info'
+baseURL: 'https://open.ecoacoustics.info'
 enableGitInfo: true
 languageCode: 'en-us'
 title: Open Ecoacoustics

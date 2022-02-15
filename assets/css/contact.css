@@ -1,0 +1,16 @@
+
+form .g-recpatcha {
+    padding-bottom: var(--oe-padding-small);
+    padding-top: var(--oe-padding-small);
+}
+
+/* #success {
+    visibility: collapse;
+    height: 0;
+}
+
+
+#success:target {
+    visibility: visible;
+    height: auto;
+} */

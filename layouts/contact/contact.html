@@ -1,24 +1,99 @@
 {{ define "main" }}
+
+
 {{ with .Content }}
 {{ . }}
 {{ end }}
+
+<div class="contact columns">
+    <div>
+
+
+        {{/* https://docs.netlify.com/forms/setup/ */}}
+        {{/* Netlify needs to be able to parse these form controls at deploy time otherwise form submission won't work,
+        hence the duplication */}}
+        <form id="fake-form" name="Contact form" netlify hidden>
+            <input class="hidden" name="name" type="text" />
+            <input class="hidden" name="company" type="text" />
+            <input class="hidden" name="email" type="email" />
+            <input class="hidden" name="subject" type="text" />
+            <textarea class="hidden" name="comment"></textarea>
+            <input type="hidden" class="hidden" name="form-name" value="Contact form" />
+        </form>
+        <form id="contact-form" name="Contact form" class="form-overview" data-netlify="true"
+            data-netlify-recaptcha="true">
+
+
+            <sl-input name="name" required type="text" label="Your Name"></sl-input>
+            <sl-input name="company" type="text" label="Company (optional)"></sl-input>
+            <sl-input name="email" required type="email" label="Your email"></sl-input>
+            <sl-input name="subject" type="text" label="Subject"></sl-input>
+            <br>
+            <sl-textarea name="comment" required label="Comment" required></sl-textarea>
+            <br>
+            <div data-netlify-recaptcha="true" class="g-recpatcha"></div>
+            <input type="hidden" class="hidden" name="form-name" value="Contact form" />
+
+
+            <sl-button variant="primary" type="submit">Submit</sl-button>
+        </form>
+    </div>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56621.51849751034!2d153.03547363532016!3d-27.5051984661581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a10325d08a3%3A0xc8192dc3e2e64fe6!2sS%20Block%2C%20QUT!5e0!3m2!1sen!2sau!4v1638838515631!5m2!1sen!2sau"
+        width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <script type="module">
+        import { serialize } from 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/utilities/form.js';
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector("#fake-form").remove();
+            const form = document.querySelector('#contact-form');
+            const success = document.querySelector('sl-alert#success');
+            const failure = document.querySelector('sl-alert#failure');
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+                const data = serialize(form);
+
+                fetch("/", {
+                    body: new URLSearchParams(data),
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    method: "POST",
+                })
+                    .then(function (response) {
+                        if (!response.ok) {
+                            throw Error(response.statusText);
+                        }
+
+                        return response;
+                    })
+                    .then(() => {
+                        success.show()
+                    })
+                    .catch((error) => {
+                        let span = failure.querySelector("#reason");
+                        span.innerHTML = `${error}`;
+                        failure.show();
+                    });
+            });
+        });
+    </script>
+</div>
+
+<sl-alert id="success" variant="success" closable>
+    <sl-icon slot="icon" name="check2-circle"></sl-icon>
+    <strong>Message received</strong><br>
+    We'll get back to you soon.
+</sl-alert>
+
+<sl-alert id="failure" variant="danger" closeable>
+    <sl-icon slot="icon" name="exclamation-octagon"></sl-icon>
+    <strong>Failed</strong><br>
+    There was a problem sending the message.
+    <span id="reason"></span>
+</sl-alert>
+
 {{ end }}
 
 {{ define "footer" }}
-<div class="columns">
-    <sl-form class="form-overview" data-netlify="true" data-netlify-recaptcha="true">
-    <sl-input name="name" required type="text" label="Your Name"></sl-input>
-    <sl-input name="company" type="text" label="Company (optional)"></sl-input>
-    <sl-input name="email" required type="email" label="Your email"></sl-input>
-    <sl-input name="subject" type="text" label="Subject"></sl-input>
-    <br>
-    <sl-textarea name="comment" required label="Comment" required></sl-textarea>
-    <br>
-    <div data-netlify-recaptcha="true"></div>
-    <sl-button type="primary" submit>Submit</sl-button>
-    </sl-form>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56621.51849751034!2d153.03547363532016!3d-27.5051984661581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a10325d08a3%3A0xc8192dc3e2e64fe6!2sS%20Block%2C%20QUT!5e0!3m2!1sen!2sau!4v1638838515631!5m2!1sen!2sau" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-</div>
 {{ end }}
-

@@ -6,10 +6,18 @@
       calls: [ 'grunt', 'inhale']
     - name: Kangaroo
       taxonomic: Macropus giganteus
+      context: this recogniser was done to find koalas all over their distribution and develop species distribution models for 
+      past, current and future climate and deforestation for this species. Therefore we wanted to maximise the true positive rates, to find as many koala's calls as possible.
+    - location
+       training data: Samford Ecological Research Facility
+       testing data: Australia
   performance:
-    accuracy: 98%
+    accuracy: 98% true positives
     population: 30
   repository: https://github.com/QutEcoacoustics/audio-analysis/
+  Availability of training data: 
+    - [] yes
+    - [] no
   documentation: https://ap.qut.ecoacoustics.info/
   project: https://research.ecosounds.org
   citation: Blah blah blah
@@ -20,10 +28,17 @@
     - name: Grey shrikethrush
       taxonomic: Colluricincla harmonica
       calls: [ 'grunt', 'inhale']
+      context: this recogniser was developed aiming to find a rare endangered species, so false positive rates were minimised. We needed as much false positives as possible. 
+    - location
+        training data: North Queensland
+        testing data: North Queensland
   performance:
-    accuracy: 98%
+    accuracy: 02% false positives
     population: 30
   repository: https://github.com/QutEcoacoustics/audio-analysis/
+  Availability of training data: 
+    - [] yes
+    - [] no
   documentation: https://ap.qut.ecoacoustics.info/
   project: https://research.ecosounds.org
   citation: Blah blah blah

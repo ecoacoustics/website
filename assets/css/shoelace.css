@@ -1,0 +1,20 @@
+sl-icon {
+    color: var(--oe-theme-color);
+    display: inline-block;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+    min-height: 16px;
+    vertical-align: middle;
+}
+
+sl-input {
+    margin-bottom: var(--oe-padding);
+}
+
+sl-button::part(base) {
+    color: var(--oe-font-color-bright);
+}
+
+sl-divider {
+    --color: var(--oe-theme-color);
+}

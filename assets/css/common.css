@@ -1,5 +1,3 @@
-
-
 body {
     color: var(--oe-font-color);
     background-color: var(--oe-background-color);
@@ -7,6 +5,9 @@ body {
     display: flex;
     flex-direction: column;
 
+    /* transition:
+        color var(--duration) var(--timing),
+        background-color var(--duration) var(--timing); */
 }
 
 main {
@@ -15,31 +16,30 @@ main {
     flex-grow: 1;
 }
 
+pre,
+.markdown pre {
+    color: var(--oe-font-color);
+    background-color: var(--oe-background-color);
+}
+
+.markdown table tr:nth-child(2n) {
+    background-color: var(--oe-background-color-darker);
+}
+
 body > footer {
     flex-grow: 0;
 }
 
-
-sl-icon {
-    color: var(--oe-theme-color);
-    font-size: 150%;
-}
-
-sl-input {
-    margin-bottom: var(--oe-padding);
-}
-
-sl-button::part(base) {
-    color: var(--oe-font-color-bright);
-}
-
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 500;
     font-size: 250%;
     font-family: var(--oe-fancy-font);
 }
-
-
 
 .navbar {
     padding-left: var(--oe-padding);
@@ -67,11 +67,10 @@ h1,h2,h3,h4,h5,h6 {
     flex-grow: 1;
 }
 
-.brand img,svg {
+.brand img,
+svg {
     height: var(--oe-navbar-height);
 }
-
-
 
 .pull {
     display: flex;
@@ -90,7 +89,10 @@ h1,h2,h3,h4,h5,h6 {
 
 .pull.pull-red > * {
     background-color: var(--oe-panel-red-with-alpha);
-    --oe-panel-red-with-alpha: hsla(var(--sl-color-red-300), var(--oe-panel-opacity));
+    --oe-panel-red-with-alpha: hsla(
+        var(--sl-color-red-300),
+        var(--oe-panel-opacity)
+    );
 }
 
 .pull > *:first-child {
@@ -104,7 +106,6 @@ h1,h2,h3,h4,h5,h6 {
 .pull-left {
     justify-content: start;
 }
-
 
 footer {
     padding-left: var(--oe-padding);

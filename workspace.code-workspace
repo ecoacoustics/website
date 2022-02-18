@@ -1,55 +1,78 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		"markdownlint.config": {
-			"MD028": false,
-			"MD025": {
-				"front_matter_title": ""
-			},
-			"MD033": false
-		},
-		"workbench.colorCustomizations": {
-			"activityBar.activeBackground": "#d79757",
-			"activityBar.activeBorder": "#ccf3df",
-			"activityBar.background": "#d79757",
-			"activityBar.foreground": "#15202b",
-			"activityBar.inactiveForeground": "#15202b99",
-			"activityBarBadge.background": "#ccf3df",
-			"activityBarBadge.foreground": "#15202b",
-			"sash.hoverBorder": "#d79757",
-			"statusBar.background": "#cb7e30",
-			"statusBar.foreground": "#15202b",
-			"statusBarItem.hoverBackground": "#a26426",
-			"statusBarItem.remoteBackground": "#cb7e30",
-			"statusBarItem.remoteForeground": "#15202b",
-			"titleBar.activeBackground": "#cb7e30",
-			"titleBar.activeForeground": "#15202b",
-			"titleBar.inactiveBackground": "#cb7e3099",
-			"titleBar.inactiveForeground": "#15202b99"
-		},
-		"peacock.color": "#CB7E30",
-		"[markdown]": {
-			"editor.quickSuggestions": true,
-
-		},
-		"cSpell.words": [
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "markdownlint.config": {
+            "MD028": false,
+            "MD025": {
+                "front_matter_title": ""
+            },
+            "MD033": false
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "prettier.enable": true,
+        "prettier.tabWidth": 2,
+        "prettier.useTabs": false,
+        "editor.tabSize": 2,
+        "[yaml]": {
+            "editor.insertSpaces": true,
+            "editor.tabSize": 2,
+            "editor.autoIndent": "keep",
+            "editor.quickSuggestions": {
+                "other": true,
+                "comments": false,
+                "strings": true
+            },
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[javascript]": {
+            "editor.maxTokenizationLineLength": 2500,
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "workbench.colorCustomizations": {
+            "activityBar.activeBackground": "#d79757",
+            "activityBar.activeBorder": "#ccf3df",
+            "activityBar.background": "#d79757",
+            "activityBar.foreground": "#15202b",
+            "activityBar.inactiveForeground": "#15202b99",
+            "activityBarBadge.background": "#ccf3df",
+            "activityBarBadge.foreground": "#15202b",
+            "sash.hoverBorder": "#d79757",
+            "statusBar.background": "#cb7e30",
+            "statusBar.foreground": "#15202b",
+            "statusBarItem.hoverBackground": "#a26426",
+            "statusBarItem.remoteBackground": "#cb7e30",
+            "statusBarItem.remoteForeground": "#15202b",
+            "titleBar.activeBackground": "#cb7e30",
+            "titleBar.activeForeground": "#15202b",
+            "titleBar.inactiveBackground": "#cb7e3099",
+            "titleBar.inactiveForeground": "#15202b99"
+        },
+        "peacock.color": "#CB7E30",
+        "[markdown]": {
+            "editor.quickSuggestions": true
+        },
+        "cSpell.words": [
             "behaviour",
             "Ecoacoustic",
             "Ecoacoustics",
+            "orcid",
             "organisations",
+            "Preact",
             "recognisers",
             "standardised"
         ]
-	},
-	"extensions": {
-		"recommendations": [
-			"kaellarkin.hugo-shortcode-syntax",
-			"editorconfig.editorconfig",
-			"budparr.language-hugo-vscode"
-		]
-	}
+    },
+    "extensions": {
+        "recommendations": [
+            "kaellarkin.hugo-shortcode-syntax",
+            "editorconfig.editorconfig",
+            "budparr.language-hugo-vscode",
+            "bierner.lit-html",
+            "streetsidesoftware.code-spell-checker"
+        ]
+    }
 }

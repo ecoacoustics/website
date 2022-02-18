@@ -1,14 +1,57 @@
-<link rel="stylesheet" media="(prefers-color-scheme:light)" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/themes/light.css">
-<link rel="stylesheet" media="(prefers-color-scheme:dark)"
-href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/themes/dark.css"
-onload="document.documentElement.classList.add('sl-theme-dark');">
-<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/shoelace.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/components/icon/icon.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/utilities/form.js"></script>
+{{/* Shoelace */}}
 
-{{ $css := resources.Get "css/oe-main.css" }}
-{{ $css = $css |  resources.ExecuteAsTemplate "css/oe-main.css" . | resources.ToCSS }}
-{{ if hugo.IsProduction }}
-{{ $css = $css | minify | fingerprint | resources.PostProcess }}
-{{ end }}
+<link
+    rel="stylesheet"
+    media="(prefers-color-scheme:light)"
+    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/themes/light.css"
+/>
+<link
+    rel="stylesheet"
+    media="(prefers-color-scheme:dark)"
+    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/themes/dark.css"
+    onload="document.documentElement.classList.add('sl-theme-dark');"
+/>
+
+<script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/shoelace.js"
+></script>
+<script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/components/icon/icon.js"
+></script>
+<script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/utilities/form.js"
+></script>
+
+<script type="module">
+    import { registerIconLibrary } from "https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/utilities/icon-library.js";
+    document.addEventListener("DOMContentLoaded", function () {
+        registerIconLibrary("oe", {
+            resolver: (name) => `/assets/icons/${name}.svg`,
+            //mutator: (svg) => svg.setAttribute("fill", "currentColor"),
+        });
+    });
+</script>
+
+{{/* Theme switcher component */}}
+<script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
+
+{{/* Our custom CSS */}} {{ with resources.Get "css/theme/light.css" }}
+<link
+    href="{{ .RelPermalink }}"
+    media="(prefers-color-scheme:light)"
+    rel="stylesheet"
+/>
+{{ end }} {{ with resources.Get "css/theme/dark.css" }}
+<link
+    href="{{ .RelPermalink }}"
+    media="(prefers-color-scheme:dark)"
+    rel="stylesheet"
+/>
+{{ end }} {{ $css := resources.Get "css/oe-main.css" }} {{ $css = $css |
+resources.ExecuteAsTemplate "css/oe-main.css" . | resources.ToCSS }} {{ if
+hugo.IsProduction }} {{ $css = $css | minify | fingerprint |
+resources.PostProcess }} {{ end }}
 <link href="{{ $css.RelPermalink }}" rel="stylesheet" />

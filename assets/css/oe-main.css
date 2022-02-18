@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import "common";
-@import "theme/auto";
+@import "icons";
+@import "shoelace";
 @import "home";
 @import "contact";
 @import "page";
 @import "resources";
 @import "layout";
+@import "footer";
+@import "registry";
 
 /* Added a second definition to separate templated values from not so syntax
   highlighting will work */
@@ -31,6 +34,9 @@
     --oe-panel-opacity: 0.66;
     --oe-panel-color-with-alpha: hsla(var(--theme-color-raw), var(--oe-panel-opacity));
     --oe-panel-red-with-alpha: rgba(180, 52, 52, 0.66);
+
+    --duration: 0.5s;
+    --timing: ease;
 
 }
 

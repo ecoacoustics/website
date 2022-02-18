@@ -8,6 +8,22 @@
 {{ end }}
 
 Registry:
-</main>
+<div id="registryContainer">
+</div>
 
+{{/*  Grab the data from the data folder and turn it into json  */}}
+{{ $string := ( $.Site.Data.recognizer_registry | jsonify) }}
+{{/*  tell hugo to pretend it is located in our page bundle  */}}
+{{ $targetPath := path.Join .Page.File.Dir "registry.json" }}
+{{/*  tell hugo to render the json string as a file  */}}
+{{ $data := $string | resources.FromString $targetPath }}
+{{/*  get a reference to our render script, but also inject the url to our data  */}}
+{{/*  note: without referring to the url, our resource would not be output  */}}
+{{ $options := (dict "params" (dict "dataUrl" $data.Permalink) "format" "esm" "sourceMap" "inline")}}
+{{ $js := resources.Get "js/registry-render.js" |  js.Build $options | resources.Fingerprint "sha512" }}
+{{/*  embed a reference and realise our render script  */}}
+<script type="module" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+
+
+</main>
 {{ end }}

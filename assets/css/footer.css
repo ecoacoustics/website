@@ -1,0 +1,22 @@
+footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#themeSelector {
+    text-align: right;
+}
+
+dark-mode-toggle {
+    word-spacing: 200%;
+}
+
+dark-mode-toggle::part(fieldset){
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-direction: row-reverse;
+    gap: 1em;
+}

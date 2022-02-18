@@ -25,5 +25,6 @@
     display: flex;
     justify-content: start;
     margin-bottom: var(--oe-padding-large);
+    color: var(--oe-font-color-bright);
 }
 

@@ -8,9 +8,18 @@
     line-height: 1.5;
 }
 
-.home-page h1,h2,h3,h4,h5,h6 {
+.home-page h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 500;
     font-size: 200%;
+}
+
+.home-page sl-icon {
+    font-size: 150%;
 }
 
 .home-page .book-columns {
@@ -47,16 +56,15 @@
     justify-content: center;
 }
 
-.home-page .partners>*:first-child {
+.home-page .partners > *:first-child {
     flex: 1 1 70%;
     text-align: center;
 }
 
-.home-page .partners>* {
+.home-page .partners > * {
     flex: 1 1 30%;
     text-align: left;
 }
-
 
 .home-page .logos {
     display: flex;
@@ -70,9 +78,8 @@
 .home-page .logos img {
     margin: 1em;
     padding: 1em;
-    background-color: #FFF;
+    background-color: #fff;
 }
-
 
 .home-page section {
     width: 100%;

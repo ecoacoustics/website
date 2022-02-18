@@ -5,5 +5,7 @@ layout: resources
 type: registry
 ---
 
-Recognizer Registry
+This is a collection of acoustic event recognisers that we know of.
+
+Do you have something to add to this list? Contribute here {todo}
 

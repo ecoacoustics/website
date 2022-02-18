@@ -5,7 +5,7 @@
   "scope": "{{ "/" | relURL }}",
   "display": "standalone",
   "background_color": "#000000",
-  "theme_color": "#000000",
+  "theme_color": "{{ .Site.Params.ThemeColor }}",
   "icons": [
     {
       "src": "{{ "/favicon.svg" | relURL }}",

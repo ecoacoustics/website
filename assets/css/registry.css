@@ -1,0 +1,9 @@
+.registryCardList {
+    display: flex;
+    flex-direction: column;
+}
+
+.registryCardList sl-card {
+    width: 100%;
+    padding: 1em;
+}

@@ -1,34 +1,39 @@
 {{ partial "docs/inject/body" . }}
 <footer>
-    <p>
-        © {{ now.Format "2006" }} <strong>{{ .Site.Params.Organization }}</strong>
-    </p>
+    <div>
+        <p>
+            © {{ now.Format "2006" }} <strong>{{ .Site.Params.Organization }}</strong>
+        </p>
+    </div>
+    <div id="themeSelector">
+        <dark-mode-toggle id="dark-mode-toggle-1" appearance="switch" dark="Dark" light="Light"
+        permanent remember="Remember?"></dark-mode-toggle>
+    </div>
 </footer>
 </body>
+
 </html>
 
 
 
 {{ define "header" }}
-  {{ partial "docs/header" . }}
+{{ partial "docs/header" . }}
 
-  {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
-  <aside class="hidden clearfix">
+{{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
+<aside class="hidden clearfix">
     {{ template "toc" . }}
-  </aside>
-  {{ end }}
+</aside>
+{{ end }}
 {{ end }}
 
 {{ define "footer" }}
-  {{ partial "docs/footer" . }}
+{{ partial "docs/footer" . }}
 {{ end }}
 
 {{ define "comments" }}
-  {{ if and .Content (default true (default .Site.Params.BookComments .Params.BookComments)) }}
-  <div class="book-comments">
+{{ if and .Content (default true (default .Site.Params.BookComments .Params.BookComments)) }}
+<div class="book-comments">
     {{- partial "docs/comments" . -}}
-  </div>
-  {{ end }}
+</div>
 {{ end }}
-
-
+{{ end }}

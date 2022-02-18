@@ -8,7 +8,7 @@
 
 <title>{{ partial "docs/html-head-title" . }}</title>
 
-{{- $manifest := resources.Get "manifest.json" | resources.ExecuteAsTemplate "manifest.json" . }}
+{{- $manifest := resources.Get "manifest.json" | resources.ExecuteAsTemplate "manifest.webmanifest" . }}
 <link rel="manifest" href="{{ $manifest.RelPermalink }}">
 <link rel="icon" href="{{ .Site.Params.FavIcon | relURL }}" type="image/x-icon">
 

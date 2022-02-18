@@ -1,0 +1,88 @@
+- title: Koala recognizer
+  description: |
+    this recogniser was done to find koalas all over their distribution and develop species distribution
+    models for past, current and future climate and deforestation for this species.
+    Therefore we wanted to maximise the true positive rates, to find as many koala's calls as possible.
+  targets:
+    - name: Koala
+      taxonomic: Phascolarctos cinereus
+      variants: ["grunt", "inhale"]
+    - name: Kangaroo
+      taxonomic: Macropus giganteus
+  datasets:
+    training:
+      summary: 30-second segments, manually annotated
+      location: Samford Ecological Research Facility, Brisbane, Australia
+      url: https://www.ecosounds.org/projects/397
+    test:
+      summary: 30-second segments, manually annotated
+      location: Samford Ecological Research Facility, Brisbane, Australia
+      url: https://www.ecosounds.org/projects/397
+      performance:
+        # or event
+        criteria: segment
+        tp: 8
+        fp: 12
+        tn: 10
+        fn: 10
+
+  repository: https://github.com/QutEcoacoustics/audio-analysis/
+  documentation: https://ap.qut.ecoacoustics.info/
+  organization: QUT Ecoacoustics
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: Towsey
+      givenNames: Michael
+      orcid:
+    - familyNames: Truskinger
+      givenNames: Anthony
+      orcid: 0000-0003-1110-1483
+  version: 2.0.4
+  doi: 10.5281/zenodo.1234
+  dateReleased: 2021-08-11
+  license: Apache-2.0
+
+- targets:
+    - name: Grey shrikethrush
+      taxonomic: Colluricincla harmonica
+      calls: ["grunt", "inhale"]
+  performance:
+    accuracy: 98%
+    population: 30
+  repository: https://github.com/QutEcoacoustics/audio-analysis/
+  documentation: https://ap.qut.ecoacoustics.info/
+  organization: QUT Ecoacoustics
+  license: MIT
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: Scarpelli
+      givenNames: Marina
+  title: "Grey strike thrush recognizer"
+  version: 1
+  doi:
+  dateReleased: 2021-08-11
+
+- title: "Grey strike thrush recognizer"
+  description: |
+    shrike 2.0
+  targets:
+    - name: Grey shrikethrush
+      taxonomic: Colluricincla harmonica
+      calls: ["grunt", "inhale"]
+  performance:
+    accuracy: 98%
+    population: 30
+  repository: https://github.com/QutEcoacoustics/audio-analysis/
+  documentation: https://ap.qut.ecoacoustics.info/
+  organization: QUT Ecoacoustics
+  license: MIT
+  message: "shrike."
+  authors:
+    - familyNames: Scarpelli
+      givenNames: Marina
+
+  version: 1
+  doi:
+  dateReleased: 2021-08-11

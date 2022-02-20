@@ -21,8 +21,18 @@ Array.prototype.insertBetween = function (insert) {
     return this.flatMap((item) => [item, insert]).slice(0, -1);
 };
 
-let externalLink = (href, text) =>
+const externalLink = (href, text) =>
     html`<a href="${href}" target="_blank">${text || href}</a>`;
+
+const definition = (key, value) =>
+    html`<div>
+        <dt>${key}</dt>
+        <dd>${value}</dd>
+    </div>`;
+
+const quiet = (text) => html`<small class="quiet">${text}</small>`;
+
+const formatPercent = (number) => (number * 100).toFixed(2) + "%";
 
 function makeAuthor(author) {
     const name = html`
@@ -57,11 +67,16 @@ function makeSpecies(target) {
 let Title = (entry) => entry.title;
 let Authors = (entry) =>
     (entry.authors || []).map(makeAuthor).insertBetween(", ");
-let Description = (entry) => entry.description;
-let TargetSpecies = (entry) =>
-    (entry.targets || [])
+let Description = (entry) =>
+    entry.description || quiet("no description provided");
+let TargetSpecies = (entry) => {
+    let items = (entry.targets || [])
         .map(makeSpecies)
         .map((item) => html`<li>${item}</li>`);
+    return html`<ul>
+        ${items}
+    </ul>`;
+};
 
 const defaultPerformance = {
     criteria: null,
@@ -81,51 +96,55 @@ function Dataset(props) {
         dataset.performance
     );
 
+    const [tpr, fnr, fpr, tnr] = [
+        tp / (tp + fn),
+        fn / (tp + fn),
+        fp / (fp + tn),
+        tn / (fp + tn),
+    ];
+
     return html`
         <div>
             <p>${summary}</p>
             <dl>
-                <dt>Location:</dt>
-                <dd>${location}</dd>
-                <dt>
-                    Criteria:
-                </dt>
-                <dd>
-                    <sl-tooltip content="How was a result matched? Typically 'segment' means that any hit in any block of audio counts as a true positive. 'event' means an event has to occur in the same location to count as a true positive.">
+                ${definition("Location", location)}
+                ${definition(
+                    "Criteria",
+                    html`
+                <sl-tooltip content="How was a result matched? Typically 'segment' means that any hit in any block of audio counts as a true positive. 'event' means an event has to occur in the same location to count as a true positive.">
                         <sl-tag variant="neutral">${criteria}
                     </sl-tooltip>
                 </sl-tag>
-                </dd>
-                <dt>Source:</dt>
-                <dd>${externalLink(url)}</dd>
+                `
+                )}
+                ${definition("Source", externalLink(url))}
             </dl>
         </div>
-        <table>
+        <table class="performanceTable">
+            <caption>
+                Performance
+            </caption>
             <thead>
                 <tr>
-                    <th></th>
-                    <th></th>
+                    <th colspan="2" rowspan="2"></th>
                     <th colspan="2">Predicted</th>
                 </tr>
                 <tr>
-                    <th></th>
-                    <th></th>
                     <th>Positives</th>
                     <th>Negatives</th>
                 </tr>
             </thead>
             <tbody>
-                <tr></tr>
                 <tr>
-                    <th rowspan="2">Actual</th>
+                    <th rowspan="2" class="actual">Actual</th>
                     <th>Positives</th>
-                    <td>${tp}</td>
-                    <td>${fn}</td>
+                    <td>${tp} (${formatPercent(tpr)})</td>
+                    <td>${fn} (${formatPercent(fnr)})</td>
                 </tr>
                 <tr>
                     <th>Negatives</th>
-                    <td>${fp}</td>
-                    <td>${tn}</td>
+                    <td>${fp} (${formatPercent(fpr)})</td>
+                    <td>${tn} (${formatPercent(tnr)})</td>
                 </tr>
             </tbody>
         </table>
@@ -134,6 +153,9 @@ function Dataset(props) {
 
 function Datasets(props) {
     const datasets = props.datasets || {};
+    if (Object.keys(datasets).length == 0) {
+        return html`<p>${quiet("no datasets provided")}</p>`;
+    }
     return html`
         <sl-tab-group>
             ${Object.entries(datasets).map(
@@ -160,31 +182,30 @@ function Card(props) {
     return html`
         <sl-card>
             <div slot="header">
-                <h2>${Title(entry)}</h2>
-                <span>${Authors(entry)}</span>
+                <h3>${Title(entry)}</h3>
+                <span class="authors">${Authors(entry)}</span>
             </div>
-            <p>${Description(entry)}</p>
-            <div>
-                <dl>
-                    <dt>Target species:</dt>
-                    <dd>${TargetSpecies(entry)}</dd>
-                    <dt>Datasets</dt>
-                    <dd><${Datasets} datasets=${entry.datasets} /></dd>
-                    <dt>Repository</dt>
-                    <dd>${externalLink(repository)}</dd>
-                    <dt>Documentation</dt>
-                    <dd>${externalLink(documentation)}</dd>
-                    <dt>Organization</dt>
-                    <dd>${organization}</dd>
-                    <dt>Version</dt>
-                    <dd>${version}</dd>
-                    <dt>DOI</dt>
-                    <dd>${formatDoi(doi)}</dd>
-                    <dt>Released</dt>
-                    <dd>${date}</dd>
-                    <dt>License</dt>
-                    <dd>${license}</dd>
-                </dl>
+            <div class="descriptionAndDatasets">
+                <div>
+                    <p>${Description(entry)}</p>
+                    <dl>
+                        ${definition("Target species", TargetSpecies(entry))}
+                        ${definition("Repository", externalLink(repository))}
+                        ${definition(
+                            "Documentation",
+                            externalLink(documentation)
+                        )}
+                        ${definition("Organization", organization)}
+                        ${definition("Version", version)}
+                        ${definition("DOI", formatDoi(doi))}
+                        ${definition("Released", date)}
+                        ${definition("License", license)}
+                    </dl>
+                </div>
+                <sl-card>
+                    <strong slot="header">Datasets</strong>
+                    <${Datasets} datasets=${entry.datasets} />
+                </sl-card>
             </div>
         </sl-card>
     `;
@@ -288,7 +309,6 @@ function App() {
     );
 
     return html`<${Search} term=${search} setTerm=${setSearch} />
-        Search term: ${search}
         <sl-divider></sl-divider>
         ${isLoading && html`<sl-progress-bar indeterminate></sl-progress-bar>`}
         ${error &&

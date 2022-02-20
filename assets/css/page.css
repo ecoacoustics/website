@@ -1,7 +1,7 @@
 .page {
     flex-grow: 1;
     display: flex;
-    padding: 0 var(--oe-padding-large);
+    padding: 0 var(--oe-padding);
     flex-direction: column;
     overflow-x: hidden;
     min-height: 100%;
@@ -27,4 +27,3 @@
     margin-bottom: var(--oe-padding-large);
     color: var(--oe-font-color-bright);
 }
-

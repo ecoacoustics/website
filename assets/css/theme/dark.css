@@ -1,7 +1,8 @@
 :root {
-    --oe-color-logo: #FFFFFF;
-    --oe-font-color: #FFF;
-    --oe-font-color-bright: #FFF;
+    --oe-color-logo: #ffffff;
+    --oe-font-color: #fff;
+    --oe-font-color-bright: #fff;
+    --oe-font-color-toned: #666;
     --oe-inverse-color: #000;
     --oe-background-color: #1d1d1d;
     --oe-background-color-darker: #1a1a1a;

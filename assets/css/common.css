@@ -112,3 +112,7 @@ footer {
     padding-right: var(--oe-padding);
     padding-top: var(--oe-padding-small);
 }
+
+.quiet {
+    color: var(--oe-font-color-toned);
+}

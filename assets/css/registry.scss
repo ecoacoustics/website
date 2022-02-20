@@ -1,0 +1,70 @@
+.registryCardList {
+    display: flex;
+    flex-direction: column;
+}
+
+.registryCardList > sl-card {
+    width: 100%;
+    min-width: calc(400px + 1em);
+    padding: 1em;
+    & *[slot="header"] {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        & > * {
+            margin: 0.5rem 0;
+        }
+    }
+
+    .authors > * {
+        display: inline-block;
+    }
+
+    .descriptionAndDatasets {
+        display: flex;
+        flex-flow: wrap;
+        gap: 1rem;
+        & > *:nth-child(1) {
+            flex: 1 1;
+            width: 100%;
+            min-width: 15ch;
+        }
+        & > *:nth-child(2) {
+            flex: 0 1;
+            flex-basis: 25em;
+            width: 100%;
+        }
+    }
+
+    dl {
+        & div {
+            display: inline-block;
+            width: 100%;
+            padding: 0.5rem;
+        }
+        & dt {
+            display: inline;
+        }
+        & dd {
+            display: inline;
+        }
+    }
+
+    & dt::after {
+        content: ": ";
+    }
+
+    ul {
+        margin-left: 1ch;
+    }
+
+    .performanceTable {
+        font-size: smaller;
+        padding: 0.25rem, 0.5rem;
+
+        & .actual {
+            transform: rotate(-90deg);
+            padding: 0;
+        }
+    }
+}

@@ -16,7 +16,14 @@
         "prettier.enable": true,
         "prettier.tabWidth": 2,
         "prettier.useTabs": false,
+        "prettier.jsxBracketSameLine": true,
         "editor.tabSize": 2,
+        "[html]": {
+            "editor.suggest.insertMode": "replace",
+            "editor.defaultFormatter": "jinliming2.vscode-go-template",
+            "files.insertFinalNewline": false,
+            "files.trimFinalNewlines": true
+        },
         "[yaml]": {
             "editor.insertSpaces": true,
             "editor.tabSize": 2,

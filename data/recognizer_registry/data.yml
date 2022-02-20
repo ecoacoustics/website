@@ -14,6 +14,13 @@
       summary: 30-second segments, manually annotated
       location: Samford Ecological Research Facility, Brisbane, Australia
       url: https://www.ecosounds.org/projects/397
+      performance:
+        # or event
+        criteria: segment
+        tp: 100
+        fp: 12
+        tn: 10
+        fn: 10
     test:
       summary: 30-second segments, manually annotated
       location: Samford Ecological Research Facility, Brisbane, Australia

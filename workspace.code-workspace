@@ -20,7 +20,7 @@
         "editor.tabSize": 2,
         "[html]": {
             "editor.suggest.insertMode": "replace",
-            "editor.defaultFormatter": "jinliming2.vscode-go-template",
+            "editor.defaultFormatter": "vscode.html-language-features",
             "files.insertFinalNewline": false,
             "files.trimFinalNewlines": true
         },
@@ -64,6 +64,7 @@
         },
         "cSpell.words": [
             "behaviour",
+            "binomial",
             "Ecoacoustic",
             "Ecoacoustics",
             "orcid",

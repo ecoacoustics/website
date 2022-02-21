@@ -22,7 +22,9 @@ Array.prototype.insertBetween = function (insert) {
 };
 
 const externalLink = (href, text) =>
-    html`<a href="${href}" target="_blank">${text || href}</a>`;
+    html`<a href="${href}" target="_blank">
+        ${text || href.replace(/https?:\/\//, "")}
+    </a>`;
 
 const definition = (key, value) =>
     html`<div>
@@ -51,9 +53,7 @@ function makeAuthor(author) {
 }
 
 function makeSpecies(target) {
-    var taxonomic = target.taxonomic
-        ? html` (<em>${target.taxonomic}</em>)`
-        : "";
+    var binomial = target.binomial ? html` (<em>${target.binomial}</em>)` : "";
     var variants = "";
     if (target.variants) {
         variants = target.variants
@@ -61,7 +61,7 @@ function makeSpecies(target) {
             .insertBetween(", ");
         variants.unshift(": ");
     }
-    return html` <span>${target.name}${taxonomic}</span>${variants}`;
+    return html` <span>${target.name}${binomial}</span>${variants}`;
 }
 
 let Title = (entry) => entry.title;
@@ -239,9 +239,21 @@ function Search(props) {
     `;
 }
 
+function lexiographicalSort(a, b) {
+    var titleA = a.title.toLowerCase(); // ignore upper and lowercase
+    var titleB = b.title.toLowerCase(); // ignore upper and lowercase
+    if (titleA < titleB) {
+        return -1; //titleA comes first
+    }
+    if (titleA > titleB) {
+        return 1; // titleB comes first
+    }
+    return 0; // titles must be equal
+}
+
 function searchFilter(term, entries) {
     if (!term || term.length == 0) {
-        return entries;
+        return entries.sort(lexiographicalSort);
     }
 
     let lowerTerm = term.toLowerCase();
@@ -290,8 +302,8 @@ function App() {
             setIsLoading(true);
             const response = await fetch(params.dataUrl);
             const result = await response.json();
-            console.log("data received", result.data);
-            setData(result.data);
+            console.log("data received", result);
+            setData(result);
         } catch (error) {
             console.error(
                 "There was a problem loading the registry data",
@@ -308,12 +320,19 @@ function App() {
         [search, data]
     );
 
-    return html`<${Search} term=${search} setTerm=${setSearch} />
+    return html`
+        <div class="registrySearch">
+            <${Search} term=${search} setTerm=${setSearch} />
+            <sl-badge variant="primary" pill
+                >${filteredData.length} results</sl-badge
+            >
+        </div>
         <sl-divider></sl-divider>
         ${isLoading && html`<sl-progress-bar indeterminate></sl-progress-bar>`}
         ${error &&
         html`<div>There was a problem loading the registry data.</div>`}
-        ${!error && html` <${List} entries=${filteredData} /> `} `;
+        ${!error && html` <${List} entries=${filteredData} /> `}
+    `;
 }
 
 render(html`<${App} />`, document.querySelector("#registryContainer"));

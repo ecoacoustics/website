@@ -7,7 +7,7 @@ git lfs pull
 
 Write-Output "Installing Hugo..."
 if ($IsWindows) {
-    gsudo choco install hugo-extended
+    Start-Process -FilePath pwsh.exe -Verb Runas  -Wait -ArgumentList "-nop -c 'choco install hugo-extended'" -NoNewWindow | wait-job | receive-job
 }
 elseif ($IsLinux) {
     snap install hugo --channel=extended

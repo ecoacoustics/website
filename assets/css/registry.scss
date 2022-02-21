@@ -1,3 +1,14 @@
+.registrySearch {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+
+    & > sl-input {
+        flex-grow: 1;
+    }
+}
+
 .registryCardList {
     display: flex;
     flex-direction: column;
@@ -48,6 +59,10 @@
         & dd {
             display: inline;
         }
+    }
+
+    a {
+        display: inline-block;
     }
 
     & dt::after {

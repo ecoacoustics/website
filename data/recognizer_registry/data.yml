@@ -51,10 +51,63 @@
   dateReleased: 2021-08-11
   license: Apache-2.0
 
+- title: Boobook recognizer
+  description:
+
+  targets:
+    - name: Boobook Owl
+      taxonomic: Ninox Boobook
+      variants:
+  datasets:
+    training:
+      summary:
+      location:
+      url:
+      performance:
+        # or event
+        criteria: segment
+        tp: 47
+        fp: 34
+        tn: 267
+        fn: 12
+    test:
+      summary:
+      location:
+      url:
+      performance:
+        # or event
+        criteria:
+        tp:
+        fp:
+        tn:
+        fn:
+
+  repository:
+  documentation:
+  organization:
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: Towsey
+      givenNames: Michael
+      orcid:
+    - familyNames: Truskinger
+      givenNames: Anthony
+      orcid: 0000-0003-1110-1483
+    - familyNames: Thompson
+      givenNames: Kristen
+      orcid:
+  version:
+  doi:
+  dateReleased: 2021-03-05
+  license:
+
+
 - targets:
     - name: Grey shrikethrush
       taxonomic: Colluricincla harmonica
-      calls: ["grunt", "inhale"]
+      variants: ["alarm", "inhale"]
   performance:
     accuracy: 98%
     population: 30
@@ -64,12 +117,12 @@
   license: MIT
   message: "If you use this software, please cite it as below."
   authors:
-    - familyNames: Scarpelli
+    - familyNames: D. A. Scarpelli
       givenNames: Marina
   title: "Grey strike thrush recognizer"
   version: 1
   doi:
-  dateReleased: 2021-08-11
+  dateReleased: 2021-09-11
 
 - title: "Grey strike thrush recognizer"
   description: |

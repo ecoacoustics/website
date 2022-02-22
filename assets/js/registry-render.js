@@ -21,10 +21,16 @@ Array.prototype.insertBetween = function (insert) {
     return this.flatMap((item) => [item, insert]).slice(0, -1);
 };
 
-const externalLink = (href, text) =>
-    html`<a href="${href}" target="_blank">
-        ${text || href.replace(/https?:\/\//, "")}
-    </a>`;
+const externalLink = (href, text) => {
+    let content = text;
+    if (!content) {
+        content = href;
+        if (href) {
+            href = href.replace(/https?:\/\//, "");
+        }
+    }
+    return html`<a href="${href}" target="_blank"> ${content} </a>`;
+};
 
 const definition = (key, value) =>
     html`<div>

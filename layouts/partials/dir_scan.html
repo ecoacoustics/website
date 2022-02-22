@@ -1,0 +1,14 @@
+{{/* This is a recursive partial that emits no html but does return an array of files */}}
+{{/* that are the result od recursively searching through the path provided in the */}}
+{{/* partial's context */}}
+{{ $result := slice }}
+{{ $parent := . }}
+{{ range os.ReadDir $parent}}
+{{ $child := path.Join $parent .Name }}
+{{ if .IsDir }}
+{{ $result = $result | append (partial "dir_scan" $child) }}
+{{ else }}
+{{ $result = $result | append $child }}
+{{ end }}
+{{ end }}
+{{ return $result}}

@@ -3,27 +3,48 @@
     <header>
         <h1>{{.Title}}</h1>
     </header>
-{{ with .Content }}
-{{ . }}
-{{ end }}
+    {{ with .Content }}
+    {{ . }}
+    {{ end }}
 
 
-<div id="registryContainer">
-</div>
+    <div id="registryContainer">
+    </div>
 
-{{/*  Grab the data from the data folder and turn it into json  */}}
-{{ $string := ( $.Site.Data.recognizer_registry | jsonify) }}
-{{/*  tell hugo to pretend it is located in our page bundle  */}}
-{{ $targetPath := path.Join .Page.File.Dir "registry.json" }}
-{{/*  tell hugo to render the json string as a file  */}}
-{{ $data := $string | resources.FromString $targetPath }}
-{{/*  get a reference to our render script, but also inject the url to our data  */}}
-{{/*  note: without referring to the url, our resource would not be output  */}}
-{{ $options := (dict "params" (dict "dataUrl" $data.Permalink) "format" "esm" "sourceMap" "inline")}}
-{{ $js := resources.Get "js/registry-render.js" |  js.Build $options | resources.Fingerprint "sha512" }}
-{{/*  embed a reference and realise our render script  */}}
-<script type="module" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+    {{/* scan for all files in the data folder */}}
+    {{- $dataDir := "/data/recognizer_registry" -}}
+    {{- $dataFiles := partial "dir_scan" $dataDir -}}
+    {{- $data := slice -}}
+    {{- range $dataFiles -}}
+    {{/* remove the base search dir */}}
+    {{- $relative := slicestr . (len $dataDir) -}}
+    {{/* remove the extension */}}
+    {{- $extensionless := slicestr $relative 0 (sub (len $relative) (len (path.Ext $relative))) -}}
+    {{/* split on '/' and use fragments as an index key */}}
+    {{- $fragments := split $extensionless "/" -}}
+    {{/* if the first index is an empty string remove it */}}
+    {{- if eq (index $fragments 0) "" -}}
+    {{- $fragments = after 1 $fragments -}}
+    {{end}}
+    {{- warnf "Including data from %s (%s)" . $fragments -}}
+    {{- $data_from_file := index $.Site.Data.recognizer_registry $fragments -}}
+    {{/* finally concat all the selections together! */}}
+    {{- $data = $data | append $data_from_file -}}
+    {{end}}
+
+    {{/* Grab the data from the data from our above operations */}}
+    {{ $string := $data | jsonify }}
+    {{/* tell hugo to pretend it is located in our page bundle */}}
+    {{ $targetPath := path.Join .Page.File.Dir "registry.json" }}
+    {{/* tell hugo to render the json string as a file */}}
+    {{ $data := $string | resources.FromString $targetPath }}
+    {{/* get a reference to our render script, but also inject the url to our data */}}
+    {{/* note: without referring to the url, our resource would not be output */}}
+    {{ $options := (dict "params" (dict "dataUrl" $data.Permalink) "format" "esm" "sourceMap" "inline")}}
+    {{ $js := resources.Get "js/registry-render.js" | js.Build $options | resources.Fingerprint "sha512" }}
+    {{/* embed a reference and realise our render script */}}
+    <script type="module" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 
 
-</main>
+</article>
 {{ end }}

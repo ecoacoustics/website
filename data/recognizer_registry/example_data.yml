@@ -56,7 +56,7 @@
 
   targets:
     - name: Boobook Owl
-      taxonomic: Ninox boobook
+      binomial: Ninox boobook
       variants:
   datasets:
     training:
@@ -118,7 +118,7 @@
   description: developed in partnership with NSW Department of Primary industries
   targets:
     - name: Sugar glider
-      taxonomic: Petaurus breviceps
+      binomial: Petaurus breviceps
       variants:
   datasets:
     training:
@@ -180,7 +180,7 @@
   description: developed in partnership with NSW Department of Primary industries
   targets:
     - name: Brown treecreeper
-      taxonomic: Climacteris picumnus
+      binomial: Climacteris picumnus
       variants:
   datasets:
     training:
@@ -242,7 +242,7 @@
   description: developed in partnership with NSW Department of Primary industries
   targets:
     - name: Barking owl
-      taxonomic: Ninox connivens
+      binomial: Ninox connivens
       variants:
   datasets:
     training:
@@ -304,7 +304,7 @@
   description: developed in partnership with NSW Department of Primary industries
   targets:
     - name: Yellow bellied glider
-      taxonomic: Petaurus australis
+      binomial: Petaurus australis
       variants:
   datasets:
     training:
@@ -366,7 +366,7 @@
   description: developed in partnership with NSW Department of Primary industries
   targets:
     - name: Flying fox
-      taxonomic: Pteropus sp.
+      binomial: Pteropus sp.
       variants:
   datasets:
     training:
@@ -427,7 +427,7 @@
   description: developed in partnership with NSW Department of Primary industries
   targets:
     - name: Sooty owl
-      taxonomic: Tyto tenebricosa
+      binomial: Tyto tenebricosa
       variants:
   datasets:
     training:
@@ -488,7 +488,7 @@
   description: developed in partnership with NSW Department of Primary industries
   targets:
     - name: Masked owl
-      taxonomic: Tyto novaehollandiae
+      binomial: Tyto novaehollandiae
       variants:
   datasets:
     training:
@@ -549,7 +549,7 @@
   description: developed in partnership with NSW Department of Primary industries
   targets:
     - name: Squirrel glider
-      taxonomic:  Petaurus norfolcensis
+      binomial: Petaurus norfolcensis
       variants:
   datasets:
     training:

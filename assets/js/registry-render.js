@@ -20,16 +20,38 @@ const html = htm.bind(h);
 Array.prototype.insertBetween = function (insert) {
     return this.flatMap((item) => [item, insert]).slice(0, -1);
 };
+Array.prototype.compact = function () {
+    return this.filter(
+        (item) => item !== null && item !== undefined && item !== ""
+    );
+};
+
+const formatGitHubLink = (url) => {
+    let content = url.replace(/https?:\/\//, "");
+    if (!content.startsWith("github.com/")) {
+        return url;
+    }
+    let trimmed = content.replace("github.com/", "");
+    let parts = trimmed.split("/").compact();
+    // keep the org & repo & file name
+    let short = [parts[0], "/", parts[1]];
+    if (parts.length > 2) {
+        short.push("/…/", parts.slice(-1));
+    }
+    content = html`<sl-icon class="textColor" name="github"></sl-icon>
+        ${short}`;
+
+    return content;
+};
 
 const externalLink = (href, text) => {
     let content = text;
     if (!content) {
-        content = href;
-        if (href) {
-            href = href.replace(/https?:\/\//, "");
-        }
+        content = href || "";
+        content = content.replace(/https?:\/\//, "");
+        content = formatGitHubLink(content);
     }
-    return html`<a href="${href}" target="_blank"> ${content} </a>`;
+    return html`<a href="${href}" target="_blank">${content}</a>`;
 };
 
 const definition = (key, value) =>
@@ -39,21 +61,24 @@ const definition = (key, value) =>
     </div>`;
 
 const quiet = (text) => html`<small class="quiet">${text}</small>`;
+const notProvidedOr = (text, or) => (text ? or(text) : quiet("not provided"));
+const notProvided = (text) => notProvidedOr(text, (x) => x);
 
 const formatPercent = (number) => (number * 100).toFixed(2) + "%";
 
 function makeAuthor(author) {
-    const name = html`
-        <span>${author["givenNames"]} ${author["familyNames"]}</span>
-    `;
+    const name = [author.givenNames, author.familyNames]
+        .compact()
+        .insertBetween(" ");
+    const span = html` <span>${name}</span> `;
 
     if (!author.orcid) {
-        return name;
+        return span;
     }
 
     return externalLink(
         `https://orcid.org/${author.orcid}`,
-        html` ${name}
+        html` ${span}
             <sl-icon library="oe" name="orcid"></sl-icon>`
     );
 }
@@ -93,7 +118,7 @@ const defaultPerformance = {
 };
 
 function Dataset(props) {
-    const { name, dataset } = props;
+    const { dataset } = props;
     const { summary, location, url } = dataset;
 
     const { criteria, tp, fp, tn, fn } = Object.assign(
@@ -113,7 +138,7 @@ function Dataset(props) {
         <div>
             <p>${summary}</p>
             <dl>
-                ${definition("Location", location)}
+                ${definition("Location", notProvided(location))}
                 ${definition(
                     "Criteria",
                     html`
@@ -123,7 +148,7 @@ function Dataset(props) {
                 </sl-tag>
                 `
                 )}
-                ${definition("Source", externalLink(url))}
+                ${definition("Source", notProvidedOr(url, externalLink))}
             </dl>
         </div>
         <table class="performanceTable">
@@ -175,8 +200,7 @@ function Datasets(props) {
     `;
 }
 
-const formatDoi = (doi) =>
-    doi ? html`${externalLink("https://doi.org/" + doi, doi)}` : "";
+const formatDoi = (doi) => html`${externalLink("https://doi.org/" + doi, doi)}`;
 
 function Card(props) {
     const entry = props.entry;
@@ -196,16 +220,16 @@ function Card(props) {
                     <p>${Description(entry)}</p>
                     <dl>
                         ${definition("Target species", TargetSpecies(entry))}
+                        ${definition("Organization", notProvided(organization))}
+                        ${definition("Version", notProvided(version))}
+                        ${definition("DOI", notProvidedOr(doi, formatDoi))}
+                        ${definition("Released", notProvided(date))}
+                        ${definition("License", notProvided(license))}
                         ${definition("Repository", externalLink(repository))}
                         ${definition(
                             "Documentation",
-                            externalLink(documentation)
+                            notProvidedOr(documentation, externalLink)
                         )}
-                        ${definition("Organization", organization)}
-                        ${definition("Version", version)}
-                        ${definition("DOI", formatDoi(doi))}
-                        ${definition("Released", date)}
-                        ${definition("License", license)}
                     </dl>
                 </div>
                 <sl-card>
@@ -229,7 +253,6 @@ function List(props) {
 function Search(props) {
     const { term, setTerm } = props;
     const handleInput = (event) => {
-        console.log(event);
         setTerm(event.target.value);
     };
 
@@ -277,7 +300,8 @@ function searchFilter(term, entries) {
             ]),
             ...(entry.targets || []).flatMap((t) => [
                 contains(t.name),
-                contains(t.taxonomic),
+                contains(t.binomial),
+                ...(t.variants || []).flatMap((v) => contains(v)),
             ]),
             ...Object.entries(entry.datasets || {}).flatMap(([_, d]) => [
                 contains(d.summary),

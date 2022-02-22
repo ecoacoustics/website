@@ -18,4 +18,31 @@
         font-size: 100%;
         font-weight: 600;
     }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        & sl-icon-button {
+            aspect-ratio: 1 / 1;
+        }
+    }
+
+    .menu {
+        transition-property: all;
+        transition-duration: 1.5s;
+        transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    }
+
+    &.menu.closed {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    &.menu.open {
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }

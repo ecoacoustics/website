@@ -5,12 +5,7 @@
     margin-left: -15px;
 }
 
-.columns > *{
+.columns > * {
     flex: 1 1 auto;
-    margin: var(--oe-padding)
-}
-
-sl-alert {
-    padding-bottom: var(--oe-padding-small);
-    padding-top: var(--oe-padding-small);
+    margin: var(--oe-padding);
 }

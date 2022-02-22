@@ -20,15 +20,22 @@
     padding: 1em;
     & *[slot="header"] {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: baseline;
         & > * {
-            margin: 0.5rem 0;
+            margin-top: 0.5em;
+            margin-bottom: 0;
         }
     }
 
-    .authors > * {
-        display: inline-block;
+    .authors {
+        margin-left: auto;
+        margin-bottom: 0;
+        font-size: smaller;
+        & > * {
+            display: inline-block;
+        }
     }
 
     .descriptionAndDatasets {
@@ -51,7 +58,7 @@
         & div {
             display: inline-block;
             width: 100%;
-            padding: 0.5rem;
+            padding: 0.25rem;
         }
         & dt {
             display: inline;
@@ -76,6 +83,7 @@
     .performanceTable {
         font-size: smaller;
         padding: 0.25rem, 0.5rem;
+        margin-bottom: 0;
 
         & .actual {
             transform: rotate(-90deg);

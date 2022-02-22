@@ -1,0 +1,56 @@
+sl-icon {
+    color: var(--oe-theme-color);
+    display: inline-block;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+    min-height: 16px;
+    min-width: 16px;
+    vertical-align: middle;
+}
+
+sl-icon.textColor {
+    color: var(--oe-font-color);
+}
+
+sl-icon-button::part(base) {
+    color: var(--oe-theme-color);
+}
+
+sl-icon-button.bordered {
+    border: 1px solid var(--oe-theme-color);
+    border-radius: var(--sl-border-radius-large);
+}
+
+form {
+    & sl-input,
+    sl-textarea,
+    sl-checkbox {
+        margin-bottom: var(--oe-padding);
+    }
+}
+
+sl-button::part(base) {
+    color: var(--oe-font-color-bright);
+}
+
+sl-divider {
+    --color: var(--oe-theme-color);
+}
+
+sl-badge::part(base) {
+    color: var(--oe-font-color-bright);
+}
+
+sl-alert {
+    padding-bottom: var(--oe-padding-small);
+    padding-top: var(--oe-padding-small);
+}
+
+form *[invalid]::part(suffix)::after {
+    color: var(--sl-color-danger-600);
+}
+
+form *[required]::part(suffix)::after {
+    content: "*";
+    padding: 1em;
+}

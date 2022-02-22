@@ -1,5 +1,5 @@
 - title: Boobook recognizer
-  description: developed in partnership with NSW Department of Primary industries
+  description: Developed in partnership with NSW Department of Primary industries
 
   targets:
     - name: Boobook Owl
@@ -62,7 +62,7 @@
   license: Apache-2.0
 
 - title: Sugar glider recognizer
-  description: developed in partnership with NSW Department of Primary industries
+  description: Developed in partnership with NSW Department of Primary industries
   targets:
     - name: Sugar glider
       binomial: Petaurus breviceps
@@ -124,7 +124,7 @@
   license: Apache-2.0
 
 - title: Brown treecreeper recognizer
-  description: developed in partnership with NSW Department of Primary industries
+  description: Developed in partnership with NSW Department of Primary industries
   targets:
     - name: Brown treecreeper
       binomial: Climacteris picumnus
@@ -186,7 +186,7 @@
   license: Apache-2.0
 
 - title: Barking owl recognizer
-  description: developed in partnership with NSW Department of Primary industries
+  description: Developed in partnership with NSW Department of Primary industries
   targets:
     - name: Barking owl
       binomial: Ninox connivens
@@ -248,7 +248,7 @@
   license: Apache-2.0
 
 - title: Yellow bellied glider recognizer
-  description: developed in partnership with NSW Department of Primary industries
+  description: Developed in partnership with NSW Department of Primary industries
   targets:
     - name: Yellow bellied glider
       binomial: Petaurus australis
@@ -310,7 +310,7 @@
   license: Apache-2.0
 
 - title: Flying fox recognizer
-  description: developed in partnership with NSW Department of Primary industries
+  description: Developed in partnership with NSW Department of Primary industries
   targets:
     - name: Flying fox
       binomial: Pteropus sp.
@@ -371,7 +371,7 @@
   license: Apache-2.0
 
 - title: Sooty owl recognizer
-  description: developed in partnership with NSW Department of Primary industries
+  description: Developed in partnership with NSW Department of Primary industries
   targets:
     - name: Sooty owl
       binomial: Tyto tenebricosa
@@ -432,7 +432,7 @@
   license: Apache-2.0
 
 - title: Masked owl recognizer
-  description: developed in partnership with NSW Department of Primary industries
+  description: Developed in partnership with NSW Department of Primary industries
   targets:
     - name: Masked owl
       binomial: Tyto novaehollandiae
@@ -493,7 +493,7 @@
   license: Apache-2.0
 
 - title: Squirrel glider recognizer
-  description: developed in partnership with NSW Department of Primary industries
+  description: Developed in partnership with NSW Department of Primary industries
   targets:
     - name: Squirrel glider
       binomial: Petaurus norfolcensis

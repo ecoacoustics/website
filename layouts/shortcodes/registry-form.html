@@ -1,0 +1,42 @@
+<sl-divider>></sl-divider>
+
+<form id="registry-contribution-form" name="Registry Contribution" netlify data-netlify-recaptcha="true">
+    <input type="hidden" name="submission" />
+
+    <sl-input label="Title" name="title" required></sl-input>
+
+    <sl-textarea label="Description" name="description"></sl-textarea>
+
+    <sl-textarea label="Targets" name="targets" required></sl-textarea>
+
+    <sl-textarea label="Datasets" name="datasets"></sl-textarea>
+
+    <sl-input variant="url" label="Repository url" placeholder="https://github.com/" name="repository">
+    </sl-input>
+
+    <sl-input label="Version" name="version"></sl-input>
+
+    <sl-input label="Release date" name="dateReleased" required type="date"></sl-input>
+
+    <sl-input label="License" name="license" required></sl-input>
+
+    <sl-input variant="url" label="Documentation url" placeholder="https://github.com/" name="documentation">
+    </sl-input>
+
+    <sl-input label="Organization" name="organization"></sl-input>
+
+    <sl-input label="DOI" name="doi" pattern='(10[.][0-9]{4,}(?:[.][0-9]+)*/(?:(?![%"#? ])\\S)+)'></sl-input>
+
+    <sl-input label="Authors" name="authors" required></sl-input>
+
+
+
+
+
+    <sl-input variant="email" label="Email" placeholder="you@example.com" name="email" required></sl-input>
+    <sl-checkbox required>I agree to be contacted if further information is required</sl-checkbox>
+
+    <div data-netlify-recaptcha="true" class="g-recpatcha"></div>
+    <sl-button variant="primary" type="submit">Submit</sl-button>
+
+</form>

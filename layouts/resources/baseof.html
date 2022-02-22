@@ -1,49 +1,67 @@
 {{ partial "before_main" . }}
-  <main class="container flex resources">
-    <aside class="book-menu">
-      <div class="">
-        <h1>
-            {{$section_heading := .Site.GetPage "section" .Section }}
-            {{with $section_heading}}
-            {{- .Title -}}
-            {{end}}
-        </h1>
+<main class="container flex resources" style="position: relative;">
+    <aside id="sideMenu" class="book-menu menu open">
+        <div class="header">
+            <h1>
+                {{$section_heading := .Site.GetPage "section" .Section }}
+                {{with $section_heading}}
+                {{- .Title -}}
+                {{end}}
+            </h1>
+            {{/* <sl-tooltip class="menu-toggle" content="Collapse menu">
+                <sl-icon-button id="menuToggle" class="bordered" name="chevron-left" label="collapse menu">
+                </sl-icon-button>
+            </sl-tooltip> */}}
+        </div>
         {{ block "menu" . }}
         <!-- Left menu Content -->
         {{ partial "docs/menu" . }}
         {{ end }}
-      </div>
+
     </aside>
+    {{/*
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggle = document.querySelector('#menuToggle');
+            const menu = document.querySelector('#sideMenu');
+
+            toggle.addEventListener('click', () => {
+                menu.classList.toggle("open");
+                menu.classList.toggle("closed");
+            });
+        });
+    </script> */}}
 
     <div class="book-page">
-      <header class="book-header">
-        {{ block "header" . }}
-        <!-- Mobile layout header -->
+        <header class="book-header">
+            {{ block "header" . }}
+            <!-- Mobile layout header -->
+            {{end}}
+        </header>
+
+        <!-- {{ partial "hero.html" . }} -->
+
+        {{ partial "docs/inject/content-before" . }}
+        {{ block "main" . }}
+        <!-- Page Content -->
         {{end}}
-      </header>
+        {{ partial "docs/inject/content-after" . }}
 
-      <!-- {{ partial "hero.html" . }} -->
+        {{ template "comments" . }}
+        <!-- Comments block -->
 
-      {{ partial "docs/inject/content-before" . }}
-      {{ block "main" . }}
-      <!-- Page Content -->
-      {{end}}
-      {{ partial "docs/inject/content-after" . }}
+        <label for="menu-control" class="hidden book-menu-overlay"></label>
 
-      {{ template "comments" . }} <!-- Comments block -->
-
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
-
-      <footer class="footer">
-        {{ block "footer" . }}
-        <!-- Footer under page content -->
-        {{ end }}
-        {{ partial "docs/inject/footer" . }}
-      </footer>
+        <footer class="footer">
+            {{ block "footer" . }}
+            <!-- Footer under page content -->
+            {{ end }}
+            {{ partial "docs/inject/footer" . }}
+        </footer>
     </div>
 
     {{ block "toc" . }}
-        <!-- Table of Contents -->
+    <!-- Table of Contents -->
     {{end }}
 </main>
 {{ partial "after_main" . }}

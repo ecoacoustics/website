@@ -42,7 +42,7 @@
   authors:
     - familyNames: Towsey
       givenNames: Michael
-      orcid:
+      orcid: 0000-0002-8246-7151
     - familyNames: Truskinger
       givenNames: Anthony
       orcid: 0000-0003-1110-1483
@@ -52,27 +52,16 @@
   license: Apache-2.0
 
 - title: Boobook recognizer
-  description:
+  description: developed in partnership with NSW Department of Primary industries
 
   targets:
     - name: Boobook Owl
-      taxonomic: Ninox Boobook
+      taxonomic: Ninox boobook
       variants:
   datasets:
     training:
-      summary:
-      location:
-      url:
-      performance:
-        # or event
-        criteria: segment
-        tp: 47
-        fp: 34
-        tn: 267
-        fn: 12
-    test:
-      summary:
-      location:
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
       url:
       performance:
         # or event
@@ -81,68 +70,538 @@
         fp:
         tn:
         fn:
+    test (segments):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: segment
+        tp: 47
+        fp: 34
+        tn: 267
+        fn: 12
+    test (events):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: events
+        tp: 220
+        fp: 113
+        tn: 0
+        fn: 227
 
-  repository:
+  repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Towsey.NinoxBoobook.yml
   documentation:
-  organization:
+  organization: QUT Ecoacoustics
   # https://citation-file-format.github.io/
   # cff-version: 1.2.0
   message: "If you use this software, please cite it as below."
   authors:
     - familyNames: Towsey
       givenNames: Michael
-      orcid:
+      orcid: 0000-0002-8246-7151
     - familyNames: Truskinger
       givenNames: Anthony
       orcid: 0000-0003-1110-1483
     - familyNames: Thompson
       givenNames: Kristen
       orcid:
-  version:
+  version: 1.0
   doi:
   dateReleased: 2021-03-05
-  license:
+  license: Apache-2.0
 
+- title: Sugar glider recognizer
+  description: developed in partnership with NSW Department of Primary industries
+  targets:
+    - name: Sugar glider
+      taxonomic: Petaurus breviceps
+      variants:
+  datasets:
+    training:
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria:
+        tp:
+        fp:
+        tn:
+        fn:
+    test (segment):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: segment
+        tp: 23
+        fp: 98
+        tn: 239
+        fn: 0
+    test (events):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: events
+        tp: 336
+        fp: 164
+        tn: 0
+        fn: 3
 
-- targets:
-    - name: Grey shrikethrush
-      taxonomic: Colluricincla harmonica
-      variants: ["alarm", "inhale"]
-  performance:
-    accuracy: 98%
-    population: 30
-  repository: https://github.com/QutEcoacoustics/audio-analysis/
-  documentation: https://ap.qut.ecoacoustics.info/
+  repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.PetaurusBreviceps.yml
+  documentation:
   organization: QUT Ecoacoustics
-  license: MIT
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
   message: "If you use this software, please cite it as below."
   authors:
-    - familyNames: D. A. Scarpelli
-      givenNames: Marina
-  title: "Grey strike thrush recognizer"
-  version: 1
+    - familyNames: Towsey
+      givenNames: Michael
+      orcid: 0000-0002-8246-7151
+    - familyNames: Truskinger
+      givenNames: Anthony
+      orcid: 0000-0003-1110-1483
+    - familyNames: Thompson
+      givenNames: Kristen
+      orcid:
+  version: 1.0
   doi:
-  dateReleased: 2021-09-11
+  dateReleased: 2021-03-17
+  license: Apache-2.0
 
-- title: "Grey strike thrush recognizer"
-  description: |
-    shrike 2.0
+- title: Brown treecreeper recognizer
+  description: developed in partnership with NSW Department of Primary industries
   targets:
-    - name: Grey shrikethrush
-      taxonomic: Colluricincla harmonica
-      calls: ["grunt", "inhale"]
-  performance:
-    accuracy: 98%
-    population: 30
-  repository: https://github.com/QutEcoacoustics/audio-analysis/
-  documentation: https://ap.qut.ecoacoustics.info/
-  organization: QUT Ecoacoustics
-  license: MIT
-  message: "shrike."
-  authors:
-    - familyNames: Scarpelli
-      givenNames: Marina
+    - name: Brown treecreeper
+      taxonomic: Climacteris picumnus
+      variants:
+  datasets:
+    training:
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria:
+        tp:
+        fp:
+        tn:
+        fn:
+    test (segment):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: segment
+        tp: 127
+        fp: 229
+        tn: 4
+        fn: 0
+    test (events):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: events
+        tp: 1171
+        fp: 3007
+        tn: 0
+        fn: 904
 
-  version: 1
+  repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.ClimacterisPicumnus.yml
+  documentation:
+  organization: QUT Ecoacoustics
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: Towsey
+      givenNames: Michael
+      orcid: 0000-0002-8246-7151
+    - familyNames: Truskinger
+      givenNames: Anthony
+      orcid: 0000-0003-1110-1483
+    - familyNames: Thompson
+      givenNames: Kristen
+      orcid:
+  version: 1.0
   doi:
-  dateReleased: 2021-08-11
+  dateReleased: 2021-03-05
+  license: Apache-2.0
+
+- title: Barking owl recognizer
+  description: developed in partnership with NSW Department of Primary industries
+  targets:
+    - name: Barking owl
+      taxonomic: Ninox connivens
+      variants:
+  datasets:
+    training:
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria:
+        tp:
+        fp:
+        tn:
+        fn:
+    test (segment):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: segment
+        tp: 32
+        fp: 137
+        tn: 189
+        fn: 2
+    test (events):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: events
+        tp: 177
+        fp: 1050
+        tn: 0
+        fn: 77
+
+  repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.NinoxConnivens.yml
+  documentation:
+  organization: QUT Ecoacoustics
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: Towsey
+      givenNames: Michael
+      orcid: 0000-0002-8246-7151
+    - familyNames: Truskinger
+      givenNames: Anthony
+      orcid: 0000-0003-1110-1483
+    - familyNames: Thompson
+      givenNames: Kristen
+      orcid:
+  version: 1.0
+  doi:
+  dateReleased: 2021-03-05
+  license: Apache-2.0
+
+- title: Yellow bellied glider recognizer
+  description: developed in partnership with NSW Department of Primary industries
+  targets:
+    - name: Yellow bellied glider
+      taxonomic: Petaurus australis
+      variants:
+  datasets:
+    training:
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria:
+        tp:
+        fp:
+        tn:
+        fn:
+    test (segment):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: segment
+        tp: 4
+        fp: 6
+        tn: 333
+        fn: 17
+    test (events):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: events
+        tp: 5
+        fp: 7
+        tn: 0
+        fn: 23
+
+  repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.PetaurusAustralis.yml
+  documentation:
+  organization: QUT Ecoacoustics
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: Towsey
+      givenNames: Michael
+      orcid: 0000-0002-8246-7151
+    - familyNames: Truskinger
+      givenNames: Anthony
+      orcid: 0000-0003-1110-1483
+    - familyNames: Thompson
+      givenNames: Kristen
+      orcid:
+  version: 1.0
+  doi:
+  dateReleased: 2021-03-17
+  license: Apache-2.0
+
+- title: Flying fox recognizer
+  description: developed in partnership with NSW Department of Primary industries
+  targets:
+    - name: Flying fox
+      taxonomic: Pteropus sp.
+      variants:
+  datasets:
+    training:
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria:
+        tp:
+        fp:
+        tn:
+        fn:
+    test (segment):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: segment
+        tp: 121
+        fp: 166
+        tn: 67
+        fn: 5
+    test (events):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: events
+        tp: 213
+        fp: 1079
+        tn: 0
+        fn: 316
+
+  repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Towsey.PteropusSpecies.yml
+  organization: QUT Ecoacoustics
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: Towsey
+      givenNames: Michael
+      orcid: 0000-0002-8246-7151
+    - familyNames: Truskinger
+      givenNames: Anthony
+      orcid: 0000-0003-1110-1483
+    - familyNames: Thompson
+      givenNames: Kristen
+      orcid:
+  version: 1.0
+  doi:
+  dateReleased: 2021-03-17
+  license: Apache-2.0
+
+- title: Sooty owl recognizer
+  description: developed in partnership with NSW Department of Primary industries
+  targets:
+    - name: Sooty owl
+      taxonomic: Tyto tenebricosa
+      variants:
+  datasets:
+    training:
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria:
+        tp:
+        fp:
+        tn:
+        fn:
+    test (segment):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: segment
+        tp: 5
+        fp: 269
+        tn: 238
+        fn: 5
+    test (events):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: events
+        tp: 3
+        fp: 111
+        tn: 0
+        fn: 7
+
+  repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.TytoTenebricosa.yml
+  organization: QUT Ecoacoustics
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: Towsey
+      givenNames: Michael
+      orcid: 0000-0002-8246-7151
+    - familyNames: Truskinger
+      givenNames: Anthony
+      orcid: 0000-0003-1110-1483
+    - familyNames: Thompson
+      givenNames: Kristen
+      orcid:
+  version: 1.0
+  doi:
+  dateReleased: 2021-03-17
+  license: Apache-2.0
+
+- title: Masked owl recognizer
+  description: developed in partnership with NSW Department of Primary industries
+  targets:
+    - name: Masked owl
+      taxonomic: Tyto novaehollandiae
+      variants:
+  datasets:
+    training:
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria:
+        tp:
+        fp:
+        tn:
+        fn:
+    test (segment):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: segment
+        tp: 41
+        fp: 226
+        tn: 91
+        fn: 2
+    test (events):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: events
+        tp: 60
+        fp: 518
+        tn: 0
+        fn: 46
+
+  repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.TytoNovaehollandiae.yml
+  organization: QUT Ecoacoustics
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: Towsey
+      givenNames: Michael
+      orcid: 0000-0002-8246-7151
+    - familyNames: Truskinger
+      givenNames: Anthony
+      orcid: 0000-0003-1110-1483
+    - familyNames: Thompson
+      givenNames: Kristen
+      orcid:
+  version: 1.0
+  doi:
+  dateReleased: 2021-03-17
+  license: Apache-2.0
+
+- title: Squirrel glider recognizer
+  description: developed in partnership with NSW Department of Primary industries
+  targets:
+    - name: Squirrel glider
+      taxonomic:  Petaurus norfolcensis
+      variants:
+  datasets:
+    training:
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria:
+        tp:
+        fp:
+        tn:
+        fn:
+    test (segment):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: segment
+        tp: 26
+        fp: 232
+        tn: 97
+        fn: 5
+    test (events):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: events
+        tp: 109
+        fp: 1103
+        tn: 0
+        fn: 99
+
+  repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.PetaurusNorfolcensis.yml
+  organization: QUT Ecoacoustics
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: Towsey
+      givenNames: Michael
+      orcid: 0000-0002-8246-7151
+    - familyNames: Truskinger
+      givenNames: Anthony
+      orcid: 0000-0003-1110-1483
+    - familyNames: Thompson
+      givenNames: Kristen
+      orcid:
+  version: 1.0
+  doi:
+  dateReleased: 2020-12-16
+  license: Apache-2.0

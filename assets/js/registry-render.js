@@ -33,10 +33,15 @@ const formatGitHubLink = (url) => {
     }
     let trimmed = content.replace("github.com/", "");
     let parts = trimmed.split("/").compact();
-    // keep the org & repo & file name
+    // keep the org & repo or the file name
     let short = [parts[0], "/", parts[1]];
+
     if (parts.length > 2) {
-        short.push("/…/", parts.slice(-1));
+        let last = parts.slice(-1)[0];
+        console.log(last, last.includes("."));
+        if (last.includes(".")) {
+            short = last;
+        }
     }
     content = html`<sl-icon class="textColor" name="github"></sl-icon>
         ${short}`;

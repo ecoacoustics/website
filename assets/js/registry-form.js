@@ -191,7 +191,7 @@ async function Submit(data) {
     console.log("submit", data);
     var body = new FormData();
     body.append("subject", "New registry contribution");
-    body.append("form-name", "registry-contribution-form");
+    body.append("form-name", "RegistryContribution");
     body.append("submission", JSON.stringify(data));
     fetch("/", {
         method: "POST",

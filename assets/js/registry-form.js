@@ -192,6 +192,7 @@ async function Submit(data) {
     var body = new FormData();
     body.append("subject", "New registry contribution");
     body.append("form-name", "RegistryContribution");
+    body.append("g-recaptcha-response", data["g-recaptcha-response"]);
     body.append("submission", JSON.stringify(data));
     fetch("/", {
         method: "POST",

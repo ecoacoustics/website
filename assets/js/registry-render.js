@@ -1,20 +1,13 @@
 import * as params from "@params";
-// https://github.com/preactjs/preact/issues/1961
-//import "https://cdn.skypack.dev/preact/debug";
-import { h, Component, render } from "https://cdn.skypack.dev/preact";
 import {
-    useState,
+    render,
     useEffect,
+    useState,
     useCallback,
     useReducer,
     useMemo,
-} from "https://cdn.skypack.dev/preact/hooks";
-
-import htm from "https://cdn.skypack.dev/htm";
-
-// Initialize htm with Preact
-const html = htm.bind(h);
-
+    html,
+} from "./preact-common";
 // ---
 
 Array.prototype.insertBetween = function (insert) {
@@ -38,7 +31,7 @@ const formatGitHubLink = (url) => {
 
     if (parts.length > 2) {
         let last = parts.slice(-1)[0];
-        console.log(last, last.includes("."));
+        //console.log(last, last.includes("."));
         if (last.includes(".")) {
             short = last;
         }
@@ -366,7 +359,7 @@ function App() {
         ${isLoading && html`<sl-progress-bar indeterminate></sl-progress-bar>`}
         ${error &&
         html`<div>There was a problem loading the registry data.</div>`}
-        ${!error && html` <${List} entries=${filteredData} /> `}
+        ${!error && !isLoading && html` <${List} entries=${filteredData} /> `}
     `;
 }
 

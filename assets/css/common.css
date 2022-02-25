@@ -30,7 +30,7 @@ body > footer {
     flex-grow: 0;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -39,7 +39,7 @@ h6 {
     font-weight: 500;
     font-size: 250%;
     font-family: var(--oe-fancy-font);
-}
+} */
 
 .navbar {
     padding-left: var(--oe-padding);
@@ -115,4 +115,8 @@ footer {
 
 .quiet {
     color: var(--oe-font-color-toned);
+}
+
+ol > li {
+    margin-bottom: 0.5em;
 }

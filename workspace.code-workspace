@@ -12,6 +12,16 @@
             },
             "MD033": false
         },
+        "json.schemas": [
+            {
+                "fileMatch": ["data/recognizer_registry/**/*.json"],
+                "url": "file:static/registry_schema.json"
+            }
+        ],
+        "yaml.schemaStore.enable": true,
+        "yaml.schemas": {
+            "static/registry_schema.json": "data/recognizer_registry/**/*.yml"
+        },
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "prettier.enable": true,
         "prettier.tabWidth": 2,

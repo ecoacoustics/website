@@ -5,7 +5,9 @@ layout: resources
 BookToc: false
 ---
 
-Fill in the following form to list your recognizer in the registry.
+You can make a contribution directly by adding a data file in the [recognizer_registry](https://github.com/ecoacoustics/website/tree/main/data/recognizer_registry) folder.
+
+Alternately, fill in the following form to list your recognizer in the registry.
 
 After a short review process it will be added to the registry.
 

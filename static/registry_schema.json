@@ -1,0 +1,244 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "open.ecoacoustics.info/registry_schema.json",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/RecognizerInfo"
+    },
+    "definitions": {
+        "RecognizerInfo": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "authors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Author"
+                    },
+                    "minItems": 1
+                },
+                "datasets": {
+                    "$ref": "#/definitions/Datasets"
+                },
+                "dateReleased": {
+                    "type": ["null", "string"],
+                    "format": "date"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "documentation": {
+                    "type": ["null", "string"],
+                    "format": "uri",
+                    "qt-uri-protocols": ["https"]
+                },
+                "doi": {
+                    "type": ["null", "string"],
+                    "pattern": "(10[.][0-9]{4,}(?:[.][0-9]+)*/(?:(?![%\"#? ])\\S)+)"
+                },
+                "license": {
+                    "$ref": "#/definitions/License"
+                },
+                "message": {
+                    "$ref": "#/definitions/Message"
+                },
+                "organization": {
+                    "$ref": "#/definitions/Organization"
+                },
+                "repository": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "targets": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Target"
+                    }
+                },
+                "title": {
+                    "type": "string"
+                },
+                "version": {
+                    "$ref": "#/definitions/Version"
+                }
+            },
+            "required": [
+                "authors",
+                "datasets",
+                "dateReleased",
+                "description",
+                "doi",
+                "license",
+                "message",
+                "organization",
+                "repository",
+                "targets",
+                "title",
+                "version"
+            ],
+            "title": "Recognizer information"
+        },
+        "Author": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "familyNames": {
+                    "$ref": "#/definitions/FamilyNames"
+                },
+                "givenNames": {
+                    "$ref": "#/definitions/GivenNames"
+                },
+                "orcid": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/Orcid"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                }
+            },
+            "required": ["familyNames", "givenNames", "orcid"],
+            "title": "Author"
+        },
+        "Datasets": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "#/definitions/Dataset"
+            },
+            "title": "Datasets"
+        },
+        "Dataset": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "location": {
+                    "$ref": "#/definitions/Location"
+                },
+                "performance": {
+                    "$ref": "#/definitions/Performance"
+                },
+                "summary": {
+                    "$ref": "#/definitions/Summary"
+                },
+                "url": {
+                    "type": ["null", "string"],
+                    "format": "uri"
+                }
+            },
+            "required": ["location", "performance", "summary", "url"],
+            "title": "A single dataset"
+        },
+        "Performance": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "criteria": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/Criteria"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "fn": {
+                    "type": ["null", "integer"]
+                },
+                "fp": {
+                    "type": ["null", "integer"]
+                },
+                "tn": {
+                    "type": ["null", "integer"]
+                },
+                "tp": {
+                    "type": ["null", "integer"]
+                }
+            },
+            "required": ["criteria", "fn", "fp", "tn", "tp"],
+            "title": "Performance"
+        },
+        "Target": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "binomial": {
+                    "type": ["null", "string"]
+                },
+                "name": {
+                    "type": "string"
+                },
+                "variants": {
+                    "anyOf": [
+                        {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                }
+            },
+            "required": ["binomial", "name"],
+            "title": "Target"
+        },
+        "Version": {
+            "type": "string",
+            "pattern": "(?:(?<=^v?|\\sv?)(?:(?:0|[1-9]\\d{0,9})\\.){2}(?:0|[1-9]\\d{0,9})(?:-(?:0|[1-9]\\d*?|[\\da-z-]*?[a-z-][\\da-z-]*?){0,100}(?:\\.(?:0|[1-9]\\d*?|[\\da-z-]*?[a-z-][\\da-z-]*?))*?){0,100}(?:\\+[\\da-z-]+?(?:\\.[\\da-z-]+?)*?){0,100}\\b){1,200}",
+            "title": "Version"
+        },
+        "FamilyNames": {
+            "type": "string",
+            "enum": ["Towsey", "Truskinger", "Thompson"],
+            "title": "FamilyNames"
+        },
+        "GivenNames": {
+            "type": "string",
+            "enum": ["Michael", "Anthony", "Kristen"],
+            "title": "GivenNames"
+        },
+        "Orcid": {
+            "type": "string",
+            "pattern": "^([0-9]{4})?(-)?([0-9]{4})?(-)?([0-9]{4})?(-)?([0-9]{4})$",
+            "title": "The author's ORCID"
+        },
+        "Location": {
+            "type": ["null", "string"],
+            "enum": [
+                "Samford Ecological Research Facility, Brisbane, Australia",
+                "NSW, Australia"
+            ],
+            "title": "Location"
+        },
+        "Criteria": {
+            "type": ["null", "string"],
+            "enum": ["segment", "events"],
+            "title": "Criteria"
+        },
+        "Summary": {
+            "type": ["null", "string"],
+            "enum": ["30-second segments, manually annotated"],
+            "title": "Summary"
+        },
+        "License": {
+            "type": ["null", "string"],
+            "examples": ["Apache-2.0", "MIT"],
+            "title": "License"
+        },
+        "Message": {
+            "type": "string",
+            "examples": ["If you use this software, please cite it as below."],
+            "title": "Message"
+        },
+        "Organization": {
+            "type": "string",
+            "examples": ["QUT Ecoacoustics"],
+            "title": "Organization"
+        }
+    }
+}

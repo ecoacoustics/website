@@ -91,3 +91,36 @@
         }
     }
 }
+
+#registryFormContainer {
+    & .addRemove {
+        & .addRemoveHeader {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+        }
+        & .variableList {
+            display: flex;
+            gap: var(--oe-padding-small);
+            flex-wrap: wrap;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                gap: var(--oe-padding-small);
+            }
+        }
+    }
+
+    li.datasets {
+        flex-basis: calc(50% - 2em);
+    }
+
+    li.targets {
+        flex-basis: calc(33% - 2em);
+    }
+
+    h4 {
+        margin: 0em 0;
+    }
+}

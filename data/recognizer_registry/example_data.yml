@@ -1,8 +1,8 @@
-- title: Koala recognizer
+- title: Koala recognize(demo data)
   description: |
-    this recogniser was done to find koalas all over their distribution and develop species distribution
+    this recognizer was done to find koalas all over their distribution and develop species distribution
     models for past, current and future climate and deforestation for this species.
-    Therefore we wanted to maximise the true positive rates, to find as many koala's calls as possible.
+    Therefore we wanted to maximize the true positive rates, to find as many koala's calls as possible.
   targets:
     - name: Koala
       binomial: Phascolarctos cinereus

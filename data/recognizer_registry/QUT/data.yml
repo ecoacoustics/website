@@ -56,7 +56,7 @@
     - familyNames: Thompson
       givenNames: Kristen
       orcid:
-  version: 1.0
+  version: 1.0.0
   doi:
   dateReleased: 2021-03-05
   license: Apache-2.0
@@ -118,7 +118,7 @@
     - familyNames: Thompson
       givenNames: Kristen
       orcid:
-  version: 1.0
+  version: 1.0.0
   doi:
   dateReleased: 2021-03-17
   license: Apache-2.0
@@ -180,7 +180,7 @@
     - familyNames: Thompson
       givenNames: Kristen
       orcid:
-  version: 1.0
+  version: 1.0.0
   doi:
   dateReleased: 2021-03-05
   license: Apache-2.0
@@ -242,7 +242,7 @@
     - familyNames: Thompson
       givenNames: Kristen
       orcid:
-  version: 1.0
+  version: 1.0.0
   doi:
   dateReleased: 2021-03-05
   license: Apache-2.0
@@ -304,7 +304,7 @@
     - familyNames: Thompson
       givenNames: Kristen
       orcid:
-  version: 1.0
+  version: 1.0.0
   doi:
   dateReleased: 2021-03-17
   license: Apache-2.0
@@ -365,7 +365,7 @@
     - familyNames: Thompson
       givenNames: Kristen
       orcid:
-  version: 1.0
+  version: 1.0.0
   doi:
   dateReleased: 2021-03-17
   license: Apache-2.0
@@ -426,7 +426,7 @@
     - familyNames: Thompson
       givenNames: Kristen
       orcid:
-  version: 1.0
+  version: 1.0.0
   doi:
   dateReleased: 2021-03-17
   license: Apache-2.0
@@ -487,7 +487,7 @@
     - familyNames: Thompson
       givenNames: Kristen
       orcid:
-  version: 1.0
+  version: 1.0.0
   doi:
   dateReleased: 2021-03-17
   license: Apache-2.0
@@ -548,7 +548,7 @@
     - familyNames: Thompson
       givenNames: Kristen
       orcid:
-  version: 1.0
+  version: 1.0.0
   doi:
   dateReleased: 2020-12-16
   license: Apache-2.0

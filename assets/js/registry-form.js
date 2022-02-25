@@ -192,7 +192,7 @@ async function Submit(data) {
     var body = new FormData();
     body.append("subject", "New registry contribution");
     body.append("form-name", "registry-contribution-form");
-    body.append("body", JSON.stringify(data));
+    body.append("submission", JSON.stringify(data));
     fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -210,10 +210,13 @@ function RegistryForm() {
         submit.toggleAttribute("disabled", true);
         const data = serialize(target);
 
-        Submit(data).then((_) => {
-            submit.toggleAttribute("disabled", false);
-            setSuccess(true);
-        });
+        Submit(data)
+            .then((_) => {
+                submit.toggleAttribute("disabled", false);
+                setSuccess(true);
+            })
+            .then(() => console.log("Form successfully submitted"))
+            .catch((error) => alert(error));
     };
 
     form.addEventListener("submit", formSubmit);

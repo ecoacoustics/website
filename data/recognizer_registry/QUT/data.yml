@@ -552,3 +552,248 @@
   doi:
   dateReleased: 2020-12-16
   license: Apache-2.0
+  
+ - title: Powerful owl recognizer
+  description: Developed in partnership with NSW Department of Primary industries
+  targets:
+    - name: Powerful owl
+      binomial: Ninox Strenua
+      variants:
+  datasets:
+    training:
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria:
+        tp:
+        fp:
+        tn:
+        fn:
+    test (segment):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: segment
+        tp: 32
+        fp: 0
+        tn: 276
+        fn: 58
+    test (events):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: events
+        tp: 16
+        fp: 0
+        tn: 0
+        fn: 160
+
+  repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Towsey.NinoxStrenua.yml
+  organization: QUT Ecoacoustics
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: Towsey
+      givenNames: Michael
+      orcid: 0000-0002-8246-7151
+    - familyNames: Truskinger
+      givenNames: Anthony
+      orcid: 0000-0003-1110-1483
+    - familyNames: Thompson
+      givenNames: Kristen
+      orcid:
+  version: 1.0.0
+  doi:
+  dateReleased: 2020-12-16
+  license: Apache-2.0
+  
+ - title: Glossy black cokcatoo
+  description: Developed in partnership with NSW Department of Primary industries
+  targets:
+    - name: Glossy black cockatoo
+      binomial: Calyptorhynchus lathami
+      variants:
+  datasets:
+    training:
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria:
+        tp:
+        fp:
+        tn:
+        fn:
+    test (segment):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: segment
+        tp: 23
+        fp: 192
+        tn: 139
+        fn: 6
+    test (events):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: events
+        tp: 32
+        fp: 953
+        tn: 0
+        fn: 98
+
+  repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.CalyptorhynchusLathami.yml
+  organization: QUT Ecoacoustics
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: Towsey
+      givenNames: Michael
+      orcid: 0000-0002-8246-7151
+    - familyNames: Truskinger
+      givenNames: Anthony
+      orcid: 0000-0003-1110-1483
+    - familyNames: Thompson
+      givenNames: Kristen
+      orcid:
+  version: 1.0.0
+  doi:
+  dateReleased: 2020-12-16
+  license: Apache-2.0
+
+
+- title: Rufous scrub bird recognizer
+  description: Developed in partnership with NSW Department of Primary industries
+  targets:
+    - name: Rufous scrub bird
+      binomial: Atrichornis rufescens
+      variants:
+  datasets:
+    training:
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria:
+        tp:
+        fp:
+        tn:
+        fn:
+    test (segment):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: segment
+        tp: 27
+        fp: 271
+        tn: 62
+        fn: 0
+    test (events):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: events
+        tp: 4
+        fp: 1098
+        tn: 0
+        fn: 39
+
+  repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.AtrichornisRufescens.yml
+  organization: QUT Ecoacoustics
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: Towsey
+      givenNames: Michael
+      orcid: 0000-0002-8246-7151
+    - familyNames: Truskinger
+      givenNames: Anthony
+      orcid: 0000-0003-1110-1483
+    - familyNames: Thompson
+      givenNames: Kristen
+      orcid:
+  version: 1.0.0
+  doi:
+  dateReleased: 2020-12-16
+  license: Apache-2.0
+  
+  - title: Bell miner recognizer
+  description: Developed in partnership with NSW Department of Primary industries
+  targets:
+    - name: Bell miner
+      binomial: Manorina melanophrys
+      variants:
+  datasets:
+    training:
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria:
+        tp:
+        fp:
+        tn:
+        fn:
+    test (segment):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: segment
+        tp: 118
+        fp: 11
+        tn: 90
+        fn: 20
+    test (events):
+      summary: 30-second segments, manually annotated
+      location: NSW, Australia
+      url:
+      performance:
+        # or event
+        criteria: events
+        tp: 75
+        fp: 20
+        tn: 0
+        fn: 3616
+
+  repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.ManorinaMelanophrys.yml
+  organization: QUT Ecoacoustics
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: Towsey
+      givenNames: Michael
+      orcid: 0000-0002-8246-7151
+    - familyNames: Truskinger
+      givenNames: Anthony
+      orcid: 0000-0003-1110-1483
+    - familyNames: Thompson
+      givenNames: Kristen
+      orcid:
+  version: 1.0.0
+  doi:
+  dateReleased: 2020-12-16
+  license: Apache-2.0

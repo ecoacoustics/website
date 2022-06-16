@@ -1,0 +1,28 @@
+#!/bin/bash -l
+#PBS -N MyAnalysis
+#PBS -l ncpus=1
+#PBS -l mem=2GB
+#PBS -l walltime=00:05:00
+#PBS -j oe
+#PBS -m abe
+#PBS -M phil.eichinski@qut.edu.au
+#PBS -J 0-44
+
+
+# cd to dir where directory was created
+cd $PBS_O_WORKDIR
+echo "working directory is $PBS_O_WORKDIR"
+
+# the environment variable $PBS_ARRAY_INDEX
+# resolves to what ever the current job index
+# in the array is
+echo "Array index is $PBS_ARRAY_INDEX"
+
+# this the path to the csv (relative to the directory on HPC storage where you launch the batch job)
+export data_file=./list_of_audio_files.csv
+
+# this extracts the row of the csv that corresponds to the current PBS job within the batch
+line=$(sed -n "$(($PBS_ARRAY_INDEX + 1))p" "$data_file")
+
+echo "processing row:"
+echo  $line

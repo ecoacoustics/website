@@ -5,7 +5,7 @@
 #PBS -l walltime=00:05:00
 #PBS -j oe
 #PBS -m abe
-#PBS -M phil.eichinski@qut.edu.au
+#PBS -M j.bloggs@myinstitution.edu.au
 #PBS -J 0-44
 
 

@@ -8,14 +8,7 @@ If you have a lot of analysis to do, your institute's high performance computing
 
 PBS jobs are used to run your code on HPC.  The code is not run immediately, but queued to run when resources open up. The time in the queue depends on how busy HPC is and how much time your job will take.
 
-Here are some guides available online
-
-[cqu](https://www.cqu.edu.au/eresearch/high-performance-computing/hpc-user-guides-and-faqs/pbs-commands)
-
-TODO: add more guides
-
-
-PBS **batch jobs** are useful when you want to run your analysis on many files independently. That is, the results from one file are not used for the analysis of another and they can be done in any order.  This means that they each can be sent to a different computer and run in parallel at the same time. An example of this might be running a species recognizer over thousands of audio files.
+PBS **batch jobs** (also called array jobs) are useful when you want to run your analysis on many files independently. That is, the results from one file are not used for the analysis of another and they can be done in any order.  This means that they each can be sent to a different computer and run in parallel at the same time. An example of this might be running a species recognizer over thousands of audio files.
 
 To run a batch job you need to:
 
@@ -24,8 +17,13 @@ To run a batch job you need to:
 3) Set up the environment on HPC, such as making sure python or R dependencies are available
 4) run the PBS commandline command to queue the batch job
 
-In this guide we first show how to complete these steps with a basic, minimal batch script. Then, we extend the script to show the basics of common tasks like running python, R, and subbatching. 
+In this guide we first show how to complete these steps with a basic, minimal batch script. Then, we extend the script to show the basics of common tasks like running python, R, and sub-batching. 
 
+This brief guide does not cover everything about PBS. For more extensive information, try the following guides:
+
+[cqu](https://www.cqu.edu.au/eresearch/high-performance-computing/hpc-user-guides-and-faqs/pbs-commands)
+[uts](https://hpc.research.uts.edu.au/pbs/array_jobs/)
+[jcu](https://secure.jcu.edu.au/confluence/display/Public/HPC+PBSPro+script+files)
 
 # PBS batch job script
 
@@ -47,8 +45,8 @@ First we will just show a bare minimum empty example. This will simply output th
 #PBS -l walltime=00:11:00
 #PBS -j oe
 #PBS -m abe
-#PBS -M my.email.address@university.edu.au
-#PBS -J 0-987
+#PBS -M j.bloggs@myuniversity.edu.au
+#PBS -J 0-46
 
 
 # cd to dir where directory was created
@@ -83,10 +81,10 @@ The first few lines, prefixed with `#PBS` are configuration for the script.
 - `#PBS -l ncpus=8` The number of CPUs. The more cpus you allocate, the longer it might take to be scheduled because it has to wait for available resources. 
 - `#PBS -l mem=8GB` The amount of RAM needed. Again, more ram might mean a longer wait
 - `#PBS -l walltime=00:11:00` The amount of time you estimate each job will take to process at most. The scheduler will try to fit your jobs in based on this, so the higher the walltime, the longer it might take to get schedule. If a job takes longer than this, it will terminate early. This example we specify 11 minutes. 
-- `#PBS -j oe` This merges standard error to standard output. TODO: explain this
-- `#PBS -m abe` This defines when to send you an email. Because you don't have control and don't know when the job will start or has finished executing, or had a problem and aborted, it is useful to receive this information by email. In this case the options specify that mail should be sent when the when the job is aborted by PBS (a), when the job begins execution (b) and when the job terminates (c).
-- `#PBS -M my.email.address@university.edu.au` This is where to send the notification emails.
-- `#PBS -J 0-987` The indexes that will be executed. In this case, it will run this script with the `$PBS_ARRAY_INDEX` environment variable set to the integers 0 to 987
+- `#PBS -j oe` This merges standard error and standard output into the same output file.
+- `#PBS -m abe` This defines when to send you an email. Because you can't control and don't know when the job will start or will finish executing, or had a problem and aborted, it is useful to receive this information by email. Here we have specified that mail should be sent when the when the job is aborted by PBS (a), when the job begins execution (b) and when the job terminates (c).
+- `#PBS -M j.blogs@myinstitute.edu.au` This is where to send the notification emails.
+- `#PBS -J 0-46` The indexes that will be executed. In this case, it will run this script with the `$PBS_ARRAY_INDEX` environment variable set to the integers 0 to 46
 
 ### Environment Variables
 
@@ -226,7 +224,7 @@ Below is an updated version of the pbs bash script, this time loading python and
 #PBS -l walltime=00:05:00
 #PBS -j oe
 #PBS -m abe
-#PBS -M phil.eichinski@qut.edu.au
+#PBS -M j.bloggs@myuniversity.edu.au
 #PBS -J 0-44
 
 
@@ -253,13 +251,16 @@ You should see the output of this this pbs batch script as well as your python s
 
 # Sub Batching
 
-So far we have been processing one audio file (row of our csv) per pbs batch job array index. Your institution may have imposed a limit on how many array indexes you can submit. You should check with your institution's HPC documentation to find what this limit is.
+So far we have been processing one audio file (row of our csv) per pbs batch job array index. Your institution may have imposed a limit on how many array indexes you can submit with the `-J` option. You should check with your institution's HPC documentation to find what this limit is.
 
-If you have more files to process than this limit, then you will need to process multiple files per array index. The following example batch script shows how to accomplish this.
+If you have more files to process than this limit, then you will need to process multiple files per array index. The following example batch script shows one method to accomplish this.
 
-In this example we have a csv with 123 rows and a limit of 50 (in reality the limit will be more like 2000, but let's keep things small for the demo)
+In this example imagine we have a csv with 136 rows and a limit of 50 (in reality the limit will be more like 2000, but let's keep things small for this demo)
 
-We need to calculate the "set size", i.e. the number of rows per job: `set_size = ceiling(num_rows / limit) = 3`.
+We need to calculate the `set_size`, i.e. the number of rows per job, with `ceiling(num_rows / limit)` which in this case equals 3.  We then use the `set_size` to calculate the number of indexes to submit with `ceiling(num_rows / set_size)` which in this case equals 46. 
+
+The pbs batch script below uses these values to calculate the which rows to process for each array index. It then has a loop that iterates over these rows one at a time. 
+Note that this may increase the walltime you need to allocate to the job. 
 
 ```bash
 #!/bin/bash -l
@@ -269,8 +270,8 @@ We need to calculate the "set size", i.e. the number of rows per job: `set_size 
 #PBS -l walltime=00:05:00
 #PBS -j oe
 #PBS -m abe
-#PBS -M phil.eichinski@qut.edu.au
-#PBS -J 0-50
+#PBS -M j.bloggs@myuniversity.edu.au
+#PBS -J 0-46
 
 
 cd $PBS_O_WORKDIR
@@ -289,9 +290,11 @@ source activate myenv
 # number of rows per job
 set_size=3
 # total number of rows
-number_records=123
+number_records=136
 let "start_row = PBS_ARRAY_INDEX * $set_size"
 let "end_row = $start_row + $set_size - 1"
+# if the set size does not divide exactly into the num_rows, for the last array index we need to 
+# make sure we don't go past the last row. 
 let "end_row = ($end_row > $number_records - 1) ? $number_records - 1 : $end_row"
 
 # loop from the start to the end row, calling the python script on each execution

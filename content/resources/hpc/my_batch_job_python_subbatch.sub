@@ -5,11 +5,10 @@
 #PBS -l walltime=00:05:00
 #PBS -j oe
 #PBS -m abe
-#PBS -M phil.eichinski@qut.edu.au
-#PBS -J 0-50
+#PBS -M j.bloggs@myuniversity.edu.au
+#PBS -J 0-46
 
 
-# cd to dir where directory was created
 cd $PBS_O_WORKDIR
 echo "working directory is $PBS_O_WORKDIR"
 echo "Array index is $PBS_ARRAY_INDEX"
@@ -26,17 +25,16 @@ source activate myenv
 # number of rows per job
 set_size=3
 # total number of rows
-number_records=123
+number_records=136
 let "start_row = PBS_ARRAY_INDEX * $set_size"
 let "end_row = $start_row + $set_size - 1"
 let "end_row = ($end_row > $number_records - 1) ? $number_records - 1 : $end_row"
 
-
 # loop from the start to the end row, calling the python script on each execution
-# alternatively, you could code your python script to do the loop,  passing in the start and end rows as arguments
+# alternatively, you could code your python script to do the loop,
+# passing in the start and end rows as arguments
 
 for (( idx = start_row;  idx <= end_row; idx++ )); do
   echo "starting $idx, batch $PBS_ARRAY_INDEX"
   python3 check_files.py -f $data_file -r $PBS_ARRAY_INDEX
 done
-

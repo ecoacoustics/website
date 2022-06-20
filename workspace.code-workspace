@@ -23,10 +23,13 @@
             "static/registry_schema.json": "data/recognizer_registry/**/*.yml"
         },
         "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+        "editor.rulers": [80, 120],
         "prettier.enable": true,
         "prettier.tabWidth": 2,
         "prettier.useTabs": false,
         "prettier.jsxBracketSameLine": true,
+        "prettier.printWidth": 80,
         "editor.tabSize": 2,
         "[html]": {
             "editor.suggest.insertMode": "replace",
@@ -70,7 +73,12 @@
         },
         "peacock.color": "#CB7E30",
         "[markdown]": {
-            "editor.quickSuggestions": true
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.quickSuggestions": {
+                "comments": "on",
+                "strings": "on",
+                "other": "on"
+            }
         },
         "cSpell.words": [
             "behaviour",

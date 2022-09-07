@@ -33,7 +33,7 @@ Then for your first time:
 
 1.  Fork the repository
 1.  Clone your fork
-1.  Run `./setup.ps1` (once only)
+1.  Run `./setup.ps1` (once only) This script installs hugo-extended using chocolately.
 
 Then before each session:
 

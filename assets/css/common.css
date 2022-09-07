@@ -22,6 +22,10 @@ pre,
     background-color: var(--oe-background-color);
 }
 
+.markdown code  {
+    background: var(--oe-inline-code-bg-color);
+}
+
 .markdown table tr:nth-child(2n) {
     background-color: var(--oe-background-color-darker);
 }

@@ -1,6 +1,0 @@
----
-Title: Governance
----
-
-
-## Steering Committee

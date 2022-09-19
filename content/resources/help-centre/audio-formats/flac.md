@@ -3,20 +3,21 @@ title: FLAC
 ---
 
 ## Description
-FLAC stands for Free Lossless Audio Codec, and it is one type of compressed
-audio files that does not loose information. Being able to store audio files in
-a lossless format is really important when ecoacoustics starts to be scale up.
-This means storing those files cheaper but also, transferring them gets easier.
-You can open and listen `.flac` files in most softwares, but to analyse them,
-some tools require for it to be transformed to `.wav` to be able to process it.
+FLAC stands for Free Lossless Audio Codec. This format allows your audio files
+to be compressed to around half the size of a `.wav` file, without losing any
+information (lossless compression). Storing audio files in a lossless format is
+really important when ecoacoustics starts to be scaled up. This means storing
+files is cheaper, and transferring them gets easier.
 
-Most softwares, like [Raven](https://ravensoundsoftware.com/) and
-[Audacity](https://www.audacityteam.org/) can open `.flac` files, however, they
-do not allow you to export them as `.flac`.
+You can open and listen to `.flac` files in most commonly used audio software,
+such as [Raven](https://ravensoundsoftware.com/)[^1] and
+[Audacity](https://www.audacityteam.org).
 [AnalysisPrograms.exe](https://ap.qut.ecoacoustics.info/basics/introduction.html)
 (AP.exe) can run analysis (i.e.: calculate indices and segment) on `.flac`
-files.
+files. However, some analysis tools may not support `.flac`, in which case you
+will be required to convert your files to `.wav`. [See converting help page][see
+compatability table].
 
-## Advantages
-
-## Limitations
+[^1]: Note: Raven can read `.flac` files, but can't export audio files as
+    `.flac`. If you make changes to the audio file in Raven that you wish to
+    save, you can save the file as `.wav`

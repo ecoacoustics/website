@@ -6,7 +6,7 @@ draft: true
 ## Description
 
 `.wav` or `.wave` is the most common audio format passive acoustic sensors
-collect. It is a Waveform Audio file, and that is why it is called `wav`. `.wav`
+collect. It is a Waveform Audio file, and that is why it is called `WAVE`. `.wav`
 is great because it does not apply any type of compression to the file, so we
 can use it in analysis in different types of software without any problems.
 However, not compressing the file comes with a trade-off: these files are

@@ -1,0 +1,31 @@
+- name: Hamish Holewa
+  jobTitle: Deputy Director
+  affiliation: Atlas of Living Australia
+  description: Dynamic and innovative senior executive with specialist expertise within national research infrastructure and information technology fields. Currently employed as Deputy Director of the Atlas of Living Australia, responsibilities are focused on providing and managing the organisations’ strategic direction, team supervision and leadership and engaging with key stakeholders from the government, industry and research. Experience encompasses leading and developing information technology and research enabling national infrastructure for multiple research domains and disciplines, in addition to working closely across all levels of an organisation to instil vision, and implement measures to achieve such vision. Innate ability to develop, execute and oversee strategy and key projects/programs delivering infrastructure, change and/or improvement in order to support organisational goals and objectives.
+  imgUrl: /images/people/hamish-holewa.jpeg
+
+- name: Arve Solland
+  jobTitle: Lead Developer
+  affiliation: EcoCommons
+  description: Arve joined EcoCommons in May 2020 as the Technical Lead and Solutions Architect after spending more than a decade working across a range of national, and international research projects within the eResearch sector as a senior software engineer and analyst.
+  imgUrl: /images/people/arve-solland.jpg
+
+- name: Dr Siddeswara Guru
+  jobTitle: Director Data Science
+  affiliation: TERN
+  description: Siddeswara Guru is the program lead for the Terrestrial Ecosystem Research Network (TERN) Data Services and Analytics Platform. He provides strategic direction by initiating, coordinating, developing and managing data e-infrastructure and analytics projects apart from overseeing the data and information management activities across TERN.
+  imgUrl: /images/people/siddeswara-guru.jpg
+
+- name: Jon Smillie
+  jobTitle: eResearch Data Systems Analyst
+  affiliation: ARDC
+  description: Jon is a technical systems analyst with the ARDC, working across the ARDC’s investments in Platforms and National Data Assets. He has a technical background in eResearch spanning more than 20 years.
+  imgUrl: /images/people/ARDC.png
+  imgSquare: true
+
+- name: Mitchel Haring
+  jobTitle: DevOps Engineer
+  affiliation: Queensland University of Technology (QUT)
+  description: Mitchel Haring is a DevOps Engineer in the QUT eResearch team. He works with researchers and research groups to design, implement and deploy best of breed eResearch solutions. He specialises in automation, Cloud Computing, Kubernetes, security, and tool development.
+  imgUrl: /images/people/QUT.png
+  imgSquare: true

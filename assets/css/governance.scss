@@ -1,0 +1,35 @@
+.profile-img {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+
+    &.circle {
+        border-radius: 50%;
+    }
+}
+
+.person-card {
+    text-align: center;
+    padding: var(--oe-padding-small);
+    min-width: 15em;
+
+    .affiliation,
+    .job-title {
+        display: block;
+    }
+
+    .affiliation {
+        padding-bottom: var(--oe-padding-small);
+    }
+
+    sl-details {
+        font-size: 0.75em;
+    }
+
+    .description {
+        text-align: left;
+    }
+}

@@ -1,0 +1,19 @@
+.circle-profile-img {
+  border-radius: 50%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.person-card {
+    text-align: center;
+    padding: var(--oe-padding-small);
+}
+
+.person-card sl-details {
+   font-size: 15px;
+}
+
+.person-card .description {
+    text-align: left;
+}

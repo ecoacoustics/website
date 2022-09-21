@@ -9,6 +9,7 @@
 @import "layout";
 @import "footer";
 @import "registry";
+@import "governance";
 
 /* Added a second definition to separate templated values from not so syntax
   highlighting will work */

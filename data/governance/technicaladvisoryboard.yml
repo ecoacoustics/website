@@ -21,9 +21,11 @@
   affiliation: ARDC
   description: Jon is a technical systems analyst with the ARDC, working across the ARDC’s investments in Platforms and National Data Assets. He has a technical background in eResearch spanning more than 20 years.
   imgUrl: /images/people/ARDC.png
+  imgSquare: true
 
 - name: Mitchel Haring
   jobTitle: DevOps Engineer
   affiliation: Queensland University of Technology (QUT)
   description: Mitchel Haring is a DevOps Engineer in the QUT eResearch team. He works with researchers and research groups to design, implement and deploy best of breed eResearch solutions. He specialises in automation, Cloud Computing, Kubernetes, security, and tool development.
   imgUrl: /images/people/QUT.png
+  imgSquare: true

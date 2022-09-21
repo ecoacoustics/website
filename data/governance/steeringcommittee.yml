@@ -1,0 +1,36 @@
+
+- name: Prof. Paul Roe
+  jobTitle: Project Leader
+  affiliation: Queensland University of Technology
+  description: Professor Roe is a computer scientist interested in how technology can benefit environment and community, particularly for new kinds of environmental monitoring. With a deep understanding of Australia’s fragile and mega-diverse environment, Professor Roe undertakes novel interdisciplinary research. This includes ecological acoustic monitoring systems which enable new scales of environmental monitoring through big data collection and analysis, and novel computer systems supporting communication and collaboration in remote Aboriginal communities. He leads the ARDC Open Ecoacoustics platform project which is developing an open source platform for ecoacoustic data storage, analysis, visualisation and sharing. He also leads the Australian Acoustic Observatory (A2O), a continental-scale network utilising 400 continuously operating acoustic sensors across multiple Australian ecosystems collecting 2 Petabytes of sound data over the project’s 5-year duration. Professor Roe is also a member of the Open Ecoacoustics Scientific and Technical Advisory boards.
+  imgUrl: /images/people/paul-roe.jpg
+
+- name: Assoc. Prof. Susan Fuller
+  jobTitle: Project Leader
+  affiliation: Queensland University of Technology 
+  description: Associate Professor Susan Fuller is an internationally recognised researcher in ecology and conservation biology, with a focus on using acoustic technology to understand and conserve biodiversity. Her research group studies the bioacoustics of frogs and birds, particularly to better understand call evolution and speciation, but importantly to identify risks posed by anthropogenic activities (such as vegetation clearing and noise) on species persistence. Susan is leading research on threatened bird, frog and mammal species detection in the bushfire affected Gondwana WHA, but also in urban areas with her project developing ecoacoustic tools for detection of powerful owls and breeding success in the Greater Brisbane Region She also studies soundscapes and has pioneered research linking soundscape patterns to landscape fragmentation and ecological condition. Her research on bird assemblages in regrowth Mulga has important ramifications for vegetation clearing in this impacted bioregion and her current involvement in QUT’s National Landcare Smart Farms project developing acoustic technology for biodiversity monitoring on cotton farms will deliver tangible reporting outcomes for the industry. Susan is also co-leader with Prof Paul Roe of the ARDC Open Ecoacoustics Platform project.  She has been elected as a Councillor on the Board of the International Society of Ecoacoustics since it’s inception in 2014 and she gained national media attention in 2016 through her involvement in an ABC Catalyst episode on soundscapes (http://www.abc.net.au/catalyst/stories/4498780.htm).Assoc. Professor Fuller is also a member of the Open Ecoacoustics Scientific and Technical Advisory boards.
+  imgUrl: /images/people/susan-fuller.jpg
+
+- name: Dr Brad Law
+  jobTitle: Principal Research Scientist
+  affiliation: NSW Department of Primary Industries
+  description: Brad Law is a Principal Research Scientist at the Forest Science Unit of the Dept of Primary Industries focusing on ecologically sustainable forest management practices. Brad has over 30 years of experience in forest wildlife ecology and has published more than 150 peer reviewed papers. Brad’s research covers all types of wildlife including bats, pygmy possums, Hastings River Mouse and eucalypt flowering and nectar. He is also interested in urban ecology and has co-supervised a number of postgraduate students investigating a range of ecological topics. Brad is co-editor of Australia’s oldest zoological journal Australian Zoologist Since 2015, koalas in the hinterland forests of north-east NSW and use of passive acoustics have been a major research focus. Dr Law is also a member of the Open Ecoacoustics Scientific Advisory board.
+  imgUrl: /images/people/brad-law.jpg
+
+- name: Dr Karen Rowe
+  jobTitle: Research Fellow
+  affiliation: Museums Victoria
+  description: Dr Karen Rowe is a museum-based research ecologist specialising in using acoustic methods to document the diversity of distribution of animals across landscapes. She received her PhD in Ecology and Evolutionary Biology in 2007 from the University of Illinois Urbana-Champaign in the USA. She also completed a three-year fellowship through the Museum of Vertebrate Zoology at the University of California, Berkeley before permanently relocating to Australia in 2011. Karen has been a Research Fellow at Museums Victoria and an Honorary Fellow at the University of Melbourne for the last 10 years, where her research combines acoustics with biodiversity inventories, threatened species monitoring and community engagement. Her work actively focuses on using acoustic technologies to bring together land managers, landcare groups and community participants towards improved management and conservation outcomes for wildlife. Dr Rowe is also a member of the Open Ecoacoustics Scientific Advisory board.
+  imgUrl: /images/people/karen-rowe.jpg
+
+- name: Dr Beryl Morris
+  jobTitle: Director
+  affiliation: TERN
+  description: Dr Beryl Morris is Director of TERN Australia, a national research infrastructure under the NCRIS program. TERN observes and measures changes in Australia’s land ecosystems from continental to site scale over time using remote sensing, field surveys and highly instrumented sites, making the data openly available. Beryl’s career previous to TERN covered public and private sector executive roles and directorships. She has been the CEO of several companies in the life sciences area, run national science communication programs, commercialised technology and authored books and papers on a range of topics including science, education and management. Beryl’s eclectic interests see her undertaking research on insect behaviour, forensic entomology, and the role of trust in collaborations, particularly those involving universities and industry. She has been an expert witness over several decades in most Australian jurisdictions.
+  imgUrl: /images/people/beryl-morris.png
+
+- name: Kerry Levitt
+  jobTitle: Platforms Program Manager
+  affiliation: ARDC
+  description: Kerry Levitt is the manager of the Platforms Program for the Australian Research Data Commons, which aims to increase the range of research platforms available to Australian researchers. She has a background in environmental science research and management, as well as information management.
+  imgUrl: /images/people/kerry-levitt.jpg

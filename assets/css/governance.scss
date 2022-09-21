@@ -8,12 +8,21 @@
 .person-card {
     text-align: center;
     padding: var(--oe-padding-small);
-}
+    min-width: 15em;
 
-.person-card sl-details {
-   font-size: 15px;
-}
+    .affiliation, .job-title {
+        display: block;
+    }
 
-.person-card .description {
-    text-align: left;
+    .affiliation {
+        padding-bottom: var(--oe-padding-small);
+    }
+
+    sl-details {
+        font-size: 0.75em;
+    }
+
+    .description {
+        text-align: left;
+    }   
 }

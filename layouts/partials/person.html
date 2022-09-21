@@ -1,0 +1,16 @@
+<div class="flex-3-row column person-card">
+
+  {{if .imgSquare }}
+      <img class="profile-img" src="{{ .imgUrl }}" alt="Picture of {{ .name }}" />
+  {{ else }}
+      <img class="circle-profile-img" src="{{ .imgUrl }}" alt="Picture of {{ .name }}" />
+  {{ end }}
+
+  <h3>{{ .name }}</h3>
+  <span class="job-title">{{ .jobTitle }}</span>
+  <em class="affiliation">{{ .affiliation }}</em>
+
+  <sl-details summary="Read more about {{ .name }}">
+       <p class="description">{{ .description }}</p>
+  </sl-details>
+</div>

@@ -1,8 +1,14 @@
-.circle-profile-img {
-  border-radius: 50%;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  overflow: hidden;
+.profile-img {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+
+    &.circle {
+        border-radius: 50%;
+    }
 }
 
 .person-card {
@@ -10,7 +16,8 @@
     padding: var(--oe-padding-small);
     min-width: 15em;
 
-    .affiliation, .job-title {
+    .affiliation,
+    .job-title {
         display: block;
     }
 
@@ -24,5 +31,5 @@
 
     .description {
         text-align: left;
-    }   
+    }
 }

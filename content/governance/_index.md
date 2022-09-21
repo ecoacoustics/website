@@ -4,12 +4,12 @@ Title: Governance
 
 ## Steering Committee
 
-{{< governance-people-cards groupName="steeringcommittee" >}}
+{{< governance-people-cards groupName="steering" >}}
 
 ## Scientific Advisory Group
 
-{{< governance-people-cards groupName="scientificadvisorygroup" >}}
+{{< governance-people-cards groupName="scientific" >}}
 
 ## Technical Advisory Board
 
-{{< governance-people-cards groupName="technicaladvisoryboard" >}}
+{{< governance-people-cards groupName="technical" >}}

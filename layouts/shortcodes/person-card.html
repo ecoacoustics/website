@@ -1,7 +1,0 @@
-{{ $data := index $.Site.Data.governance.people }}
-
-{{ range $data }}
-  <div>
-      {{ partial "people" . }}
-  </div>
-{{ end }}

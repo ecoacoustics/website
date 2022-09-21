@@ -1,0 +1,7 @@
+{{ $data := index $.Site.Data.governance (.Get "groupName") }}
+
+<div class="flex flex-wrap person-cards">
+    {{ range $data }}
+          {{ partial "people" . }}
+    {{ end }}
+</div>

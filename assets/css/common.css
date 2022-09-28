@@ -45,36 +45,7 @@ h6 {
     font-family: var(--oe-fancy-font);
 } */
 
-.navbar {
-    padding-left: var(--oe-padding);
-    padding-right: var(--oe-padding);
-    padding-top: var(--oe-padding-small);
-    padding-bottom: var(--oe-padding-small);
-    font-size: 120%;
-    font-family: var(--oe-fancy-font);
-    background-color: var(--oe-background-color);
-    display: flex;
-    justify-content: flex-end;
-    align-items: end;
-}
 
-.navbar > .nav-item {
-    color: var(--oe-font-color);
-    margin: var(--oe-padding-small);
-}
-
-.navbar > .nav-item.active {
-    color: var(--oe-theme-color);
-}
-
-.brand {
-    flex-grow: 1;
-}
-
-.brand img,
-svg {
-    height: var(--oe-navbar-height);
-}
 
 .pull {
     display: flex;
@@ -86,9 +57,11 @@ svg {
 }
 
 .pull > * {
-    width: 50%;
+    min-width: calc(min(25em, 100%));
+    flex-basis: 50%;
     background-color: var(--oe-panel-color-with-alpha);
     padding: var(--oe-padding-small);
+
 }
 
 .pull.pull-red > * {

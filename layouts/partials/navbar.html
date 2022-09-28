@@ -1,14 +1,40 @@
+
 <nav class="flex align-center justify-between navbar">
     <div class="brand">
-        <a href="{{ .Site.Home.RelPermalink  }}">
-
+        <a title="{{ .Site.Title }}" class="logo-large" href="{{ .Site.Home.RelPermalink  }}">
             {{  readFile (printf "static/%s" .Site.Params.Logo ) | safeHTML }}
         </a>
     </div>
 
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
-    <a class="nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    <a class="nav-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{end}} normal-nav" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
     {{ end }}
 
+    <sl-icon-button name="list" class="main-menu-button nav-item" ></sl-icon-button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const drawer = document.querySelector('.nav-drawer');
+            const openButton = document.querySelector('.main-menu-button');
+
+            openButton.addEventListener('click', () => {
+                if (drawer.open) {
+                    drawer.hide();
+                    openButton.toggleAttribute('open', false);
+                }
+                else {
+                    drawer.show();
+                    openButton.toggleAttribute('open', true);
+                }
+            });
+        });
+      </script>
 </nav>
+<sl-drawer class="nav-drawer" no-header>
+    <nav class="flex align-center justify-between navbar">
+        {{ range .Site.Menus.main }}
+        <a class="nav-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+        {{ end }}
+    </nav>
+</sl-drawer>

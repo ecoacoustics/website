@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import "common";
+@import "main_nav";
 @import "icons";
 @import "shoelace";
 @import "home";
@@ -39,5 +40,15 @@
     --duration: 0.5s;
     --timing: ease;
 
+    --oe-narrow-display: none;
+    --oe-wide-display: inherit;
+
+}
+
+@media screen and (max-width: 60em) {
+    :root {
+        --oe-narrow-display: inherit;
+        --oe-wide-display: none;
+    }
 }
 

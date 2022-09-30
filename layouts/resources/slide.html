@@ -1,0 +1,22 @@
+{{ define "main" }}
+    <header>
+        <h1>{{.Title}}</h1>
+    </header>
+
+    <div class="reveal">
+      <div class="slides">
+         {{ .Content}}
+      </div>
+    </div>
+
+    <div class="flex pull-right">
+      <sl-icon-button name="arrows-fullscreen" label="fullscreen"></sl-icon-button>
+      <sl-icon-button onClick="window.print()" name="printer" label="Print"></sl-icon-button>
+     </div>
+
+<script>
+    Reveal.initialize({
+      embedded: true
+    });
+</script>
+{{ end }}

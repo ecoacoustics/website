@@ -38,6 +38,11 @@
 {{/* Theme switcher component */}}
 <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
 
+{{/* Revealjs */}}
+<script src="https://unpkg.com/reveal.js@4.3.1/dist/reveal.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.3.1/dist/reveal.css">
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.3.1/dist/theme/simple.css">
+
 {{/* Our custom CSS */}} {{ with resources.Get "css/theme/light.css" }}
 <link
     href="{{ .RelPermalink }}"

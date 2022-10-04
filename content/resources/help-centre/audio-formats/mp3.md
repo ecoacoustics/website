@@ -13,9 +13,4 @@ in some information loss, and is therefore not the preferred format for working
 with ecoacoustic data. Nevertheless, if you have access to files which were
 recorded using the `.mp3` format, it will be possible to open them in most
 software and run typical analysis procedures. Otherwise, it is also possible to
-convert to `.wav` See [Converting]({{< ref "converting" >}}). 
-
-MP3 works well for
-songs and there is no loss in quality for listening, but when it comes to
-analysing the data in terms of acoustic indices, running recognisers, etc, MP3
-does not work, because of the compression.
+convert these files to `.wav` See [Converting]({{< ref "converting" >}}). 

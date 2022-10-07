@@ -2,7 +2,7 @@
 title: Test Presentation
 image: images/Maybe-home-page3.jpg
 type: "resources"
-layout: "slide"
+layout: "presentation"
 draft: true
 ---
 {{< slide data-transition="fade" >}}
@@ -10,7 +10,7 @@ draft: true
 This presentation is for demonstration purposes.
 {{< /slide >}}
 
-{{< slide data-transition="fade" >}}
+{{< slide data-transition="slide" >}}
 ### Slide with an image
 ![Susan Fuller](/images/people/susan-fuller.jpg)
 
@@ -19,7 +19,7 @@ Susan Fuller
 - Researcher in ecology and conservation biology
 {{< /slide >}}
 
-{{< slide data-transition="fade"  data-background-color="wheat" >}}
+{{< slide data-transition="fade"  data-background-color="wheat">}}
 ### List 
 - Creating 
 - A list 

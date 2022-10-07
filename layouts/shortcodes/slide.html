@@ -1,7 +1,7 @@
 <section
-    data-background-image="{{ .Get "data-background-image" }}"
-    data-background-color="{{ .Get "data-background-color" }}"
-    data-transition="{{ .Get "data-transition" }}"
->
+{{ with .Get "data-background-image" }} data-background-image="{{ . }}" {{ end }}
+{{ with .Get "data-background-color" }} data-background-color="{{ . }}" {{ end }}
+{{ with .Get "data-transition=" }} data-transition="{{ . }}" {{ end }}
+ id="{{ .Get "slide-name" }}">
     {{.Inner  | markdownify}}
 </section>

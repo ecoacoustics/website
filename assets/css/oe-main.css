@@ -11,6 +11,7 @@
 @import "footer";
 @import "registry";
 @import "governance";
+@import "reveal-slides";
 
 /* Added a second definition to separate templated values from not so syntax
   highlighting will work */

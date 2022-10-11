@@ -1,0 +1,24 @@
+@media print {
+	.navbar, .oe-presentation-controls, #themeSelector {display:none;}
+}
+
+.reveal {
+    overflow: hidden;
+
+    .slide-background  {
+        background-image: url(/oe-logo-horizontal.svg);
+        background-position: right 5% top 5%;
+        background-repeat: no-repeat;
+        background-size:  20%;;
+    }
+
+    h2, h3, h4 {
+        a {
+            display: none; //overriding anchor link style
+        }
+    }
+
+    aside {
+        background: none; // overriding aside bg style
+    }
+}

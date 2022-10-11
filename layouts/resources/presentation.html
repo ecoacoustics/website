@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="reveal" id="presentation">
+    <div class="slides">
+        {{ .Content}}
+    </div>
+</div>
+
+<div class="flex pull-right oe-presentation-controls">
+    <sl-icon-button name="arrows-fullscreen" label="fullscreen" onclick="var el = document.getElementById('presentation'); el.requestFullscreen();"></sl-icon-button>
+    <sl-icon-button name="printer" label="Print" onclick="window.print();"></sl-icon-button>
+</div>
+
+<script>
+    Reveal.initialize({
+      embedded: true,
+      slideNumber: true
+    });
+</script>
+{{ end }}

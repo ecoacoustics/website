@@ -1,29 +1,17 @@
 {{/* Shoelace */}}
 
-<link
-    rel="stylesheet"
-    media="(prefers-color-scheme:light)"
-    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/themes/light.css"
-/>
-<link
-    rel="stylesheet"
-    media="(prefers-color-scheme:dark)"
+<link rel="stylesheet" media="(prefers-color-scheme:light)"
+    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/themes/light.css" />
+<link rel="stylesheet" media="(prefers-color-scheme:dark)"
     href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/themes/dark.css"
-    onload="document.documentElement.classList.add('sl-theme-dark');"
-/>
+    onload="document.documentElement.classList.add('sl-theme-dark');" />
 
-<script
-    type="module"
-    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/shoelace.js"
-></script>
-<script
-    type="module"
-    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/components/icon/icon.js"
-></script>
-<script
-    type="module"
-    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/utilities/form.js"
-></script>
+<script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/shoelace.js"></script>
+<script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/components/icon/icon.js"></script>
+<script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/utilities/form.js"></script>
 
 <script type="module">
     import { registerIconLibrary } from "https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.68/dist/utilities/icon-library.js";
@@ -38,23 +26,11 @@
 {{/* Theme switcher component */}}
 <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
 
-{{/* Revealjs */}}
-<script src="https://unpkg.com/reveal.js@4.3.1/dist/reveal.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.3.1/dist/reveal.css">
-<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.3.1/dist/theme/simple.css">
 
 {{/* Our custom CSS */}} {{ with resources.Get "css/theme/light.css" }}
-<link
-    href="{{ .RelPermalink }}"
-    media="(prefers-color-scheme:light)"
-    rel="stylesheet"
-/>
+<link href="{{ .RelPermalink }}" media="(prefers-color-scheme:light)" rel="stylesheet" />
 {{ end }} {{ with resources.Get "css/theme/dark.css" }}
-<link
-    href="{{ .RelPermalink }}"
-    media="(prefers-color-scheme:dark)"
-    rel="stylesheet"
-/>
+<link href="{{ .RelPermalink }}" media="(prefers-color-scheme:dark)" rel="stylesheet" />
 {{ end }} {{ $css := resources.Get "css/oe-main.css" }} {{ $css = $css |
 resources.ExecuteAsTemplate "css/oe-main.css" . | resources.ToCSS }} {{ if
 hugo.IsProduction }} {{ $css = $css | minify | fingerprint |

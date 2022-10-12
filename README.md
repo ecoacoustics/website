@@ -39,7 +39,7 @@ Then before each session:
 
 1.  Update your Fork
 1.  Branch
-1.  Run `./dev.ps1`
+1.  Run `hugo server -DEF`
 1.  Commit
 1.  Push
 1.  Create a pull request

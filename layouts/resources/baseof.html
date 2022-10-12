@@ -5,7 +5,7 @@
             <h1>
                 {{$section_heading := .Site.GetPage "section" .Section }}
                 {{with $section_heading}}
-                {{- .Title -}}
+                <a href="{{ .Page.RelPermalink }}">{{- .Title -}}</a>
                 {{end}}
             </h1>
             {{/* <sl-tooltip class="menu-toggle" content="Collapse menu">

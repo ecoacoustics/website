@@ -22,12 +22,16 @@ pre,
     background-color: var(--oe-background-color);
 }
 
-.markdown code  {
+.markdown code {
     background: var(--oe-inline-code-bg-color);
 }
 
 .markdown table tr:nth-child(2n) {
     background-color: var(--oe-background-color-darker);
+}
+
+.markdown header h1 {
+    margin-top: 0;
 }
 
 body > footer {
@@ -45,8 +49,6 @@ h6 {
     font-family: var(--oe-fancy-font);
 } */
 
-
-
 .pull {
     display: flex;
     flex-direction: row;
@@ -61,7 +63,6 @@ h6 {
     flex-basis: 50%;
     background-color: var(--oe-panel-color-with-alpha);
     padding: var(--oe-padding-small);
-
 }
 
 .pull.pull-red > * {

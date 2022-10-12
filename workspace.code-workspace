@@ -28,12 +28,16 @@
         "prettier.enable": true,
         "prettier.tabWidth": 2,
         "prettier.useTabs": false,
-        "prettier.jsxBracketSameLine": true,
+        "prettier.bracketSameLine": true,
         "prettier.printWidth": 80,
         "editor.tabSize": 2,
+        "html.format.templating": true,
+        "html.format.indentHandlebars": true,
+        "html.format.wrapAttributes": "aligned-multiple",
         "[html]": {
             "editor.suggest.insertMode": "replace",
-            "editor.defaultFormatter": "vscode.html-language-features",
+            // this is causing so many templating issues with auto formatting, disabled
+            //"editor.defaultFormatter": "vscode.html-language-features",
             "files.insertFinalNewline": false,
             "files.trimFinalNewlines": true
         },

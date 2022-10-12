@@ -4,7 +4,6 @@
 .resources aside {
     background-color: var(--oe-background-color-darker);
     padding: var(--oe-padding-small);
-    margin-top: 2em;
 }
 
 .resources aside {
@@ -45,4 +44,11 @@
         transform: translateX(0%);
         opacity: 1;
     }
+}
+
+.book-menu-content {
+}
+
+.book-search input {
+    background-color: white !important;
 }

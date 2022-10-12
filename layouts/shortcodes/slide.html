@@ -1,7 +1,15 @@
+{{- $classes := slice -}}
+{{- $type := .Get "type" -}}
+{{- $classes :=  cond (eq $type "title")  $classes ($classes | append "align-middle") }}
+{{- $classes :=  cond (eq $type "normal")  $classes ($classes | append "align-left") }}
+{{- $classes :=  cond (eq $type "")  $classes ($classes | append "align-left") }}
 <section
-{{ with .Get "data-background-image" }} data-background-image="{{ . }}" {{ end }}
-{{ with .Get "data-background-color" }} data-background-color="{{ . }}" {{ end }}
-{{ with .Get "data-transition=" }} data-transition="{{ . }}" {{ end }}
- id="{{ .Get "slide-name" }}">
-    {{.Inner  | markdownify}}
+  {{- with .Get "data-background-image" }} data-background-image="{{ . }}" {{ end -}}
+  {{- with .Get "data-background-color" }} data-background-color="{{ . }}" {{ end -}}
+  {{- with .Get "data-visibility" }} data-visibility="{{ . }}" {{ end -}}
+  {{- with .Get "data-transition" }} data-transition="{{ . }}" {{ end -}}
+  {{- with .Get "slide-name" }} id="{{ . }}"{{ end }}
+   class="{{ $classes }}"
+  >
+    {{ .Inner }}
 </section>

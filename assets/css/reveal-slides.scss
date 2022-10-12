@@ -1,18 +1,29 @@
 @media print {
-	.navbar, .oe-presentation-controls, #themeSelector {display:none;}
+    .navbar,
+    .oe-presentation-controls,
+    #themeSelector {
+        display: none;
+    }
 }
 
 .reveal {
     overflow: hidden;
+    // force a 16:9 ratio for slide size
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    margin: var(--oe-padding-small);
 
-    .slide-background  {
+    .slide-background {
         background-image: url(/oe-logo-horizontal.svg);
         background-position: right 5% top 5%;
         background-repeat: no-repeat;
-        background-size:  20%;;
+        background-size: 20%;
     }
 
-    h2, h3, h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
         a {
             display: none; //overriding anchor link style
         }
@@ -20,5 +31,22 @@
 
     aside {
         background: none; // overriding aside bg style
+    }
+
+    .slide-number {
+        .slide-number-delimiter {
+            margin: 0;
+        }
+    }
+
+    section {
+    }
+
+    .align-middle {
+        text-align: left;
+    }
+
+    .align-left {
+        text-align: left;
     }
 }

@@ -1,19 +1,46 @@
-{{ define "main" }}
+{{ define "main" }} {{/* Revealjs */}}
+<script src="https://unpkg.com/reveal.js@4.3.1/dist/reveal.js"></script>
+<script src="https://unpkg.com/reveal.js@4.3.1/plugin/notes/notes.js"></script>
+{{/*
+<script src="https://unpkg.com/reveal.js@4.3.1/plugin/math/math.js"></script>
+*/}}
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/reveal.js@4.3.1/dist/reveal.css"
+/>
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/reveal.js@4.3.1/dist/theme/simple.css"
+/>
+
 <div class="reveal" id="presentation">
-    <div class="slides">
-        {{ .Content}}
-    </div>
+    <div class="slides">{{ .Content }}</div>
 </div>
 
 <div class="flex pull-right oe-presentation-controls">
-    <sl-icon-button name="arrows-fullscreen" label="fullscreen" onclick="var el = document.getElementById('presentation'); el.requestFullscreen();"></sl-icon-button>
-    <sl-icon-button name="printer" label="Print" onclick="window.print();"></sl-icon-button>
+    <sl-icon-button
+        name="arrows-fullscreen"
+        label="fullscreen"
+        onclick="var el = document.getElementById('presentation'); el.requestFullscreen();"
+    ></sl-icon-button>
+    <sl-icon-button
+        name="printer"
+        label="Print"
+        onclick="window.print();"
+    ></sl-icon-button>
 </div>
 
 <script>
-    Reveal.initialize({
-      embedded: true,
-      slideNumber: true
+    document.addEventListener("DOMContentLoaded", function () {
+        Reveal.initialize({
+            embedded: true,
+            slideNumber: true,
+            hash: true,
+            plugins: [
+                RevealNotes,
+                /*  RevealMath.KaTeX  */
+            ],
+        });
     });
 </script>
 {{ end }}

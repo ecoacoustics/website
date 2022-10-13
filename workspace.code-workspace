@@ -30,14 +30,16 @@
         "prettier.useTabs": false,
         "prettier.bracketSameLine": true,
         "prettier.printWidth": 80,
+        "prettier.enableDebugLogs": true,
         "editor.tabSize": 2,
         "html.format.templating": true,
-        "html.format.indentHandlebars": true,
-        "html.format.wrapAttributes": "aligned-multiple",
+        "html.format.indentHandlebars": false,
+        "html.format.wrapAttributes": "preserve",
         "[html]": {
             "editor.suggest.insertMode": "replace",
             // this is causing so many templating issues with auto formatting, disabled
-            //"editor.defaultFormatter": "vscode.html-language-features",
+            // "editor.defaultFormatter": "GitHub.vscode-pull-request-github",
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
             "files.insertFinalNewline": false,
             "files.trimFinalNewlines": true
         },

@@ -59,7 +59,7 @@ Many small files seriously affect the performance of file systems.
     -   (OneDrive, DropBox, Google Drive)
     -   Tend to be slow for very large sets of data
     -   Are optimised for documents, not audio
--   **DON'T** Store data on SSDs without power
+-   **DON'T**: Store data on SSDs without power
 
 {{% /slide %}}
 {{% slide %}}
@@ -74,7 +74,75 @@ Many small files seriously affect the performance of file systems.
 ## Directory Structure
 
 -   **DO**: Be consistent
--
+-   **DO**: Follow a pattern
+    -   For example
+        `{project}/{deployment}/{site}/[{memory_card}/]`
+-   **DO NOT**: Mix files from sensors/memory cards into one directory
+
+{{% /slide %}}
+{{% slide %}}
+
+## Formats
+
+-   **DO**: keep your files in their original formats
+    -   embedded metadata is often not kept during conversion
+-   **DO**: keep all files produced by the sensor
+    -   log files
+    -   ancillary measurements
+    -   schedules
+-   **DO**: Embrace compression
+
+{{% /slide %}}
+
+<!-- end vertical slides -->
+
+{{% /slide %}}
+{{% slide %}}
+
+<!-- vertical slides -->
+
+{{% slide %}}
+
+## Repairing data
+
+There are lot of problems with audio files produced by PAM.
+
+Problems are documented in an open source knowledge base:
+
+<https://github.com/ecoacoustics/known-problems>
+
+{{% /slide %}}
+{{% slide %}}
+
+## Using EMU to repair files
+
+{{% /slide %}}
+{{% slide %}}
+
+## Using EMU to rename files
+
+{{% /slide %}}
+
+<!-- end vertical slides -->
+
+{{% /slide %}}
+{{% slide %}}
+
+<!-- vertical slides -->
+
+{{% slide %}}
+
+## Using EMU to extract metadata
+
+{{% /slide %}}
+{{% slide %}}
+
+## Using EMU from R
+
+{{% /slide %}}
+{{% slide %}}
+
+## Using EMU from Python
 
 {{% /slide %}}
 

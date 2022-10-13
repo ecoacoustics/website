@@ -15,3 +15,6 @@ elseif ($IsLinux) {
 elseif ($IsMac) {
     brew install hugo
 }
+
+
+npm i -g prettier prettier-plugin-go-template

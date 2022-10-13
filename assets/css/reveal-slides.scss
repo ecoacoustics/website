@@ -40,10 +40,20 @@
     }
 
     section {
+        display: flex !important;
+        flex-direction: column;
+        overflow-wrap: break-word;
+    }
+
+    .align-top {
+        // flex-;
     }
 
     .align-middle {
-        text-align: left;
+    }
+
+    .align-center {
+        text-align: center;
     }
 
     .align-left {

@@ -12,6 +12,7 @@ markup:
         renderer:
             unsafe: true
 params:
+    GitHubRepo: https://github.com/ecoacoustics/website
     BookSection: resources
     Organization: "Open Ecoacoustics"
     ThemeColor: "#CB7E30"

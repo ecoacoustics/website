@@ -3,6 +3,9 @@
 <meta name="description" content="{{ default .Summary .Description }}">
 <meta name="theme-color" content="{{ .Site.Params.ThemeColor }}">
 <meta name="color-scheme" content="light dark">
+{{ with .GitInfo }}
+<meta name="revised" {{ printf `content="%s"` (.AuthorDate.Format `2006-01-02T15:04:05-07:00`) | safeHTMLAttr }} >
+{{ end }}
 
 {{- template "_internal/opengraph.html" . -}}
 

@@ -6,8 +6,8 @@ body {
     flex-direction: column;
 
     /* transition:
-        color var(--duration) var(--timing),
-        background-color var(--duration) var(--timing); */
+        color var(--oe-duration) var(--oe-timing),
+        background-color var(--oe-duration) var(--oe-timing); */
 }
 
 main {

@@ -1,3 +1,7 @@
+{{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
+{{ if (and (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") (ne .TableOfContents "")) }}
 {{ partial "docs/inject/toc-before" . }}
 {{ .TableOfContents }}
 {{ partial "docs/inject/toc-after" . }}
+{{ end }}
+{{ end }}

@@ -8,14 +8,5 @@
 {{ end }}
 {{ end }}
 {{ define "toc" }}
-{{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
-<aside class="book-toc">
-  <div class="">
-    <h1>Contents</h1>
     {{ partial "docs/toc" . }}
-  </div>
-</aside>
-{{ end }}
-</main>
-
 {{ end }}

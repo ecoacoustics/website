@@ -5,8 +5,6 @@
   {{ partial "docs/inject/head" . }}
 </head>
 <body dir="{{ .Site.Language.LanguageDirection | default "ltr" }}">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
       <div class="book-menu-content">
@@ -29,8 +27,6 @@
       </footer>
 
       {{ template "comments" . }} <!-- Comments block -->
-
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}

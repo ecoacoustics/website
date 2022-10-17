@@ -1,12 +1,71 @@
 .resources {
-}
-
-.resources aside {
-    background-color: var(--oe-background-color-darker);
+    display: grid;
+    grid-template-rows: 0 1fr;
+    grid-template-columns: auto 1fr auto;
+    height: 100%;
     padding: var(--oe-padding-small);
 }
 
-.resources aside {
+.resources {
+    #sideMenu {
+        transition-property: all;
+        transition-duration: var(--oe-duration);
+        transition-timing-function: var(--oe-timing);
+
+        grid-column: 1;
+        grid-row: 2;
+        width: var(--oe-side-menu-width);
+        transform: translateX(0);
+    }
+    &.side-menu-closed #sideMenu {
+        width: 0;
+        transform: translateX(calc(-1 * var(--oe-side-menu-width) - 2em));
+    }
+
+    .book-page {
+        transition-property: all;
+        transition-duration: var(--oe-duration);
+        transition-timing-function: var(--oe-timing);
+
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .toc {
+        transition-property: all;
+        transition-duration: var(--oe-duration);
+        transition-timing-function: var(--oe-timing);
+
+        width: var(--oe-side-menu-width);
+        grid-column: 3;
+        grid-row: 2;
+    }
+    &.toc-menu-closed #toc {
+        width: 0;
+        transform: translateX(calc(var(--oe-side-menu-width) + 2em));
+    }
+}
+
+.resources {
+    .menu-toggle {
+        grid-row: 1;
+        grid-column: 1;
+        display: block;
+        justify-self: end;
+        z-index: 100;
+    }
+    .toc-toggle {
+        grid-row: 1;
+        grid-column: 3;
+        display: block;
+        justify-self: end;
+        z-index: 100;
+    }
+}
+
+.resources #sideMenu {
+    background-color: var(--oe-background-color-darker);
+
     & h1,
     h2,
     h3,
@@ -18,37 +77,30 @@
         font-weight: 600;
     }
 
+    .side-menu-fixed-container {
+        width: var(--oe-side-menu-width);
+    }
+
     .header {
         display: flex;
         justify-content: space-between;
     }
 
+    .book-search input {
+        background-color: white !important;
+    }
+}
+
+.resources .book-page {
     .menu-toggle {
         & sl-icon-button {
             aspect-ratio: 1 / 1;
         }
     }
-
-    .menu {
-        transition-property: all;
-        transition-duration: 1.5s;
-        transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-    }
-
-    &.menu.closed {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-
-    &.menu.open {
-        transform: translateX(0%);
-        opacity: 1;
-    }
 }
 
-.book-menu-content {
-}
-
-.book-search input {
-    background-color: white !important;
+.resources .toc {
+    h1 {
+        margin-top: 0;
+    }
 }

@@ -1,38 +1,47 @@
 {{ partial "before_main" . }}
-<main class="container flex resources" style="position: relative;">
-    <aside id="sideMenu" class="book-menu menu open">
-        <div class="header">
-            <h1>
-                {{$section_heading := .Site.GetPage "section" .Section }}
-                {{with $section_heading}}
-                <a href="{{ .Page.RelPermalink }}">{{- .Title -}}</a>
-                {{end}}
-            </h1>
-            {{/* <sl-tooltip class="menu-toggle" content="Collapse menu">
-                <sl-icon-button id="menuToggle" class="bordered" name="chevron-left" label="collapse menu">
-                </sl-icon-button>
-            </sl-tooltip> */}}
-        </div>
-        {{ block "menu" . }}
-        <!-- Left menu Content -->
-        {{ partial "docs/menu" . }}
-        {{ end }}
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector('#menuToggle');
+        const tocToggle = document.querySelector('#tocToggle');
+        const container = document.querySelector('.resources');
 
-    </aside>
-    {{/*
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const toggle = document.querySelector('#menuToggle');
-            const menu = document.querySelector('#sideMenu');
-
-            toggle.addEventListener('click', () => {
-                menu.classList.toggle("open");
-                menu.classList.toggle("closed");
-            });
+        menuToggle.addEventListener('click', () => {
+            let active = container.classList.toggle("side-menu-closed");
+            menuToggle.setAttribute("name", active ? "chevron-right" : "chevron-left");
         });
-    </script> */}}
+
+        tocToggle?.addEventListener('click', () => {
+            let active = container.classList.toggle("toc-menu-closed");
+            tocToggle.setAttribute("name", active ? "chevron-left" : "chevron-right");
+        });
+    });
+</script>
+
+
+<main class="container resources" style="position: relative;">
+    <sl-tooltip class="menu-toggle" content="Toggle menu">
+        <sl-icon-button id="menuToggle" class="" name="chevron-left" label="Toggle menu">
+        </sl-icon-button>
+    </sl-tooltip>
+
+
+    <aside id="sideMenu" class="book-menu menu open">
+            <div class="header">
+                <h1>
+                    {{$section_heading := .Site.GetPage "section" .Section }}
+                    {{with $section_heading}}
+                    <a href="{{ .Page.RelPermalink }}">{{- .Title -}}</a>
+                    {{end}}
+                </h1>
+            </div>
+            {{ block "menu" . }}
+            <!-- Left menu Content -->
+            {{ partial "docs/menu" . }}
+            {{ end }}
+    </aside>
 
     <div class="book-page">
+
         <header class="book-header">
             {{ block "header" . }}
             <!-- Mobile layout header -->
@@ -49,8 +58,6 @@
 
         {{ template "comments" . }}
         <!-- Comments block -->
-
-        <label for="menu-control" class="hidden book-menu-overlay"></label>
 
         <footer class="footer">
             {{ block "footer" . }}

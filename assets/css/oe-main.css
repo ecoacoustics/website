@@ -38,11 +38,13 @@
     --oe-panel-color-with-alpha: hsla(var(--theme-color-raw), var(--oe-panel-opacity));
     --oe-panel-red-with-alpha: rgba(180, 52, 52, 0.66);
 
-    --duration: 0.5s;
-    --timing: ease;
+    --oe-duration: 0.5s;
+    --oe-timing: ease-in-out;
 
     --oe-narrow-display: none;
     --oe-wide-display: inherit;
+
+    --oe-side-menu-width: 16em;
 
 }
 

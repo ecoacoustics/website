@@ -1,0 +1,14 @@
+{{ $classes := slice -}}
+{{- $type := .Get "type" -}}
+{{- if (eq $type "title") }}{{ $classes = $classes | append "align-center" }}{{ end -}}
+{{- if (eq $type "normal") }}{{ $classes = $classes | append "align-left" }}{{ end -}}
+{{- if (not $type) }}{{ $classes = $classes | append "align-left" }}{{ end -}}
+<section
+  {{- with .Get "data-background-image" }} data-background-image="{{ . }}" {{ end -}}
+  {{- with .Get "data-background-color" }} data-background-color="{{ . }}" {{ end -}}
+  {{- with .Get "data-visibility" }} data-visibility="{{ . }}" {{ end -}}
+  {{- with .Get "data-transition" }} data-transition="{{ . }}" {{ end -}}
+  {{- with .Get "slide-name" }} id="{{ . }}"{{ end }}
+   class="{{ delimit $classes  ` ` }}" >
+    {{ .Inner }}
+</section>

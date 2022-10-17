@@ -1,6 +1,5 @@
 ---
 title: Presentation
-type: "resources"
 layout: "presentation"
 draft: true
 ---

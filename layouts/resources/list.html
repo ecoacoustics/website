@@ -7,13 +7,13 @@
 {{ . }}
 {{ end }}
 <ul>
-    <!-- Ranges through content/posts/*.md -->
-    {{ range .Pages }}
-        <li>
-            <a href="{{.Permalink}}">{{.Title}}</a>
-        </li>
-    {{ end }}
-    </ul>
+<!-- Ranges through content/posts/*.md -->
+{{ range .Pages.ByWeight }}
+    <li>
+        <a href="{{.Permalink}}">{{.Title}}</a>
+    </li>
+{{ end }}
+</ul>
 </article>
 {{ end }}
 {{ define "toc" }}

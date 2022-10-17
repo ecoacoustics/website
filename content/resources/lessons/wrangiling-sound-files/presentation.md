@@ -32,7 +32,7 @@ will go wrong.
 4. Segmenting files
 
 {{% /slide %}}
-{{% slide %}}
+{{% vertical-slides %}}
 
 <!-- vertical slides -->
 
@@ -94,12 +94,8 @@ Many small files seriously affect the performance of file systems.
 
 {{% /slide %}}
 
-<!-- end vertical slides -->
-
-{{% /slide %}}
-{{% slide %}}
-
-<!-- vertical slides -->
+{{% /vertical-slides %}}
+{{% vertical-slides %}}
 
 {{% slide %}}
 
@@ -123,12 +119,8 @@ Problems are documented in an open source knowledge base:
 
 {{% /slide %}}
 
-<!-- end vertical slides -->
-
-{{% /slide %}}
-{{% slide %}}
-
-<!-- vertical slides -->
+{{% /vertical-slides %}}
+{{% vertical-slides %}}
 
 {{% slide %}}
 
@@ -146,9 +138,7 @@ Problems are documented in an open source knowledge base:
 
 {{% /slide %}}
 
-<!-- end vertical slides -->
-
-{{% /slide %}}
+{{% /vertical-slides %}}
 {{% slide %}}
 
 ## Golden rules

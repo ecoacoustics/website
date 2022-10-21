@@ -6,8 +6,8 @@
 </div>
 
 <div class="flex pull-right oe-presentation-controls">
-    <sl-icon-button name="arrows-fullscreen" label="fullscreen" onclick="var el = document.getElementById('presentation'); el.requestFullscreen();"></sl-icon-button>
-    <sl-icon-button name="printer" label="Print" onclick="window.print();"></sl-icon-button>
+    <sl-icon-button id="presentationFullScreenBtn" name="arrows-fullscreen" label="fullscreen"></sl-icon-button>
+    <sl-icon-button id="presentationPrintBtn" name="printer" label="Print"></sl-icon-button>
 </div>
 
 <script>
@@ -15,5 +15,26 @@
       embedded: true,
       slideNumber: true
     });
+
+    var printBtn = document.getElementById('presentationPrintBtn');
+    var fullScreenBtn = document.getElementById('presentationFullScreenBtn');
+
+    printBtn.addEventListener('click', function (event) {
+        window.location.search += "print-pdf"
+        window.print();
+    });
+
+    window.addEventListener('load', (event) => {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has("print-pdf")) {
+            window.print();
+        }
+    });
+
+    fullScreenBtn.addEventListener('click', function (event) {
+        var el = document.getElementById('presentation');
+       el.requestFullscreen();
+    });
+
 </script>
 {{ end }}

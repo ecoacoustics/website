@@ -15,10 +15,19 @@
 />
 
 <div class="reveal" id="presentation">
-    <div class="slides">{{ .Content }}</div>
+    {{/*  render notes section as an aside  */}}
+    {{- with .Content -}}
+    {{ $content := replaceRE `(?s:<blockquote>.*Notes?:(.*)</blockquote>)` "<aside class=\"notes\">\n${1}\n</aside>" . }}
+    <div class="slides">{{ $content | safeHTML  }}</div>
+    {{ end }}
 </div>
 
 <div class="flex pull-right oe-presentation-controls">
+    <sl-icon-button
+        id="notesToggleButton"
+        name="card-text"
+        label="show-notes"
+    ></sl-icon-button>
     <sl-icon-button
         name="arrows-fullscreen"
         label="fullscreen"
@@ -31,8 +40,18 @@
     ></sl-icon-button>
 </div>
 
+<aside id="slideNotes" class="notes-container notes-hidden">
+    <h6>Notes:</h6>
+    <div id="slideNotesContainer">
+    </div>
+</aside>
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+        const slideNotes = document.querySelector("#slideNotes");
+        const slideNotesContainer = document.querySelector("#slideNotesContainer");
+        const notesButton = document.querySelector("#notesToggleButton");
+
         Reveal.initialize({
             embedded: true,
             slideNumber: true,
@@ -43,11 +62,18 @@
             minScale: 0.1,
             maxScale: 3.0,
             disableLayout: false,
+            mouseWheel: true,
             plugins: [
                 RevealNotes,
                 RevealMath.KaTeX
             ],
         });
+
+        Reveal.on('slidechanged', event => {
+            slideNotesContainer.innerHTML = Reveal.getSlideNotes();
+        })
+
+        notesButton.addEventListener('click', () => slideNotes.classList.toggle("notes-hidden"));
     });
 </script>
 {{ end }}

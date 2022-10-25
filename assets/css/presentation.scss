@@ -30,7 +30,15 @@
     }
 
     aside {
-        background: none; // overriding aside bg style
+        //background: none; // overriding aside bg style
+    }
+
+    iframe {
+        // assume videos are central
+        width: auto;
+        aspect-ratio: 16/9;
+        flex-grow: 1 !important;
+        align-self: center;
     }
 
     .slide-number {
@@ -47,14 +55,15 @@
     }
 
     section > * {
-        flex: 1 1 auto;
+        flex: 0 1 auto;
     }
 
     .align-top {
-        // flex-;
+        justify-content: start;
     }
 
     .align-middle {
+        justify-content: center;
     }
 
     .align-center {
@@ -74,4 +83,8 @@
         /* overrides simple.css theme's stupid height limit */
         max-height: unset !important;
     }
+}
+
+.notes-hidden {
+    display: none;
 }

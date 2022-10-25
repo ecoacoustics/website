@@ -2,6 +2,7 @@
 {{- $type := .Get "type" -}}
 {{- if (eq $type "title") }}{{ $classes = $classes | append "align-center" }}{{ end -}}
 {{- if (eq $type "normal") }}{{ $classes = $classes | append "align-left" }}{{ end -}}
+{{- if (eq $type "centered") }}{{ $classes = $classes | append "align-center" }}{{ end -}}
 {{- if (not $type) }}{{ $classes = $classes | append "align-left" }}{{ end -}}
 <section
   {{- with .Get "data-background-image" }} data-background-image="{{ . }}" {{ end -}}

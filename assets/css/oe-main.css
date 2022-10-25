@@ -11,7 +11,9 @@
 @import "footer";
 @import "registry";
 @import "governance";
-@import "reveal-slides";
+@import "presentation";
+@import "shortcodes";
+
 
 /* Added a second definition to separate templated values from not so syntax
   highlighting will work */
@@ -40,6 +42,7 @@
 
     --oe-duration: 0.5s;
     --oe-timing: ease-in-out;
+    --oe-transition-properties-movement: grid-column, grid-row, width, transform, left, top, right, bottom, margin, padding;
 
     --oe-narrow-display: none;
     --oe-wide-display: inherit;

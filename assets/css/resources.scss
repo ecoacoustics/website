@@ -8,7 +8,7 @@
 
 .resources {
     #sideMenu {
-        transition-property: all;
+        transition-property: var(--oe-transition-properties-movement);
         transition-duration: var(--oe-duration);
         transition-timing-function: var(--oe-timing);
 
@@ -23,7 +23,7 @@
     }
 
     .book-page {
-        transition-property: all;
+        transition-property: var(--oe-transition-properties-movement);
         transition-duration: var(--oe-duration);
         transition-timing-function: var(--oe-timing);
 
@@ -32,7 +32,7 @@
     }
 
     .toc {
-        transition-property: all;
+        transition-property: var(--oe-transition-properties-movement);
         transition-duration: var(--oe-duration);
         transition-timing-function: var(--oe-timing);
 

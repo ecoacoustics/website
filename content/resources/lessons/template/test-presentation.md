@@ -101,3 +101,14 @@ To add a video: go to YouTube, click Share, choose embed, and paste the code:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-gOK_sv80uI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {{% /slide %}}
+{{% slide %}}
+
+## math
+
+Block display (using LaTeX syntax):
+
+$$\int_{a}^{b} x^2 dx$$
+
+And inline $\int_{a}^{b} x^2 dx$ display.
+
+{{% /slide %}}

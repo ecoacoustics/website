@@ -1,0 +1,13 @@
+.shortcode-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    min-height: 1em;
+    flex-grow: 10 !important;
+    gap: 1em;
+
+    & > * {
+        display: contents;
+    }
+}

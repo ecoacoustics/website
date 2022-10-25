@@ -43,6 +43,11 @@
         display: flex !important;
         flex-direction: column;
         overflow-wrap: break-word;
+        height: 100%;
+    }
+
+    section > * {
+        flex: 1 1 auto;
     }
 
     .align-top {
@@ -54,9 +59,19 @@
 
     .align-center {
         text-align: center;
+        align-items: stretch;
     }
 
     .align-left {
         text-align: left;
+    }
+
+    .emphasize {
+        font-size: 200%;
+    }
+
+    pre code {
+        /* overrides simple.css theme's stupid height limit */
+        max-height: unset !important;
     }
 }

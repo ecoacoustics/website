@@ -49,7 +49,7 @@ Your negative files should have a wide variety of sounds that are likely to appe
 You should bring between 1 and 3 GB of longer wav files (between 5 and 60 mins) which will be put through your trained recogniser. You should make sure that your target call is contained in those recordings somewhere, the more examples the better.  Ideally none of your training/testing labelled examples should have been taken from these longer recordings. 
 
  
- # Software
+# Software
 
  The following software will be used in the workshop. If you are bringing your own laptop, please install them. 
 

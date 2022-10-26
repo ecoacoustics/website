@@ -17,7 +17,7 @@
 <div class="reveal" id="presentation">
     {{/*  render notes section as an aside  */}}
     {{- with .Content -}}
-    {{ $content := replaceRE `(?s:<blockquote>.*Notes?:(.*)</blockquote>)` "<aside class=\"notes\">\n${1}\n</aside>" . }}
+    {{ $content := replaceRE `(?s:<blockquote>.*?Notes?:(.*?)(</p>)?</blockquote>)` "<aside class=\"notes\">\n${1}\n</aside>" . }}
     <div class="slides">{{ $content | safeHTML  }}</div>
     {{ end }}
 </div>

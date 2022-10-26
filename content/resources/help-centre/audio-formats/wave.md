@@ -19,4 +19,4 @@ is important to know that some compression formats, such as [MP3]({{< ref
 "/resources/help-centre/audio-formats/mp3" >}}), use a method of compression
 that can result in a loss of quality (lossy compression). You can avoid this
 shortcoming by using lossless compression formats such as [`FLAC`]({{< ref
-"flac" >}}), where there is no reduction in quality. 
+"flac" >}}), where there is no reduction in quality.

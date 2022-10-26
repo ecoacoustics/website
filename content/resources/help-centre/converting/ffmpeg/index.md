@@ -1,6 +1,7 @@
 ---
 title: FFmpeg
 ---
+{{< section >}}
 
 [FFmpeg](https://ffmpeg.org/)  is a cross platform tool which allows multimedia
 files, such as audio recordings, to be converted between different formats. We
@@ -15,6 +16,13 @@ first time using FFmpeg, start by downloading and installing the appropriate
 build from the FFmpeg website. You can then open your CLI, and type ffmpeg, to
 check that your installation was successful. You should see some information
 returned, such as the version number of FFmpeg you have installed. 
+
+## Installing FFmpeg
+{{< tabs "test" >}}
+{{< tab "MacOS" >}} # MacOS Content {{< /tab >}}
+{{< tab "Linux" >}} # Linux Content {{< /tab >}}
+{{< tab "Windows" >}} # Windows Content {{< /tab >}}
+{{< /tabs >}}
 
 ## Converting audio files
 FFmpeg is able to convert audio easily with smart default settings.

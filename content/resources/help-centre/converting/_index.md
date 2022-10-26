@@ -1,10 +1,12 @@
 ---
 title: Converting audio files
 ---
-[we need to add a warning about conversions that strip sensor metadata from
-files]
 
 In this section we will cover the topic of converting audio files. 
+{{< hint danger >}}
+**Warning**: we need to add a warning about conversions that strip sensor metadata from
+files
+{{< /hint >}}
 
 ## Do I need to convert my audio files? 
 Check the file type compatibility of the

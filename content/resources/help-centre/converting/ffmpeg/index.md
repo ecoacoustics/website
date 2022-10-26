@@ -2,16 +2,11 @@
 title: FFmpeg
 ---
 
-Introduction to FFmpeg
-
-[text](https://ffmpeg.org/) 
-
-FFmpeg is a cross platform tool which runs in the command line to "convert
-multimedia files between formats." Particularly for changing / converting audio
-formats quickly, this tool is amazing. We will give a simple overview on how to
-use this tool to do basic conversions between audio formats, but keep in mind
-the features of FFmpeg are far more extensive, and covered in detail within
-their documentation.
+[FFmpeg](https://ffmpeg.org/)  is a cross platform tool which allows multimedia
+files, such as audio recordings, to be converted between different formats. We
+will give a simple overview on how to use this tool to do basic conversions
+between audio formats, but keep in mind the features of FFmpeg are far more
+extensive, and covered in detail within their documentation.
 
 FFmpeg is a command line tool, which means we need to use a command line
 interface (CLI), either the command prompt (cmd.exe) or PowerShell for Windows
@@ -22,24 +17,49 @@ check that your installation was successful. You should see some information
 returned, such as the version number of FFmpeg you have installed. 
 
 ## Converting audio files
-### Simple conversions 
-### Batch conversions 
+FFmpeg is able to convert audio easily with smart default settings.
 
-batch: 
-```for i in *.wav; do ffmpeg -i "$i" -f mp3 "${i%.*}.mp3"; done```
+### Simple conversions
+This is a simple conversion which takes your input file name and format, and
+returns an output, in the format of the file extension you specify. For example,
+the code below will take the input (-i) file, named input.mp3, and return a file
+called output.wav. 
+
+```
+ffmpeg -i input.mp3 output.wav
+``` 
+
+### Batch conversions 
+We can also convert all files within a directory with a batch conversion. The
+code below will convert all `.wav` files, into `.mp3`. The original file names
+are preserved for the output, and a _converted suffix is added (which you can
+modify). batch: 
+
+```
+for i in *.wav; do ffmpeg -i "$i" -f mp3 "${i%.*}_converted.mp3"; done
+```
 
 ## Output settings
-specify output bit depth and sample rate
+### Sample rate
+FFmpeg will not change sample rate unless you tell it to. If you want to modify
+the sample rate, first check the audio properties of your sound file by entering
+the file without specifying an output: `ffmpeg -i input.wav`. Assuming that
+input.wav has a sample rate 44100 Hz, but you want to down sample this file, the
+sample rate of the output file can be specified using `-ar`. The example below
+will return a `.wav` file with a sample rate of 22050 Hz. 
 
-convert flac to wav. ffmpeg will not change sample rate unless you tell it to. 
-ffmpeg -i input.flac output.wav
+```
+ffmpeg -i input.flac -ar 22050 output.wav
+```
+### Bit depth
+However, FFmpeg defaults to 16-bit encoding when outputting `.wav`, and will
+therefore not preserve bit depth of your audio file, if it is greater than 16.
+If you want to preserve a 24 bit encoded file, you can manually specify a 24-bit
+encoder.
 
-"ffmepg will however not preserve bit depth and default to 16-bit encoding, so
-if your input is 24 bit, you have to use:"
+```
 ffmpeg -i input.flac -c:a pcm_s24le output.wav
-
-## Compressing audio
-wav to flac
+```
 
 
 

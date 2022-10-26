@@ -7,13 +7,18 @@ files]
 
 In this section we will cover the topic of converting audio files. 
 
-In some cases, you may be required to convert your files..etc. We will present
-some solutions for converting between audio file formats. The tool we recommend
-is ffmpeg, But we will also present some alternatives. 
-## Why
+## Do I need to convert my audio files? 
+Check the file type compatibility of the
+software you will be working with. In most cases, the commonly used file types
+in ecoacoustics will be supported
+and conversions may not be necessary. But if not, you can follow the help
+pages below. You may also be interested in learning how to convert between `.wav`
+and `.flac` files, to save storage space. 
 
-## How
-The pages listed below will cover the most common tools available to convert
-your audio files. 
+## How?
+The pages listed below will present some solutions for converting between audio
+file formats.
+
+
 
 

@@ -15,8 +15,8 @@ such as [Raven](https://ravensoundsoftware.com/)[^1] and
 [AnalysisPrograms.exe](https://ap.qut.ecoacoustics.info/basics/introduction.html)
 (AP.exe) can run analysis (i.e.: calculate indices and segment) on `.flac`
 files. However, some analysis tools may not support `.flac`, in which case you
-will be required to convert your files to `.wav`. [See converting help page][see
-compatability table].
+will be required to convert your files to `.wav`. See [Converting]({{< ref
+"converting" >}})
 
 [^1]: Note: Raven can read `.flac` files, but can't export audio files as
     `.flac`. If you make changes to the audio file in Raven that you wish to

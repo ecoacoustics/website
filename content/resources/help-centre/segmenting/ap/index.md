@@ -2,11 +2,13 @@
 title: Segmenting with AP
 draft: true
 ---
-AP can segment audio files, to desired lengths etc. 
+AnalysisPrograms (AP) software can segment audio files into desired lengths.
+For full details see the --help documentation. 
 
+```
 C:\AP\AnalysisPrograms.exe AudioCutter --help
 ~/AP/AnalysisPrograms AudioCutter --help
-~/AP/AnalysisPrograms AudioCutter --help
+```
 
 ## WAV
 
@@ -20,7 +22,7 @@ C:\AP\AnalysisPrograms.exe AudioCutter "C:\AP\test\20200216T040000+1000.wav" "C:
 
 ## FLAC
 
-Cutting `.flac` into smaller files using AP.exe. In Powershell:
+Segmenting `.flac` into smaller files using AP.exe. In Powershell:
 
 ```
 C:\AP\AnalysisPrograms.exe AudioCutter "C:\AP\test\20200216T040000+1000.flac" "C:\AP\test_output"

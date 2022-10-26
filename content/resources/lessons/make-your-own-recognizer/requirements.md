@@ -21,7 +21,7 @@ You will need to provide between 20 and 200 positive examples and negative examp
 
 Positive and negative examples should be separated into different folders, i.e. a folder named "positive" and a folder named "negative" 
 
-There are two possible formats your labelled examples can be in:
+There are two possible formats for you to prepare the training/testing data:
 
 - "Pre-segmented"
 - "Annotated"
@@ -38,10 +38,11 @@ You can have a combination of both formats if it suits you.
 
 - Each recording has been annotated in Raven or Raven Lite, with bounding boxes drawn over the calls in the spectrogram. 
 - This will give an annotation text file that is paired with the recording file.  
-- The annotation file should have the identical name as the audio file (except for the file extension) E.g. the annotation file of an audio file named site_1_20220326_042500.wav should be named site_1_20220326_042500.txt 
-- This would suit short calls that happen sporadically or with longer gaps between them multiple times within a longer file. 
+- The annotation filename should match the wav filename, the way Raven saves it by default. E.g. the annotation file of an audio file named `site_1_20220326_042500.wav` should be named `site_1_20220326_042500.Table.1.selections.txt`. The scripts provided in the workshop will take the audio filename (minus the extension) and look for a matching annotation file whose filename begins with that string of characters. 
 - For instructions installing Raven Lite, see the instructions at the bottom of this document. 
-Your negative files should have a wide variety of sounds that are likely to appear in audio that is recorded when your recogniser is deployed. It should also resemble the audio from the positive examples as closely as possible. It would be good to take some negative and positive examples from the same original longer recordings if possible. 
+
+
+Whichever of the two formats you use, your negative files should have a wide variety of sounds that are likely to appear in audio that is recorded when your recogniser is deployed. It should also resemble the audio from the positive examples as closely as possible. It would be good to take some negative and positive examples from the same original longer recordings if possible. 
 
 
 ## Unlabelled Inference Dataset

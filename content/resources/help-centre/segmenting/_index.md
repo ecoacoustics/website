@@ -1,6 +1,5 @@
 ---
 title: Segmenting audio files
-draft: true
 ---
 
 In this section we will cover the topic of segmenting audio files. Segmenting

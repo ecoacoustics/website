@@ -1,6 +1,5 @@
 ---
 title: Segmenting with R
-draft: true
 ---
 
 The warbleR package in R provides a convenient function `split_sound_files`, to

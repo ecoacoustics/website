@@ -1,6 +1,5 @@
 ---
 title: Converting audio files
-draft: true
 ---
 [we need to add a warning about conversions that strip sensor metadata from
 files]

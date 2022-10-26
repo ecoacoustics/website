@@ -1,6 +1,5 @@
 ---
 title: WAC
-draft: true
 ---
 
 ## Description

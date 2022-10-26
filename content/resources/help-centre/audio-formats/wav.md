@@ -1,6 +1,5 @@
 ---
 title: WAV
-draft: true
 ---
 
 ## Description

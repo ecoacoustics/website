@@ -1,6 +1,5 @@
 ---
 title: Converting audio files with R
-draft: true
 ---
 ## Working with .wav and .mp3
 

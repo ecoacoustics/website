@@ -104,3 +104,16 @@
         margin-top: 0;
     }
 }
+
+.resources nav.breadcrumbs {
+    margin-bottom: 1em;
+    font-size: smaller;
+
+    & a {
+        color: var(--oe-font-color-tone);
+
+        &:hover {
+            color: var(--color-link);
+        }
+    }
+}

@@ -33,6 +33,22 @@
         //background: none; // overriding aside bg style
     }
 
+    blockquote {
+        box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.2) !important;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    div.footnotes {
+        font-size: 66%;
+        position: absolute;
+        bottom: -2em;
+
+        & hr {
+            display: none;
+        }
+    }
+
     iframe {
         // assume videos are central
         width: auto;
@@ -58,8 +74,13 @@
         flex: 0 1 auto;
     }
 
+    section > div.highlight {
+        flex: 1 1 auto;
+    }
+
     .align-top {
-        justify-content: start;
+        justify-content: flex-start;
+        gap: 1em;
     }
 
     .align-middle {
@@ -87,4 +108,9 @@
 
 .notes-hidden {
     display: none;
+}
+
+.notes-container > div {
+    border: 1px solid gray;
+    min-height: 5em;
 }

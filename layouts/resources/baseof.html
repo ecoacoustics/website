@@ -41,6 +41,9 @@
     </aside>
 
     <div class="book-page">
+        <nav class="breadcrumbs">
+            {{ partial "breadcrumbs" . }}
+        </nav>
 
         <header class="book-header">
             {{ block "header" . }}

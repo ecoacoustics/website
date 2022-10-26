@@ -1,6 +1,5 @@
 ---
 title: MP3
-draft: true
 ---
 
 ## Description

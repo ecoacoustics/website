@@ -131,7 +131,7 @@ page for more information. Further details on the `wav2flac` function can be
 found [here](https://rdrr.io/cran/seewave/man/wav2flac.html). 
 
 Take note of the `exename` and `path2exe` settings in the examples below. If you
-are using windows, path2exe should specify the folder which contains flac.exe.
+are using windows, path2exe should specify the folder which contains `flac.exe`.
 If you are using MacOS, the directory that flac is installed should be listed in
 your `$PATH` variable for the function to work. 
 

@@ -4,6 +4,8 @@ languageCode: "en-us"
 title: Open Ecoacoustics
 theme: hugo-book-custom
 markup:
+    highlight:
+        style: rrt
     goldmark:
         parser:
             attribute:

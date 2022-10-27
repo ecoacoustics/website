@@ -16,8 +16,9 @@
 
 <div class="reveal" id="presentation">
     {{/*  render notes section as an aside  */}}
-    {{- with .Content -}}
-    {{ $content := replaceRE `(?s:<blockquote>.*?Notes?:(.*?)(</p>)?</blockquote>)` "<aside class=\"notes\">\n${1}\n</aside>" . }}
+        {{/*  <pre>{{ .Content }}</pre>  */}}
+    {{- with .Content  -}}
+    {{ $content := replaceRE `(?s:<blockquote>(\s+?<p>)(?:Notes?:)(.*?)</blockquote>)` "<aside class=\"notes\">\n${1}${2}\n</aside>" . }}
     <div class="slides">{{ $content | safeHTML  }}</div>
     {{ end }}
 </div>
@@ -47,7 +48,7 @@
 
 <aside id="slideNotes" class="notes-container notes-hidden">
     <h6>Notes:</h6>
-    <div id="slideNotesContainer">
+    <div id="slideNotesContainer" class="markdown">
     </div>
 </aside>
 

@@ -58,6 +58,6 @@
 }
 
 .brand img,
-svg {
+.brand svg {
     max-height: var(--oe-navbar-height);
 }

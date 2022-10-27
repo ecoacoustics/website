@@ -11,3 +11,9 @@
         display: block;
     }
 }
+
+.asciinema-player {
+    & pre {
+        overflow-x: hidden;
+    }
+}

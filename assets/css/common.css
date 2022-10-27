@@ -97,3 +97,7 @@ footer {
 ol > li {
     margin-bottom: 0.5em;
 }
+
+sup {
+    top: initial;
+}

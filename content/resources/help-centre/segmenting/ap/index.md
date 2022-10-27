@@ -2,7 +2,7 @@
 title: Segmenting with AP
 ---
 AnalysisPrograms (AP) software can segment audio files into desired lengths.
-For full details see the --help documentation. 
+For full details see the `--help` documentation. 
 
 ```
 C:\AP\AnalysisPrograms.exe AudioCutter --help

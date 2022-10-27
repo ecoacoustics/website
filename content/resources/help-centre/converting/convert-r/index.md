@@ -5,7 +5,7 @@ In this section we will discuss some options for working with different audio
 formats in R, and converting between those formats. When using R to work with
 audio files, we typically use the tuneR package to import audio, which stores
 the data as a wave class object. The packages and functions discussed below will
-cover importing a range of audio formats (.wav, .mp3, .flac, .wac) as a wave
+cover importing a range of audio formats (WAVE, MP3, FLAC, WAC) as a wave
 object. Once you have a wave object, you can export the audio as a `.wav` file
 if you desire. It is also possible to convert between .wav and .flac within R,
 which will be discussed. 

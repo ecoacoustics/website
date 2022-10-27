@@ -3,13 +3,11 @@
 {{- $href := .Destination -}}
 {{- $local := false -}}
 {{- if not (strings.HasPrefix .Destination "http") -}}
-{{/* {{- $href = (relref .Page .Destination) -}} */}}
 <a href="{{- $href | safeURL -}}" {{- with .Title -}} title="{{- . -}}" {{- end -}}>{{- .PlainText -}}</a>
 {{- else -}}
 {{- $isInsecure := true -}}
 {{- if strings.HasPrefix .Destination "https" -}}
 {{- $isInsecure = false -}}
 {{- end -}}
-<a href="{{- $href | safeURL -}}" {{- with .Title -}} title="{{- .Title -}}" {{- end -}} {{- if (or (not ($local))
-    ($isInsecure) ) }} target="_blank" rel="noopener" {{- end -}}>{{- .PlainText -}}</a>
+<a href="{{- $href | safeURL -}}" {{- with .Title -}} title="{{- .Title -}}" {{- end -}} {{- if (or (not ($local)) ($isInsecure) ) }} target="_blank" rel="noopener" {{- end -}}>{{- .PlainText -}}</a>
 {{- end -}}

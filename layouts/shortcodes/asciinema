@@ -1,0 +1,23 @@
+{{- $file := .Get `id` }}
+{{- $id := md5 $file}}
+{{- $path := path.Join $.Page.File.Dir $file }}
+{{- if not (os.FileExists $path) }}
+{{ errorf "Could not find file at path %q" $path }}
+{{ end -}}
+<div id="asciinema-container-{{ $id }}" class="asciinema-player"></div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const castUrl = "{{ relURL (path.Join $.Page.File.Dir $file) }}";
+        const container = document.querySelector(
+            "#asciinema-container-{{ $id }}"
+        );
+        const options = JSON.parse(`{
+    "loop": {{- with .Get "loop" }}{{ . }}{{ else }}false{{ end -}},
+    "autoPlay": {{- with .Get "loop" }}{{ . }}{{ else }}false{{ end -}},
+    "preload": {{- with .Get "loop" }}{{ . }}{{ else }}true{{ end -}}
+    {{- with .Get "cols" }},"cols": {{ . }}{{ end -}}
+    {{- with .Get "rows" }},"rows": {{ . }}{{ end -}}
+  }`);
+        AsciinemaPlayer.create(castUrl, container, options);
+    });
+</script>

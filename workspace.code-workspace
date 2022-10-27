@@ -79,7 +79,7 @@
         },
         "peacock.color": "#CB7E30",
         "[markdown]": {
-            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            // "editor.defaultFormatter": "esbenp.prettier-vscode",
             "editor.quickSuggestions": {
                 "comments": "on",
                 "strings": "on",
@@ -87,14 +87,22 @@
             }
         },
         "cSpell.words": [
+            "analyse",
+            "Asciinema",
             "behaviour",
             "binomial",
+            "convolutional",
             "Ecoacoustic",
             "Ecoacoustics",
+            "Ecosounds",
+            "favourite",
             "orcid",
+            "organisation",
             "organisations",
             "Preact",
+            "recogniser",
             "recognisers",
+            "specialising",
             "standardised"
         ]
     },

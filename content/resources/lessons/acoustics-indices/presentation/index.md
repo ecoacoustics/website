@@ -17,7 +17,7 @@ Marina D. A. Scarpelli - PhD candidate at QUT
 {{% /slide %}}
 {{% slide %}}
 
-## Bioacoustics vs Ecoacoustics
+## Two approaches: Bioacoustics vs Ecoacoustics
 
 <div class="quarter-grid">
 
@@ -37,12 +37,11 @@ Marina D. A. Scarpelli - PhD candidate at QUT
 ![Communicationnetwork](./communication-network.png)
 
 </div>
-
 {{% /slide %}}
 {{% slide %}}
 
 ## Passive Acoustic Monitoring (PAM)
-### Facilitating research on communication networks
+
 {{% row %}} 
 -   Passive acoustic recorders facilitated the investigation 
 of more comprehensive questions, enabling research on:
@@ -55,6 +54,7 @@ of more comprehensive questions, enabling research on:
 { .image-150-percent  }
 
 {{% /row %}}
+
 {{% /slide %}}
 {{% slide %}}
 
@@ -72,33 +72,16 @@ of more comprehensive questions, enabling research on:
 <div class="footnotes">
 Sugai LSM, Silva TSF, Ribeiro JW, Llusia D. 2019. Terrestrial Passive Acoustic Monitoring: Review and Perspectives. BioScience 69:5–11.
 </div>
-
 {{% /slide %}}
 {{% slide %}}
 
 ## Acoustic indices
 
--   “Soundscape” or Ecoacoustics approach (Alcocer et al., 2022)
+-   Linked to the “Soundscape” or Ecoacoustics approach (Alcocer et al., 2022)
 -   Mathematical function applied to waveform or spectrogram
     -   Can be derived from traditional ecological indices (i.e.: diversity, richness, etc)
 -   Summarise the acoustic information with a community perspective
-    -   moving away from species-specific questions
-
-{{% /slide %}}
-{{% slide %}}
-
-## Acoustic indices
-![sueur-et-al-2014](./Pasted%20image%2020220915105916.png)
-{.align-center style="height: 80%"}
-
-Sueur, J., Farina, A., Gasc, A., Pieretti, N., & Pavoine, S. (2014). Acoustic Indices for Biodiversity Assessment and Landscape Investigation. ACTA Acustica United With Acustica, 100, 772–781. [https://doi.org/10.3813/AAA.918757](https://doi.org/10.3813/AAA.918757)
-{.footnotes}
-
-> Notes:
-> Alpha diversity: related to richness and relative abundance (evenness)
->
-> Beta diversity: try to estimate similarity or dissimilarity between list of entities recorded at each site
-
+    -   Moving away from species-specific questions
 {{% /slide %}}
 {{% slide %}}
 
@@ -240,11 +223,11 @@ Biophony
 
 -   Sounds are multidimensional: frequency, time and amplitude
 -   Environmental recordings have an additional constraint: 
-    -   it is hard to determine the distance between sound source (e.g.: animal) to microphone
-    -   Amplitude metrics depend on distance because of attenuation effects
+    -   It is hard to determine the distance between sound source (e.g.: animal) to microphone
+        -   Amplitude metrics depend on distance because of attenuation effects
 -   Other factors might influence values: 
-    -   e.g. background noise, intensity and repetition of calls by one individual, overlaps between calls,etc
-    -   Therefore the relationship between one index/one ecological metric are still unclear
+    -   E.g. background noise, intensity and repetition of calls by one individual, overlaps between calls,etc
+    -   Therefore the relationship between one index/one ecological metric is still unclear
 
 >Notes:
 >Transforming a multidimensional feature into one single number is not always straightforward and a lot of times if does not work the same in every situation;

@@ -7,44 +7,71 @@ weight: 2
 
 {{% slide type=title %}}
 
-# Cover: Acoustic Indices
+# Acoustic Indices
 
-Marina D. A. Scarpelli - PhD candidate at QUT
+Marina D. A. Scarpelli - PhD candidate at QUT  
+[@ScarpelliNina](https://twitter.com/ScarpelliNina)
 
-{{% /slide %}}
-{{% slide %}}
-
-## PAM enabling research on communication networks
-
--   With PAM recorders the investigation of questions related to soundscapes and all audible fauna was possible in terms of data - however analytical tools still needed to be improved
-    -   It also enabled upscaling bioacoustics questions
--   ![[Pasted image 20220916114118.png]]
--   ![[Pasted image 20220916114126.png]]
+![FCS](./258_20201027__2Maps.png)
 
 {{% /slide %}}
 {{% slide %}}
 
-## Bioacoustics vs ecoacoustics
+## Bioacoustics vs Ecoacoustics
 
--   Species-specific approach: consider the communication system exclusively between sender and receiver
-    -   Bioacoustics is more appropriate
--   ![[Communication1to1 1.tif]]
--   Communication structure is more like a network (Sueur, 2014)
-    -   Ecoacoustics or soundscape approach
-    -   Biophony + Geophony + Technophony
-    -   Enables the detection not only of species calls, but social, behavioural and ecological cues
--   ![[Communication_network.tif]]
+<div class="quarter-grid">
 
+-  Species-specific approach: consider the communication system exclusively between sender and receiver
+    - Usually called **bioacoustics**
+
+![Communication1to1](./communication-1-1.png)
+
+
+-  Communication structure is more similar to a network (Sueur, 2014)
+    - **Ecoacoustics** or **soundscape** approach
+        - Soundscape: all the sounds in the landscape
+        - Biophony + Geophony + Technophony
+    - Enables the detection not only of species calls, but also social, behavioural and ecological cues
+
+
+![Communicationnetwork](./communication-network.png)
+
+</div>
+
+{{% /slide %}}
+{{% slide %}}
+
+## Passive Acoustic Monitoring (PAM)
+### Facilitating research on communication networks
+{{% row %}} 
+-   Passive acoustic recorders facilitated the investigation 
+of more comprehensive questions, enabling research on:
+    - Soundscapes
+    - Multiple species
+    - Upscaling bioacoustics questions: temporal and spatially
+- However analytical tools still needed to be improved
+
+![sensor2](./Pasted%20image%2020220916114126.png)  
+{ .image-150-percent  }
+
+{{% /row %}}
 {{% /slide %}}
 {{% slide %}}
 
 ## Approaches to analyse the data
 
+{{% row %}} 
 -   Manually listening/annotating
 -   Species recognisers (automatic/semi-automatic)
 -   Acoustic indices (AI): summarising information
     -   More than 69 existing indices (Alcocer et al., 2022)
--   ![[Pasted image 20220915141421.png]]- Sugai LSM, Silva TSF, Ribeiro JW, Llusia D. 2019. Terrestrial Passive Acoustic Monitoring: Review and Perspectives. BioScience 69:5–11.
+
+![sugai-et-al-2019](./Pasted%20image%2020220915141421.png)
+{{% /row %}}
+
+<div class="footnotes">
+Sugai LSM, Silva TSF, Ribeiro JW, Llusia D. 2019. Terrestrial Passive Acoustic Monitoring: Review and Perspectives. BioScience 69:5–11.
+</div>
 
 {{% /slide %}}
 {{% slide %}}
@@ -54,52 +81,157 @@ Marina D. A. Scarpelli - PhD candidate at QUT
 -   “Soundscape” or Ecoacoustics approach (Alcocer et al., 2022)
 -   Mathematical function applied to waveform or spectrogram
     -   Can be derived from traditional ecological indices (i.e.: diversity, richness, etc)
--   Summarise the acoustic information with a community perspective – moving away from species-specific questions
-
--   ![[Pasted image 20220915105916.png]]
-
-Sueur, J., Farina, A., Gasc, A., Pieretti, N., & Pavoine, S. (2014). Acoustic Indices for Biodiversity Assessment and Landscape Investigation. ACTA Acustica United With Acustica, 100, 772–781. https://doi.org/10.3813/AAA.918757
-
-## Slide notes:
-
--   Alpha diversity: related to richness and relative abundance (evenness)
--   Beta diverity: try to estimate similarity or dissimilarity between list of entinties recorded at each site
+-   Summarise the acoustic information with a community perspective
+    -   moving away from species-specific questions
 
 {{% /slide %}}
 {{% slide %}}
 
-## Types of indices (Sueur et al., 2014)
+## Acoustic indices
+![sueur-et-al-2014](./Pasted%20image%2020220915105916.png)
+{.align-center style="height: 80%"}
 
--   Intensity indices: measure sound intensity (in dB) with different wheighting an time averaging
-    -   They usually miss information on frequency and temporal patterns of soundscapes
-    -   Towsey M, Wimmer J, Williamson I, Roe P. 2014. The use of acoustic indices to determine avian species richness in audio-recordings of the environment. Ecological Informatics 21:110–119. Elsevier B.V. Available from http://dx.doi.org/10.1016/j.ecoinf.2013.11.007.
--   Complexity indices: more species and individuals communicating will increase the complexity of the soundscape
-    -   Index capturing heterogeneity would provide a proxy of animal acoustic activity
-    -   ACI: Pieretti N, Farina A, Morri D. 2011. A new methodology to infer the singing activity of an avian community: The Acoustic Complexity Index (ACI). Ecological Indicators 11:868–873. Elsevier Ltd. Available from http://dx.doi.org/10.1016/j.ecolind.2010.11.005.
-    -   Entropy (H): Sueur J, Pavoine S, Hamerlynck O, Duvail S. 2008. Rapid Acoustic Survey for Biodiversity Appraisal. PLoS ONE 3:e4065. Available from https://dx.plos.org/10.1371/journal.pone.0004065.
--   Soundscape derived indices: estimates the relative contribution of biophony in relation to technophony and geophony
-    -   Splits the spectrum into frequency bands: 0.2 to 2 kHz = technophony; 2 to 8kHz = biophony; geophony: occupies the entire spectrum
-    -   NDSI (Gage SH, Axel AC. 2014. Visualization of temporal change in soundscape power of a Michigan lake habitat over a 4-year period. Ecological Informatics 21:100–109. Elsevier B.V. Available from http://dx.doi.org/10.1016/j.ecoinf.2013.11.004.)
+Sueur, J., Farina, A., Gasc, A., Pieretti, N., & Pavoine, S. (2014). Acoustic Indices for Biodiversity Assessment and Landscape Investigation. ACTA Acustica United With Acustica, 100, 772–781. [https://doi.org/10.3813/AAA.918757](https://doi.org/10.3813/AAA.918757)
+{.footnotes}
+
+> Notes:
+> Alpha diversity: related to richness and relative abundance (evenness)
+>
+> Beta diversity: try to estimate similarity or dissimilarity between list of entities recorded at each site
 
 {{% /slide %}}
 {{% slide %}}
 
-## Soundscape indices and splitting the frequency bands (I'm gonna have spectrograms here to show these)
+## Types of Indices
 
--   good examples
-    -   ![[technophony-example.wav]]
+### Sueur et al., 2014
 
-![[biophony-example.wav]]
+- Intensity indices: measure sound intensity (in dB) with different frequency weighting and time averaging
+- They usually miss information on frequency and temporal patterns of soundscapes
 
-![[birds-example.wav]]
+![towsey-et-al-2014](./towsey-et-al-2014.PNG)
+{.align-center}
 
-![[geophony-example.wav]]
+>Notes:
+>In this paper we examine the problem of estimating avian species richness by sampling from very long acoustic recordings using intensity indices.
 
--   Does not always work:
-    -   rustling
-    -   ![[rustling-example.wav]]
+{{% /slide %}}
+{{% slide %}}
 
-![[boobook-example.wav]] - boobook -
+## Types of Indices
+
+### Sueur et al., 2014
+- Complexity indices: more species and individuals communicating will increase the complexity of the soundscape
+- Heterogeneity would be a proxy of animal acoustic activity
+
+![pieretti-et-al-2011](./pieretti-et-al-2011.PNG) 
+{.align-center}
+
+>Notes:
+>This is the paper for the ACI, one of the oldest and most used Acoustic indices so far
+
+{{% /slide %}}
+{{% slide %}}
+
+## Types of Indices
+
+### Sueur et al., 2014
+
+- Soundscape derived indices: estimates the relative contribution of biophony in relation to technophony and geophony
+- Splits the spectrum into frequency bands:
+  - 0.2 to 2 kHz = technophony
+  - 2 to 8kHz = biophony
+  - geophony: occupies the entire spectrum
+
+![gage-and-axel-2014](./gage-and-axel-2014.PNG)
+{.align-center}
+
+>Notes:
+>This is the paper for the NDSI - Normalised Difference Soundscape Index, which calculates the ratio between the anthrophony and biophony based on the frequency bands division
+
+{{% /slide %}}
+{{% slide %}}
+
+## Soundscape indices
+
+### Splitting frequency bands
+
+Sometimes it works...
+
+Technophony
+![technophony-example](./technophony-example.PNG)
+{.align-center}
+
+{{% /slide %}}
+{{% slide %}}
+
+## Soundscape indices
+
+### Splitting frequency bands
+
+Sometimes it works...
+
+Biophony
+![biophony-example](./biophony-example.PNG)
+{.align-center}
+
+{{% /slide %}}
+{{% slide %}}
+
+## Soundscape indices
+
+### Splitting frequency bands
+
+Sometimes it works...
+
+Geophony
+![geophony-example](./geophony-example.PNG)
+{.align-center}
+
+{{% /slide %}}
+{{% slide %}}
+
+## Soundscape indices
+
+### Splitting frequency bands
+
+Sometimes it does not work...
+
+Geophony
+ ![rustling-example](./rustling-example.PNG)
+ {.align-center}
+
+>Notes:
+>rustling
+
+{{% /slide %}}
+{{% slide %}}
+
+## Soundscape indices
+
+### Splitting frequency bands
+
+Sometimes it does not work...
+
+Biophony
+![boobook-example](./boobook-example.PNG)
+{.align-center}
+
+{{% /slide %}}
+{{% slide %}}
+
+## Soundscape indices
+
+### Splitting frequency bands
+
+Sometimes it does not work...
+
+Biophony
+![birds-example](./birds-example.PNG)
+{.align-center}
+
+>Notes:
+>Birds going over the technophony 
 
 {{% /slide %}}
 {{% slide %}}
@@ -107,60 +239,58 @@ Sueur, J., Farina, A., Gasc, A., Pieretti, N., & Pavoine, S. (2014). Acoustic In
 ## Acoustic indices disadvantages
 
 -   Sounds are multidimensional: frequency, time and amplitude
--   Environmental recordings have an additional constraint: it is hard to determine the distance between sound source (e.g.: animal) to microphone
+-   Environmental recordings have an additional constraint: 
+    -   it is hard to determine the distance between sound source (e.g.: animal) to microphone
     -   Amplitude metrics depend on distance because of attenuation effects
--   Other factors might influence values: background noise, intensity and repetition of calls by one individual, overlaps between calls
--   Therefore the relationship between one index/one ecological metric are still unclear
+-   Other factors might influence values: 
+    -   e.g. background noise, intensity and repetition of calls by one individual, overlaps between calls,etc
+    -   Therefore the relationship between one index/one ecological metric are still unclear
 
+>Notes:
+>Transforming a multidimensional feature into one single number is not always straightforward and a lot of times if does not work the same in every situation;
 {{% /slide %}}
 {{% slide %}}
 
 ## Acoustic indices measuring biodiversity
 
--   ![[Pasted image 20220915145342.png]]
+![Pasted image 20220915145342.png](./Pasted%20image%2020220915145342.png)
+
+>Notes:
+>This is a meta-analysis that just came out this year and they did a very thorough investigation on acoustic indices and how effective they are in measuring biodiversity
+{{% /slide %}}
+{{% slide %}}
+
+## Summary of meta-analysis
+{{% row %}} 
+![Pasted image 20220920125409.png](./Pasted%20image%2020220920125409.png)
+{ .image-150-percent }
+
+-   AI had an overall moderate positive correlation with biodiversity
+-   Best biodiversity metric correlated with AI was abundance of sounds
+-   There was no single best AI
+{{% /row %}} 
 
 {{% /slide %}}
 {{% slide %}}
 
 ## Summary of meta-analysis
-
-![[Pasted image 20220920125409.png]]
-
--   AI had an overall moderate positive correlation with biodiversity
--   Best biodiversity metric correlated with AI was abundance of sounds
--   There was no single best AI
-
-{{% /slide %}}
-{{% slide %}}
+{{% row %}} 
+![Pasted image 20220920125409.png](./Pasted%20image%2020220920125409.png)
+{ .image-150-percent }
 
 -   Majority of studies investigated terrestrial habitats and birds are the main group studied;
 -   Species richness and abundance of sounds are the most explored metric to relate acoustic indices values to biodiversity measures
+{{% /row %}} 
+
+{{% /slide %}}
+{{% slide type=title %}}
+
+Now, let's do some practical exercises!
+
+
+Go to the [practical](../practical/).
+
 
 {{% /slide %}}
 {{% slide %}}
 
-## False-colour spectrograms ?
-
--   \*\*Don't know if I'll talk about this if we won't do any - maybe I'll show the 2-hour blocks?
--   Frequency x time x acoustic indices (3): (Towsey et al, 2014)
-    -   Visualisation tool
-    -   Capture repetitive patterns of the soundscape
-    -   Visual combination of AI
-        -   Combination of indices is more successful to summarise soundscapes than single indices approach
-
-## Exploring the results
-
-Remaining time (if there's any)
-
--   .csv file
--   FCS
-
-{{% /slide %}}
-{{% slide %}}
-
-# References
-
--   Alcocer I, Lima H, Sugai LSM, Llusia D. 2022. Acoustic indices as proxies for biodiversity: a meta‐analysis. Biological ReviewsDOI: 10.1111/brv.12890. Available from https://onlinelibrary.wiley.com/doi/10.1111/brv.12890.
--   Sueur J, Farina A, Gasc A, Pieretti N, Pavoine S. 2014. Acoustic Indices for Biodiversity Assessment and Landscape Investigation. Acta Acustica united with Acustica 100:772–781. Available from http://openurl.ingenta.com/content/xref?genre=article&issn=1610-1928&volume=100&issue=4&spage=772.
-
-{{% /slide %}}

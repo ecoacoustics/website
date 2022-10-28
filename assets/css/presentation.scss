@@ -15,9 +15,9 @@
 
     .slide-background {
         background-image: url(/oe-logo-horizontal.svg);
-        background-position: right 5% top 5%;
+        background-position: right 10px top 10px;
         background-repeat: no-repeat;
-        background-size: 25%;
+        background-size: 20%;
     }
 
     h1,
@@ -39,8 +39,9 @@
         background-color: rgba(0, 0, 0, 0.2);
     }
 
-    div.footnotes {
-        font-size: 66%;
+    div.footnotes,
+    p.footnotes {
+        font-size: 50%;
         position: absolute;
         bottom: -2em;
 
@@ -112,6 +113,28 @@
         padding-left: 0.2em;
         padding-right: 0.2em;
         border-radius: 5px;
+    }
+
+    .quarter-grid {
+        display: grid;
+        grid: repeat(2, min-content) / 1fr 1fr;
+
+        & > p {
+            width: 100%;
+
+            & img {
+            }
+        }
+    }
+
+    .image-200-percent,
+    .image-200-percent > img {
+        width: 200%;
+    }
+
+    .image-150-percent,
+    .image-150-percent > img {
+        width: 150%;
     }
 }
 

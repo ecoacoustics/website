@@ -5,11 +5,11 @@ weight: 3
 ---
 *Full disclosure: the person writing this (Marina Scarpelli) is an ecologist so I'll try to "translate" some of the computer language into everyday words. If you are used to programming language this might be a bit tedious, if you are a computer scientist or highly educated on the topic, you might not be very happy with this. I am sorry in advance if this is offensive to anyone, I am just trying to make it more accessible to people that have less contact with programming languages :)*
 
-## Open Powershell 7 in your computer
+## Open the Windows Terminal in your computer
 
-On the search tab you can type `Powershell` and one of the options should be Powershell 7
+On the search tab you can type `Terminal` and one of the options should be Powershell 7
 
-![finding-pwsh](./finding-pwsh.png)
+![finding-terminal](./finding-terminal.png)
 
 ## Changing the directory to where AP.exe is installed
 
@@ -20,9 +20,9 @@ We copy this address:
 
 ![ap-copying-path](./AP-copying-path.png)
 
-When I open my powershell, it is in one directory (folder) which os not where AP is installed. 
+When I open my terminal, it is in one directory (folder) which os not where AP is installed. 
 
-![open-pwsh](./open-pwsh.PNG)
+![open-terminal](./open-pwsh.PNG)
 
 We want to work with AP and I have to inform my computer that, by telling it the "address" of the folder where AP is installed. We do this by using the command `cd` followed by the folder path 
 
@@ -38,7 +38,7 @@ Now we are on the AP folder and we can run the analysis. If you want to explore 
 
 When dealing with lot's of data, from different locations etc it is very easy to get lost - and lose data too. So I like to create folders and organise myself before starting.
 
-Using the method you prefer (using command lines or manually) create folders to store our results. I like to put them directly in the `C:` drive in my computer and have one folder called: `something-to-identify-the-data-data` and one `something-to-identify-the-results-output`. Like this
+Using the method you prefer (using command lines or manually) create folders to store our results. I like to have a folder named after the project I am working on (`EcoacousticsSymposium2022` for example) and put them directly in the `C:` drive in my computer. and have one folder called: `something-to-identify-the-data-data` and one `something-to-identify-the-results-output`. Like this
 
 
 ![folder-names](./folder-names.png)

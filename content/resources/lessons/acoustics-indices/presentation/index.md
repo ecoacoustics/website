@@ -11,7 +11,7 @@ weight: 2
 
 Marina D. A. Scarpelli - PhD candidate at QUT
 
-Add an image
+![FCS](./258_20201027__2Maps.png)
 
 {{% /slide %}}
 {{% slide %}}
@@ -168,6 +168,7 @@ Biophony
 ## frequency bands
 
 -   Sometimes it works
+
 Geophony
 ![geophony-example](./geophony-example.PNG)
 {.align-center}
@@ -271,28 +272,3 @@ Biophony
 {{% /slide %}}
 {{% slide %}}
 
-## False-colour spectrograms ?
-
--   \*\*Don't know if I'll talk about this if we won't do any - maybe I'll show the 2-hour blocks?
--   Frequency x time x acoustic indices (3): (Towsey et al, 2014)
-    -   Visualisation tool
-    -   Capture repetitive patterns of the soundscape
-    -   Visual combination of AI
-        -   Combination of indices is more successful to summarise soundscapes than single indices approach
-
-## Exploring the results
-
-Remaining time (if there's any)
-
--   .csv file
--   FCS
-
-{{% /slide %}}
-{{% slide %}}
-
-# References
-
--   Alcocer I, Lima H, Sugai LSM, Llusia D. 2022. Acoustic indices as proxies for biodiversity: a meta‐analysis. Biological ReviewsDOI: 10.1111/brv.12890. Available from https://onlinelibrary.wiley.com/doi/10.1111/brv.12890.
--   Sueur J, Farina A, Gasc A, Pieretti N, Pavoine S. 2014. Acoustic Indices for Biodiversity Assessment and Landscape Investigation. Acta Acustica united with Acustica 100:772–781. Available from http://openurl.ingenta.com/content/xref?genre=article&issn=1610-1928&volume=100&issue=4&spage=772.
-
-{{% /slide %}}

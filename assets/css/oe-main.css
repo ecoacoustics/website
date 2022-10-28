@@ -11,7 +11,9 @@
 @import "footer";
 @import "registry";
 @import "governance";
-@import "reveal-slides";
+@import "presentation";
+@import "shortcodes";
+
 
 /* Added a second definition to separate templated values from not so syntax
   highlighting will work */
@@ -38,11 +40,14 @@
     --oe-panel-color-with-alpha: hsla(var(--theme-color-raw), var(--oe-panel-opacity));
     --oe-panel-red-with-alpha: rgba(180, 52, 52, 0.66);
 
-    --duration: 0.5s;
-    --timing: ease;
+    --oe-duration: 0.5s;
+    --oe-timing: ease-in-out;
+    --oe-transition-properties-movement: grid-column, grid-row, width, transform, left, top, right, bottom, margin, padding;
 
     --oe-narrow-display: none;
     --oe-wide-display: inherit;
+
+    --oe-side-menu-width: 16em;
 
 }
 

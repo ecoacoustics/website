@@ -416,7 +416,7 @@ See our [AP cutting](../../../help-centre/segmenting/ap/) guide for more example
 <small>_fin_</small>
 {.align-center}
 
-Next: the [practical](../practical/).
+Go to the [practical](../practical/).
 {.align-center}
 
 {{% /slide %}}

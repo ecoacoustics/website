@@ -1,10 +1,36 @@
 @media print {
     .navbar,
+    .breadcrumbs,
+    .icon-button,
+    #themeSelector,
     .oe-presentation-controls,
-    #themeSelector {
-        display: none;
+    .menu-toggle,
+    .asciinema-player-wrapper, // There might be a better solution
+    footer {
+        display: none !important;
+    }
+
+    .asciinema-player:after {
+        content: "Not available in print mode.";
+        font-size: 0.5em;
+        opacity: 0.5;
+    }
+
+    img {
+        overflow: hidden;
+    }
+
+    section {
+       page-break-after: always;
+    }
+
+    @page {
+        margin-top: 0;
+        margin-bottom: 0;
+        transform: scale(88%) // Hack. Seems to work minimising overflow and empty pages when printing
     }
 }
+
 
 .reveal {
     overflow: hidden;

@@ -113,6 +113,8 @@ or not, like this
 
 Alternatively, you might be interested in looking into the False-Colour Spetrograms (FCS) and how the combination of indices is looking in your recordings, how well they are representing biophony, geophony and/or technophony. The files with the FCS are the ones ending in `_2Maps.png` or `_ACI-ENT-EVN.png` (the indices usually used to represent biophony) and `_BGN-PMN-SPT.png` (the indices that usually better represent noise).
 
+Now, if you have the time, try to run the analysis on a different sound file (or all of them) to practice your programming skills ;)
+
 Thank you and I hope this has been useful to start clarifying the world of acoustic indices and soundscape analysis.
 
 ## More resources

@@ -22,5 +22,6 @@ interested in a bioacoustic question. In which case, it may be easier to work
 with smaller files. 
 
 ## How?
+
 The pages listed below will cover the most common tools available to segment
 your audio files. 

@@ -1,82 +1,92 @@
 ---
 title: Converting audio files with R
 ---
+
 In this section we will discuss some options for working with different audio
 formats in R, and converting between those formats. When using R to work with
-audio files, we typically use the tuneR package to import audio, which stores
-the data as a wave class object. The packages and functions discussed below will
-cover importing a range of audio formats (WAVE, MP3, FLAC, WAC) as a wave
-object. Once you have a wave object, you can export the audio as a `.wav` file
-if you desire. It is also possible to convert between .wav and .flac within R,
-which will be discussed. 
+audio files, we typically use the
+[tuneR](https://cran.r-project.org/web/packages/tuneR/index.html) package to
+import audio, which stores the data as a `Wave` class object. The packages and
+functions discussed below will cover importing a range of audio formats (`WAVE`,
+`MP3`, `FLAC`, `WAC`) as a `Wave` object. Once you have a `Wave` object, you can
+export the audio as a `WAVE` file if you desire. It is also possible to convert
+between `WAVE` and `FLAC` within R, which will be discussed. 
 
 Throughout this guide, we will provide examples of how
 to call the various R functions, based on the example R project working
-directory shown below:  
+directory shown below. Three audio files are provided to use in the examples,
+and you can download those files
+[here](https://cloudstor.aarnet.edu.au/plus/s/xlr924y4Ovu17Yr).
 
 ``` markdown
 .
 ├── my-project.Rmd
 ├── data
-│   ├── a_wav_sound.wav
-│   ├── a_flac_sound.flac
-│   └── a_mp3_sound.mp3
+│   ├── CC1_20171010_125500.wav
+│   ├── CC1_20171011_053000.mp3
+│   └── 20220421T100000+1000_SEQP-Samford-Wet-B_644370_0000_5857.flac
 ├── output
-│   └── converted.wav
 └── my-project.Rproj
-
 ```
-## Importing .wav files
-If you already have `.wav` files, then no conversion is necessary. You can read
+
+## Importing WAVE files
+
+If you already have `WAVE` files, then no conversion is necessary. You can read
 your files directly into R with the tuneR function `readWave`:
 
 ``` r
 library(tuneR)
-# Import .wav file
-frog_BC03_1C102_WAV <- readWave(filename = "data/frog_BC03_1C102.wav")
-```
-Reading sound files with tuneR stores the data in a wave object:
-``` r
-frog_BC03_1C102_WAV
-## Wave Object
-##	Number of Samples:      18984000
-##	Duration (seconds):     395.5
-##	Samplingrate (Hertz):   48000
-##	Channels (Mono/Stereo): Mono
-##	PCM (integer format):   TRUE
-##	Bit (8/16/24/32/64):    24 
+# Import WAVE file
+CC1_20171010_125500_Wave <- readWave(filename = "data/CC1_20171010_125500.wav")
 ```
 
-## Importing and converting .mp3
-If you have `.mp3` files, you can read those directly into R using the tuneR
+Reading sound files with tuneR stores the data in a `Wave` class object:
+
+``` r
+CC1_20171010_125500_Wave
+## Wave Object
+##	Number of Samples:      1323008
+##	Duration (seconds):     60
+##	Samplingrate (Hertz):   22050
+##	Channels (Mono/Stereo): Mono
+##	PCM (integer format):   TRUE
+##	Bit (8/16/24/32/64):    16 
+```
+
+## Importing and converting MP3
+
+If you have `MP3` files, you can read those directly into R using the tuneR
 package, with the function `readMP3`:
 
 ``` r
 library(tuneR)
-# Import .mp3 file
-bird_XC_755944_mp3 <- readMP3(filename = "data/bird_XC_755944.mp3")
+# Import MP3 file
+CC1_20171011_053000_Wave <- readMP3(filename = "data/CC1_20171011_053000.mp3")
 ```
+
 ``` r
-bird_XC_755944_mp3
-##Wave Object
-##	Number of Samples:      43352064
-##	Duration (seconds):     903.17
-##	Samplingrate (Hertz):   48000
-##	Channels (Mono/Stereo): Stereo
+CC1_20171011_053000_Wave
+## Wave Object
+##	Number of Samples:      1324224
+##	Duration (seconds):     60.06
+##	Samplingrate (Hertz):   22050
+##	Channels (Mono/Stereo): Mono
 ##	PCM (integer format):   TRUE
 ##	Bit (8/16/24/32/64):    16 
 ```
-A wave object can be exported as a `.wav` file at any point using the
+
+A `Wave` object can be exported as a `WAVE` audio file at any point using the
 `writeWave` function. See this example of exporting the audio which was imported
-above with the `readMP3` function as a `.wav` file.  
+above with the `readMP3` function as a `WAVE` file.  
 
 ``` r
 # Export the wave object as a .wav sound file
-writeWave(bird_XC_755944_mp3, filename = "output/bird_XC_755944.wav")
+writeWave(CC1_20171011_053000_Wave, filename = "output/CC1_20171011_053000.wav")
 ```
-### Converting a directory from .mp3 to .wav
 
-If you wish to convert all `.mp3` files within a directory to `.wav` prior to
+### Converting a directory from MP3 to WAVE
+
+If you wish to convert all `MP3` files within a directory to `WAVE` prior to
 analysis, you can do so with the `mp32wav` function in the
 [warbleR](https://cran.r-project.org/web/packages/warbleR/index.html) package. 
 
@@ -84,28 +94,34 @@ analysis, you can do so with the `mp32wav` function in the
 library(warbleR)
 mp32wav(path = "data/", dest.path = "output/")
 ```
+
 {{% hint warning %}}
 **Warning:**  
-The mp32wav function relies on the tuneR package. Sometimes, this function does
-not work, and RStudio may abort. Although this bug should be fixed in future
-versions of tuneR, if this happens to you, alternative conversion methods are
-available (see our [ffmpeg]({{% ref"ffmpeg"%}}) or Audacity (todo) help pages).   
+The `mp32wav` function relies on the tuneR package. Sometimes, this function
+does not work, and RStudio may abort. Although this bug should be fixed in
+future versions of tuneR, if this happens to you, alternative conversion methods
+are available (see our [ffmpeg]({{% ref"ffmpeg"%}}) or Audacity (todo) help
+pages).   
 {{% /hint %}}
 
-## Importing and converting .wac files
-The utility to read the Wildlife Acoustics proprietary compressed format
-(`.wac`) is provided by the
+## Importing and converting WAC files
+
+The utility to read the Wildlife Acoustics proprietary Compressed format (`WAC`,
+file extension: `.wac`) is provided by the
 [bioacoustics](https://cran.r-project.org/web/packages/bioacoustics/index.html)
 package, with their `read_wac` function. See the example below on using the
-`read_wac` function directly using the bioacoustics package. This function has
-the useful option of converting your `.wac` files into `.wav` using the
-`write_wav` setting. 
+`read_wac` function directly using the bioacoustics package. This function also
+the useful option of converting your `WAC` files into `WAVE` using the
+`write_wav` setting. The example code below is provided by the bioacoustics
+package, which reads in a practice `WAC` file that is included with the
+bioacoustics package. 
 
 ``` r
 library(bioacoustics)
-# writes wav files to output folder of your choosing
-sound_wac <- read_wac(file = "data/recording_20170716_230503.wac", write_wav = "output/")
+filepath <- system.file("extdata", "recording_20170716_230503.wac", package = "bioacoustics")
+read_wac(file = filepath)
 ```
+
 ``` r
 sound_wac
 ## Wave Object
@@ -116,142 +132,124 @@ sound_wac
 ##	PCM (integer format):   TRUE
 ##	Bit (8/16/24/32/64):    16 
 ```
-## Importing and converting .flac
-tuneR does not read `.flac`, but there are packages which can help you to
-work with `.flac`, and perform conversions between `.flac` and `.wav`
+
+## Importing and converting FLAC
+
+tuneR does not read `FLAC` files, but there are R packages which can help you to
+work with `FLAC`, and perform conversions between `FLAC` and `WAVE`. 
+
+{{% hint warning %}}
+**Warning:**  
+Sometimes, these R functions for reading or converting `FLAC` files may not work
+for very large or long duration files (such as files greater than 1 hour in
+duration). If you find this issue, we have guides for other converting methods
+available. See the help pages in [Converting audio files]({{%
+ref"converting"%}}). 
+{{% /hint %}}
 
 ### seewave
+
 The [seewave](https://cran.r-project.org/web/packages/seewave/index.html)
 package provides an integration with a software called
-[FLAC](https://xiph.org/flac/index.html) that converts `.flac` files into `wav`,
+[FLAC](https://xiph.org/flac/index.html) that converts `FLAC` files into `WAVE`,
 by using the function `wav2flac`. The function actually converts both ways
-(`.flac` to `.wav`, `.wav` to `.flac`). Before seewave can convert `.flac`, you
+(`FLAC` to `WAVE`, `WAVE` to `FLAC`). Before seewave can convert `FLAC`, you
 will need to install the FLAC software. See our [FLAC]({{< ref"FLAC">}}) help
 page for more information. Further details on the `wav2flac` function can be
 found [here](https://rdrr.io/cran/seewave/man/wav2flac.html). 
 
-Take note of the `exename` and `path2exe` settings in the examples below. If you
-are using windows, path2exe should specify the folder which contains `flac.exe`.
-If you are using MacOS, the directory that flac is installed should be listed in
-your `$PATH` variable for the function to work. 
-
-{{% tabs "seewave_flac" %}}
-{{% tab "Windows" %}} 
-``` r
-library(seewave)
-# reverse = TRUE covnerts a flac to a wav file
- wav2flac(
-         file = "data/20200117T000000+1000.flac",
-         reverse = TRUE,
-         overwrite = FALSE,
-         exename = "flac.exe",
-         path2exe = "C:/ProgramData/chocolatey/bin")
-
-# reverse = FALSE converts a wav to a flac file
- wav2flac(
-         file = "data/20200117T000000+1000.wav",
-         reverse = FALSE,
-         overwrite = FALSE,
-         exename = "flac.exe",
-         path2exe = "C:/ProgramData/chocolatey/bin")
-```
-{{% /tab %}}
-{{% tab "MacOS" %}} 
 ``` r
 library(seewave)
 # reverse = TRUE covnerts a flac to a wav file
 wav2flac(
-        file = "data/CanyonWren.flac",
+        file = "data/20220421T100000+1000_SEQP-Samford-Wet-B_644370_0000_5857.flac",
         reverse = TRUE,
-        overwrite = FALSE,
-        exename = "flac")
+        overwrite = FALSE)
 
 # reverse = FALSE converts a wav to a flac file
 wav2flac(
-        file = "data/CanyonWren.wav",
+        file = "data/CC1_20171010_125500.wav",
         reverse = FALSE,
-        overwrite = FALSE,
-        exename = "flac")
+        overwrite = FALSE)
 ```
-{{% /tab %}}
-{{% tab "Linux" %}} 
-{{% /tab %}}
-{{% /tabs %}}
 
 ### warbleR
-The wableR package can read `.flac` files directly, using the function
+
+The wableR package can read `FLAC` files directly, using the function
 `read_sound_file`. However, they point out in the
 [documentation](https://cran.r-project.org/web/packages/warbleR/warbleR.pdf)
-that to read `.flac` files the function is actually creating a temporary copy of
-your sound file in `.wav` format and this can take a long time to process,
+that to read `FLAC` files the function is actually creating a temporary copy of
+your sound file in `WAVE` format and this can take a long time to process,
 especially for long files. If the goal is opening and processing many long
 duration files, this might be slow. Like the seewave function described
-previously, this function also requires FLAC to be installed on your system. 
+previously, this function also requires the FLAC software to be installed on
+your system. 
 
-Besides reading `.flac` files, the `read_sound_file` function in the warbleR
-package is also useful because it can read sound files in `.wav`, `.flac`,
-`.mp3` and `.wac` format, and return a `wave` class object. See the examples
-below that demonstrate importing different audio formats using the
-`read_sound_files` function:
+Besides reading `FLAC` files, the `read_sound_file` function in the warbleR
+package is also useful because it can read sound files in `WAVE`, `FLAC`, `MP3`
+and `WAC` format, and return a `Wave` class object. See the examples below that
+demonstrate importing different audio formats using the `read_sound_files`
+function:
 
 {{% tabs "read_sound_files" %}}
-{{% tab ".wav" %}} 
+{{% tab "WAVE" %}} 
 ``` r
 library(warbleR)
-frog_BC03_1C102_wave <- read_sound_file("data/frog_BC03_1C102.WAV")
+CC1_20171010_125500_Wave <- read_sound_file("data/CC1_20171010_125500.wav")
 ```
 ``` r
-frog_BC03_1C102_wave
+CC1_20171010_125500_Wave
 ## Wave Object
-##  Number of Samples:      18984000
-##  Duration (seconds):     395.5
-##  Samplingrate (Hertz):   48000
-##  Channels (Mono/Stereo): Mono
-##  PCM (integer format):   TRUE
-##  Bit (8/16/24/32/64):    24
+##	Number of Samples:      1323008
+##	Duration (seconds):     60
+##	Samplingrate (Hertz):   22050
+##	Channels (Mono/Stereo): Mono
+##	PCM (integer format):   TRUE
+##	Bit (8/16/24/32/64):    16 
 ```
 {{% /tab %}}
-{{% tab ".flac" %}} 
+{{% tab "FLAC" %}} 
 
 ``` r
 library(warbleR)
-CanyonWren_wave <- read_sound_file("data/CanyonWren.flac")
+Samford_Wet_B_644370_0000_5857_Wave <- read_sound_file("data/20220421T100000+1000_SEQP-Samford-Wet-B_644370_0000_5857.flac")
 ``` 
 ``` r
-CanyonWren_wave
+Samford_Wet_B_644370_0000_5857_Wave
 ## Wave Object
-##  Number of Samples:      237697
-##  Duration (seconds):     5.39
-##  Samplingrate (Hertz):   44100
-##  Channels (Mono/Stereo): Mono
-##  PCM (integer format):   TRUE
-##  Bit (8/16/24/32/64):    16
+##	Number of Samples:      77985651
+##	Duration (seconds):     3536.76
+##	Samplingrate (Hertz):   22050
+##	Channels (Mono/Stereo): Mono
+##	PCM (integer format):   TRUE
+##	Bit (8/16/24/32/64):    16 
 ```
 {{% /tab %}}
-{{% tab ".mp3" %}} 
+{{% tab "MP3" %}} 
 
 ``` r
 library(warbleR)
-bird_XC_755944_wave <- read_sound_file("data/bird_XC_755944.mp3")
+CC1_20171011_053000_Wave <- read_sound_file("data/CC1_20171011_053000.mp3")
 ``` 
 ``` r 
-bird_XC_755944_wave
+CC1_20171011_053000_Wave
 ## Wave Object
-##  Number of Samples:      43352064
-##  Duration (seconds):     903.17
-##  Samplingrate (Hertz):   48000
-##  Channels (Mono/Stereo): Stereo
-##  PCM (integer format):   TRUE
-##  Bit (8/16/24/32/64):    16
+##	Number of Samples:      1324224
+##	Duration (seconds):     60.06
+##	Samplingrate (Hertz):   22050
+##	Channels (Mono/Stereo): Mono
+##	PCM (integer format):   TRUE
+##	Bit (8/16/24/32/64):    16 
 ```
 {{% /tab %}}
-{{% tab ".wac" %}}
+{{% tab "WAC" %}}
 ``` r
 library(warbleR)
-recording_20170716_230503_wave <- read_sound_file("data/recording_20170716_230503.wac")
+filepath <- system.file("extdata", "recording_20170716_230503.wac", package = "bioacoustics")
+recording_20170716_230503_Wave <- read_sound_file(filepath)
 ```
 ``` r
-recording_20170716_230503_wave
+recording_20170716_230503_Wave
 ## Wave Object
 ##  Number of Samples:      230144
 ##  Duration (seconds):     0.6
@@ -262,6 +260,7 @@ recording_20170716_230503_wave
 ```
 {{% /tab %}}
 {{% /tabs %}}
+
 {{% hint info %}}
 **Note:**  
 The warbleR package uses functions from various packages internally,
@@ -271,9 +270,10 @@ including citations in publications as appropriate (e.g. `citation("seewave")`).
 {{% /hint %}}
 
 ## Help! I'm using a different audio format
+
 If you have a different audio format that was not discussed above, you may need
-to convert your files using a different software. See our [ffmpeg]({{<
-ref"ffmpeg">}}) help page for more information. 
+to convert your files using a different software. See our [FFmpeg]({{%
+ref"ffmpeg"%}}) help page for more information. 
 
 
 

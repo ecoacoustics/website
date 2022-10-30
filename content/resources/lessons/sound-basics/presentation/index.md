@@ -14,9 +14,10 @@ Dr Michael Towsey
 {{% row %}}
 
 ![deployed sensor](./image3.jpeg)
-{ .hello height="300" }
+{ .image-fill }
 
 ![spectrogram](./image2.png)
+{.image-100-percent style="height:100%" }
 {{% /row %}}
 
 {{% /slide %}}

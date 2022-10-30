@@ -1,5 +1,5 @@
 ---
-title: Converting audio files with R
+title: Converting with R
 ---
 
 In this section we will discuss some options for working with different audio

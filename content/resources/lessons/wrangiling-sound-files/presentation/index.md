@@ -123,8 +123,6 @@ Several are available:
 
 ## Repairing data
 
-### Identifying problems
-
 -   Sensors produce all sorts of faulty files.
 -   Problems are documented in an open source _known-problems_ repository[^1]
 -   Categorizing problems allows us to _describe_ them in a common language
@@ -376,7 +374,7 @@ See our [ffmpeg](../../../help-centre/converting/ffmpeg/) guide for more example
   - emits 1-minute WAVE blocks
 - Can customize sample rate, segment size, start and end offsets, segment overlap, segment minimum durations
 
-Example (2 hour flac file):
+Example (2 hour FLAC file):
 
 ```bash
 #                <input_file>                  <output_directory>

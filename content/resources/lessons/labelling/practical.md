@@ -1,6 +1,6 @@
 ---
 title: Practical
-draft: true
+draft: false
 weight: 3
 ---
 

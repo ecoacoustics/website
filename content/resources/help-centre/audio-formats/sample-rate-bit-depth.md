@@ -18,6 +18,7 @@ can be reconstructed depends primarily on two key concepts, known as sample rate
 and bit depth.
 
 ## Sample rate
+
 Sample rate is a measure of how many samples are collected per second, and is
 described in Hz (cycles per second) or kHz (thousand cycles per second). A
 sample rate of 22 050 Hz (or 22.05 kHz) represents 22 050 samples recorded per
@@ -34,6 +35,7 @@ you wish to also capture sounds in the ultrasonic range (>20 kHz), a higher
 sample rate is required. 
 
 ## Bit depth
+
 As previously mentioned, when a recording device takes samples, the information
 is stored in binary data. This binary data is known as 'bits', and as a result,
 bit depth refers to how much information can be stored. Higher bit depths result

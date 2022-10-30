@@ -1,0 +1,19 @@
+{{- $path := .Get 0 -}}
+{{- /* first try getting the page */ -}}
+{{- $page := .Page.GetPage $path -}}
+{{- if (not $page) -}}
+    {{- /* now try accessing as a headless bundle */ -}}
+    {{- $page = .Page.GetPage (path.Dir $path) -}}
+    {{- /* warnf "Did we find headless page? %s" $page */ -}}
+    {{- if $page -}}
+        {{- $pattern := printf "*%s" (path.Base $path) -}}
+        {{- /* warnf "Page resources: %s. Search for pattern %s" $page.Resources $pattern  */ -}}
+        {{- $page = $page.Resources.GetMatch $pattern -}}
+        {{- /* warnf "Page is now: %s" $page */ -}}
+    {{- end -}}
+{{- end -}}
+{{- with $page -}}
+{{ .Content | markdownify }}
+{{- else -}}
+    {{- errorf "Include: Page not found: `%s`. Context: %s" $path .Position -}}
+{{- end -}}

@@ -127,6 +127,21 @@
         }
     }
 
+    .image-fill,
+    .image-fill > img {
+        height: 100%;
+    }
+
+    .image-50-percent,
+    .image-50-percent > img {
+        width: 50%;
+    }
+
+    .image-100-percent,
+    .image-100-percent > img {
+        width: 100%;
+    }
+
     .image-200-percent,
     .image-200-percent > img {
         width: 200%;

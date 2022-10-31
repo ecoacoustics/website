@@ -23,17 +23,17 @@ Once you have anaconda installed, you can open it like any other program.
 
 1) On the left, select the `Environments` Tab
 
-![Conda Environments](images/create_venv_1.jpg){ style="width=75%" }
+![Conda Environments](create_venv_1.jpg){ style="width=75%" }
 
 2) At the bottom of the screen click `create`
 
-![Create Conda Virtual Environment](images/create_venv_2.jpg){ style="width=75%" }
+![Create Conda Virtual Environment](create_venv_2.jpg){ style="width=75%" }
 
 3) Give the environment a name. It doesn't matter what, but something like "recogniser-workshop". 
 4) Choose a python version. Version 3.8.x or 3.9.x will work fine. 
 5) Click "create"
 
-![Create Conda Virtual Environment](images/create_venv_3.jpg){ style="width=75%" }
+![Create Conda Virtual Environment](create_venv_3.jpg){ style="width=75%" }
 
 
 This creates a "conda environment". This is a folder on your computer that will contain all of the python related dependencies for running the recognizer python scripts. 
@@ -51,20 +51,20 @@ Back in the anaconda desktop app,
 
 1) Go to the Home tab in the Applications pane on the right
 
-![Create Conda Virtual Environment](images/launch_notebook_1.jpg){ style="width=75%" }
+![Create Conda Virtual Environment](launch_notebook_1.jpg){ style="width=75%" }
 
 2) Find the Jupyter Lab tile and click the Install button 
 
-![Create Conda Virtual Environment](images/launch_notebook_2.jpg){ style="width=75%" }
+![Create Conda Virtual Environment](launch_notebook_2.jpg){ style="width=75%" }
 
 3) After installation is complete, click "Launch"
 
-![Create Conda Virtual Environment](images/launch_notebook_3.jpg){ style="width=75%" }
+![Create Conda Virtual Environment](launch_notebook_3.jpg){ style="width=75%" }
 
 
 This will open a page in a web browser, with the url starting with "localhost". You should see a file browser on the left
 
-![Create Conda Virtual Environment](images/launch_notebook_4.jpg){ style="width=75%" }
+![Create Conda Virtual Environment](launch_notebook_4.jpg){ style="width=75%" }
 
 4) Use that file browser to navigate to the folder you unzipped in step 2 above. 
 5) Click on the file `workshop.ipynb`

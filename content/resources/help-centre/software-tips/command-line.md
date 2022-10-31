@@ -3,6 +3,7 @@ title: The command line
 ---
 
 ## What is it?
+
 The command line, or command-line interface (CLI), is where commands or
 instructions can be passed from you, the user, to your computer. Many things
 that you do on your computer by clicking on a graphical user interface (GUI),

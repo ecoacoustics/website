@@ -149,7 +149,7 @@ $$
 -   We can convert from time domain to frequency domain
 
 ![fourier transform](./image13.PNG)  
-{ style="scale: 150%" }
+{ style="width: 50%" }
 
 {{% /row %}}
 
@@ -241,5 +241,7 @@ Spectrogram
 
 {{% /slide %}}
 {{% slide type="title" %}}
+
+Finished. Next up: [recording and labelling](../../labelling/presentation).
 
 {{% /slide %}}

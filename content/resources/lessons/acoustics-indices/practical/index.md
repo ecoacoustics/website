@@ -17,6 +17,10 @@ Follow the instructions in the [Requirements](./../requirements) document.
 
 {{% include "../../shared/open-terminal-Symposium.md" %}}
 
+## Terminal use
+
+{{% include "../../shared/basic-terminal-use.md" %}}
+
 ## Check where Analysis Programs (AP.exe) is installed
 
 If you followed the install instructions for installing AP, you should be 
@@ -78,9 +82,6 @@ For example, using the data for today's demo, I'd create folders like this:
 | SERF Data\20220421T180000+1000_SEQP-Samford-Wet-B_644363.flac | indices\20220421T180000+1000_SEQP-Samford-Wet-B_644363 |
 | SERF Data\20220421T200000+1000_SEQP-Samford-Wet-B_644357.flac | indices\20220421T200000+1000_SEQP-Samford-Wet-B_644357 |
 
-## Terminal use
-
-{{% include "../../shared/basic-terminal-use.md" %}}
 
 ## Calculating Acoustic Indices for a recording
 

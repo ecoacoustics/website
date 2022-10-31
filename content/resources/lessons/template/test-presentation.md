@@ -2,7 +2,7 @@
 title: Test Presentation
 type: "resources"
 layout: "presentation"
-draft: false
+draft: true
 ---
 
 {{% slide type=title data-transition="fade" %}}

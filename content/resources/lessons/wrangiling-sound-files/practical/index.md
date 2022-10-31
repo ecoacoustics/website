@@ -150,7 +150,12 @@ Oh no! Something funny happened in my files. Have a look in the
 `C:\2022 Ecoacoustics Symposium\EMU Examples` folder. All the files are empty...
 or nearly empty. Time for some EMU.
 
-![superman emu](./DALLE_an_comic_book_emu_wearing_a_superman_costume_and_flying_fast_over_the_city.png)
+> This is a contrived example: very rarely will you see 100% of the files in a
+> folder all be faulty.
+
+
+{{< figure src="./DALLE_an_comic_book_emu_wearing_a_superman_costume_and_flying_fast_over_the_city.png" caption="A DALL-E (a deep learning text prompt image generator) image of an emu in a superman costume." >}}
+
 
 First let's find all the files in the folder; we want to simulate an analysis 
 looking for source files.
@@ -163,7 +168,7 @@ looking for source files.
 ```
 
 {{< /tab >}}
-{{< tab "MacOS" >}} 
+{{< tab "macOS" >}} 
 
 ```bash
 > find EMU\ Examples/ -name *.wav -or -name *.flac
@@ -200,7 +205,7 @@ Let's see what EMU can do for us, run the following command:
 ```
 
 {{< /tab >}}
-{{< tab "MacOS" >}} 
+{{< tab "macOS" >}} 
 
 ```bash
 > /emu/emu --help
@@ -238,7 +243,7 @@ Let's see what the `fix` command does, and further `list` the available fixes:
 ```
 
 {{< /tab >}}
-{{< tab "MacOS" >}} 
+{{< tab "macOS" >}} 
 
 ```bash
 > /emu/emu fix --help
@@ -265,7 +270,8 @@ The following command will use EMU to fix any instances of:
 - [FL001: Preallocated headers (near-empty corrupt files)](https://github.com/ecoacoustics/known-problems/blob/main/frontier_labs/FL001.md)
 - [WA002: Generating Files with No Data](https://github.com/ecoacoustics/known-problems/blob/main/wildlife_acoustics/WA002.md)
 
-Examples of each are in the `EMU Examples` folder. Note the `--dry-run` argument: this prevents EMU
+In the `EMU Examples` folder are examples of each of those problems.
+Note the `--dry-run` argument: this prevents EMU
 from making any changes to the files. If you remove the dry run argument EMU
 **will modify the files**. Dry runs are a safety feature: they give users a chance
 to see if a potentially dangerous action will have the intended affect.
@@ -278,7 +284,7 @@ to see if a potentially dangerous action will have the intended affect.
 ```
 
 {{< /tab >}}
-{{< tab "MacOS" >}} 
+{{< tab "macOS" >}} 
 
 ```bash
 > /emu/emu fix apply -f OE004 -f FL001 -f WA002 --dry-run './EMU Examples/'
@@ -307,7 +313,7 @@ This allows them to be easily filtered out. Try running our find command again:
 ```
 
 {{< /tab >}}
-{{< tab "MacOS" >}} 
+{{< tab "macOS" >}} 
 
 ```bash
 > find EMU\ Examples/ -name *.wav -or -name *.flac
@@ -347,7 +353,7 @@ Try this:
 ```
 
 {{< /tab >}}
-{{< tab "MacOS" >}} 
+{{< tab "macOS" >}} 
 
 ```bash
 > /emu/emu metadata './SERF Data/'
@@ -375,7 +381,7 @@ results to a file.
 ```
 
 {{< /tab >}}
-{{< tab "MacOS" >}} 
+{{< tab "macOS" >}} 
 
 ```bash
 > /emu/emu metadata  -F CSV -o SERF_metadata.csv './SERF Data/'

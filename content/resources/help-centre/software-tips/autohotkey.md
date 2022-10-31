@@ -3,7 +3,7 @@ title: AutoHotkey
 ---
 
 [AutoHotkey](https://www.autohotkey.com/)(AHK) is a scripting language for the
-automation of tasks with the use of hot keys. It is available only on the
+automation of tasks with the use of hotkeys. It is available only on the
 Windows operating system. From their home page, follow the download link
 (Download Current Version), and then install the downloaded `.exe` file. The
 full AHK [documentation](https://www.autohotkey.com/docs/AutoHotkey.htm) is also

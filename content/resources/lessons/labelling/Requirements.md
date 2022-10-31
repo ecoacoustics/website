@@ -8,7 +8,7 @@ weight: 1
 
 {{% include "../shared/symposium_data.md" %}}
 
-We'll use the _SRF Data_ and _Annotation Examples_ folders will be used for this practical.
+We'll use the _SERF Data_ and _Annotation Examples_ folders will be used for this practical.
 
 ## Software
 

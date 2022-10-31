@@ -33,7 +33,7 @@ full path!
 
 We can quickly check if a program has been successfully added to our `PATH` or
 not. Open up a shell (such as PowerShell on Windows, or terminal on
-Linux/MacOS), and type a command for the program we are interested in testing. 
+Linux/macOS), and type a command for the program we are interested in testing. 
 
 ```ps
 > FFmpeg
@@ -45,7 +45,7 @@ it is available on your `PATH`.
 ## Adding to PATH
 
 If you use a package manager such as [chocolatey](https://chocolatey.org/) on
-Windows, or homebrew on [MacOS](https://brew.sh/) or
+Windows, or homebrew on [macOS](https://brew.sh/) or
 [Linux](https://docs.brew.sh/Homebrew-on-Linux), then packages you install with
 those commands should be automatically added to your `PATH` variable. This saves
 you having to manually change the `PATH` variable. The automatic installer for
@@ -66,7 +66,7 @@ If you need to add a program to the `PATH` manually, you can follow these steps:
 6. Then click OK or close all windows.
 7. You will have to restart any programs for which you want to see the new value
 {{% /tab %}}
-{{% tab "MacOS" %}}
+{{% tab "macOS" %}}
 1. Find where the program is installed on your computer. This will be a
    directory (folder) where the .exe resides.
 2. Open or create your ~/.profile file

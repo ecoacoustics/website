@@ -25,11 +25,11 @@ and using the following:
   - Note: PowerShell 7 is different to PowerShell 5, which is likely already
    installed on your system by default. 
 
-If you are using Linux or MacOS, then you can use the terminal, which is
+If you are using Linux or macOS, then you can use the terminal, which is
 included by default for those systems. PowerShell 7 is also available for both
 [Linux](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-linux?view=powershell-7.2)
 and
-[Mac](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.2).
+[macOS](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.2).
 
 
 ## How do I use it?

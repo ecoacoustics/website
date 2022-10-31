@@ -175,8 +175,15 @@
 
     figure {
         margin: $padding-16 0;
+
+        img {
+            box-shadow: 0 0 $padding-8 rgba(0, 0, 0, 0.1);
+        }
+
         figcaption p {
             margin-top: 0;
+            font-weight: bold;
+            font-size: smaller;
         }
     }
 }

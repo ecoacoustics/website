@@ -23,7 +23,7 @@ has default settings for exe and path.)
 
 Take note of the `exename` and `path2exe` settings in the examples below. If you
 are using windows, path2exe should specify the folder which contains `flac.exe`.
-If you are using MacOS, the directory that flac is installed should be listed in
+If you are using macOS, the directory that flac is installed should be listed in
 your `$PATH` variable for the function to work. 
 
 ## Using FLAC in the command line 

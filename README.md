@@ -27,7 +27,7 @@ Ensure you have the following installed:
 -   A package manager
     -   Chocolately on Windows
     -   Snap on Linux
-    -   HomeBrew on MacOS
+    -   HomeBrew on macOS
 
 Then for your first time:
 

@@ -23,7 +23,7 @@ Once you have anaconda installed, you can open it like any other program.
 
 1) On the left, select the `Environments` Tab
 
-![Conda Environments](/images/recognizer_workshop/create_venv_1.png)
+![Conda Environments](images/create_venv_1.png)
 
 2) At the bottom of the screen click `create`
 

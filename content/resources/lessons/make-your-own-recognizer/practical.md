@@ -1,5 +1,6 @@
 ---
 title: Practical Steps
+weight: 2
 draft: true
 ---
 

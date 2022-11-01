@@ -172,12 +172,12 @@ Maximum frequency in spectrograms = sample rate / 2 = <mark>Nyquist</mark>
 ## 4: Fourier transform
 
 {{% row %}}
-{{< highlight powershell >}}
+```powershell
 Function FFT($array){
     $Len = $array.Count
     If($Len -le 1){Return $array} 
     $Len_Over_2 = [Math]::Floor(($Len/2))
-$Output = New-Object Complex[] $Len
+    $Output = New-Object Complex[] $Len
 
     $EvenArray = @()
     $OddArray  = @()
@@ -191,15 +191,17 @@ $Output = New-Object Complex[] $Len
     $Odd  = FFT($OddArray)
 
     For($i = 0; $i -lt $Len_Over_2; $i++){
-        $Twiddle = [Complex]::Exp([Complex]::ImaginaryOne*[Math]::Pi*($i*-2/$Len))*$Odd[$i]
+        $Twiddle = [Complex]::Exp(
+            [Complex]::ImaginaryOne*[Math]::Pi*($i*-2/$Len)
+        ) * $Odd[$i]
         $Output[$i]             = $Even[$i] + $Twiddle
         $Output[$i+$Len_Over_2] = $Even[$i] - $Twiddle
     }
 
     Return $Output
-
 }
-{{< /highlight >}}
+```
+
 
 -   20 lines of code that changed human civilization
 -   Thanks to Cooley and Tukey in 1965 (or Gauss 1805)

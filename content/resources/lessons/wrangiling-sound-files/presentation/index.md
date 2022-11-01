@@ -167,36 +167,62 @@ The _Ecoacoustics Metadata Utility_.
 
 ### Using EMU to rename files
 
--   Can convert dates
-    ```bash
-    > emu rename **/*.WAV
-    Looking for targets...
-    -   Renamed 5B07FAC0.WAV
-            to 20180525T120000Z.WAV
-    1 files, 1 renamed, 0 unchanged, 0 failed
-    ```
--   Can add timezone offsets[^2]
-    ```bash
-    > emu rename **/*.wav --offset "+11:00"
-    Looking for targets...
-    -   Renamed PILLIGA_20121204_234600.wav
-            to PILLIGA_20121204T234600+1100.wav
-    1 files, 1 renamed, 0 unchanged, 0 failed
-    ```
--   Can read metadata from the files to use in rename
-    ```bash
-    $ emu rename --template "{StartDate}_{SampleRateHertz}{Extension}" --scan-metadata
-    Looking for targets...
-    -   Renamed /mnt/f/tmp/fixes/renames/20210621T205706-0300.wav
-            to /mnt/f/tmp/fixes/renames/20210621T205706-0300_256000.wav
-    -   Renamed /mnt/f/tmp/fixes/renames/20220331T094902-0300.flac
-            to /mnt/f/tmp/fixes/renames/20220331T094902-0300_44100.flac
-    ```
+Can convert dates:
+
+```bash
+> emu rename **/*.WAV
+Looking for targets...
+-   Renamed 5B07FAC0.WAV
+        to 20180525T120000Z.WAV
+1 files, 1 renamed, 0 unchanged, 0 failed
+```
+Can add timezone offsets[^2]:
+
+```bash
+> emu rename **/*.wav --offset "+11:00"
+Looking for targets...
+-   Renamed PILLIGA_20121204_234600.wav
+        to PILLIGA_20121204T234600+1100.wav
+1 files, 1 renamed, 0 unchanged, 0 failed
+```
 
 [^2]: There is one true date format: [ISO8601](https://en.wikipedia.org/wiki/ISO_8601)
 
 > Notes:
 > - timezone offsets are important for working with any dataset that occurs cross-timezone boundary
+
+{{% /slide %}}
+
+{{% slide %}}
+
+## Repairing data
+
+### Using EMU to rename files
+
+Can read metadata from the files to use in rename:
+
+```bash
+$ emu rename --template "{StartDate}_{SampleRateHertz}{Extension}" --scan-metadata
+Looking for targets...
+-   Renamed /mnt/f/tmp/fixes/renames/20210621T205706-0300.wav
+        to /mnt/f/tmp/fixes/renames/20210621T205706-0300_256000.wav
+-   Renamed /mnt/f/tmp/fixes/renames/20220331T094902-0300.flac
+        to /mnt/f/tmp/fixes/renames/20220331T094902-0300_44100.flac
+```
+
+Real use case: recovering dates from corrupted memory card:
+
+```bash
+$ emu rename --template "{StartDate}{Extension}" --scan-metadata **/F*
+Looking for targets...
+-   Renamed /mnt/f/tmp/fixes/renames/F4622343428908
+         to /mnt/f/tmp/fixes/renames/20220331T094902-0300.flac
+-   Renamed /mnt/f/tmp/fixes/renames/F4623864286243
+         to /mnt/f/tmp/fixes/renames/20210621T205706-0300.wav
+2 files, 2 renamed, 0 unchanged, 0 failed
+```
+
+> Notes:
 > - Add sample rate read from file into filename.... weird example but you can do it
 
 {{% /slide %}}
@@ -341,6 +367,7 @@ Lots of ways to achieve the same outcome.
 
 ```
 
+
 See our [ffmpeg](../../../help-centre/converting/ffmpeg/) guide for more examples.
 
 {{% /slide %}}
@@ -366,11 +393,6 @@ Took 00:01:31.0498711. Done.
 20191026T000000+1000_REC_0-60.wav       20191026T000000+1000_REC_3120-3180.wav  20191026T000000+1000_REC_5340-5400.wav
 20191026T000000+1000_REC_1020-1080.wav  20191026T000000+1000_REC_3180-3240.wav  20191026T000000+1000_REC_540-600.wav
 20191026T000000+1000_REC_1080-1140.wav  20191026T000000+1000_REC_3240-3300.wav  20191026T000000+1000_REC_5400-5460.wav
-20191026T000000+1000_REC_1140-1200.wav  20191026T000000+1000_REC_3300-3360.wav  20191026T000000+1000_REC_5460-5520.wav
-20191026T000000+1000_REC_120-180.wav    20191026T000000+1000_REC_3360-3420.wav  20191026T000000+1000_REC_5520-5580.wav
-20191026T000000+1000_REC_1200-1260.wav  20191026T000000+1000_REC_3420-3480.wav  20191026T000000+1000_REC_5580-5640.wav
-20191026T000000+1000_REC_1260-1320.wav  20191026T000000+1000_REC_3480-3540.wav  20191026T000000+1000_REC_5640-5700.wav
-20191026T000000+1000_REC_1320-1380.wav  20191026T000000+1000_REC_3540-3600.wav  20191026T000000+1000_REC_5700-5760.wav
 # <...snip...>
 ```
 

@@ -3,10 +3,13 @@ title: AutoHotkey
 ---
 
 [AutoHotkey](https://www.autohotkey.com/) (AHK) is a scripting language for the
-automation of tasks with the use of hotkeys. It is available only on the
-Windows operating system. From their home page, follow the download link
-(Download Current Version), and then install the downloaded `.exe` file. The
-full AHK [documentation](https://www.autohotkey.com/docs/AutoHotkey.htm) is also
+automation of tasks with the use of hotkeys. AHK can automate graphical
+applications by simulating clicks and keystrokes, and uses a simple, flexible,
+and easy to learn syntax. This makes it a great tool to automate all kinds of
+tasks in any Windows application. It is available only on the Windows operating
+system. From their home page, follow the download link (Download Current
+Version), and then install the downloaded `.exe` file. The full AHK
+[documentation](https://www.autohotkey.com/docs/AutoHotkey.htm) is also
 available on their website.  
 
 Please know, you do not need this program for ecoacoustic analysis or workflows.
@@ -26,8 +29,8 @@ If you haven't already installed the AHK program, do so now. Then, you may
 download the **example AHK script** available
 [here](https://gist.github.com/andrew-1234/384ea4b716b4b0e8abb7012dbd600ae4), by
 downloading the file as a zip with the `Download Zip` button, or copying the
-script contents into a blank notepad file. After downloading or copying the
-script contents, make sure your file has the `.ahk` extension.
+script contents into a blank [Visual Studio Code](https://code.visualstudio.com/) file. After downloading or copying the
+script contents, make sure your file is saved with the `.ahk` extension.
 
 ### First use
 

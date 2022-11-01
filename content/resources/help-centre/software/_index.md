@@ -1,5 +1,5 @@
 ---
-title: Software tips
+title: Software
 ---
 
 This section is not necessarily specific to ecoacoustics, but is here to provide

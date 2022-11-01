@@ -29,33 +29,26 @@ If you haven't already installed the AHK program, do so now. Then, you may
 download the **example AHK script** available
 [here](https://gist.github.com/andrew-1234/384ea4b716b4b0e8abb7012dbd600ae4), by
 downloading the file as a zip with the `Download Zip` button, or copying the
-script contents into a blank [Visual Studio Code](https://code.visualstudio.com/) file. After downloading or copying the
+script contents into a blank [Visual Studio Code](https://code.visualstudio.com/) file. The script is also embedded at the
+bottom of this help page. After downloading or copying the
 script contents, make sure your file is saved with the `.ahk` extension.
 
 ### First use
 
-Right click on the downloaded AHK file, and `Open with` a text editor such as
-Notepad. Have a read through the information in the file.  In particular, check
-to make sure that the following line of code correctly specifies your Raven
-version number:
-
-`#IfWinActive, Raven Pro 1.6.1`
-
-If you are using a different version of Raven, you will have to change this
-line. For example, if I wanted to use this script with Raven v1.5, then my file
-would contain the following instead:
-
-`#IfWinActive, Raven Pro 1.5.0`
-
-Save your changes. Now, you can double click on the file to run the script, and
-check your taskbar icons to make sure the script is successfully running. 
+Right click on the downloaded AHK file, and `Open with` an editor such as Visual
+Studio Code. Have a read through the information in the file, and make any
+changes if you want to. Next, you can double click on the file in `File
+Explorer` to run the script, and check your taskbar icons to make sure the
+script is successfully running. 
 
 ## Usage
-
-With Raven open, and a sound file imported, you can test the hotkeys. Hold down
-`ctrl` and scroll up and down with your mouse wheel to zoom in and out of a
-sound. Press `F1` to show the entire sound file (zoom to all), or `F2` to zoom
-to the active selection. `F3` will navigate to your next selection. 
+| hotkey                | action            |
+| --------------------- | ----------------- |
+| `ctrl` + `mouse up`   | zoom in           |
+| `ctrl` + `mouse down` | zoom out          |
+| `F1`                  | zoom to all       |
+| `F2`                  | zoom to selection |
+| `F3`                  | move to next selection |
 
 With these hotkeys, working through a large number of annotations is easier.
 Navigate to the next selection with `F3`, press `F2` to zoom into that
@@ -90,5 +83,9 @@ the hotkey to move to next selection would be the right arrow key instead of
 {{% hint info %}}
 **Note:**  
 If you make changes to your AHK script (using a text editor), then you will have
-to save the script, and re-run it, before the change take effect.
+to save the script, and re-run it, before the changes take effect.
 {{% /hint %}}
+
+## AHK script
+
+{{% gist andrew-1234 384ea4b716b4b0e8abb7012dbd600ae4 %}}

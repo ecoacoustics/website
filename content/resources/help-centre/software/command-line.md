@@ -21,10 +21,7 @@ and using the following:
 
 - [Windows 
     Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-au&gl=au)
-- [Powershell 
-  7](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2)
-  - Note: PowerShell 7 is different to PowerShell 5, which is likely already
-   installed on your system by default. 
+- [Powershell]({{% ref "powershell" %}})
 
 If you are using Linux or macOS, then you can use the terminal, which is
 included by default for those systems. PowerShell 7 is also available for both

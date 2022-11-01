@@ -26,5 +26,6 @@ weight: 1
 
 ### macOS
 
-_AP_  is not supported for this workshop when a Mac is used.
-
+- Change the settings for [unsigned apps](../../../help-centre/software/unsigned)
+- Install [PowerShell **7**](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-macOS?view=powershell-7.2)
+- Install [AnalysisPrograms (AP)](https://ap.qut.ecoacoustics.info/basics/installing.html)

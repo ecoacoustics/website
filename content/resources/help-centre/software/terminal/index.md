@@ -27,7 +27,15 @@ terminal.
 
 ## Recommendations
 
-For Windows, the terminal we recommend using is called [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-au&gl=au).
+For Windows, we strongly recommend using the [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-au&gl=au),
+over the default Windows Console Host. Windows Terminal includes a range of
+great features such as tabs, zooming, themes, profiles, split panes, accuracy,
+colors, and most importantly emoji.
+
+{{< figure src="./conhost.png" caption="conhost.exe." >}}
+
+{{< figure src="./windows-terminal.png" caption="Windows Terminal" >}}
+
 The shell we recommend using on Windows is [PowerShell]({{% ref "powershell"
 %}}). 
 

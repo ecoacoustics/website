@@ -2,11 +2,8 @@
 title: Homebrew (macOS)
 ---
 
+**Install [Homebrew](https://brew.sh/) for macOS:**
 
-- [Homebrew](https://brew.sh/) on macOS 
-
-
-**Install Homebrew for macOS:**
 1. Check your system meets the requirements:
     - A 64-bit Intel CPU or Apple Silicon CPU
     - macOS Big Sur (11) (or higher)

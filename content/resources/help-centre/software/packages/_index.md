@@ -8,9 +8,7 @@ Much of the software that is mentioned on this website includes package manager
 installation instructions, if they are available. But what is a package manager?
 Essentially, it is a piece of software that lets us easily and conveniently
 download and install applications (known as packages), and keep those packages
-up to date. A package manager runs in the [command line]({{% ref
-"command-line.md" %}}), so check out that help page first if you are unfamiliar
-with using the command line. 
+up to date.
 
 You might be asking, "why would I want to use a package manager?". The biggest
 advantage of a package manager is the convenience. For example, installing
@@ -27,10 +25,10 @@ focus on the things that matter. Besides FFmpeg, there are many useful software
 packages that are commonly used for ecoacoustics which can be installed with
 package managers.
 
-The other great thing about package managers is that they take care of your
-[PATH variable]({{% ref "path.md" %}}), ensuring that anything you
-install will be available and ready to use directly from the [command line]({{%
-ref "command-line.md" %}}).
+The other great thing about package managers is that they can sometimes take
+care of your [PATH variable]({{% ref "path.md" %}}). This functionality means
+that programs you install will be available and ready to use directly from the 
+[terminal]({{%ref "terminal" %}}).
 
 ## Get started
 

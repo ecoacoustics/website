@@ -51,7 +51,7 @@ it is available on your `PATH`.
 
 You can check the list of folders contained in your `PATH` variable
 using `printenv PATH` in Bash, `echo $env:Path` in PowerShell, and 
-`echo$env:$path` in Zsh. If the folder where you installed a program you want to
+`printenv PATH` in Zsh. If the folder where you installed a program you want to
 use is not listed, then you may need to add it to the `PATH`.
 
 ## Adding to PATH

@@ -275,5 +275,4 @@ Go to the [practical](../practical/).
 
 
 {{% /slide %}}
-{{% slide %}}
 

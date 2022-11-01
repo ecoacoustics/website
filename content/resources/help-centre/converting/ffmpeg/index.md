@@ -19,7 +19,7 @@ returned, such as the version number of FFmpeg you have installed.
 ## Installing FFmpeg
 
 {{% tabs "install_ffmpeg" %}}
-{{% tab "MacOS" %}} # MacOS Content {{% /tab %}}
+{{% tab "macOS" %}} # macOS Content {{% /tab %}}
 {{% tab "Linux" %}} # Linux Content {{% /tab %}}
 {{% tab "Windows" %}} # Windows Content {{% /tab %}}
 {{% /tabs %}}

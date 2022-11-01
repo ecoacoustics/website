@@ -36,4 +36,7 @@ Often we will omit the output for brevity.
 
 Previous commands can be run again by using the up and down
 arrow keys to cycle through those commands.
+
+Lastly, if your terminal reports it cannot find a program you just installed,
+try closing the terminal, and then reopen it.
 {{% /hint %}}

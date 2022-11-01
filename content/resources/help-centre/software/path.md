@@ -50,7 +50,7 @@ If the command successfully returns some kind of output about the package, then
 it is available on your `PATH`.  
 
 You can check the list of folders contained in your `PATH` variable
-using `printenv | grep PATH` in Bash, `echo $env:Path` in PowerShell, and 
+using `printenv PATH` in Bash, `echo $env:Path` in PowerShell, and 
 `echo$env:$path` in Zsh. If the folder where you installed a program you want to
 use is not listed, then you may need to add it to the `PATH`.
 

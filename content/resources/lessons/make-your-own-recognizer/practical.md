@@ -1,5 +1,6 @@
 ---
 title: Practical Steps
+draft: true
 ---
 
 The materials for this workshop will be delivered in a **Jupyter Notebook**. 

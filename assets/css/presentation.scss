@@ -75,11 +75,6 @@
         flex: 0 1 auto;
     }
 
-    /* allow code to grow */
-    section > div.highlight {
-        flex: 1 1 auto;
-    }
-
     .align-top {
         justify-content: flex-start;
         gap: 0.2em;
@@ -102,9 +97,23 @@
         font-size: 200%;
     }
 
-    pre code {
-        /* overrides simple.css theme's stupid height limit */
-        max-height: unset !important;
+    /* allow code to grow */
+    div.highlight {
+        flex: 1 1 auto;
+
+        pre {
+            width: 100%;
+            font-size: 0.7em;
+            code {
+                /* overrides simple.css theme's stupid height limit */
+                max-height: unset !important;
+            }
+
+            & *::selection {
+                color: black;
+                background-color: rgb(255, 255, 0);
+            }
+        }
     }
 
     *:not(pre) > code {
@@ -123,6 +132,8 @@
             width: 100%;
 
             & img {
+                display: block;
+                margin: auto;
             }
         }
     }

@@ -44,7 +44,7 @@ it is available on your `PATH`.
 
 ## Adding to PATH
 
-If you use a [package manager]({{% ref "package-manager.md" %}}) such as
+If you use a [package manager]({{% ref "packages" %}}) such as
 [chocolatey](https://chocolatey.org/) on Windows, [homebrew](https://brew.sh/)
 on macOS or [snap](https://snapcraft.io/) on Linux, then packages you install
 with those commands should be automatically added to your `PATH` variable. This

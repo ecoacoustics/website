@@ -300,37 +300,18 @@ Tools to use:
 
 Lots of ways to achieve the same outcome.
 
+-   Ecosounds and the A2O use `ffmpeg` and `sox` under the hood
+-   AP uses `ffmpeg` and `sox` under the hood
+-   R can use `ffmpeg` through the `system` call
+-   The `av` package in R uses FFmpeg
+
+
 > Fun fact: _WAVE_ is the name of the audio format, `.wav` is the extension commonly
 > used for WAVE files
 
 > Notes:
 > Many R/Python libraries have support for segmenting WAVE files.
 > Once your data is in a WAVE format
-
-{{% /slide %}}
-{{% slide %}}
-
-## Segmenting
-
-### A note on CLI tools
-
--   Command line tools are often simpler to use (in the long run)
--   Easier to program against
-    -   Graphical UIs are difficult to automate
--   Transferrable knowledge!
--   Can often be used within your language of choice
-    -   Ecosounds and the A2O use `ffmpeg` and `sox` under the hood
-    -   AP uses `ffmpeg` and `sox` under the hood
-    -   R can do so through the `system` call
-        -   The `av` package in R uses FFmpeg
-    -   Python has `subprocess`
-
-> <sl-icon name="info-circle"></sl-icon>
-> Software Carpentry has a lesson for using the shell: <https://swcarpentry.github.io/shell-novice/>
-
-> Notes:
-> The fewer layers of abstraction you have between the tool and you, means greater
-> opportunities for reuse/knowledge transfer
 
 {{% /slide %}}
 {{% slide %}}
@@ -406,15 +387,16 @@ See our [AP cutting](../../../help-centre/segmenting/ap/) guide for more example
     - `YYYY-MM-DDTHH:MM:SS+ZZ`
     - Compact format is _valid_ and is very useful for filenames: `YYYYMMDDTHHMMSS+ZZ`
 2. Never delete your originals
-3. Cut on demand
-4. Embrace the shell and the command line
+3. Keep your code simple---make use of other tools to do the heavy lifting
+4. Cut on demand
+5. Embrace the shell and the command line tools
+   - Knowledge transfer!
+   - Common abstraction means easy automation
 
 &nbsp;
 
-<small>_fin_</small>
-{.align-center}
 
-Go to the [practical](../practical/).
+Next the [practical](../practical/).
 {.align-center}
 
 {{% /slide %}}

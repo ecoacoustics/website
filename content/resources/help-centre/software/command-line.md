@@ -23,7 +23,7 @@ and using the following:
     Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-au&gl=au)
 - [Powershell]({{% ref "powershell" %}})
 
-If you are using Linux or macOS, then you can use the terminal, which is
+If you are using Linux or macOS, then you can use the Terminal, which is
 included by default for those systems. PowerShell 7 is also available for both
 [Linux](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-linux?view=powershell-7.2)
 and

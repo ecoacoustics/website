@@ -354,7 +354,7 @@ Lots of ways to achieve the same outcome.
 > ffmpeg -i 20191026T000000+1000_REC.flac 20191026T000000+1000_REC.wav
 
 # Cut out the 10th minute:
-> ffmpeg -i 20191026T000000+1000_REC.flac -ss 360 -t 60 20191026T000000+1000_REC_10th_minute.wav
+> ffmpeg -i 20191026T000000+1000_REC.flac -ss 300 -t 60 20191026T000000+1000_REC_10th_minute.wav
 
 # mix down multiple channels into one single channel
 > ffmpeg -i 20191026T000000+1000_REC.flac -ac 1 20191026T000000+1000_REC_mixdown.flac
@@ -363,7 +363,7 @@ Lots of ways to achieve the same outcome.
 > ffmpeg -i 20191026T000000+1000_REC.flac -ar 22050 20191026T000000+1000_REC_mixdown.flac
 
 # putting it all together:
-> ffmpeg -i 20191026T000000+1000_REC.flac -ss 360 -t 60 -ac 1 -ar 22050 20191026T000000+1000_REC_10th_minute.wav
+> ffmpeg -i 20191026T000000+1000_REC.flac -ss 300 -t 60 -ac 1 -ar 22050 20191026T000000+1000_REC_10th_minute.wav
 
 ```
 

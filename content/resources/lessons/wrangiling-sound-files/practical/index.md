@@ -65,7 +65,7 @@ Try the following exercises as well:
 ### Cut out the 10th minute
 
 ```bash
-> ffmpeg -i './SERF Data/20220421T100000+1000_SEQP-Samford-Wet-B_644370.flac' -ss 360 -t 60 ./ffmpeg-output/20220421T100000+1000_SEQP-Samford-Wet-B_644370_360-420.wav 
+> ffmpeg -i './SERF Data/20220421T100000+1000_SEQP-Samford-Wet-B_644370.flac' -ss 300 -t 60 ./ffmpeg-output/20220421T100000+1000_SEQP-Samford-Wet-B_644370_360-420.wav 
 ```
 
 ### Mix down multiple channels into one single channel

@@ -77,7 +77,7 @@ $$
 $$
 
 $$
-10 \log_{10}{\left( \frac{\text{Amplitude}}{\text{Reference Amplitude}}  \right)}
+20 \log_{10}{\left( \frac{\text{Amplitude}}{\text{Reference Amplitude}}  \right)}
 $$
 
 {{% fragment class="" %}}

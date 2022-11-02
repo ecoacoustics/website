@@ -15,7 +15,6 @@ There are two distinct PowerShell runtimes:
 
 {{< figure src="./powershell-versions-start-menu.png" caption="Always choose version 7." >}}
 
-
 From version 6, PowerShell has become cross platform---it can run on Windows,
 macOS, and Linux. If you need a script that runs cross-platform, PowerShell
 is a good choice.
@@ -23,9 +22,6 @@ is a good choice.
 ## Installing
 
 ### Windows
-
-Follow the guides for [Installing PowerShell on macOS](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-macOS) 
-published by microsoft.
 
 - Go to Installing [PowerShell on Windows](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows) guide
 - Choose the MSI package, and choose the `x64` version
@@ -51,7 +47,6 @@ and choose the _Run as Administrator_ option.
 
 Follow the guides for [Installing PowerShell on macOS](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-macOS) 
 published by microsoft.
-
 
 ### Linux
 

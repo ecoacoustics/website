@@ -1,7 +1,6 @@
 ---
 title: Practical Steps
 weight: 2
-draft: true
 ---
 
 The materials for this workshop will be delivered in a **Jupyter Notebook**. 

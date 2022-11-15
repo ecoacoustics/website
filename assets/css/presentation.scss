@@ -6,8 +6,7 @@
     footer p,
     footer small,
     .menu-toggle,
-    .asciinema-player-wrapper,
-    img {
+    .asciinema-player-wrapper {
         display: none !important;
     }
 
@@ -17,17 +16,22 @@
         display: block;
     }
 
-    .reveal, .slides {
+    .reveal {
         display: block;
-    }
+        aspect-ratio: auto;
 
-    .reveal .slides > section {
-        display: block;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        break-after: always;
-        page-break-after: always;
+
+        object {
+            margin: 0 !important;
+               break-before: always;
+            page-break-before: always;
+        }
+
+        .slides > section {
+            display: block;
+            break-after: always;
+            page-break-after: always;
+        }
     }
 
     .asciinema-player::after {

@@ -1,7 +1,7 @@
 ---
 title: Presentation
 layout: "presentation"
-draft: true
+draft: false
 weight: 2
 ---
 
@@ -123,8 +123,6 @@ Several are available:
 
 ## Repairing data
 
-### Identifying problems
-
 -   Sensors produce all sorts of faulty files.
 -   Problems are documented in an open source _known-problems_ repository[^1]
 -   Categorizing problems allows us to _describe_ them in a common language
@@ -169,36 +167,62 @@ The _Ecoacoustics Metadata Utility_.
 
 ### Using EMU to rename files
 
--   Can convert dates
-    ```bash
-    > emu rename **/*.WAV
-    Looking for targets...
-    -   Renamed 5B07FAC0.WAV
-            to 20180525T120000Z.WAV
-    1 files, 1 renamed, 0 unchanged, 0 failed
-    ```
--   Can add timezone offsets[^2]
-    ```bash
-    > emu rename **/*.wav --offset "+11:00"
-    Looking for targets...
-    -   Renamed PILLIGA_20121204_234600.wav
-            to PILLIGA_20121204T234600+1100.wav
-    1 files, 1 renamed, 0 unchanged, 0 failed
-    ```
--   Can read metadata from the files to use in rename
-    ```bash
-    $ emu rename --template "{StartDate}_{SampleRateHertz}{Extension}" --scan-metadata
-    Looking for targets...
-    -   Renamed /mnt/f/tmp/fixes/renames/20210621T205706-0300.wav
-            to /mnt/f/tmp/fixes/renames/20210621T205706-0300_256000.wav
-    -   Renamed /mnt/f/tmp/fixes/renames/20220331T094902-0300.flac
-            to /mnt/f/tmp/fixes/renames/20220331T094902-0300_44100.flac
-    ```
+Can convert dates:
+
+```bash
+> emu rename **/*.WAV
+Looking for targets...
+-   Renamed 5B07FAC0.WAV
+        to 20180525T120000Z.WAV
+1 files, 1 renamed, 0 unchanged, 0 failed
+```
+Can add timezone offsets[^2]:
+
+```bash
+> emu rename **/*.wav --offset "+11:00"
+Looking for targets...
+-   Renamed PILLIGA_20121204_234600.wav
+        to PILLIGA_20121204T234600+1100.wav
+1 files, 1 renamed, 0 unchanged, 0 failed
+```
 
 [^2]: There is one true date format: [ISO8601](https://en.wikipedia.org/wiki/ISO_8601)
 
 > Notes:
 > - timezone offsets are important for working with any dataset that occurs cross-timezone boundary
+
+{{% /slide %}}
+
+{{% slide %}}
+
+## Repairing data
+
+### Using EMU to rename files
+
+Can read metadata from the files to use in rename:
+
+```bash
+$ emu rename --template "{StartDate}_{SampleRateHertz}{Extension}" --scan-metadata
+Looking for targets...
+-   Renamed /mnt/f/tmp/fixes/renames/20210621T205706-0300.wav
+        to /mnt/f/tmp/fixes/renames/20210621T205706-0300_256000.wav
+-   Renamed /mnt/f/tmp/fixes/renames/20220331T094902-0300.flac
+        to /mnt/f/tmp/fixes/renames/20220331T094902-0300_44100.flac
+```
+
+Real use case: recovering dates from corrupted memory card:
+
+```bash
+$ emu rename --template "{StartDate}{Extension}" --scan-metadata **/F*
+Looking for targets...
+-   Renamed /mnt/f/tmp/fixes/renames/F4622343428908
+         to /mnt/f/tmp/fixes/renames/20220331T094902-0300.flac
+-   Renamed /mnt/f/tmp/fixes/renames/F4623864286243
+         to /mnt/f/tmp/fixes/renames/20210621T205706-0300.wav
+2 files, 2 renamed, 0 unchanged, 0 failed
+```
+
+> Notes:
 > - Add sample rate read from file into filename.... weird example but you can do it
 
 {{% /slide %}}
@@ -302,37 +326,18 @@ Tools to use:
 
 Lots of ways to achieve the same outcome.
 
+-   Ecosounds and the A2O use `ffmpeg` and `sox` under the hood
+-   AP uses `ffmpeg` and `sox` under the hood
+-   R can use `ffmpeg` through the `system` call
+-   The `av` package in R uses FFmpeg
+
+
 > Fun fact: _WAVE_ is the name of the audio format, `.wav` is the extension commonly
 > used for WAVE files
 
 > Notes:
 > Many R/Python libraries have support for segmenting WAVE files.
 > Once your data is in a WAVE format
-
-{{% /slide %}}
-{{% slide %}}
-
-## Segmenting
-
-### A note on CLI tools
-
--   Command line tools are often simpler to use (in the long run)
--   Easier to program against
-    -   Graphical UIs are difficult to automate
--   Transferrable knowledge!
--   Can often be used within your language of choice
-    -   Ecosounds and the A2O use `ffmpeg` and `sox` under the hood
-    -   AP uses `ffmpeg` and `sox` under the hood
-    -   R can do so through the `system` call
-        -   The `av` package in R uses FFmpeg
-    -   Python has `subprocess`
-
-> <sl-icon name="info-circle"></sl-icon>
-> Software Carpentry has a lesson for using the shell: <https://swcarpentry.github.io/shell-novice/>
-
-> Notes:
-> The fewer layers of abstraction you have between the tool and you, means greater
-> opportunities for reuse/knowledge transfer
 
 {{% /slide %}}
 {{% slide %}}
@@ -349,7 +354,7 @@ Lots of ways to achieve the same outcome.
 > ffmpeg -i 20191026T000000+1000_REC.flac 20191026T000000+1000_REC.wav
 
 # Cut out the 10th minute:
-> ffmpeg -i 20191026T000000+1000_REC.flac -ss 3600 -t 60 20191026T000000+1000_REC_10th_minute.wav
+> ffmpeg -i 20191026T000000+1000_REC.flac -ss 300 -t 60 20191026T000000+1000_REC_10th_minute.wav
 
 # mix down multiple channels into one single channel
 > ffmpeg -i 20191026T000000+1000_REC.flac -ac 1 20191026T000000+1000_REC_mixdown.flac
@@ -358,9 +363,10 @@ Lots of ways to achieve the same outcome.
 > ffmpeg -i 20191026T000000+1000_REC.flac -ar 22050 20191026T000000+1000_REC_mixdown.flac
 
 # putting it all together:
-> ffmpeg -i 20191026T000000+1000_REC.flac -ss 3600 -t 60 -ac 1 -ar 22050 20191026T000000+1000_REC_10th_minute.wav
+> ffmpeg -i 20191026T000000+1000_REC.flac -ss 300 -t 60 -ac 1 -ar 22050 20191026T000000+1000_REC_10th_minute.wav
 
 ```
+
 
 See our [ffmpeg](../../../help-centre/converting/ffmpeg/) guide for more examples.
 
@@ -376,7 +382,7 @@ See our [ffmpeg](../../../help-centre/converting/ffmpeg/) guide for more example
   - emits 1-minute WAVE blocks
 - Can customize sample rate, segment size, start and end offsets, segment overlap, segment minimum durations
 
-Example (2 hour flac file):
+Example (2 hour FLAC file):
 
 ```bash
 #                <input_file>                  <output_directory>
@@ -387,11 +393,6 @@ Took 00:01:31.0498711. Done.
 20191026T000000+1000_REC_0-60.wav       20191026T000000+1000_REC_3120-3180.wav  20191026T000000+1000_REC_5340-5400.wav
 20191026T000000+1000_REC_1020-1080.wav  20191026T000000+1000_REC_3180-3240.wav  20191026T000000+1000_REC_540-600.wav
 20191026T000000+1000_REC_1080-1140.wav  20191026T000000+1000_REC_3240-3300.wav  20191026T000000+1000_REC_5400-5460.wav
-20191026T000000+1000_REC_1140-1200.wav  20191026T000000+1000_REC_3300-3360.wav  20191026T000000+1000_REC_5460-5520.wav
-20191026T000000+1000_REC_120-180.wav    20191026T000000+1000_REC_3360-3420.wav  20191026T000000+1000_REC_5520-5580.wav
-20191026T000000+1000_REC_1200-1260.wav  20191026T000000+1000_REC_3420-3480.wav  20191026T000000+1000_REC_5580-5640.wav
-20191026T000000+1000_REC_1260-1320.wav  20191026T000000+1000_REC_3480-3540.wav  20191026T000000+1000_REC_5640-5700.wav
-20191026T000000+1000_REC_1320-1380.wav  20191026T000000+1000_REC_3540-3600.wav  20191026T000000+1000_REC_5700-5760.wav
 # <...snip...>
 ```
 
@@ -408,15 +409,16 @@ See our [AP cutting](../../../help-centre/segmenting/ap/) guide for more example
     - `YYYY-MM-DDTHH:MM:SS+ZZ`
     - Compact format is _valid_ and is very useful for filenames: `YYYYMMDDTHHMMSS+ZZ`
 2. Never delete your originals
-3. Cut on demand
-4. Embrace the shell and the command line
+3. Keep your code simple---make use of other tools to do the heavy lifting
+4. Cut on demand
+5. Embrace the shell and the command line tools
+   - Knowledge transfer!
+   - Common abstraction means easy automation
 
 &nbsp;
 
-<small>_fin_</small>
-{.align-center}
 
-Go to the [practical](../practical/).
+Next the [practical](../practical/).
 {.align-center}
 
 {{% /slide %}}

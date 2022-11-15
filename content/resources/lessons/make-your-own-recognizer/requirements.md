@@ -1,5 +1,6 @@
 ---
 title: Requirements
+weight: 1
 ---
 
 -   This is a face to face workshop and all attendees will be required to register for the main symposium, as well as attending the workshop on Friday.

@@ -1,7 +1,7 @@
 ---
 title: Presentation
 layout: "presentation"
-draft: true
+draft: false
 weight: 2
 ---
 
@@ -14,9 +14,10 @@ Dr Michael Towsey
 {{% row %}}
 
 ![deployed sensor](./image3.jpeg)
-{ .hello height="300" }
+{ .image-fill }
 
 ![spectrogram](./image2.png)
+{.image-100-percent style="height:100%" }
 {{% /row %}}
 
 {{% /slide %}}
@@ -76,7 +77,7 @@ $$
 $$
 
 $$
-10 \log_{10}{\left( \frac{\text{Amplitude}}{\text{Reference Amplitude}}  \right)}
+20 \log_{10}{\left( \frac{\text{Amplitude}}{\text{Reference Amplitude}}  \right)}
 $$
 
 {{% fragment class="" %}}
@@ -148,7 +149,7 @@ $$
 -   We can convert from time domain to frequency domain
 
 ![fourier transform](./image13.PNG)  
-{ style="scale: 150%" }
+{ style="width: 50%" }
 
 {{% /row %}}
 
@@ -171,12 +172,12 @@ Maximum frequency in spectrograms = sample rate / 2 = <mark>Nyquist</mark>
 ## 4: Fourier transform
 
 {{% row %}}
-{{< highlight powershell >}}
+```powershell
 Function FFT($array){
     $Len = $array.Count
     If($Len -le 1){Return $array} 
     $Len_Over_2 = [Math]::Floor(($Len/2))
-$Output = New-Object Complex[] $Len
+    $Output = New-Object Complex[] $Len
 
     $EvenArray = @()
     $OddArray  = @()
@@ -190,15 +191,17 @@ $Output = New-Object Complex[] $Len
     $Odd  = FFT($OddArray)
 
     For($i = 0; $i -lt $Len_Over_2; $i++){
-        $Twiddle = [Complex]::Exp([Complex]::ImaginaryOne*[Math]::Pi*($i*-2/$Len))*$Odd[$i]
+        $Twiddle = [Complex]::Exp(
+            [Complex]::ImaginaryOne*[Math]::Pi*($i*-2/$Len)
+        ) * $Odd[$i]
         $Output[$i]             = $Even[$i] + $Twiddle
         $Output[$i+$Len_Over_2] = $Even[$i] - $Twiddle
     }
 
     Return $Output
-
 }
-{{< /highlight >}}
+```
+
 
 -   20 lines of code that changed human civilization
 -   Thanks to Cooley and Tukey in 1965 (or Gauss 1805)
@@ -240,5 +243,7 @@ Spectrogram
 
 {{% /slide %}}
 {{% slide type="title" %}}
+
+Finished. Next up: [recording and labelling](../../labelling/presentation).
 
 {{% /slide %}}

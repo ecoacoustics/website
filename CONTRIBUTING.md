@@ -15,4 +15,4 @@ You need to install the following:
 - A package manager
   - Chocolatey on Windows
   - Snap on Linux
-  - Homebrew on MacOS
+  - Homebrew on macOS

@@ -1,32 +1,39 @@
 ---
 title: Requirements
-draft: true
+draft: false
 weight: 1
 ---
 
-**Download + Install prior to session:**
+## Demo Audio files
 
--   SERF and Powerful Owl Data
-    -   Make sure to pre-download the SERF and Powerful Owl .wav files as we will be exploring them in the practical.
-        You can download them from here: <https://cloudstor.aarnet.edu.au/plus/s/Fsoi5Dm0AJ1JvYU>
+{{% include "../shared/symposium_data.md" %}}
 
-## Linux
+
+## Software
+
+### Linux
 
 - Install [ffmpeg](https://www.tecmint.com/install-ffmpeg-in-linux/)
 - Install [AnalysisPrograms (AP)](https://ap.qut.ecoacoustics.info/basics/installing.html?tabs=windows)
 - Install [EMU](https://github.com/QutEcoacoustics/emu/blob/master/docs/installing.md)
 
-## Windows
+### Windows
 
-- Highly recommend installing [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-au&gl=au)
+- Highly recommend installing  [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-au&gl=au)
+  - Some computers do not allow installing apps from the Microsoft Store.
+    If this happens to you, then just make sure you follow the PowerShell
+    install steps below.
 - Install [Chocolatey](https://community.chocolatey.org/courses/installation/installing?method=installing-chocolatey)
   - Chocolatey is a package manager that allows you to install new apps
 - Install `ffmpeg` with `choco install ffmpeg` (use an Administrator prompt)
 - Install [AnalysisPrograms (AP)](https://ap.qut.ecoacoustics.info/basics/installing.html?tabs=windows)
 - Install [EMU](https://github.com/QutEcoacoustics/emu/blob/master/docs/installing.md)
 
-## MacOS
+### macOS
 
-_AP_ and _EMU_ are not supported for this workshop when a Mac is used.
-
+- Change the settings for [unsigned apps](../../../help-centre/software/unsigned)
+- Install [EMU](https://github.com/QutEcoacoustics/emu/blob/master/docs/installing.md)
+  - Release `emu_6.0.0_osx-x64.zip` works on ARM through virtualisation
 - Install [FFmpeg](https://pigtou.com/install-ffmpeg-on-mac/)
+- `brew install FFmpeg`. See [package managers](../../../help-centre/software/package-manager)  for information about _brew_.
+- Install [AnalysisPrograms (AP)](https://ap.qut.ecoacoustics.info/basics/installing.html)

@@ -1,7 +1,7 @@
 ---
 title: Presentation
 layout: "presentation"
-draft: true
+draft: false
 weight: 2
 ---
 
@@ -87,18 +87,25 @@ Group multiple raven files into one csv file, generate spectrograms for all dete
 {{% /slide %}}
 {{% slide %}}
 
-## Useful Autohotkey script for using arrow keys to move left and right:**
+## Useful Autohotkey script
 
-*Note: You will need to download [Autohotkey](https://www.autohotkey.com/) and use their screen co-ordinate tool. Replace the click values after 'Right' and 'Left'* *to correlate with the left and right scrollbar arrows in Raven depending on the size of your monitor.*
+This scripts allows you to use your arrow keys to move left and right.
 
-> #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases. ; #Warn  ; Enable warnings to assist with
-> detecting common errors. SendMode Input  ; Recommended for new scripts
-> due to its superior speed and reliability. SetWorkingDir %A_ScriptDir%
-> ; Ensures a consistent starting directory.
-> 
-> #IfWinActive ahk_class SunAwtFrame Right:: Click, 1824 790 Click, 1824 790 Return
-> 
-> Left:: Click, 235 791 Click, 235 791 Return
+Note: You will need to download [Autohotkey](https://www.autohotkey.com/) and 
+use their screen co-ordinate tool. Replace the click values after 'Right' and 
+'Left'* *to correlate with the left and right scrollbar arrows in Raven 
+depending on the size of your monitor.*
+
+```text
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases. ; #Warn  ; Enable warnings to assist with
+detecting common errors. SendMode Input  ; Recommended for new scripts
+due to its superior speed and reliability. SetWorkingDir %A_ScriptDir%
+; Ensures a consistent starting directory.
+
+#IfWinActive ahk_class SunAwtFrame Right:: Click, 1824 790 Click, 1824 790 Return
+
+Left:: Click, 235 791 Click, 235 791 Return
+```
 
 {{% /slide %}}
 {{% slide %}}
@@ -110,5 +117,10 @@ Group multiple raven files into one csv file, generate spectrograms for all dete
 -   A list of free and paid software available for bioacoustic analyses: https://github.com/rhine3/bioacoustics-software
 -   Izotope RX8 - batch noise removal, pretty spectrograms, fine-scale sound editing 
 -   Audacity - free noise removal + sound editing
+
+&nbsp;
+
+Go to the [practical](../practical/).
+{ .align-center }
 
 {{% /slide %}}

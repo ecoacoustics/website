@@ -16,16 +16,17 @@
         display: block;
     }
 
+    img, object, svg {
+        max-height: 100%;
+        break-after: auto;
+        break-inside: avoid;
+        page-break-after: auto;
+        page-break-inside: avoid;
+    }
+
     .reveal {
         display: block;
         aspect-ratio: auto;
-
-
-        object {
-            margin: 0 !important;
-               break-before: always;
-            page-break-before: always;
-        }
 
         .slides > section {
             display: block;

@@ -1,8 +1,12 @@
 @media print {
     .navbar,
     .oe-presentation-controls,
-    #themeSelector {
-        display: none;
+    #themeSelector,
+    .breadcrumbs,
+    footer p,
+    footer small,
+    .menu-toggle {
+        display: none !important;
     }
 }
 

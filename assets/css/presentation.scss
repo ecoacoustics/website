@@ -5,8 +5,47 @@
     .breadcrumbs,
     footer p,
     footer small,
-    .menu-toggle {
+    .menu-toggle,
+    .asciinema-player-wrapper,
+    img {
         display: none !important;
+    }
+
+    .book-page {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    .reveal, .slides {
+        display: block;
+    }
+
+    .reveal .slides > section {
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        break-after: always;
+        page-break-after: always;
+    }
+
+    svg {
+        display: none !important;
+    }
+
+    .asciinema-player::after {
+        content: "This content is not available for printing.";
+        font-size: 0.4em;
+        opacity: 0.5;
+    }
+
+    a::after {
+        content: " (" attr(href) ")";
+    }
+    
+    @page {
+        size: A4 landscape;
     }
 }
 

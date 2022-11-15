@@ -30,10 +30,6 @@
         page-break-after: always;
     }
 
-    svg {
-        display: none !important;
-    }
-
     .asciinema-player::after {
         content: "This content is not available for printing.";
         font-size: 0.4em;

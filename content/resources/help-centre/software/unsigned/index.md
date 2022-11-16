@@ -45,7 +45,7 @@ Gatekeeper. Open a terminal and run the following command:
 > xattr -dr com.apple.quarantine <your-path-here>
 ```
 
-Replace \<your-path-here\> with the location of the executable file you would
+Replace `<your-path-here>` with the location of the executable file you would
 like to allow. For example, the following code will allow the `emu` executable
 to run, which in this example is located in `~/emu/`:
 

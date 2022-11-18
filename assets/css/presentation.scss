@@ -1,8 +1,50 @@
 @media print {
     .navbar,
     .oe-presentation-controls,
-    #themeSelector {
-        display: none;
+    #themeSelector,
+    .breadcrumbs,
+    footer p,
+    footer small,
+    .menu-toggle,
+    .asciinema-player-wrapper {
+        display: none !important;
+    }
+
+    .book-page {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    img, object, svg {
+        max-height: 100%;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .reveal {
+        display: block;
+        aspect-ratio: auto;
+
+        .slides > section {
+            display: block;
+            break-after: always;
+            page-break-after: always;
+        }
+    }
+
+    .asciinema-player::after {
+        content: "This content is not available for printing.";
+        font-size: 0.4em;
+        opacity: 0.5;
+    }
+
+    a::after {
+        content: " (" attr(href) ")";
+    }
+    
+    @page {
+        size: A4 landscape;
     }
 }
 

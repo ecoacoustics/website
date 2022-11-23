@@ -37,6 +37,10 @@ Marina D. A. Scarpelli - PhD candidate at QUT
 ![Communicationnetwork](./communication-network.png)
 
 </div>
+
+>Notes:
+>The different components of the soundscape are usually described as:
+>*Biophony:* sounds emitted by animals; *Geophony:* sounds emitted by geographical components of the landscape (e.g.: wind, rain, strems, etc); *Technophony:* sounds emitted by humans and its machines.
 {{% /slide %}}
 {{% slide %}}
 
@@ -72,6 +76,9 @@ of more comprehensive questions, enabling research on:
 <div class="footnotes">
 Sugai LSM, Silva TSF, Ribeiro JW, Llusia D. 2019. Terrestrial Passive Acoustic Monitoring: Review and Perspectives. BioScience 69:5–11.
 </div>
+
+>Notes:
+>In the graph presented from the review paper (Sugai et al., 2019) we can see that 100% of studies looking at soundscapes (las row on the plot) used acoustic indices. The other analytical methods (manual tagging and recognisers) are very time-consuming to be used in large datasets, besides the need for expert knowledge to identify species. Moreover, the choice of which species to monitor can also be an issue, especially when considering recordings from different locations, where finding shared species of significance might be a problem.
 {{% /slide %}}
 {{% slide %}}
 
@@ -230,7 +237,7 @@ Biophony
     -   Therefore the relationship between one index/one ecological metric is still unclear
 
 >Notes:
->Transforming a multidimensional feature into one single number is not always straightforward and a lot of times if does not work the same in every situation;
+>Transforming a multidimensional feature into one single number is not always straightforward and a lot of times it does not work the same in every situation;
 {{% /slide %}}
 {{% slide %}}
 

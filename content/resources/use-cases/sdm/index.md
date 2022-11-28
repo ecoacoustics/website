@@ -10,21 +10,19 @@ By Dr Andrew Schwenke & Dr Rob Clemens
 The Australian Acoustic Observatory (A2O) is a continental-scale acoustic sensor
 network that provides data for hundreds of acoustic sensors across seven
 Australian ecoregions. This data is freely available to researchers, citizen
-scientists, and the general public, for use under [CC BY
-4.0](https://creativecommons.org/licenses/by/4.0/) licence. More information
-about the A2O can be found in a paper published in [Methods in Ecology and
-Evolution (Roe at al.,
-2021)](https://acousticobservatory.org/wp-content/uploads/2021/07/A2O_Methods-in-Ecology-and-Evolution_2021.pdf).
+scientists, and the general public, for use under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) licence. More information
+about the A2O can be found in a paper published in [Methods in Ecology and Evolution (Roe at al., 2021)](https://acousticobservatory.org/wp-content/uploads/2021/07/A2O_Methods-in-Ecology-and-Evolution_2021.pdf).
 For National Science Week in 2021, a partnership between ABC Science, the
 Australian Acoustic Observatory, Queensland University of Technology and the
-University of New England, formed the Hoot Detective project. This was a citizen
-science project that used recordings from the Australian Acoustic Observatory,
-resulting in the identification of 23,568 owl calls by members of the public.
-There are a variety of advantages to this kind of continental scale data
-([Guerin et al.
-2020](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3307))
+University of New England, formed the Hoot Detective project (Figure 1). This
+was a citizen science project that used recordings from the Australian Acoustic
+Observatory, resulting in the identification of 23,568 owl calls by members of
+the public. There are a variety of advantages to this kind of continental scale
+data ([Guerin et al. 2020](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3307))
 and those advantages directly apply to questions looking to predict a species
 distribution.
+
+{{% figure src="./hoot_detective.png" caption="Figure 1: Hoot Detective website." width="50%"%}}
 
 First, occurrence data for most fauna in Australia are not systematically
 collected at geographic scales. Most data for species that vocalise are highly
@@ -89,26 +87,27 @@ of annotations for five owl species: Masked Owl (Tyto novaehollandiae), Eastern
 Barn Owl (Tyto javanica), Barking Owl (Ninox connivens), Powerful Owl (Ninox
 strenua), and Southern Boobook (Ninox boobook). All data, including audio
 recordings, annotations, and associated sensor metadata, is available for
-download and use from the [A2O data
-portal](https://acousticobservatory.org/data/find-data/). A GitHub repository
+download and use from the [A2O data portal](https://acousticobservatory.org/data/find-data/). A GitHub repository
 detailing the complete methods for preparing the Hoot Detective data, prediction
 layers, and running preliminary SDM analyses with R is
-[available](https://github.com/andrew-1234/sdm-usecase-master).
+[also provided](https://github.com/andrew-1234/sdm-usecase-master).
 
 ### Data preparation
 
 The Hoot Detective project resulted in 28723 segments of annotated audio, from
 37 sensors. Each segment of audio was 10 seconds in length, resulting in a total
 of just under 80 hours of annotated audio. Audio segments came from most days
-spanning between June, 2019, until July, 2021 (Figure XX). These annotations
+spanning between June, 2019, until July, 2021 (Figure 2). These annotations
 were summarised in R to get occurrence data for each species, which included
 determining if at any point the target species was recorded (presence) or was
-absent from recordings (absence). 
+absent from recordings (absence).
+
+{{% figure src="./hoot_segments_per_day.png" caption="Figure 2: Histogram demonstrating total frequency of annotated audio segments per day in the Hoot Detective data set." width="100%"%}}
 
 A Powerful Owl presence was recorded in Western Australia, which is quite far
 outside of the recognised distribution. Therefore, Powerful Owl records were
 filtered further, using a buffered boundary of the known distribution extent
-derived from ALA records (?), to remove these potentially anomalous records. 
+derived from ALA records, to remove these potentially anomalous records. 
 
 The A2O uses a paired sensor design, with four sensors per site. The distance
 between sensors is typically within 500m to 5000m. Therefore, we first attempted
@@ -130,8 +129,7 @@ masked to the buffered boundary extent representing the known distribution. 
 
 Powerful Owl presence data were used to extract environmental variable values
 from eastern Australia, and the resulting presence data and environmental
-rasters were used in a Maxent model in R ([see
-code](https://github.com/andrew-1234/sdm-usecase-master)).
+rasters were used in a Maxent model in R ([see code](https://github.com/andrew-1234/sdm-usecase-master)).
 
 Presence only vs presence absence comparisons were made within the EcoCommons
 platform. Evironmental predictors were at 1 km resolution and included the ANU
@@ -146,8 +144,7 @@ selected the Southern Boobook which was recorded at all but one station (mean
 137 vocalisations, range 0 to 993). We then extracted raster grid values from
 the two forest area variables, bioclim variables 5,6 and 17, and NVIS, a
 national vegetation classification. We then ran a Boosted regression tree (BRT)
-model specifying a Poisson distribution ([see
-code](https://github.com/andrew-1234/sdm-usecase-master)).
+model specifying a Poisson distribution ([see code](https://github.com/andrew-1234/sdm-usecase-master)).
 
 ## Results
 
@@ -158,28 +155,36 @@ Owl which is only found in eastern Australia had relatively few locations where
 they were recorded. Chance resulted in more detections of Powerful Owl in
 southeast Queensland in observatory data, and that bias is reflected in attempts
 with multiple methods to predict their distribution using only observatory
-data.  Nonetheless, the presence-only model MaxEnt proved to be the best at
+data. Nonetheless, the presence-only model MaxEnt proved to be the best at
 approaching predictions of the actual distribution of Powerful Owl in eastern
-Australia (Figure 1).
+Australia (Figure 3).
+
+{{% figure src="./gg_powl_maxent_stack1_prediction.png" caption="Figure 3: " width="50%"%}}
 
 When comparing presence only data with presence / absence data, again results
 varied by species, but were most interesting for a species that had close to the
 same number of presence and absence data available, the Masked Owl. Using this
 owl's presence only data in a Bioclim model resulted in a reasonable
-approximation of geographic distribution in southern Australia (Figure 2).
+approximation of geographic distribution in southern Australia (Figure 4).
 However, that model completely failed to predict the presence of this owl in
 much of northern Australia. When presence absence data was run through a
 Artificial Neural Network model, the predictions included all of northern
-Australia (Figure 3) and were much more closely aligned to the known continental
+Australia (Figure 5) and were much more closely aligned to the known continental
 distribution of Masked Owl.
 
+{{% figure src="./maskedowl_BIOCLIM.png" caption="Figure 4: " width="50%"%}}
+
+{{% figure src="./maskedowl_ANN_w_absence_data.png" caption="Figure 5: " width="50%"%}}
+
 The mapped frequency of southern boobook suggests that it would be possible to
-predict areas where these owls call more (Figure 4). The results demonstrated
+predict areas where these owls call more (Figure 6). The results demonstrated
 some reasonable patterns, such as increased call frequency along what might be
 creeks or waterways in the outback, while the lowest call frequencies were in
 outback deserts. The high call frequency in SW WA also looked reasonable, but
 the lack of similar high call frequency areas in much of eastern Australia are
 likely due to insufficient sampling in this region.
+
+{{% figure src="./boobook_frequency.png" caption="Figure 6: " width="50%"%}}
 
 ## Discussion
 
@@ -198,10 +203,6 @@ modelled here, there were some stations that were fairly close together, and
 with fine resolution data it might be possible to tease apart the within cluster
 variation in presences or frequency of presences.
 
-As acoustic monitoring activities continue to grow we demonstrate how the
-absence data acoustic sensors can deliver and the call frequency can produce
-game changing results when looking to understand species distributions.
-
 It is well established that acoustic monitoring can provide significant
 ecological insights, across both broad spatial and temporal scales. As acoustic
 monitoring activities continue to grow, we demonstrate that when such data is
@@ -214,3 +215,10 @@ is further aided by the use of online platforms such as
 [EcoCommons](https://www.ecocommons.org.au/), which allows practitioners and
 researchers to seamlessly examine their data using a wide range of modelling
 tools and trusted datasets.
+
+If you would like to learn more about Species Distribution Modelling, you can
+visit the educational material sections of EcoCommons
+[here](https://www.ecocommons.org.au/educational-material/), and
+[here](https://support.ecocommons.org.au/support/solutions). For a wide range of
+resources, guides, and lessons relating to ecoacoustics, you can visit the
+[Resources]({{% ref "resources" %}}) section of this website.

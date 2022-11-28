@@ -18,7 +18,7 @@ University of New England, formed the Hoot Detective project (Figure 1). This
 was a citizen science project that used recordings from the Australian Acoustic
 Observatory, resulting in the identification of 23,568 owl calls by members of
 the public. There are a variety of advantages to this kind of continental scale
-data ([Guerin et al. 2020](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3307))
+data [(Guerin et al. 2020)](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3307)
 and those advantages directly apply to questions looking to predict a species
 distribution.
 
@@ -129,7 +129,7 @@ masked to the buffered boundary extent representing the known distribution. 
 
 Powerful Owl presence data were used to extract environmental variable values
 from eastern Australia, and the resulting presence data and environmental
-rasters were used in a Maxent model in R ([see code](https://github.com/andrew-1234/sdm-usecase-master)).
+rasters were used in a Maxent model in R [(see code)](https://github.com/andrew-1234/sdm-usecase-master).
 
 Presence only vs presence absence comparisons were made within the EcoCommons
 platform. Evironmental predictors were at 1 km resolution and included the ANU
@@ -144,7 +144,7 @@ selected the Southern Boobook which was recorded at all but one station (mean
 137 vocalisations, range 0 to 993). We then extracted raster grid values from
 the two forest area variables, bioclim variables 5,6 and 17, and NVIS, a
 national vegetation classification. We then ran a Boosted regression tree (BRT)
-model specifying a Poisson distribution ([see code](https://github.com/andrew-1234/sdm-usecase-master)).
+model specifying a Poisson distribution [(see code)](https://github.com/andrew-1234/sdm-usecase-master).
 
 ## Results
 
@@ -159,7 +159,7 @@ data. Nonetheless, the presence-only model MaxEnt proved to be the best at
 approaching predictions of the actual distribution of Powerful Owl in eastern
 Australia (Figure 3).
 
-{{% figure src="./gg_powl_maxent_stack1_prediction.png" caption="Figure 3: " width="50%"%}}
+{{% figure src="./gg_powl_maxent_stack1_prediction.png" caption="Figure 3: MaxEnt prediction of environmental suitability using Powerful Owl prescence data and five environmental layers. Prescenes are marked with blue circles (note that some records are overlapping due to the scale)." width="100%"%}}
 
 When comparing presence only data with presence / absence data, again results
 varied by species, but were most interesting for a species that had close to the
@@ -172,11 +172,11 @@ Artificial Neural Network model, the predictions included all of northern
 Australia (Figure 5) and were much more closely aligned to the known continental
 distribution of Masked Owl.
 
-{{% figure src="./maskedowl_BIOCLIM.png" caption="Figure 4: " width="50%"%}}
+{{% figure src="./maskedowl_BIOCLIM.png" caption="Figure 4: Masked Owl distribution prediction using a Bioclim model (presence only), generated on the EcoCommons platform." width="50%"%}}
 
-{{% figure src="./maskedowl_ANN_w_absence_data.png" caption="Figure 5: " width="50%"%}}
+{{% figure src="./maskedowl_ANN_w_absence_data.png" caption="Figure 5: Masked Owl distribution prediction using a Artificial Neural Network model (presence / absence data), generated on the EcoCommons platform." width="50%"%}}
 
-The mapped frequency of southern boobook suggests that it would be possible to
+The mapped frequency of Southern Boobook suggests that it would be possible to
 predict areas where these owls call more (Figure 6). The results demonstrated
 some reasonable patterns, such as increased call frequency along what might be
 creeks or waterways in the outback, while the lowest call frequencies were in
@@ -184,7 +184,7 @@ outback deserts. The high call frequency in SW WA also looked reasonable, but
 the lack of similar high call frequency areas in much of eastern Australia are
 likely due to insufficient sampling in this region.
 
-{{% figure src="./boobook_frequency.png" caption="Figure 6: " width="50%"%}}
+{{% figure src="./boobook_frequency.png" caption="Figure 6: Predicted call frequency (number of calls) of the Southern Boobook, using a Boosted Regression Tree." width="100%"%}}
 
 ## Discussion
 
@@ -192,16 +192,16 @@ It was surprising how well some of the data predicted continental distributions
 despite there being relatively few records available (< 37 for each species).
 It was also striking how vastly different predictions were when using presence
 only vs presence absence data. Finally, the variation in predicted call
-frequency of the southern Boobook across Australia suggests that the metric of
+frequency of the Southern Boobook across Australia suggests that the metric of
 call frequency may be a useful indicator of habitats that get more use,
 potentially related to habitat quality or breeding activity.
 
-Initial attempts to model with 25m resolution proved too much to data to handle,
-but further work to tile data extractions and predictions would likely allow
-such high resolution predictions, and while not useful at the continental scale
-modelled here, there were some stations that were fairly close together, and
-with fine resolution data it might be possible to tease apart the within cluster
-variation in presences or frequency of presences.
+Initial attempts to model with 25m resolution proved to be too much data to
+handle, but further work to tile data extractions and predictions would likely
+allow such high resolution predictions, and while not useful at the continental
+scale modelled here, there were some stations that were fairly close together,
+and with fine resolution data it might be possible to tease apart the within
+cluster variation in presences or frequency of presences.
 
 It is well established that acoustic monitoring can provide significant
 ecological insights, across both broad spatial and temporal scales. As acoustic
@@ -215,10 +215,3 @@ is further aided by the use of online platforms such as
 [EcoCommons](https://www.ecocommons.org.au/), which allows practitioners and
 researchers to seamlessly examine their data using a wide range of modelling
 tools and trusted datasets.
-
-If you would like to learn more about Species Distribution Modelling, you can
-visit the educational material sections of EcoCommons
-[here](https://www.ecocommons.org.au/educational-material/), and
-[here](https://support.ecocommons.org.au/support/solutions). For a wide range of
-resources, guides, and lessons relating to ecoacoustics, you can visit the
-[Resources]({{% ref "resources" %}}) section of this website.

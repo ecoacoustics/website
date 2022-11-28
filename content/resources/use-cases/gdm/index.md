@@ -1,5 +1,5 @@
 ---
-title: Generalised Dissimilarity Modeling
+title:  Harnessing acoustic data and Generalised Dissimilarity Modelling to examine compositional turnover of avian species.
 weight: 2
 ---
 
@@ -46,14 +46,16 @@ capture large scale datasets on environmental soundscapes. Analysis of those
 soundscapes represents the focus of the emerging field of ecoacoustics. The
 increasing use of passive acoustic monitoring represents an ever-growing body of
 data which can be harnessed to answer an array of ecological questions (e.g.
-A2O, ecosounds etc). We therefore intend to demonstrate how this data is also an
-ideal candidate to be used to examine compositional turnover of species across
-various spatial scales, which has traditionally been performed with presence
-absence field survey data. The advantage of this workflow is being able to
-leverage existing acoustic datasets that may already contain species
-annotations. This data, accompanied by either study site survey data, or remote
-sensing spatial layers, will be able to provide key insights into environmental
-predictors of biological diversity across various spatial and temporal scales.
+[A2O](https://acousticobservatory.org/),
+[ecosounds](https://www.ecosounds.org/)). We therefore intend to demonstrate how
+this data is also an ideal candidate to be used to examine compositional
+turnover of species across various spatial scales, which has traditionally been
+performed with presence absence field survey data. The advantage of this
+workflow is being able to leverage existing acoustic datasets that may already
+contain species annotations. This data, accompanied by either study site survey
+data, or remote sensing spatial layers, will be able to provide key insights
+into environmental predictors of biological diversity across various spatial and
+temporal scales.
 
 ## Methods
 
@@ -65,7 +67,7 @@ The data came from nine study sites in total, which were classified based on
 their time since clearing occurred, representing three regrowth sites (cleared
 within the last 15 years; site code NR), three intermediate regrowth sites
 (cleared between 15 and 30 years; site code IR) and three old growth sites (no
-clearing events within the last 30 years; site code OG and OM)(Figure 1). One
+clearing events within the last 30 years; site code OG and OM) (Figure 1). One
 acoustic monitoring device was deployed at each site (model SM3; Wildlife
 Acoustics), and set to record the dawn chorus each day continuously for 3 hours
 (recorded as WAV format, in mono at a sample rate of 22,050 Hz)  during the
@@ -76,9 +78,7 @@ days, and all bird species were manually identified from their calls and
 annotated on the [Ecosounds](https://www.ecosounds.org/) website (project:
 "Cunnamulla").
 
-Figure 1 Study site locations represented by pins (yellow: new regrowth, green:
-intermediate regrowth, red: old growth). Inset map of Australia indicates
-location of the study area.
+{{% figure src="./GDM_fig1.jpg" caption="Figure 1: Study site locations represented by pins (yellow: new regrowth, green: intermediate regrowth, red: old growth). Inset map of Australia indicates location of the study area." width="100%"%}}
 
 For the current project, we demonstrate how an existing annotated acoustic
 dataset, along with study site environmental data, can be used to model
@@ -92,8 +92,7 @@ Ferrier et al., 2007).
 Using the GDM package in R (function: GDM with default parameters), a model was
 fit using a range of environmental variables that were collected in the field at
 the location of each acoustic sensor. Vegetation assessments were undertaken by
-[Doohan et al.
-(2019)](https://www.sciencedirect.com/science/article/pii/S2351989419303919) in
+[Doohan et al. (2019)](https://www.sciencedirect.com/science/article/pii/S2351989419303919) in
 March 2018, using the line intercept method.
 
 The final variables included in the model were:
@@ -124,19 +123,7 @@ permutation assessment showed that the model was not statistically significant
 (p = 0.370). The intercept of the model was 0.206, which represents the expected
 dissimilarity between sites when the environmental predictors are equal.
 
-Figure 2 Main output plots of the GDM. A: observed compositional dissimilarity
-as a function of predicted ecological distance, where each point represents a
-site pair, and the line represents the GDM-predicted dissimilarity. B: Observed
-compositional dissimilarity as a function of predicted compositional
-dissimilarity, where the line represents a line of equality. C -- F: Plotted GDM
-spline functions for each environmental predictor variable.
-
-Figure 2 Main output plots of the GDM. A: observed compositional dissimilarity
-as a function of predicted ecological distance, where each point represents a
-site pair, and the line represents the GDM-predicted dissimilarity. B: Observed
-compositional dissimilarity as a function of predicted compositional
-dissimilarity, where the line represents a line of equality. C -- F: Plotted GDM
-spline functions for each environmental predictor variable.
+{{% figure src="./GDM_fig2.png" caption="Figure 2: Main output plots of the GDM. A: observed compositional dissimilarity as a function of predicted ecological distance, where each point represents a site pair, and the line represents the GDM-predicted dissimilarity. B: Observed compositional dissimilarity as a function of predicted compositional dissimilarity, where the line represents a line of equality. C -- F: Plotted GDM spline functions for each environmental predictor variable." width="100%"%}}
 
 ## Discussion
 
@@ -161,6 +148,7 @@ With the growing body of acoustic data, coupled with remotely sensed data or
 ground-survey metadata, it will be possible to examine patterns of biodiversity
 variation across large spatial and temporal scales. Identifying environmental
 factors that are important drivers for species occurrences can help to guide
-land management and landscape rehabilitation / restoration guidelines etc. Can
-also make predictions about compositional turnover related to changes in
-environmental conditions, such as land cover, or temperature (climate change).**
+land management, landscape rehabilitation and inform restoration guidelines. It
+is also possible to make predictions about compositional turnover related to
+changes in environmental conditions, such as land cover, or temperature (climate
+change).

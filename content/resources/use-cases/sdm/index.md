@@ -221,8 +221,8 @@ tools and trusted datasets.
 ## Acknowledgements
 
 - We would like to first acknowledge the Australian Acoustic Observatory
-  [(A2O)](https://acousticobservatory.org/) and the Hoot Detective project, from
-  where recordings and annotations were sourced.
+  [(A2O)](https://acousticobservatory.org/) for the recording data.
+- The Hoot Detective project for providing the annotations.
 - We would also like to acknowledge the
   [EcoCommons](https://www.ecocommons.org.au/) platform for generating some of
   the models used for this use case:

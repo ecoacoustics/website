@@ -5,6 +5,9 @@ weight: 2
 
 By [Dr Andrew Schwenke](https://orcid.org/0000-0002-5281-0115)
 
+Developed in a collaboration between Open Ecoacoustics & EcoCommons.
+{{% figure src="/images/EcoCommons_Logo_13728x1988.png" width="100%"%}}
+
 ## Summary
 
 Understanding changes in species composition across temporal and spatial

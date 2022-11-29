@@ -3,6 +3,8 @@ title:  Harnessing acoustic data and Generalised Dissimilarity Modelling to exam
 weight: 2
 ---
 
+By [Dr Andrew Schwenke](https://orcid.org/0000-0002-5281-0115)
+
 ## Summary
 
 Understanding changes in species composition across temporal and spatial
@@ -152,3 +154,20 @@ land management, landscape rehabilitation and inform restoration guidelines. It
 is also possible to make predictions about compositional turnover related to
 changes in environmental conditions, such as land cover, or temperature (climate
 change).
+
+## Acknowledgements
+
+- I would like to first acknowledge the authors of the original publication from
+  which this data was sourced: Brendan Doohan, Jeanette Kemp, and Susan Fuller.
+  The article was published Global Ecology and Conservation (2019), and is
+  available [here](https://doi.org/10.1016/j.gecco.2019.e00798).
+  - This project was internally funded by the Queensland University of Technology.
+  - We thank the Australian Wildlife Conservancy for site access, previous species records and facilitation of the project.
+  - Prof. Paul Roe for the loan of additional sensors.
+  - The [Ecosounds platform](https://www.ecosounds.org/), for management,
+    access, visualisation, and analysis of the acoustic data used in this project.
+- The [EcoCommons](https://www.ecocommons.org.au/) platform:
+  - Read more about ecoacoustic integration with EcoCommons [here](https://www.ecocommons.org.au/acoustic-use-case/).
+  - See the new [community modelling (GDM) R package](https://github.com/EcoCommons-Australia/community-modelling) by EcoCommons.
+  - Visit the [Educational Material](https://www.ecocommons.org.au/educational-material/) section to learn more
+    about the platform.

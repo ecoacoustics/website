@@ -3,7 +3,7 @@ title: The Australian Acoustic Observatory, Hoot Detective, & the impact of good
 weight: 1
 ---
 
-By Dr Andrew Schwenke & Dr Rob Clemens
+By [Dr Andrew Schwenke](https://orcid.org/0000-0002-5281-0115) & [Dr Rob Clemens](https://orcid.org/0000-0002-1359-5133)
 
 ## Introduction
 
@@ -11,7 +11,7 @@ The Australian Acoustic Observatory (A2O) is a continental-scale acoustic sensor
 network that provides data for hundreds of acoustic sensors across seven
 Australian ecoregions. This data is freely available to researchers, citizen
 scientists, and the general public, for use under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) licence. More information
-about the A2O can be found in a paper published in [Methods in Ecology and Evolution (Roe at al., 2021)](https://acousticobservatory.org/wp-content/uploads/2021/07/A2O_Methods-in-Ecology-and-Evolution_2021.pdf).
+about the A2O can be found in a paper published in [Methods in Ecology and Evolution (Roe at al., 2021)](https://doi.org/10.1111/2041-210X.13660).
 For National Science Week in 2021, a partnership between ABC Science, the
 Australian Acoustic Observatory, Queensland University of Technology and the
 University of New England, formed the Hoot Detective project (Figure 1). This
@@ -50,16 +50,16 @@ use and evaluation. 
 
 Third, the field of species distribution modelling has thousands of papers
 related to using presence only modelling methods, or using binomial methods
-(presence / absence) with pseudo-absence data.  Pseudo absence data attempts to
+(presence / absence) with pseudo-absence data. Pseudo absence data attempts to
 make the best possible guess as to where species might be absent or at the least
 ensures that random pseudo-absence points are not selected in areas where there
-is zero chance that the species might be present.  As acoustic sensors are
+is zero chance that the species might be present. As acoustic sensors are
 increasingly deployed an understanding of detection probability begins to emerge
 for different sensors and different species. In other words, we can determine
 how long a sensor should be left out before we are nearly certain that the
 species of interest is not present. Once a sensor is left out the required
 amount of time, a true absence location is generated, and such data have
-explosive impacts on how well you can model species distributions using a
+significant impacts on how well you can model species distributions using a
 variety of both statistical and machine learning techniques.
 
 Fourth, an acoustic device records every single call a species makes near a
@@ -74,11 +74,13 @@ models are clear. For select species, an area with more calling might be more
 important for the species, and an area with more individuals calling might be
 relatively more important than the more silent areas.
 
-There are caveats around all of this of course, but below we demonstrate the
-kinds of results that can be generated with presence absence vs presence only
-data, and the insights that could be gained from predicting the spatial
-variation in call frequency.  We argue the benefits are clear, and ask you to
-help deliver this kind of data at scale.
+The advantages and assumptions discussed so far are likely to vary depending on
+the specific research question and species of interest. Nevertheless, the
+purpose of this use case is to demonstrate the kinds of results that can be
+generated with presence absence vs presence only data, and the insights that
+could be gained from predicting the spatial variation in call frequency.  We
+argue the benefits are clear, and ask you to help deliver this kind of data at
+scale.
 
 ## Methods
 
@@ -129,7 +131,7 @@ masked to the buffered boundary extent representing the known distribution. 
 
 Powerful Owl presence data were used to extract environmental variable values
 from eastern Australia, and the resulting presence data and environmental
-rasters were used in a Maxent model in R [(see code)](https://github.com/andrew-1234/sdm-usecase-master).
+rasters were used in a Maxent model in R [(see example code)](https://github.com/andrew-1234/sdm-usecase-master#maxent).
 
 Presence only vs presence absence comparisons were made within the EcoCommons
 platform. Evironmental predictors were at 1 km resolution and included the ANU
@@ -144,7 +146,7 @@ selected the Southern Boobook which was recorded at all but one station (mean
 137 vocalisations, range 0 to 993). We then extracted raster grid values from
 the two forest area variables, bioclim variables 5,6 and 17, and NVIS, a
 national vegetation classification. We then ran a Boosted regression tree (BRT)
-model specifying a Poisson distribution [(see code)](https://github.com/andrew-1234/sdm-usecase-master).
+model specifying a Poisson distribution [(see example code)](https://github.com/andrew-1234/sdm-usecase-master#brt).
 
 ## Results
 
@@ -215,3 +217,19 @@ is further aided by the use of online platforms such as
 [EcoCommons](https://www.ecocommons.org.au/), which allows practitioners and
 researchers to seamlessly examine their data using a wide range of modelling
 tools and trusted datasets.
+
+## Acknowledgements
+
+- We would like to first acknowledge the Australian Acoustic Observatory
+  [(A2O)](https://acousticobservatory.org/) and the Hoot Detective project, from
+  where recordings and annotations were sourced.
+- We would also like to acknowledge the
+  [EcoCommons](https://www.ecocommons.org.au/) platform for generating some of
+  the models used for this use case:
+  - To learn more about Species Distribution Modelling, you can visit the
+    EcoCommons support page section on
+  [SDMs](https://support.ecocommons.org.au/support/solutions/folders/6000240802).
+  - Visit the [Educational Material](https://www.ecocommons.org.au/educational-material/) section to
+  learn about using the EcoCommons modelling platform.
+  - Read more about ecoacoustic integration with EcoCommons
+    [here](https://www.ecocommons.org.au/acoustic-use-case/).

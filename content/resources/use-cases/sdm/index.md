@@ -113,7 +113,7 @@ The A2O uses a paired sensor design, with four sensors per site. The distance
 between sensors is typically within 500m to 5000m. Therefore, we first attempted
 to use environmental layers at a high spatial resolution (25m), to capture fine
 scale variation between proximate sensors.This came at a high computer
-processing cost. Even working with buffered extents, and using a Big Data PC,
+processing cost. Even working with buffered extents, and using a high-performance PC,
 the process was slow, highlighting the challenges of using such high resolution
 data. As a result, we decided to instead use a 250m resolution for preliminary
 analyses in R, and a 1000m resolution on the ecocommons platform. To get a

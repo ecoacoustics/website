@@ -17,3 +17,22 @@
         overflow-x: hidden;
     }
 }
+
+.shortcode-logo {
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: var(--oe-background-color);
+}
+
+.shortcode-logo-fallback-background {
+    background-color: white;
+     /* the container is either a div or an a, and the a needs to be rendered as a block  */
+    display: block;
+}
+
+.shortcode-logo img {
+    width: 100%;
+    box-shadow: none;
+
+}

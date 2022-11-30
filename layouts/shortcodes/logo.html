@@ -1,0 +1,17 @@
+{{- $data := index .Site.Data.logos (.Get 0 | lower) -}}
+{{- if ($data | not) -}}
+{{- errorf "Unknown logo name: `%s`. Context: %s" (.Get 0) .Position -}}
+{{- end -}}
+{{- $src_light := $data.image_light -}}
+{{- $src_dark := $data.image_dark -}}
+{{- $fallback := cond ($src_dark  | not | not ) "" "shortcode-logo-fallback-background" -}}
+{{- $tag := cond ($data.href | not | not) "a" "div" -}}
+{{- (printf `<%s href="%s"` $tag (cond ($data.href |not |not) $data.href "")) | safeHTML }} class="shortcode-logo {{ $fallback }}">
+    <picture>
+        <source srcset="{{ $src_light | relURL }}" data-theme-toggle="light" media="(prefers-color-scheme:light)">
+        {{- with $src_dark -}}
+        <source srcset="{{ . | relURL }}" data-theme-toggle="dark" media="(prefers-color-scheme:dark)">
+        {{- end -}}
+        <img src="{{ $src_light | relURL }}" alt="{{ .Get `name` }}" />
+    </picture>
+{{- (printf `</%s>` $tag) | safeHTML -}}

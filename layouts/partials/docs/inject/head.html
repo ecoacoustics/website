@@ -1,6 +1,33 @@
 {{/* Theme switcher component */}}
 <link rel="modulepreload" href="https://unpkg.com/dark-mode-toggle" crossorigin>
 <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
+<script type="module">
+    import * as DarkModeToggle from 'https://unpkg.com/dark-mode-toggle';
+    // defined in after-main.html
+    const toggle = document.querySelector('dark-mode-toggle');
+    const body = document.querySelector('body');
+
+    updateTheme();
+
+    toggle.addEventListener('colorschemechange', updateTheme);
+
+    function updateTheme() {
+        const mode = toggle.mode;
+        // set the body data attribute
+        body.setAttribute('data-theme', mode);
+
+        // find any element that has a data theme toggle attribute
+        // add disable or adjust the media query
+        const elements = document.querySelectorAll('[data-theme-toggle]');
+        for(let element of elements) {
+           const elementPreference = element.getAttribute('data-theme-toggle');
+
+           element.toggleAttribute('disabled', elementPreference !== mode);
+
+           element.media = elementPreference === mode ? 'all' : 'none';
+        }
+    }
+</script>
 
 
 {{/* Our custom CSS */}}

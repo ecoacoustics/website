@@ -73,7 +73,8 @@
         transform: translateX(calc(var(--oe-side-menu-width) + 2em));
     }
 
-    .mobile-toc {
+    .mobile-toc,
+    .mobile-search {
         display: none;
     }
 
@@ -126,11 +127,31 @@
         display: none;
     }
 
-    .mobile-toc {
+    .mobile-toc,
+    .mobile-search {
         display: block;
+    }
+    
+    .mobile-toc nav > ul {
+        padding: 0;
+    }
 
-        nav > ul {
+    .book-search {
+        ul {
+            list-style: none;
             padding: 0;
+
+            li {
+                margin-top: 1em;
+
+                a {
+                    color: inherit;
+                }
+            }
+        }
+        
+        small {
+            display: block;
         }
     }
   }

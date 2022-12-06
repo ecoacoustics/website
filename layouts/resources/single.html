@@ -3,10 +3,14 @@
     <header>
         <h1>{{.Title}}</h1>
     </header>
+
+    <div class="mobile-toc">{{ .TableOfContents }}</div>
+
 {{ with .Content }}
 {{ . }}
 {{ end }}
 {{ end }}
+
 {{ define "toc" }}
     {{ partial "docs/toc" . }}
 {{ end }}

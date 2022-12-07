@@ -43,8 +43,8 @@ sender and receiver
 > Notes:
 > The different components of the soundscape are usually described as:
 > *Biophony:* sounds emitted by animals; *Geophony:* sounds emitted by geographical 
-components of the landscape (e.g.: wind, rain, strems, etc); *Technophony:* sounds 
-emitted by humans and its machines.
+> components of the landscape (e.g.: wind, rain, strems, etc); *Technophony:* sounds 
+> emitted by humans and its machines.
 
 {{% /slide %}}
 {{% slide %}}
@@ -85,12 +85,12 @@ Review and Perspectives. BioScience 69:5–11.
 
 > Notes:
 > In the graph presented from the review paper (Sugai et al., 2019) we can see that 
-100% of studies looking at soundscapes (last row on the plot) used acoustic indices. 
-The other analytical methods (manual tagging and recognisers) are very time-consuming 
-to be used in large datasets, besides the need for expert knowledge to identify species. 
-Moreover, the choice of which species to monitor can also be an issue, especially when 
-considering recordings from different locations, where finding shared species of 
-significance might be a problem.
+> 100% of studies looking at soundscapes (last row on the plot) used acoustic indices. 
+> The other analytical methods (manual tagging and recognisers) are very time-consuming 
+> to be used in large datasets, besides the need for expert knowledge to identify species. 
+> Moreover, the choice of which species to monitor can also be an issue, especially when 
+> considering recordings from different locations, where finding shared species of 
+> significance might be a problem.
 
 {{% /slide %}}
 {{% slide %}}
@@ -118,7 +118,7 @@ and time averaging
 
 > Notes:
 > In this paper we examine the problem of estimating avian species richness by 
-sampling from very long acoustic recordings using intensity indices.
+> sampling from very long acoustic recordings using intensity indices.
 
 {{% /slide %}}
 {{% slide %}}
@@ -155,8 +155,8 @@ relation to technophony and geophony
 
 > Notes:
 > This is the paper for the NDSI - Normalised Difference Soundscape Index, which 
-calculates the ratio between the anthrophony and biophony based on the frequency 
-bands division
+> calculates the ratio between the anthrophony and biophony based on the frequency 
+> bands division
 
 {{% /slide %}}
 {{% slide %}}
@@ -254,7 +254,7 @@ Biophony
 
 > Notes:
 > Transforming a multidimensional feature into one single number is not always 
-straightforward and a lot of times it does not work the same in every situation;
+> straightforward and a lot of times it does not work the same in every situation;
 
 {{% /slide %}}
 {{% slide %}}
@@ -265,7 +265,7 @@ straightforward and a lot of times it does not work the same in every situation;
 
 > Notes:
 > This is a meta-analysis that just came out this year and they did a very thorough 
-investigation on acoustic indices and how effective they are in measuring biodiversity
+> investigation on acoustic indices and how effective they are in measuring biodiversity
 
 {{% /slide %}}
 {{% slide %}}

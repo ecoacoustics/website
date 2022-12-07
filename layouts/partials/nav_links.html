@@ -1,0 +1,80 @@
+{{/*  Why does .NextInSection return the previous page?  */}}
+<nav>
+    {{ $previousText := " Previous: " }}
+    {{ $nextText := "Next: " }}
+    {{ $sectionText := " Return to: " }}
+
+    <div class="nav-border">
+    </div>
+
+    <div class="nav-buttons">
+        {{/*  Previous page link  */}}
+        <div>
+            {{/*  Check for next page in section (which is previous page)  */}}
+            {{ if .NextInSection }}
+            {{ with .NextInSection }}
+            <a href="{{ .Permalink }}" class="previous">{{ $previousText }}</a>
+            <div>{{ .Title }}</div>
+            {{end}}
+
+            {{ else }}
+            {{/*  Return to parent section  */}}
+            {{ with .CurrentSection }}
+            <a href="{{ .Permalink }}" class="previous">{{ $sectionText }}</a>
+            <div>{{ .Title }}</div>
+            {{ end }}
+            {{ end }}
+        </div>
+
+        {{/*  <div>
+    <a href="{{ .Site.BaseURL | relLangURL }}">Home</a>
+    </div> */}}
+
+    {{/*  Next page link  */}}
+    <div>
+        {{ if .PrevInSection }}
+        {{ with .PrevInSection }}
+        <a href="{{ .Permalink }}" class="next">{{ $nextText }}</a>
+        <div>{{ .Title }}</div>
+        {{end}}
+
+        {{ else }}
+        {{ with .CurrentSection }}
+        <a href="{{ .Permalink }}" class="next">{{ $sectionText }}</a>
+        <div>{{ .Title }}</div>
+        {{ end }}
+        {{ end }}
+    </div>
+
+    </div>
+
+</nav>
+
+<style>
+    .nav-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    .nav-border {
+        padding-top: 50px;
+        border-bottom: 1px solid #CB7E30;
+
+    }
+
+    .previous::before {
+        content: "\2190";
+    }
+
+    .next {
+        text-align: right;
+        display: block;
+    }
+
+    .next::after {
+        content: "\2192"
+    }
+</style>

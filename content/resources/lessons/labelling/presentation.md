@@ -37,6 +37,7 @@ Callan Alexander - PhD candidate at QUT
    marking recorder GPS locations even with 0 mobile reception. Make sure to pre-download the map area if you anticpate having no signal. 
  - Taking photograph of each recorder highly reccomended (and keeping them as far away from paths as possible)
  - Using Gaia + photograph = no recorders lost yet in hundreds of deployments
+ - Remember to always check weather and park alerts before **AND** during deployment - you don't want to lose equipment to floods and/or fire
 
 {{% /slide %}}
 {{% slide %}}
@@ -44,6 +45,7 @@ Callan Alexander - PhD candidate at QUT
 ## Annotation Overview
 
  -   Why Annotate?
+      - This will be mainly linked to your research question, but a few examples are: [call description](https://www.tandfonline.com/doi/full/10.1080/09524622.2021.1941257), [getting species list for an area](https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.8797), and [building and improving models](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12599)
  -  Important to consider how your annotations will be used prior to commencing
 	  - How accurate do  your measurements need to be? For some questions you may need to tag multiple notes with high accuracy, but for other questions a loose box can be sufficient
  -  Multi-species vs single-species  

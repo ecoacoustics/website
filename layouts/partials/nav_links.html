@@ -1,53 +1,48 @@
-{{/*  Why does .NextInSection return the previous page?  */}}
 <nav>
     {{ $previousText := " Previous: " }}
     {{ $nextText := "Next: " }}
     {{ $sectionText := " Return to: " }}
 
-    <div class="nav-border">
-    </div>
+
+    <div class="nav-border"></div>
 
     <div class="nav-buttons">
-        {{/*  Previous page link  */}}
         <div>
-            {{/*  Check for next page in section (which is previous page)  */}}
             {{ if .NextInSection }}
-            {{ with .NextInSection }}
-            <a href="{{ .Permalink }}" class="previous">{{ $previousText }}</a>
-            <div>{{ .Title }}</div>
-            {{end}}
+                {{ with .NextInSection }}
+                    <a href="{{ .Permalink }}" class="previous"
+                        >{{ $previousText }}</a
+                    >
+                    <div>{{ .Title }}</div>
+                {{ end }}
 
             {{ else }}
-            {{/*  Return to parent section  */}}
-            {{ with .CurrentSection }}
-            <a href="{{ .Permalink }}" class="previous">{{ $sectionText }}</a>
-            <div>{{ .Title }}</div>
-            {{ end }}
+                {{ with .CurrentSection }}
+                    <a href="{{ .Permalink }}" class="previous"
+                        >{{ $sectionText }}</a
+                    >
+                    <div>{{ .Title }}</div>
+                {{ end }}
             {{ end }}
         </div>
 
-        {{/*  <div>
-    <a href="{{ .Site.BaseURL | relLangURL }}">Home</a>
-    </div> */}}
+        <div>
+            {{ if .PrevInSection }}
+                {{ with .PrevInSection }}
+                    <a href="{{ .Permalink }}" class="next">{{ $nextText }}</a>
+                    <div>{{ .Title }}</div>
+                {{ end }}
 
-    {{/*  Next page link  */}}
-    <div>
-        {{ if .PrevInSection }}
-        {{ with .PrevInSection }}
-        <a href="{{ .Permalink }}" class="next">{{ $nextText }}</a>
-        <div>{{ .Title }}</div>
-        {{end}}
-
-        {{ else }}
-        {{ with .CurrentSection }}
-        <a href="{{ .Permalink }}" class="next">{{ $sectionText }}</a>
-        <div>{{ .Title }}</div>
-        {{ end }}
-        {{ end }}
+            {{ else }}
+                {{ with .CurrentSection }}
+                    <a href="{{ .Permalink }}" class="next"
+                        >{{ $sectionText }}</a
+                    >
+                    <div>{{ .Title }}</div>
+                {{ end }}
+            {{ end }}
+        </div>
     </div>
-
-    </div>
-
 </nav>
 
 <style>
@@ -61,8 +56,7 @@
 
     .nav-border {
         padding-top: 50px;
-        border-bottom: 1px solid #CB7E30;
-
+        border-bottom: 1px solid #cb7e30;
     }
 
     .previous::before {
@@ -75,6 +69,6 @@
     }
 
     .next::after {
-        content: "\2192"
+        content: "\2192";
     }
 </style>

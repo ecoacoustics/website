@@ -15,8 +15,8 @@ large in size, making it more difficult to store and share them.
 
 `WAVE` files may be compressed to a different audio format to reduce their file
 size. Before compressing your files or working with compressed audio formats, it
-is important to know that some compression formats, such as [`MP3`]({{% ref
+is important to know that some compression formats, such as [`MP3`]({{% relref
 "/resources/help-centre/audio-formats/mp3" %}}), use a method of compression
 that can result in a loss of quality (lossy compression). You can avoid this
-shortcoming by using lossless compression formats such as [`FLAC`]({{% ref
+shortcoming by using lossless compression formats such as [`FLAC`]({{% relref
 "flac" %}}), where there is no reduction in quality.

@@ -12,7 +12,7 @@ The `PATH` variable is an environment variable. Environment variables are values
 that any program can access. The `PATH` variable contains a list of folders that
 your computer can check when it searches for programs to run.
 
-In simple terms, if we want to use a program in a terminal (see the [terminal basics]({{% ref "terminal" %}}) guide), we have two choices. We can
+In simple terms, if we want to use a program in a terminal (see the [terminal basics]({{% relref "terminal" %}}) guide), we have two choices. We can
 specify the full path to the program (often referred to as a binary, usually
 has an extension like `.exe` on Windows) file, and then write our code:
 
@@ -56,7 +56,7 @@ use is not listed, then you may need to add it to the `PATH`.
 
 ## Adding to PATH
 
-If you use a [package manager]({{% ref "packages" %}}) such as
+If you use a [package manager]({{% relref "packages" %}}) such as
 [chocolatey](https://chocolatey.org/) on Windows, [homebrew](https://brew.sh/)
 on macOS or [snap](https://snapcraft.io/) on Linux, then packages you install
 with those commands should be automatically added to your `PATH` variable. This

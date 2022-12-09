@@ -26,9 +26,9 @@ packages that are commonly used for ecoacoustics which can be installed with
 package managers.
 
 The other great thing about package managers is that they can sometimes take
-care of your [PATH variable]({{% ref "path.md" %}}). This functionality means
+care of your [PATH variable]({{% relref "path.md" %}}). This functionality means
 that programs you install will be available and ready to use directly from the 
-[terminal]({{%ref "terminal" %}}).
+[terminal]({{% relref "terminal" %}}).
 
 ## Get started
 

@@ -8,7 +8,7 @@
 {{ $js = $js | resources.Fingerprint "sha512" }}
 {{ end }}
 {{/* embed a reference and realise our render script */}}
-<script type="module" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+<script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 
 
 <form id="registry-contribution-form" name="RegistryContribution" data-netlify=true data-netlify-recaptcha="true">

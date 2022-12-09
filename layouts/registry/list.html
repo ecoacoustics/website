@@ -40,10 +40,10 @@
     {{ $data := $string | resources.FromString $targetPath }}
     {{/* get a reference to our render script, but also inject the url to our data */}}
     {{/* note: without referring to the url, our resource would not be output */}}
-    {{ $options := (dict "params" (dict "dataUrl" $data.Permalink) "format" "esm" "sourceMap" "inline")}}
+    {{ $options := (dict "params" (dict "dataUrl" $data.RelPermalink) "format" "esm" "sourceMap" "inline")}}
     {{ $js := resources.Get "js/registry-render.js" | js.Build $options | resources.Fingerprint "sha512" }}
     {{/* embed a reference and realise our render script */}}
-    <script type="module" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+    <script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 
 
 </article>

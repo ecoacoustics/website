@@ -100,7 +100,7 @@ mp32wav(path = "data/", dest.path = "output/")
 The `mp32wav` function relies on the tuneR package. Sometimes, this function
 does not work, and RStudio may abort. Although this bug should be fixed in
 future versions of tuneR, if this happens to you, alternative conversion methods
-are available (see our [ffmpeg]({{% ref"ffmpeg"%}}) or Audacity (todo) help
+are available (see our [ffmpeg]({{% relref"ffmpeg"%}}) or Audacity (todo) help
 pages).   
 {{% /hint %}}
 

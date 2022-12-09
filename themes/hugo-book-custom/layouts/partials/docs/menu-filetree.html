@@ -15,7 +15,6 @@
           {{ template "book-page-link" (dict "Page" . "CurrentPage" $.CurrentPage) }}
           {{/*  recursion!  */}}
           {{ template "book-section-children" (dict "Section" . "CurrentPage" $.CurrentPage) }}
-          what
         </li>
       {{ else if and .IsPage .Content }}
         <li>

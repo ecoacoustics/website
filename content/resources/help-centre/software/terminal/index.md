@@ -36,7 +36,7 @@ colors, and most importantly emoji.
 
 {{< figure src="./windows-terminal.png" caption="Windows Terminal" >}}
 
-The shell we recommend using on Windows is [PowerShell]({{% ref "powershell"
+The shell we recommend using on Windows is [PowerShell]({{% relref "powershell"
 %}}). 
 
 If you are using Linux or macOS, then you can use the inbuilt Terminal, which is

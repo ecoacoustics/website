@@ -13,4 +13,4 @@ format for working with ecoacoustic data. Nevertheless, if you have access to
 files which were recorded using the `MP3` format, it will be possible to open
 them in most software and run typical analysis procedures. Otherwise, it is also
 possible to convert these files to the `WAVE` format. See the [Converting audio
-files]({{% ref "converting" %}}) section for more information. 
+files]({{% relref "converting" %}}) section for more information. 

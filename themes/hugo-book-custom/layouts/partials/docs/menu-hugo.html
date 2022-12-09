@@ -8,10 +8,10 @@
 {{ end }}
 
 {{ define "book-menu-hugo" }}
-<ul>
+<ul >
   {{ range . }}
-  <li>
-    <a href="{{ .URL }}" {{ if not .Page }}target="_blank" rel="noopener"{{ end }}>
+  <li class="Testing">
+    <a  href="{{ .URL }}" {{ if not .Page }}target="_blank" rel="noopener"{{ end }}>
       {{- .Pre -}}
       {{ with .Page }}
         {{ partial "docs/title" .Page }}

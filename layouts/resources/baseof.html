@@ -63,6 +63,11 @@
         {{end}}
         {{ partial "docs/inject/content-after" . }}
 
+        <!-- Nav links  -->
+        {{ if .IsPage }}
+            {{ partial "nav_links.html" . }}
+        {{ end }}
+
         {{ template "comments" . }}
         <!-- Comments block -->
 

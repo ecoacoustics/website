@@ -102,6 +102,33 @@
         }
     }
 
+    .next-previous-links {
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-top: 10px;
+        }
+
+        .nav-links-previous::before {
+            content: "\2190";
+        }
+
+        .nav-links-next {
+            text-align: right;
+            display: block;
+        }
+
+        .nav-links-next::after {
+            content: "\2192";
+        }
+
+        .nav-links-up {
+            display: block;
+            text-align: center;
+        }
+    }
+
     nav ul {
         list-style: none;
     }
@@ -131,7 +158,7 @@
     .mobile-search {
         display: block;
     }
-    
+
     .mobile-toc nav > ul {
         padding: 0;
     }
@@ -149,7 +176,7 @@
                 }
             }
         }
-        
+
         small {
             display: block;
         }

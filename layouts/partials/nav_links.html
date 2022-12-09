@@ -1,71 +1,71 @@
-<nav>
-    {{ $previousText := " Previous: " }}
-    {{ $nextText := "Next: " }}
-    {{ $up := " Up" }}
+<nav class="next-previous-links">
+    {{ $sectionParentPages := .CurrentSection.Parent.Pages }}
+    {{ $currentSection := .CurrentSection.Title }}
 
 
-    <div class="nav-border"></div>
-
-    <div class="nav-buttons">
+    <sl-divider style="--spacing: 4rem 0rem;">></sl-divider>
+    <div class="nav-links">
         <div>
             {{ if .NextInSection }}
                 {{ with .NextInSection }}
-                    <a href="{{ .Permalink }}" class="previous"
-                        >{{ $previousText }}</a
-                    >
+                    <a href="{{ .Permalink }}" class="nav-links-previous"> Previous: </a>
                     <div>{{ .Title }}</div>
                 {{ end }}
 
             {{ else }}
-                {{ partial "nav_next_section.html" . }}
+                {{ range $sectionParentPages }}
+                    {{ if eq .Title $currentSection }}
+                        {{ with $sectionParentPages.Next . }}
+                        {{ if eq .Parent.Title "Lessons" }}
+                        <a href="{{ .Permalink }}" class="nav-links-previous">
+                            Previous lesson:</a
+                        >
+                        <div>{{ .Title }}</div>
+                        {{ else }}
+                        <a href="{{ .Permalink }}" class="nav-links-previous">
+                            Previous section:</a
+                        >
+                        <div>{{ .Title }}</div>
+                        {{end}}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
             {{ end }}
         </div>
 
-        <div>
+        <div class="nav-links-up">
             {{ with .CurrentSection }}
-                <a href="{{ .Permalink }}" class="">{{ $up }}</a>
+                <a href="{{ .Permalink }}">Up</a>
             {{ end }}
-
+            <div>
+                <a href="{{ .Site.Home.RelPermalink }}">{{ "Home" }}</a>
+            </div>
         </div>
 
         <div>
             {{ if .PrevInSection }}
                 {{ with .PrevInSection }}
-                    <a href="{{ .Permalink }}" class="next">{{ $nextText }}</a>
+                    <a href="{{ .Permalink }}" class="nav-links-next">Next: </a>
                     <div>{{ .Title }}</div>
                 {{ end }}
 
             {{ else }}
-                {{ partial "nav_next_section.html" . }}
+                {{ range $sectionParentPages }}
+                    {{ if eq .Title $currentSection }}
+                        {{ with $sectionParentPages.Prev . }}
+                            {{ if eq .Parent.Title "Lessons" }}
+                            <a href="{{ .Permalink }}" class="nav-links-next"
+                                > Next lesson: </a>
+                            <div>{{ .Title }}</div>
+                            {{ else }}
+                            <a href="{{ .Permalink }}" class="nav-links-next"
+                            > Next section: </a>
+                        <div>{{ .Title }}</div>
+                            {{end}}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
             {{ end }}
         </div>
     </div>
 </nav>
-
-<style>
-    .nav-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 10px;
-    }
-
-    .nav-border {
-        padding-top: 50px;
-        border-bottom: 1px solid #cb7e30;
-    }
-
-    .previous::before {
-        content: "\2190";
-    }
-
-    .next {
-        text-align: right;
-        display: block;
-    }
-
-    .next::after {
-        content: "\2192";
-    }
-</style>

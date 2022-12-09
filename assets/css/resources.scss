@@ -46,6 +46,33 @@
         overflow: hidden;
     }
 
+    .book-menu-content {
+        padding: 2rem 0.5rem;
+    }
+
+    .tree-item {
+        color: inherit;
+    }
+
+    sl-tree {
+        overflow: hidden;
+
+        sl-tree-item {
+            margin: 0.5rem 0;
+        }
+
+        a {
+            font-size: 0.9em;
+            white-space: normal;
+            line-height: 1;
+            font-family: roboto,sans-serif;
+
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }
+
     .book-page {
         transition-property: var(--oe-transition-properties-movement);
         transition-duration: var(--oe-duration);

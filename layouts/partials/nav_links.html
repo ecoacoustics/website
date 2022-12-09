@@ -17,12 +17,7 @@
                 {{ end }}
 
             {{ else }}
-                {{ with .CurrentSection }}
-                    <a href="{{ .Permalink }}" class="previous"
-                        >{{ $sectionText }}</a
-                    >
-                    <div>{{ .Title }}</div>
-                {{ end }}
+            {{ partial "nav_next_section.html" . }}
             {{ end }}
         </div>
 
@@ -34,12 +29,7 @@
                 {{ end }}
 
             {{ else }}
-                {{ with .CurrentSection }}
-                    <a href="{{ .Permalink }}" class="next"
-                        >{{ $sectionText }}</a
-                    >
-                    <div>{{ .Title }}</div>
-                {{ end }}
+            {{ partial "nav_next_section.html" . }}
             {{ end }}
         </div>
     </div>

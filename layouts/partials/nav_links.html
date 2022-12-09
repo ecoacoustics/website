@@ -1,7 +1,7 @@
 <nav>
     {{ $previousText := " Previous: " }}
     {{ $nextText := "Next: " }}
-    {{ $sectionText := " Return to: " }}
+    {{ $up := " Up" }}
 
 
     <div class="nav-border"></div>
@@ -17,8 +17,15 @@
                 {{ end }}
 
             {{ else }}
-            {{ partial "nav_next_section.html" . }}
+                {{ partial "nav_next_section.html" . }}
             {{ end }}
+        </div>
+
+        <div>
+            {{ with .CurrentSection }}
+                <a href="{{ .Permalink }}" class="">{{ $up }}</a>
+            {{ end }}
+
         </div>
 
         <div>
@@ -29,7 +36,7 @@
                 {{ end }}
 
             {{ else }}
-            {{ partial "nav_next_section.html" . }}
+                {{ partial "nav_next_section.html" . }}
             {{ end }}
         </div>
     </div>

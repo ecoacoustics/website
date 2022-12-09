@@ -4,25 +4,52 @@
 {{ end }}
 
 {{ with .Site.GetPage $bookSection }}
-  {{ template "book-section-children" (dict "Section" . "CurrentPage" $) }}
+    <sl-tree>
+    {{ template "book-section-children" (dict "Section" . "CurrentPage" $) }}
+    </sl-tree>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const activeLink = document.querySelector("sl-tree-item a.active");
+
+        var getParents = function (elem, selector) {
+	        var parents = [];
+	        for ( ; elem && elem !== document; elem = elem.parentNode ) {
+		        if (selector) {
+			        if (elem.matches(selector)) {
+				        parents.push(elem);
+			        }
+			        continue;
+		        }
+		        parents.push(elem);
+	        }
+	        return parents;
+        };
+
+        if(activeLink) {
+            const parents = getParents(activeLink, 'sl-tree-item');
+            parents.forEach(e => {
+                e.setAttribute("expanded", "");
+            });
+        }
+    });
+    </script>
 {{ end }}
 
 {{ define "book-section-children" }}{{/* (dict "Section" .Section "CurrentPage" .CurrentPage) */}}
-  <ul>
     {{ range (where .Section.Pages.ByWeight "Params.bookhidden" "ne" true) }}
       {{ if .IsSection }}
-        <li {{- if .Params.BookFlatSection }} class="book-section-flat" {{ end -}}>
+        <sl-tree-item>
           {{ template "book-page-link" (dict "Page" . "CurrentPage" $.CurrentPage) }}
           {{/*  recursion!  */}}
           {{ template "book-section-children" (dict "Section" . "CurrentPage" $.CurrentPage) }}
-        </li>
+        </sl-tree-item >
       {{ else if and .IsPage .Content }}
-        <li>
+        <sl-tree-item >
           {{ template "book-page-link" (dict "Page" . "CurrentPage" $.CurrentPage) }}
-        </li>
+        </sl-tree-item >
       {{ end }}
     {{ end }}
-  </ul>
 {{ end }}
 
 {{ define "book-page-link" }}{{/* (dict "Page" .Page "CurrentPage" .CurrentPage) */}}

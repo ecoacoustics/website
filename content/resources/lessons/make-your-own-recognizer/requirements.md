@@ -5,7 +5,7 @@ weight: 1
 
 -   For this step you will need generate labelled call data (20-200 example calls, and 20-100 negative examples from real recordings), plus a few hours of unlabelled audio that is known to contain your call of interest.
 -   You will need to be comfortable with executing simple command line programs; it’s also advantageous to have some programming experience (e.g. R or Python) although programming experience is not required. All the tools used to build the recogniser are freely available.
--   We hope that if you are successful in creating a working recogniser you will make your recogniser available under an open-source licence (Apache 2.0 https://opensource.org/licenses/Apache-2.0) so that others may use it, and for the recogniser to be published in our registry (https://openecoacoustics.org/resources/registry/).
+-   We hope that if you are successful in creating a working recogniser you will make your recogniser available under an open-source licence (Apache 2.0 https://opensource.org/licenses/Apache-2.0) so that others may use it, and for the recogniser to be published in our registry: https://openecoacoustics.org/resources/registry/
 
 
 # Datasets

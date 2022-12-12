@@ -8,3 +8,16 @@
   <header>
     {{ partial "navbar" . }}
   </header>
+  <script type="module">
+    // Wait for all components to be registered.
+    await Promise.allSettled([
+      customElements.whenDefined('sl-button'),
+      customElements.whenDefined('sl-card'),
+      customElements.whenDefined('sl-tree'),
+      customElements.whenDefined('sl-drawer')
+    ]);
+
+    // Button, card, and tree are registered, add
+    // the `ready` class so body, so the UI fades in.
+    document.body.classList.add('ready');
+  </script>

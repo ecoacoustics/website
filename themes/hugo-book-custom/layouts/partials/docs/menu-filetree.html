@@ -14,20 +14,15 @@
 
         var getParents = function (elem, selector) {
 	        var parents = [];
-	        for ( ; elem && elem !== document; elem = elem.parentNode ) {
-		        if (selector) {
-			        if (elem.matches(selector)) {
-				        parents.push(elem);
-			        }
-			        continue;
-		        }
-		        parents.push(elem);
+            while (elem.matches(selector)){
+                    parents.push(elem);
+                    elem = elem.parentElement;
 	        }
 	        return parents;
         };
 
         if(activeLink) {
-            const parents = getParents(activeLink, 'sl-tree-item');
+            const parents = getParents(activeLink.parentElement, 'sl-tree-item');
             parents.forEach(e => {
                 e.setAttribute("expanded", "");
             });

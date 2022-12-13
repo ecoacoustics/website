@@ -1,0 +1,3 @@
+[submodule "content/resources/known-problems"]
+	path = content/resources/known-problems
+	url = https://github.com/ecoacoustics/known-problems

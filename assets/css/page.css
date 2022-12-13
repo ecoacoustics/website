@@ -18,10 +18,6 @@
     padding-right: var(--oe-padding-large);
     padding-bottom: var(--oe-padding);
     position: relative;
-    left: 50%;
-    margin-left: -50vw;
-    right: 50%;
-    margin-right: -50vw;
     display: flex;
     justify-content: start;
     margin-bottom: var(--oe-padding-large);

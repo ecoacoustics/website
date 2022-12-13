@@ -47,7 +47,7 @@
     }
 
     .book-menu-content {
-        padding: 2rem 0.5rem;
+        padding: calc(var(--oe-padding-small) / 4);
     }
 
     .tree-item {
@@ -55,17 +55,19 @@
     }
 
     sl-tree {
-        overflow: hidden;
-
         sl-tree-item {
-            margin: 0.5rem 0;
+            margin: calc(var(--oe-padding-small) / 2) 0;
+
+            &:focus {
+                outline-style: none;
+            }
         }
 
         a {
             font-size: 0.9em;
             white-space: normal;
             line-height: 1;
-            font-family: roboto,sans-serif;
+            font-family: var(--oe-font);
 
             &:hover {
                 opacity: .5;

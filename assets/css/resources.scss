@@ -185,14 +185,3 @@
     }
   }
 }
-
-// Body start with opacity 0
-body {
-    opacity: 0;
-  }
-
-// When body is ready, set opacity to 1
-  body.ready {
-    opacity: 1;
-    transition: 0.25s opacity;
-  }

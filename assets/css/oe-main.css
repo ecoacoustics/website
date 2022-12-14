@@ -34,7 +34,7 @@
 
     --oe-padding-large: var(--sl-spacing-4x-large);
     --oe-padding-small: var(--sl-spacing-large);
-    --oe-font: roboto,sans-serif;
+    --oe-font: 'Roboto', sans-serif;
     --oe-fancy-font: 'Montserrat', sans-serif;
     --oe-navbar-height: 5em;
     --oe-panel-opacity: 0.66;

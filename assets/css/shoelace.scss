@@ -1,3 +1,16 @@
+// https://shoelace.style/getting-started/usage?id=waiting-for-components-to-load
+// Body start with opacity 0
+body {
+    opacity: 0;
+}
+
+// When body is ready, set opacity to 1
+body.ready {
+    opacity: 1;
+    transition: 0.25s opacity;
+}
+
+
 sl-icon {
     color: var(--oe-theme-color);
     display: inline-block;

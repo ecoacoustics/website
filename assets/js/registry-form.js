@@ -47,7 +47,7 @@ function AddRemove(props) {
     }, [count]);
 
     const isDisabled = count <= minimum;
-    console.log("isDisabled", isDisabled);
+
     return html`
         <div class="addRemove">
             <div class="addRemoveHeader">

@@ -4,30 +4,47 @@
 {{ end }}
 
 {{ with .Site.GetPage $bookSection }}
-    <sl-tree>
+    <sl-tree id="menu-tree" selection="leaf">
     {{ template "book-section-children" (dict "Section" . "CurrentPage" $) }}
     </sl-tree>
 
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const activeLink = document.querySelector("sl-tree-item a.active");
+      document.addEventListener("DOMContentLoaded", function () {
+          const tree = document.querySelector("#menu-tree");
 
-        var getParents = function (elem, selector) {
-	        var parents = [];
-            while (elem.matches(selector)){
-                    parents.push(elem);
-                    elem = elem.parentElement;
-	        }
-	        return parents;
-        };
+          // Patch the tree so that clicking on a leaf link acts the same as clicking on the anchor.
+          // Without this you can select a leaf node, and it will be highlighted, but we won't show
+          // the content from that node (page) which is confusing.
+          tree.addEventListener("sl-selection-change", function (event) {
+              const item = event.detail.selection[0];
+              const link = item.querySelector("a");
 
-        if(activeLink) {
-            const parents = getParents(activeLink.parentElement, 'sl-tree-item');
-            parents.forEach(e => {
-                e.setAttribute("expanded", "");
-            });
-        }
-    });
+              if (link) {
+                  link.click();
+              }
+          });
+
+          const activeLink = document.querySelector("sl-tree-item a.active");
+
+          var getParents = function (elem, selector) {
+              var parents = [];
+              while (elem.matches(selector)) {
+                  parents.push(elem);
+                  elem = elem.parentElement;
+              }
+              return parents;
+          };
+
+          if(activeLink) {
+              current = activeLink.parentElement;
+              current.setAttribute("selected", "");
+
+              const parents = getParents(current, 'sl-tree-item');
+              parents.forEach(parent => {
+                  parent.setAttribute("expanded", "");
+              });
+          }
+      });
     </script>
 {{ end }}
 
@@ -59,7 +76,7 @@
       </a>
     </label>
   {{ else if .Page.Content }}
-    <a href="{{ .Page.RelPermalink }}" class="{{ if $current }} active{{ end }}">
+    <a href="{{ .Page.RelPermalink }}" class="{{ if $current }}active{{ end }}">
       {{- partial "docs/title" .Page -}}
     </a>
   {{ else }}

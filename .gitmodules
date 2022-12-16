@@ -1,0 +1,6 @@
+[submodule "content/resources/known-problems"]
+	path = content/resources/known-problems
+	url = https://github.com/ecoacoustics/known-problems
+[submodule "content/resources/metadata-standard"]
+	path = content/resources/metadata-standard
+	url = https://github.com/ecoacoustics/metadata-standard

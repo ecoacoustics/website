@@ -13,6 +13,8 @@ markup:
                 title: true
         renderer:
             unsafe: true
+ignoreFiles:
+- .*README\.md$
 params:
     GitHubRepo: https://github.com/ecoacoustics/website
     BookSection: resources

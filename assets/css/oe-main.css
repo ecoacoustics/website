@@ -34,6 +34,7 @@
 
     --oe-padding-large: var(--sl-spacing-4x-large);
     --oe-padding-small: var(--sl-spacing-large);
+    --oe-font: 'Roboto', sans-serif;
     --oe-fancy-font: 'Montserrat', sans-serif;
     --oe-navbar-height: 5em;
     --oe-panel-opacity: 0.66;
@@ -48,7 +49,6 @@
     --oe-wide-display: inherit;
 
     --oe-side-menu-width: 16em;
-
 }
 
 @media screen and (max-width: 60em) {

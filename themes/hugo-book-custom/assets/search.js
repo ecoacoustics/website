@@ -23,8 +23,6 @@
     inputs.forEach ((input) => {
         const results = input.parentElement.querySelector('.book-search-results');
 
-        console.log(results);
-
         input.addEventListener('focus', init);
         input.addEventListener('keyup', search);
         document.addEventListener('keypress', focusSearchFieldOnKeyPress);

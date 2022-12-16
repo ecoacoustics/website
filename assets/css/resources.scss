@@ -46,6 +46,35 @@
         overflow: hidden;
     }
 
+    .book-menu-content {
+        padding: calc(var(--oe-padding-small) / 4);
+    }
+
+    .tree-item {
+        color: inherit;
+    }
+
+    sl-tree {
+        sl-tree-item {
+            margin: calc(var(--oe-padding-small) / 2) 0;
+
+            &:focus {
+                outline-style: none;
+            }
+        }
+
+        a {
+            font-size: 0.9em;
+            white-space: normal;
+            line-height: 1;
+            font-family: var(--oe-font);
+
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }
+
     .book-page {
         transition-property: var(--oe-transition-properties-movement);
         transition-duration: var(--oe-duration);
@@ -131,7 +160,7 @@
     .mobile-search {
         display: block;
     }
-    
+
     .mobile-toc nav > ul {
         padding: 0;
     }
@@ -149,7 +178,7 @@
                 }
             }
         }
-        
+
         small {
             display: block;
         }

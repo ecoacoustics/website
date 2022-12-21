@@ -107,7 +107,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            padding-top: 10px;
+            padding-top: var( --oe-padding-small);
         }
 
         .nav-links-previous::before {
@@ -127,6 +127,10 @@
             display: block;
             text-align: center;
         }
+
+        sl-divider {
+            --spacing: 4rem 0rem;
+          }
     }
 
     nav ul {

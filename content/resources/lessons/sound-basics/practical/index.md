@@ -17,7 +17,7 @@ spectrograms, and affect how your spectrograms will look visually.
    to the spectrogram mode.
    ![Drop down menu view of sound file](20221206111806.png)
 4. You should now see the spectrogram view. Going back to the same drop down menu, we can
-   now select _Spectrogram Settings_, which brings up this window:
+   now select _Spectrogram Settings_, which brings up the _spectrogram settings_ window:
    ![Spectrogram settings view](20221206112035.png)
 5. Inside _Spectrogram Settings_, you can adjust the scale, colour, and
    algorithm settings for the spectrogram view. Take note of the scale settings,

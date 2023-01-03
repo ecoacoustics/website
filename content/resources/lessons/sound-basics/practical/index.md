@@ -67,7 +67,7 @@ value for each bin has increased).
 
 10. What about the spectrogram, does it look different?
 
-Feel free to keep playing around with the values, and understanding the effects.
+Keep playing around with the spectrogram settings. Try to notice the effects each setting has.
 If you are going to be using spectrograms in your research, it is a good idea to
 start by adjusting the window length and determining the most appropriate
 setting for your particular use. For example, if you are making measurements or

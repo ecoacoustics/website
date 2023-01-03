@@ -36,19 +36,35 @@ spectrograms, and affect how your spectrograms will look visually.
    more samples are used to calculate the spectrogram, and the more frequency
    resolution you will have. However, the smaller the window size, the more
    temporal resolution you will have.
-7. Set the window length value to 2048, and try to determine what the temporal
-   and frequency resolution is for this file at this setting. See the following
+7. Question: Set the window length value to 2048. What is the temporal
+   and frequency resolution for this file at this setting? See the following
    formulas for help, or refer back to the [presentation]({{% relref
    "presentation" %}}) for more information.
 
 {{% katex display %}} Temporal\:resolution = \frac{Window\:size}{Sampling\:rate} {{% /katex %}}
 {{% katex display %}} Frequency\:resolution = \frac{Sampling\:rate}{Window\:size} {{% /katex %}}
 
+<details>
+    <summary>Answer:</summary>
+Temporal resolution = 0.093 seconds, Frequency resolution = 10.767 Hz.
+</details>
+
 8. Now, change the window size to 256. Click on the _Window size_ input
    box, and select the new value.
    ![Changing window size in spectrogram settings view](20221206113827.png)
-9. Calculate the new temporal and frequency resolution values - did they
+9. Question: Calculate the new temporal and frequency resolution values - did they
    increase or decrease?
+
+<details>
+    <summary>Answer:</summary>
+Temporal resolution = 0.011 seconds, Frequency resolution = 86.133 Hz.
+
+With the smaller window size, we have a higher temporal resolution (the
+seconds value decreased), but a lower frequency resolution (the frequency
+value for each bin has increased).
+
+</details>
+
 10. What about the spectrogram, does it look different?
 
 Feel free to keep playing around with the values, and understanding the effects.

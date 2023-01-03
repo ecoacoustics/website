@@ -66,15 +66,15 @@ $ db = -70dB $
 
 </div>
 
->Notes:
->- We capture sound waves using a microphone. The microphone is plugged into a
+> Notes:
+> - We capture sound waves using a microphone. The microphone is plugged into a
 >  receiver, which performs an analogue to digital conversion.
->- The digital signal is captured, which we typically store in a WAVE file.
->- We can then use audio software to display this waveform. The waveform will have
+> - The digital signal is captured, which we typically store in a WAVE file.
+> - We can then use audio software to display this waveform. The waveform will have
 >  values that relate to the amplitude of the signal.
->- Amplitude of a sound wave corresponds to air pressure, and is measured in
+> - Amplitude of a sound wave corresponds to air pressure, and is measured in
 >  Pascals (Pa)
->- We can represent these amplitudes (intensity) using decibels.
+> - We can represent these amplitudes (intensity) using decibels.
 
 {{% /slide %}}
 {{% slide %}}
@@ -102,13 +102,14 @@ $$
 
 {{% /fragment %}}
 
->Notes:
->- Decibels are always the log of a ratio.
->- We typically scale based on a pain threshold of 20 Pa, and a reference value of
->  0.00002 Pa = 0 dB, which is considered to be the softest sound level a human ear can
->  detect / near total silence. 
->- Some examples of common dB levels include a quiet room at 30 dB, or a conversation at 60 dB.
->- Because dB uses a logarithmic scale, 60 dB is 1000 times more powerful than 30
+> Notes:
+> - Decibels are always the log of a ratio.
+> - We typically scale based on a reference value of 0.00002 Pa = 0 dB, which is
+>  considered to be the softest sound level a human ear can detect / near total
+>  silence. For more information on sound and the decibel scale, see
+>  [here](https://www.epd.gov.hk/epd/noise_education/web/text/ENG_EPD_HTML/m1/intro_5.html#:~:text=Human%20ear%20can%20perceive%20a,called%20the%20Threshold%20of%20Hearing).
+> - Some examples of common dB levels include a quiet room at 30 dB, or a conversation at 60 dB.
+> - Because dB uses a logarithmic scale, 60 dB is 1000 times more powerful than 30
 >  dB. Every 10 dB increase increases the power of a signal by a factor of 10.
 
 {{% /slide %}}
@@ -126,7 +127,7 @@ $$
 -   **Rule 2**: Use the factory settings!!
     {{% /fragment %}}
 
->Notes:
+> Notes:
 > - Clipping occurs when a signal's amplitude is too high for your recording system
 > - If you see a spectrogram that looks like this, then you have
 >   clipping (you can see it in both the waveform view and in the spectrogram view).
@@ -170,7 +171,7 @@ $$
 
 {{% /row %}}
 
->Notes:
+> Notes:
 > - An analogue signal is a continuous line
 > - We use sampling or quantization to capture various points along that signal
 > - Can then transform the time-discrete signal with quantization, or a quantized
@@ -179,8 +180,11 @@ $$
 >   example, a sampling rate of 22050 means that each second, 22050 samples are
 >   captured.
 > - The bit depth refers to how many bits of information are stored for each
->   sample.
-> - Also see the help section on [sample rate and bit depth]({{% ref "sample-rate-bit-depth" %}})
+>   sample. Lower bit depth means less accurate quantization, higher means more
+>   accurate quantization. Or in other words: bit depth affects dynamic
+>   range. Dynamic range refers to the difference between the loudest and
+>   softest signal that can be recorded or reproduced from a recording.
+> - Also see the help section on [sample rate and bit depth]({{% relref "sample-rate-bit-depth" %}})
 
 {{% /slide %}}
 {{% slide %}}
@@ -192,9 +196,9 @@ $$
 
 {{% row %}}
 
--   An FFT converts a _waveform_ into a _spectrogram_
--   A sound wave can be represented as the sum of a series of sine waves
--   We can convert from time domain to frequency domain
+- An FFT converts a _waveform_ into a _spectrogram_
+- A sound wave can be represented as the sum of a series of sine waves
+- We can convert from time domain to frequency domain
 
 ![fourier transform](./image13.PNG)  
 { style="width: 50%" }
@@ -214,9 +218,12 @@ $$
 
 Maximum frequency in spectrograms = sample rate / 2 = <mark>Nyquist</mark>
 
->Notes:
-> - The maximum frequency in a spectrogram is the sample rate divided by 2. This
->   is also known as the Nyquist frequency.
+> Notes:
+> - The Nyquist theorum is a fundamental principle in signal processing, which
+>   states that a sampling rate must be at least twice the highest frequency of
+>   a target signal, for that signal to be accurately reproduced. As a result,
+>   the maximum effective frequency of an audio file will be half of the file's
+>   sample rate.
 > - There are other types of transformations besides FFT
 
 {{% /slide %}}
@@ -287,7 +294,7 @@ Spectrogram
 {{% /fragment %}}
 {{% /stack %}}
 
->Notes:
+> Notes:
 > - We can visualise a waveform as a spectrogram, by applying a STFT (Short-time
 >   Fourier transform).
 > - There are different settings, such as window size, and window type. It will be
@@ -299,7 +306,7 @@ Spectrogram
 >   resolution will be lower. Or a high frequency resolution, with a lower temporal
 >   resoltuion. Or somewhere in between for both.
 > - This trade-off is principally determined by setting the window
->   length. The window length is expressed in samples.
+>   length. The window length is expressed in samples, and should be a power of 2.
 
 {{% /slide %}}
 {{% slide %}}
@@ -309,11 +316,12 @@ Spectrogram
 <object type="image/svg+xml" style="width: 100%;" data="./spectrogram-tradeoffs.drawio.svg"></object>
 {.align-center}
 
->Notes:
+> Notes:
 > - Consider a window size of 256, with a sample rate (SR) of 22050.
 > - Lets check the temporal resolution:
->   - TR = Window size / SR
->   - 256 / 22050 = 0.01160997732, which is ~11 ms. That is a good
+>  $$ Temporal\\:resolution = \frac{Window\\:size}{Sampling\\:rate} $$
+>  $$ \frac{256}{22050} = 0.01160997732 s $$
+>   - Which is ~11 ms. That is a good
 >   time resolution. This means that the spectrum is split into images
 >   representing 11 ms each.
 > - Now consider the frequency resolution:
@@ -337,15 +345,18 @@ Spectrogram
 >   - The second way:
 >     - Due to the relationships between frequency + Nyquist frequency, and window
 >       length + bins, we can simply calculate the frequency resolution using
->       sample rate divided by window length: 22050 / 256 = 86.1328125 Hz. 
+>       sample rate divided by window length/size:
+>        $$ Frequency\\:resolution = \frac{Sampling\\:rate}{Window\\:size} $$
+>        $$ 22050 / 256 = 86.1328125 Hz $$
 >     - Remember: the more bins you have, the more slices of frequency ranges you get for
 >       your given frequency range, and therefore, the more precise each of these
 >       bins will be.
 >     - In the above example, the spectrum would be split into 128 bins where each
 >       bin represents around 86 Hz.
 >     - If we increased this to a window length of 1024 (512 frequency bins), this
->       would result in a frequency resolution of 11025 / 512 = 21.533203125 Hz. A
->       much higher frequency resolution.
+>       would result in a frequency resolution of:
+> $$ 11025 / 512 = 21.533203125 Hz $$
+>      which is a much higher frequency resolution.
 
 {{% /slide %}}
 {{% slide type="title" %}}

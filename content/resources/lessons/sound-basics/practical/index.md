@@ -8,8 +8,8 @@ size of a sound file using Audacity. This will help you to understand how
 changing the window size can alter the frequency and temporal resolution of your
 spectrograms, and affect how your spectrograms will look visually.
 
-1. Find `20220421T100000+1000_SEQP-Samford-Wet-B_644370.flac` in the 2022
-   Ecoacoustics Symposium/SERF Data folder.
+1. Find `20220421T100000+1000_SEQP-Samford-Wet-B_644370.flac` in the `2022
+   Ecoacoustics Symposium/SERF Data` folder.
 2. Open Audacity, and drag the sound file into Audacity to open it.
    ![Sound file in Audacity](20221206111634.png)
 3. At the top-left of each track, there is a drop-down menu. It's represented by

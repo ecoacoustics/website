@@ -65,10 +65,10 @@
 
         <!-- Nav links  -->
         <!-- .IsPage checks if the current page is a content page -->
-        <!-- and if so, renders the nav links partial. -->
+        <!-- and if so, renders the nav_links partial. -->
         <!-- The aim of the nav_links is to facilitate moving through -->
-        <!-- content rather than through sections, for which the side menu -->
-        <!-- is available -->
+        <!-- content pages across sections, rather than between -->
+        <!-- section pages, for which the side menu is available. -->
         {{ if .IsPage }}
             {{ partial "nav_links.html" . }}
         {{ end }}

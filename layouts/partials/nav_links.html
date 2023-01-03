@@ -1,73 +1,77 @@
-{{/*  Navigation links for content pages  */}}
-{{/*  .Next returns the previous page and .Previous returns the next page  */}}
-{{/*  The calls appear reversed possibly due to the blog origins of Hugo  */}}
-{{/*  where reverse chronological order is the default sort order  */}}
+{{/* Navigation links for content pages */}}
+{{/* .Next returns the previous page and .Previous returns the next page */}}
+{{/* The calls appear reversed possibly due to the blog origins of Hugo */}}
+{{/* where reverse chronological order is the default sort order */}}
+{{/* See: https://discourse.gohugo.io/t/next-and-previous-pages-reversed-meaning/25598/2 */}}
+
 
 <nav class="next-previous-links">
     {{ $sectionParentPages := .CurrentSection.Parent.Pages }}
     {{ $currentSection := .CurrentSection.Title }}
     <sl-divider></sl-divider>
     <div class="nav-links">
-        {{/*  Previous page | section links  */}}
+        {{/* Previous page | section links */}}
         <div>
-            {{/*  Check if there is a previous page in the section  */}}
+            {{/* Check if there is a previous page in the section */}}
             {{ if .NextInSection }}
                 {{ with .NextInSection }}
-                    <a href="{{ .Permalink }}" class="nav-links-previous">
+                    <a href="{{ .RelPermalink }}" class="nav-links-previous">
                         Previous:
                     </a>
                     <div>{{ .Title }}</div>
                 {{ end }}
-            {{/*  If no previous page, return a link to the  */}}
-            {{/*  previous section  */}}
+                {{/* If no previous page, return a link to the */}}
+                {{/* previous section */}}
             {{ else }}
                 {{ range $sectionParentPages }}
                     {{ if eq .Title $currentSection }}
                         {{ with $sectionParentPages.Next . }}
-                                <a
-                                    href="{{ .Permalink }}"
-                                    class="nav-links-previous"
-                                >
-                                    Previous section:
-                                </a>
-                                <div>{{ .Title }}</div>
+                            <a
+                                href="{{ .RelPermalink }}"
+                                class="nav-links-previous"
+                            >
+                                Previous section:
+                            </a>
+                            <div>{{ .Title }}</div>
                         {{ end }}
                     {{ end }}
                 {{ end }}
             {{ end }}
         </div>
 
-        {{/*  Links to current section list page (up) and home page  */}}
+        {{/* Links to current section list page (up) and home page */}}
         <div class="nav-links-up">
             {{ with .CurrentSection }}
-                <a href="{{ .Permalink }}">Up</a>
+                <a href="{{ .RelPermalink }}">Up</a>
             {{ end }}
             <div>
                 <a href="{{ .Site.Home.RelPermalink }}">{{ "Home" }}</a>
             </div>
         </div>
 
-        {{/*  Next page | section links  */}}
+        {{/* Next page | section links */}}
         <div>
-            {{/*  Check if there is a next page in the section  */}}
+            {{/* Check if there is a next page in the section */}}
             {{ if .PrevInSection }}
                 {{ with .PrevInSection }}
-                    <a href="{{ .Permalink }}" class="nav-links-next">Next: </a>
+                    <a href="{{ .RelPermalink }}" class="nav-links-next"
+                        >Next:
+                    </a>
                     <div>{{ .Title }}</div>
                 {{ end }}
-            {{/*  If no next page, return a link to the  */}}
-            {{/*  next section  */}}
+                {{/* If no next page, return a link to the */}}
+                {{/* next section */}}
             {{ else }}
                 {{ range $sectionParentPages }}
                     {{ if eq .Title $currentSection }}
                         {{ with $sectionParentPages.Prev . }}
-                                <a
-                                    href="{{ .Permalink }}"
-                                    class="nav-links-next"
-                                >
-                                    Next section:
-                                </a>
-                                <div>{{ .Title }}</div>
+                            <a
+                                href="{{ .RelPermalink }}"
+                                class="nav-links-next"
+                            >
+                                Next section:
+                            </a>
+                            <div>{{ .Title }}</div>
                         {{ end }}
                     {{ end }}
                 {{ end }}

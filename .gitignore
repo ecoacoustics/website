@@ -7,3 +7,4 @@ _site/
 .hugo_build.lock
 .DS_Store
 assets/jsconfig.json
+.vscode/settings.json

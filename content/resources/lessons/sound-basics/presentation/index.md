@@ -70,8 +70,9 @@ $ db = -70dB $
 > - We capture sound waves using a microphone. The microphone is plugged into a
 >  receiver, which performs an analogue to digital conversion.
 > - The digital signal is captured, which we typically store in a WAVE file.
-> - We can then use audio software to display this waveform. The waveform will have
->  values that relate to the amplitude of the signal.
+> - We can then use audio software to display this waveform. The waveform will
+>   have lots of values (samples) that quantize (measure) the amplitude of the
+>   signal.
 > - Amplitude of a sound wave corresponds to air pressure, and is measured in
 >  Pascals (Pa)
 > - We can represent these amplitudes (intensity) using decibels.

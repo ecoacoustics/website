@@ -63,6 +63,16 @@
         {{end}}
         {{ partial "docs/inject/content-after" . }}
 
+        <!-- Nav links  -->
+        <!-- .IsPage checks if the current page is a content page -->
+        <!-- and if so, renders the nav_links partial. -->
+        <!-- The aim of the nav_links is to facilitate moving through -->
+        <!-- content pages across sections, rather than between -->
+        <!-- section pages, for which the side menu is available. -->
+        {{ if .IsPage }}
+            {{ partial "nav_links.html" . }}
+        {{ end }}
+
         {{ template "comments" . }}
         <!-- Comments block -->
 

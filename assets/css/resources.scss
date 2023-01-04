@@ -131,6 +131,37 @@
         }
     }
 
+    .next-previous-links {
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-top: var( --oe-padding-small);
+        }
+
+        .nav-links-previous::before {
+            content: "\2190";
+        }
+
+        .nav-links-next {
+            text-align: right;
+            display: block;
+        }
+
+        .nav-links-next::after {
+            content: "\2192";
+        }
+
+        .nav-links-up {
+            display: block;
+            text-align: center;
+        }
+
+        sl-divider {
+            --spacing: 4rem 0rem;
+          }
+    }
+
     nav ul {
         list-style: none;
     }

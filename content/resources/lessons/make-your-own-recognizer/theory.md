@@ -47,19 +47,19 @@ https://ravensoundsoftware.com/video-tutorials/english/03-saving-selection-table
 
 ### Spectrogram Generation
  
-The CNN used is an image classifier. The sound is converted to an image in the form of a spectrogram.  The spectrogram is created by taking short (possibly overlapping) slices of the audio signal and calculating the discrete spectrum on them with a discrete Fourier transform. Each spectrum-slice then forms a column of the spectrogram, and when arranged side by side form a two dimensional grid. 
+The CNN used is an image classifier. The sound is converted to an image in the form of a spectrogram.  The spectrogram is created by taking short (possibly overlapping) slices of the audio signal and calculating the discrete spectrum of them with a discrete Fourier transform. Each spectrum-slice then forms a column of the spectrogram, and when arranged side by side form a two dimensional grid. 
 
 Each row of the grid represents a frequency band of equal frequency range. However, in nature, usually more information is encoded within a given frequency range at low frequencies than the same frequency range at higher frequencies. Therefore, most ecoacoustic CNNs use a mel-scale spectrogram, in which have a higher frequency resolution at low frequencies and a lower frequency resolution at higher frequencies. 
 
-There are several parameters you can modify when generating these mel frequency spectrograms. You can edit these in the configuration file `config.ini`
+There are several parameters you can modify when generating spectrograms:
 
+- **Windows Size** is the number of audio samples in each slice of the audio. This determines both the time resolution (a shorter window gives a more precise point in time for the resulting column) and the frequency resolution (a longer window gives more information to determine the spectrum - the contribution of wavelengths that don't fit in the window will be ignored)
 
-The most important of these is the `time-win` (time window). This sets how many seconds of audio are fed into the CNN. However, note that whatever value is chosen for this, the resulting spectrogram will be reshaped into a size of 128x256 pixels. Setting a very large value for the time window will result in loss of time resolution when this reshaping is done. 
+- **Overlap** is how many audio samples each window overlaps by. Having a large overlap will increase the number of spectrogram columns for a given window size for a given length of audio. 
 
-The most important is the 'windows size', which is the number of audio samples in each slice of the audio. This determines both the time resolution (a shorter window gives a more precise point in time for the resulting column) and the frequency resolution (a longer window gives more information to determine the spectrum - the contribution of wavelengths that don't fit in the window will be ignored)
+- **Time window**  is the number of seconds of audio in each spectrogram image fed into the CNN. However, note that whatever value is chosen for this, the resulting spectrogram will be reshaped into a size of 128x256 pixels. Setting a very large value for the time window will result in loss of time resolution when this reshaping is done. 
 
-You can also trim the spectrogram to include only a given range of frequencies. You may for example remove low or high frequencies well outside the range of your target species. This can both make the task easier for the model, since confusing are not included, as well as reducing the computational load since the input spectrogram size can be reduced. However it is important to remember that frequencies outside the range of the target call-type do help with discrimination between a positive and negative example
-
+- **maximum frequency** only the rows of the spectrogram under this frequency are included. If your target call only occurs at low frequencies, then you can fit a greater frequency resolution into the spectrogram pixel height if the top frequency is reduced. For example, if your target call is no higher than 1000Hz, they you may want to set the maximum frequency of your spectrogram to say 4000Khz. Including sound above that may not help the accuracy of the classifier, and the useful part of the spectrum will be squashed into the bottom of the spectrogram. You do want to include some frequency range above the top frequency of your target call, as there will be some information there that can be used to distinguish between confusing sounds. For example, there may be a confusing sound that appears very similar to your target call at the frequency of your target call but also includes other signal above that frequency, and it's that higher-frequency signal that is the distinguishing part. 
 
 It is important that whatever spectrogram parameters are used during training are also used when the network is deployed. 
 

@@ -29,7 +29,6 @@ Short annotations (less than the length of the fixed-length segment we are cropp
 
 ![short annotation](short_annotation.png)
 
-
 Longer annotations (more than the length of the fixed-length segment) are cropped so that the cropped segment fits within the annotation. This is shown in the figure below. 
 
 ![long annotation](long_annotation.png)
@@ -61,8 +60,11 @@ There are several parameters you can modify when generating spectrograms:
 
 - **maximum frequency** only the rows of the spectrogram under this frequency are included. If your target call only occurs at low frequencies, then you can fit a greater frequency resolution into the spectrogram pixel height if the top frequency is reduced. For example, if your target call is no higher than 1000Hz, they you may want to set the maximum frequency of your spectrogram to say 4000Khz. Including sound above that may not help the accuracy of the classifier, and the useful part of the spectrum will be squashed into the bottom of the spectrogram. You do want to include some frequency range above the top frequency of your target call, as there will be some information there that can be used to distinguish between confusing sounds. For example, there may be a confusing sound that appears very similar to your target call at the frequency of your target call but also includes other signal above that frequency, and it's that higher-frequency signal that is the distinguishing part. 
 
-It is important that whatever spectrogram parameters are used during training are also used when the network is deployed. 
+The most important is the 'windows size', which is the number of audio samples in each slice of the audio. This determines both the time resolution (a shorter window gives a more precise point in time for the resulting column) and the frequency resolution (a longer window gives more information to determine the spectrum - the contribution of wavelengths that don't fit in the window will be ignored)
 
+You can also trim the spectrogram to include only a given range of frequencies. You may for example remove low or high frequencies well outside the range of your target species. This can both make the task easier for the model, since confusing are not included, as well as reducing the computational load since the input spectrogram size can be reduced. However it is important to remember that frequencies outside the range of the target call-type do help with discrimination between a positive and negative example
+
+It is important that whatever spectrogram parameters are used during training are also used when the network is deployed.
 
 ### Balancing dataset 
 
@@ -204,10 +206,9 @@ With each epoch, the training loss should go down, because the training algorith
 
 What we are more interested in is the validation loss. This will always be higher than the training loss, because these examples were never seen during training. As long as the validation loss is still decreasing, the network is still learning in a way that generalises to examples it's never seen before. At some point the validation loss will stop improving, usually before the training loss does. The validation loss might even increase after a while. This is a sign that the network is overfitting to the training set. This means that it is memorising the individual training examples while reducing its capacity to generalise its understanding of the target call type. 
 
- The probabilities and loss can be useful for some analysis, but really at the end of the day, the examples have been labelled as binary positive/negative and so what we are interested in is the binary predictions. Generally anything with a predicted probability over 50% is a 'positive' prediction and anything less is a 'negative' prediction.  The accuracy is the proportion of examples that were correctly labelled.
+The probabilities and loss can be useful for some analysis, but really at the end of the day, the examples have been labelled as binary positive/negative and so what we are interested in is the binary predictions. Generally anything with a predicted probability over 50% is a 'positive' prediction and anything less is a 'negative' prediction.  The accuracy is the proportion of examples that were correctly labelled.
 
-
- ### Error Analysis
+### Error Analysis
 
 The first step to do after training is to check the examples that the network misclassified. Often we find that some of the training or validation set are labelled incorrectly. It's likely that mislabelled examples are "misclassified" by the network (i.e. classified correctly as belonging to a class that does not match the label). We can then correct the label of these examples and retrain. 
 

@@ -1,0 +1,27 @@
+$schema: https://raw.githubusercontent.com/citation-file-format/citation-file-format/main/schema.json
+cff-version: 1.2.0
+date-released: "2022-03-17"
+message: "If you find the information on this website useful, please cite it using the metadata from this file."
+authors:
+  - family-names: Truskinger
+    given-names: Anthony
+    orcid: https://orcid.org/0000-0003-1110-1483
+ - family-names: Schwenke
+    given-names: Andrew
+    orcid: https://orcid.org/0000-0002-5281-0115
+  - family-names: Holopainen
+    given-names: Nelli
+    orcid: https://orcid.org/0000-0002-2052-2047
+  - family-names: Eichinski
+    given-names: Philip
+- family-names: Scarpelli D. A.
+    given-names: Marina
+    orcid: https://orcid.org/0000-0001-7315-1406
+title: "Open Ecoacoustics Website"
+type: software
+url: https://github.com/ecoacoustics/website
+keywords:
+  - "open source"
+  - ecoacoustics
+  - biodiversity
+version: 0.1

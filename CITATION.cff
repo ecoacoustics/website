@@ -14,10 +14,9 @@ authors:
     orcid: https://orcid.org/0000-0002-2052-2047
   - family-names: Eichinski
     given-names: Philip
-    orcid: https://orcid.org/0000-0001-5758-5060
-- family-names: Scarpelli
-    given-names: Marina D. A.
-    orcid: https://orcid.org/0000-0002-8815-1844
+- family-names: Scarpelli D. A.
+    given-names: Marina
+    orcid: https://orcid.org/0000-0001-7315-1406
 title: "Open Ecoacoustics Website"
 type: software
 url: https://github.com/ecoacoustics/website

@@ -109,6 +109,4 @@ _This research/project is supported by the Australian Research Data Commons
 
 </div>
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7743217.svg)](https://doi.org/10.5281/zenodo.7743217)
-
 {{< /home/section >}}

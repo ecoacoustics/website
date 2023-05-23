@@ -1,6 +1,13 @@
 # List of available repositories
-- Ecosounds
-- A2O
-- RCFX
-- Wildlife Acoustics Cloud
-- safe
+
+[Ecosounds](https://www.ecosounds.org/)
+Ecosounds is a repository of environmental audio recordings. The repository contains information and audio recording annotations for fauna that make human-audible sounds. The repository includes recordings from a wide range of environments and are available for use by ecologists and other parties interested in conservation.
+
+[Australian Acoustic Observatory - A2O](https://acousticobservatory.org/)
+The Australian Acoustic Observatory is a continental-scale acoustic sensor network, recording for a five-year period across multiple Australian ecosystems. The data are freely available to researchers, citizen scientists, and the general public.
+
+[Rainforest Connection - Arbimon](https://rfcx.org/ecoacoustics) 
+Rainforest Connection is a company dedicated to supporting the bioacoustics and ecoacoustics communities with tools and technology to increase your overall impact in the conservation space. The arbimon is a free cloud-based analytical tool for audio files. 
+
+[Wildlife Acoustics Cloud - Kaleidoscope](https://www.wildlifeacoustics.com/products/kaleidoscope)
+Wildlife Acoustics Cloud - Kaleidoscope is a versatile bioacoustics sound analysis tool, available in Pro and Lite, Kaleidoscope helps you more quickly identify species and report on findings.

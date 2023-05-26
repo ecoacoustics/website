@@ -1,5 +1,5 @@
 ---
 title: Making Your Data FAIR
-weight: 3
+weight: 1
 ---
 # Making Your Data FAIR

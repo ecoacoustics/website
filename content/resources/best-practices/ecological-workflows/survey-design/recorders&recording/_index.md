@@ -1,5 +1,5 @@
-title: Recorders and Recording Schedules
+title: Recorders & Recording
 weight: 2
 ---
-# Recorders and Recording Schedules
+# Recorders & Recording Schedules
 

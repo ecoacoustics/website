@@ -1,5 +1,5 @@
 ---
-title: Things to do before you go
+title: Before You Go
 weight: 1
 ---
-# Things to do before you go
+# Things to Do Before You Go

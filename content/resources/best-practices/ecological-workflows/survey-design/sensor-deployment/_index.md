@@ -1,4 +1,4 @@
-title: Sensor deployment
+title: Sensor Deployment
 weight: 4
 ---
-# Sensor deployment patterns: Practical considerations
+# Sensor Deployment Patterns: Practical Considerations

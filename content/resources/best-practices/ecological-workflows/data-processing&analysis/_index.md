@@ -1,6 +1,6 @@
 ---
-title: Data Processing and Analysis
+title: Data Processing & Analysis
 weight: 5
 ---
-# Data Processing and Analysis
+# Data Processing & Analysis
 

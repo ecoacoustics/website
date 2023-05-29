@@ -2,8 +2,8 @@
 title: Birds, General
 ---
 # Birds: General
+The following presents special considerations for the study of birds in general.
 
-## ...
 ## Occupancy
 For mobile birds, it is important to consider how you will define occupancy, or use, of a site (see Wood and Peery 2022). This can be important to avoid counting flyovers and brief stopovers.  
 

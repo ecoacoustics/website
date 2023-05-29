@@ -1,4 +1,4 @@
 ---
-title: Birds: General
+title: Birds General
 ---
 # Birds: General

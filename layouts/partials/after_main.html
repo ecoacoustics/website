@@ -6,12 +6,14 @@
         </p>
     </div>
     <div class="oe-footer-gitinfo">
+        <small><a href="about/">How to cite</a></small>｜
         {{ with .GitInfo }}
         <small>
             Last change by <strong>{{ .AuthorName }}</strong> on {{ (.AuthorDate.Format `2006-01-02T15:04:05-07:00`) }} in
             <a href="{{ $.Site.Params.GitHubRepo }}/commit/{{ .Hash }}">{{ .AbbreviatedHash }}</a>
         </small>
         {{ end }}
+        
     </div>
     <div class="oe-footer-themeselector" id="themeSelector">
         <dark-mode-toggle id="dark-mode-toggle-1" appearance="switch" dark="Dark" light="Light"

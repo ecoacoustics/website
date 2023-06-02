@@ -6,6 +6,8 @@ See: https://open.ecoacoustics.info/
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fdbe7ac7-c77c-4c33-a67a-28a33c2087a3/deploy-status)](https://app.netlify.com/sites/open-ecoacoustics/deploys)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7743217.svg)](https://doi.org/10.5281/zenodo.7743217)
+
 ## Cloud Development
 
 You can make simple changes right here on GitHub's website.

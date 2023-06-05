@@ -1,52 +1,52 @@
-- title: Koala recognize(demo data)
-  description: |
-    this recognizer was done to find koalas all over their distribution and develop species distribution
-    models for past, current and future climate and deforestation for this species.
-    Therefore we wanted to maximize the true positive rates, to find as many koala's calls as possible.
-  targets:
-    - name: Koala
-      binomial: Phascolarctos cinereus
-      variants: ["grunt", "inhale"]
-    - name: Kangaroo
-      binomial: Macropus giganteus
-  datasets:
-    training:
-      summary: 30-second segments, manually annotated
-      location: Samford Ecological Research Facility, Brisbane, Australia
-      url: https://www.ecosounds.org/projects/397
-      performance:
-        # segment or event
-        criteria: segment
-        tp: 100
-        fp: 12
-        tn: 10
-        fn: 10
-    test:
-      summary: 30-second segments, manually annotated
-      location: Samford Ecological Research Facility, Brisbane, Australia
-      url: https://www.ecosounds.org/projects/397
-      performance:
-        # segment or event
-        criteria: segment
-        tp: 8
-        fp: 12
-        tn: 10
-        fn: 10
+# - title: Koala recognize(demo data)
+#   description: |
+#     this recognizer was done to find koalas all over their distribution and develop species distribution
+#     models for past, current and future climate and deforestation for this species.
+#     Therefore we wanted to maximize the true positive rates, to find as many koala's calls as possible.
+#   targets:
+#     - name: Koala
+#       binomial: Phascolarctos cinereus
+#       variants: ["grunt", "inhale"]
+#     - name: Kangaroo
+#       binomial: Macropus giganteus
+#   datasets:
+#     training:
+#       summary: 30-second segments, manually annotated
+#       location: Samford Ecological Research Facility, Brisbane, Australia
+#       url: https://www.ecosounds.org/projects/397
+#       performance:
+#         # segment or event
+#         criteria: segment
+#         tp: 100
+#         fp: 12
+#         tn: 10
+#         fn: 10
+#     test:
+#       summary: 30-second segments, manually annotated
+#       location: Samford Ecological Research Facility, Brisbane, Australia
+#       url: https://www.ecosounds.org/projects/397
+#       performance:
+#         # segment or event
+#         criteria: segment
+#         tp: 8
+#         fp: 12
+#         tn: 10
+#         fn: 10
 
-  repository: https://github.com/QutEcoacoustics/audio-analysis/
-  documentation: https://ap.qut.ecoacoustics.info/
-  organization: QUT Ecoacoustics
-  # https://citation-file-format.github.io/
-  # cff-version: 1.2.0
-  message: "If you use this software, please cite it as below."
-  authors:
-    - familyNames: Towsey
-      givenNames: Michael
-      orcid: 0000-0002-8246-7151
-    - familyNames: Truskinger
-      givenNames: Anthony
-      orcid: 0000-0003-1110-1483
-  version: 2.0.4
-  doi: 10.5281/zenodo.1234
-  dateReleased: 2021-08-11
-  license: Apache-2.0
+#   repository: https://github.com/QutEcoacoustics/audio-analysis/
+#   documentation: https://ap.qut.ecoacoustics.info/
+#   organization: QUT Ecoacoustics
+#   # https://citation-file-format.github.io/
+#   # cff-version: 1.2.0
+#   message: "If you use this software, please cite it as below."
+#   authors:
+#     - familyNames: Towsey
+#       givenNames: Michael
+#       orcid: 0000-0002-8246-7151
+#     - familyNames: Truskinger
+#       givenNames: Anthony
+#       orcid: 0000-0003-1110-1483
+#   version: 2.0.4
+#   doi: 10.5281/zenodo.1234
+#   dateReleased: 2021-08-11
+#   license: Apache-2.0

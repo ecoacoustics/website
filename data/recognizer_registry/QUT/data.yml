@@ -57,7 +57,7 @@
       givenNames: Kristen
       orcid:
   version: 1.0.0
-  doi:
+  doi: 10.5281/zenodo.1188743
   dateReleased: 2021-03-05
   license: Apache-2.0
 
@@ -93,7 +93,7 @@
     test (events):
       summary: 30-second segments, manually annotated
       location: NSW, Australia
-      url:
+      url: 10.5281/zenodo.1188743
       performance:
         # or event
         criteria: events
@@ -119,7 +119,7 @@
       givenNames: Kristen
       orcid:
   version: 1.0.0
-  doi:
+  doi: 10.5281/zenodo.1188743
   dateReleased: 2021-03-17
   license: Apache-2.0
 
@@ -181,7 +181,7 @@
       givenNames: Kristen
       orcid:
   version: 1.0.0
-  doi:
+  doi: 10.5281/zenodo.1188743
   dateReleased: 2021-03-05
   license: Apache-2.0
 
@@ -243,7 +243,7 @@
       givenNames: Kristen
       orcid:
   version: 1.0.0
-  doi:
+  doi: 10.5281/zenodo.1188743
   dateReleased: 2021-03-05
   license: Apache-2.0
 
@@ -305,7 +305,7 @@
       givenNames: Kristen
       orcid:
   version: 1.0.0
-  doi:
+  doi: 10.5281/zenodo.1188743
   dateReleased: 2021-03-17
   license: Apache-2.0
 
@@ -366,7 +366,7 @@
       givenNames: Kristen
       orcid:
   version: 1.0.0
-  doi:
+  doi: 10.5281/zenodo.1188743
   dateReleased: 2021-03-17
   license: Apache-2.0
 
@@ -427,7 +427,7 @@
       givenNames: Kristen
       orcid:
   version: 1.0.0
-  doi:
+  doi: 10.5281/zenodo.1188743
   dateReleased: 2021-03-17
   license: Apache-2.0
 
@@ -488,7 +488,7 @@
       givenNames: Kristen
       orcid:
   version: 1.0.0
-  doi:
+  doi: 10.5281/zenodo.1188743
   dateReleased: 2021-03-17
   license: Apache-2.0
 
@@ -549,7 +549,7 @@
       givenNames: Kristen
       orcid:
   version: 1.0.0
-  doi:
+  doi: 10.5281/zenodo.1188743
   dateReleased: 2020-12-16
   license: Apache-2.0
   
@@ -610,7 +610,7 @@
       givenNames: Kristen
       orcid:
   version: 1.0.0
-  doi:
+  doi: 10.5281/zenodo.1188743
   dateReleased: 2020-12-16
   license: Apache-2.0
   
@@ -671,7 +671,7 @@
       givenNames: Kristen
       orcid:
   version: 1.0.0
-  doi:
+  doi: 10.5281/zenodo.1188743
   dateReleased: 2020-12-16
   license: Apache-2.0
 
@@ -733,7 +733,7 @@
       givenNames: Kristen
       orcid:
   version: 1.0.0
-  doi:
+  doi: 10.5281/zenodo.1188743
   dateReleased: 2020-12-16
   license: Apache-2.0
   
@@ -794,6 +794,6 @@
       givenNames: Kristen
       orcid:
   version: 1.0.0
-  doi:
+  doi: 10.5281/zenodo.1188743
   dateReleased: 2020-12-16
   license: Apache-2.0

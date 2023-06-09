@@ -4,6 +4,47 @@ image: images/Maybe-home-page3.jpg
 layout: resources
 ---
 
-How publish your recognizer and datasets.
+# Why publish your recognizer?
+Publishing your recognizer can be your way to contribute to open science and help the development of ecoacoustics as a tool for conservation. By sharing your work and making it publicly available you allow others in the scientific community to benefit from and build upon your research. We highly appreciate and value your contributions! 
 
-See <https://github.com/ecoacoustics/recognizer-template>
+# How  to publish your recognizer
+We recommend using our [Recognizer Template in GitHub](https://github.com/ecoacoustics/recognizer-template) for publishing your recogniser. If you are familiar with GitHub you can proceed directly to the template. However, if you need more information on how to use it effectively, please continue reading this article.
+
+## What is GitHub and why is it great for this purpose?
+GitHub is a web-based service that utilises Git, which is a tool for version control. Git allows you to track changes, collaborate with others and manage different versions of your work. GitHub provides a platform for hosting and sharing Git repositories. You can read more about git and its uses from [GitHub documentation page](https://docs.github.com/en/get-started/using-git/about-git).
+
+### Version Control
+Version control is a system for recording changes to files over time, allowing you to track any modifications and revert back to previous versions. Version control is great for making collaboration with others seamless and manageable.
+
+### Zenodo - DOI generation
+Zenodo is an open-source project for generating DOIs that integrates well with GitHub. We recommend using Zenodo for generating a permanent DOI (Digital Object Identifier) for your recogniser. A DOI provides a unique and persistent identifier for your work, enabling others to cite it in their publications. Obtaining a DOI through Zenodo enhances the discoverability and visibility of yopur recognizer contributing to the impact and recoginition of your work within the scientific community.
+
+## How do I use the GitHub template to publish my recognizer?
+
+### Step 1.  Create a GitHub account 
+If you don't have a GitHub account yet,  the first step is to create one. You can create an account in [GitHub sign-in page](https://github.com/signup?ref_cta=Sign+up) following the prompts to set up your profile.
+
+### Step 2. Fork the repository 
+Once you have a GitHub account, go to the [Recognizer Template repository](https://github.com/ecoacoustics/recognizer-template). You can copy the template to your account by using GitHub's fork functionality. 
+![The Fork button is located in the top right-hand side action menu.](github-fork-recognizer.png) After forking the recogniser template repository you can start making your own changes. For more detailed instructions please refer to the [README file](https://github.com/ecoacoustics/recognizer-template#readme) in the template.
+
+### Step 3. Add test and training data
+
+### Step 4. Add code and models
+
+### Step 5. Publish your recognizer in GitHub
+
+### Step 6. Generate a DOI using Zenodo
+To generate a DOI for your recogniser go to [Zenodo](https://zenodo.org/login). Please use your GitHub account to log in. Once you are logged in, choose "Github" from the drop-down menu by clicking the arrow next to your email address in the top right-hand side menu. ![Picture of Zenodo drop down menu](zenodo-github-page.png) On this page you will see a list of your repositories. Flip the switch next to the Recogniser repository you created to ON-position. Go to Github and [create a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Zenodo will automatically generate a DOI for this release which you should now see in Zenodo GitHub page. Click either the title or the DOI-badge to go to your generated DOI-page.  Finally, you can copy the DOI-badge from the DOI-page by clicking the DOI-badge on the side panel. We recommend copying the Markdown text and adding it to your README-file in your GitHub Recocnizer Repository.
+
+### Step 7. Add a citation information file
+To make your GitHub Regocnizer repository easily citable we recommend adding a citation information file (`CITATION.cff`). We have added this to the Recogniser template for your convenience. Simply modify the `CITATION.cff` file in your repository adding your details and description in this file. You can read more about [CITATION.cff file format here](https://citation-file-format.github.io/).
+
+### Step 8. List your recogniser in the registry
+
+# FAQ
+
+## What to do when your training data set is too large?
+
+## How do I keep my recognizer private until I'm ready to publish?
+Private Embargo 

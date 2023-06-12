@@ -11,4 +11,5 @@ Sample rate, gain, schedules, sensitivity, etc…
 Choosing memory cards
 
 Logistics of sensors
+
 Impacts of battery choice, schedules, and memory card on frequency of sensor service

@@ -24,9 +24,9 @@ Zenodo is an open-source project for generating DOIs that integrates well with G
 ### Step 1.  Create a GitHub account 
 If you don't have a GitHub account yet,  the first step is to create one. You can create an account in [GitHub sign-in page](https://github.com/signup?ref_cta=Sign+up) following the prompts to set up your profile.
 
-### Step 2. Fork the repository 
-Once you have a GitHub account, go to the [Recognizer Template repository](https://github.com/ecoacoustics/recognizer-template). You can copy the template to your account by using GitHub's fork functionality. 
-![The Fork button is located in the top right-hand side action menu.](github-fork-recognizer.png) After forking the recogniser template repository you can start making your own changes. For more detailed instructions please refer to the [README file](https://github.com/ecoacoustics/recognizer-template#readme) in the template.
+### Step 2. Use the template as a start for a repository 
+Once you have a GitHub account, go to the [Recognizer Template repository](https://github.com/ecoacoustics/recognizer-template). You can use the template as a base for creating a new repository by clicking the green button that says "Use this template" and selecting "Create a new repository".  
+![The Use this template -button is located on the top right side of the page.](github-use-template.png) In the following page, input a name for your recognizer. You can choose if you want your repository to be public or private. Leave the the box that says "include all branches" unticked. Click "Create repository from template". For more detailed instructions please refer to the [README file](https://github.com/ecoacoustics/recognizer-template#readme) in the template.
 
 ### Step 3. Add test and training data
 
@@ -37,8 +37,10 @@ Once you have a GitHub account, go to the [Recognizer Template repository](https
 ### Step 6. Generate a DOI using Zenodo
 To generate a DOI for your recogniser go to [Zenodo](https://zenodo.org/login). Please use your GitHub account to log in. Once you are logged in, choose "Github" from the drop-down menu by clicking the arrow next to your email address in the top right-hand side menu. ![Picture of Zenodo drop down menu](zenodo-github-page.png) On this page you will see a list of your repositories. Flip the switch next to the Recogniser repository you created to ON-position. Go to Github and [create a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Zenodo will automatically generate a DOI for this release which you should now see in Zenodo GitHub page. Click either the title or the DOI-badge to go to your generated DOI-page.  Finally, you can copy the DOI-badge from the DOI-page by clicking the DOI-badge on the side panel. We recommend copying the Markdown text and adding it to your README-file in your GitHub Recocnizer Repository.
 
-### Step 7. Add a citation information file
-To make your GitHub Regocnizer repository easily citable we recommend adding a citation information file (`CITATION.cff`). We have added this to the Recogniser template for your convenience. Simply modify the `CITATION.cff` file in your repository adding your details and description in this file. You can read more about [CITATION.cff file format here](https://citation-file-format.github.io/).
+### Step 7. Add or modify a citation information file
+To make your GitHub Regocnizer repository easily citable we recommend adding a citation information file (`CITATION.cff`). You can read more about [CITATION files here](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files).  We have added a citation file to the Recogniser template for your convenience. Simply modify the `CITATION.cff` file in your repository. ![You can edit files by clicking the pen icon.](citation-file-edit.png) Replace the author name, the ORCID, the title and the github link fields with your own details. You can save your changes by clicking the green "Commit changes..." button. You can commit your changes directly to the main branch. If you will be collaborating with multiple authors we recommend [learning more about working with branches in GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches). 
+
+
 
 ### Step 8. List your recogniser in the registry
 

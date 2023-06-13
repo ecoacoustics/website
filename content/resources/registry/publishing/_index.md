@@ -35,7 +35,26 @@ If you don't have a GitHub account yet,  the first step is to create one. You ca
 #### Step 2. Use the template as a start for a repository
 
 Once you have a GitHub account, go to the [Recognizer Template repository](https://github.com/ecoacoustics/recognizer-template). You can use the template as a base for creating a new repository by clicking the button that says _Use this template_ and then selecting _Create a new repository_.  
-![The Use this template -button is located on the top right side of the page.](github-use-template.png) In the following page, input a name for your recognizer. You can choose if you want your repository to be public or private. Leave the the box that says "include all branches" unticked. Click "Create repository from template". For more detailed instructions please refer to the [README file](https://github.com/ecoacoustics/recognizer-template#readme) in the template.
+![The Use this template button is located on the top right side of the page.](github-use-template.png)
+
+Then, in the following page:
+
+- input a name for your recognizer repository. 
+ 
+{{% hint info%}}
+You should use `kebab-case` (all lower case, using hyphens instead of spaces) to title your repository as this is the convention used for most repositories on GitHub. For example:
+
+- A repository that contained a recognizer for a _Red-tailed Black-cockatoo_ might be named `red-tailed-black-cockatoo-recognizer`.
+- a project that detects frogs in SE Queensland might be named `se-queensland-frogs-recognizer`
+- repository that hosts all the recognizers for your group might simply be called `ecoacoustics-recognizers`
+
+{{% /hint %}}
+   
+ - You can choose if you want your repository to be public or private. Private is a good choice if you're not ready to publically publish but you want to get started. See below <insert link> for more information.
+ 
+- Leave the box that says _include all branches_ unticked.
+- Click _Create repository from template_. 
+- Then review the instructions in the `README.md` file in your new repository
 
 #### Step 3. Add test and training data
 

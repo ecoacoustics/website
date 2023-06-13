@@ -40,7 +40,7 @@ need more information on how to use it effectively, please continue reading this
 ### What goes in the repository?
 
 #### One or more recognizers, which should consist of:
-- Code to run the recognizers
+- Code to run the recognizers (e.g. scripts)
 - The code that makes the recognizers
 - Test and training data (or instructions on how to access said data)
 - Models or artifacts (or instructions on how to access said data)

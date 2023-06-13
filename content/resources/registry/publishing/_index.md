@@ -95,12 +95,31 @@ publically publish but you want to get started. See
 #### Step 3. Add test and training data
 
 #### Step 4. Add code and models
+You can sync content for this from the readme of template
 
 #### Step 5. Publish your recognizer in GitHub
+this is basically flip the private switch to public if needed. You can add some text for this.
+
 
 #### Step 6. Generate a DOI using Zenodo
 
-To generate a DOI for your recognizer go to [Zenodo](https://zenodo.org/login). Please use your GitHub account to log in. Once you are logged in, choose "Github" from the drop-down menu by clicking the arrow next to your email address in the top right-hand side menu. ![Picture of Zenodo drop down menu](zenodo-github-page.png) On this page you will see a list of your repositories. Flip the switch next to the recognizer repository you created to ON-position. Go to Github and [create a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). Zenodo will automatically generate a DOI for this release which you should now see in Zenodo GitHub page. Click either the title or the DOI-badge to go to your generated DOI-page.  Finally, you can copy the DOI-badge from the DOI-page by clicking the DOI-badge on the side panel. We recommend copying the Markdown text and adding it to your README-file in your GitHub Recocnizer Repository.
+Generating a DOI will make this repository [Findable and Citable](https://ardc.edu.au/resource/fair-data/),
+enabling others in the scientific community reference and build upon your work.
+
+1. Go to [Zenodo](https://zenodo.org/login).
+2. Use your GitHub account to log in.
+3. Once you are logged in, choose "Github" from the drop-down menu by clicking the arrow next to your email address
+in the top right-hand side menu. 
+![Picture of Zenodo drop down menu](zenodo-github-page.png)
+4. On this page you will see a list of your repositories. Flip the switch next to the recognizer repository you
+created to ON-position.
+![Picture of Zenodo repository switch](zenodo-repo-switch.png)
+5. Go to Github and [create a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository).
+Zenodo will automatically generate a DOI for this release which you should now see in Zenodo GitHub page. 
+6. Click either the title or the DOI-badge to go to your generated DOI-page. 
+7. Finally, you can copy the DOI-badge from the DOI-page by clicking the DOI-badge on the side panel.
+![Picture of Zenodo DOI-badge in the side panel](zenodo-doi-badge.png)
+We recommend copying the Markdown text and adding it to your README-file in your GitHub Recocnizer Repository.
 
 #### Step 7. Add or modify a citation information file
 

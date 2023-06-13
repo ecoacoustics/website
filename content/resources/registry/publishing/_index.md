@@ -174,7 +174,7 @@ If you wish to keep your recognizer under a private embargo, you have the option
 
 #### How to change the repository settings?
 1. In your repository go to the Settings tab
-2. In the _General_ section, scroll to the bottom "Danger Zone"
+2. In the _General_ section, scroll to the bottom of the page to heading  _Danger Zone_
 3. Click the button _Change visibility_ and select  _Change to private_. Once you are ready to publish, go to this same setting and select _Change to public._
 ![Screenshot of Visibility settings](github-change-visibility.png)
 

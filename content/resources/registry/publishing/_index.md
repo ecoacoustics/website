@@ -122,7 +122,9 @@ in the top right-hand side menu.
 created to ON-position.
 ![Picture of Zenodo repository switch](zenodo-repo-switch.png)
 5. Go to Github and [create a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository).
-Zenodo will automatically generate a DOI for this release which you should now see in Zenodo GitHub page. 
+Zenodo will automatically generate a DOI for this release which you should now see in Zenodo GitHub page.
+Zenodo will generate a new DOI version for each release.
+[Read about Zenodo Versioning](https://help.zenodo.org/#versioning).
 6. Click either the title or the DOI-badge to go to your generated DOI-page. 
 7. Finally, you can copy the DOI-badge from the DOI-page by clicking the DOI-badge on the side panel.
 ![Picture of Zenodo DOI-badge in the side panel](zenodo-doi-badge.png)

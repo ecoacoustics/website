@@ -50,7 +50,7 @@ need more information on how to use it effectively, please continue reading this
 - What species are detected by the recognizer.
 - The performance of the recognizer.
 - License and attribution information.
-
+- Instructions for setting up and running the recognizer
 ### How do I use the GitHub template to publish my recognizer?
 
 #### Step 1.  Create a GitHub account or Log in to GitHub

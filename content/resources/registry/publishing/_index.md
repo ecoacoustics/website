@@ -7,11 +7,12 @@ This guide will walk you through publishing your own recognizer.
 
 ## Why publish your recognizer?
 
-Publishing your recognizer can be your way to contribute to open science and help the development of ecoacoustics as a tool for conservation. 
-By sharing your work and making it publicly available you allow others in the scientific community to benefit from and build upon your research. 
-We highly appreciate and value your contributions! reproable science, and FINDable data.
+Publishing your recognizer can be a valuable to contribute to open science and help the development of ecoacoustics as a tool for conservation. 
+By sharing your work and making it publicly available, you will promote reproable science enabling others in the scientific community to benefit from and build upon your research.
+We highly appreciate and value your efforts making your data FINDable! 
 
 ## What is GitHub and why is it great for this purpose?
+
 Git is a version control tool for code and text. Git allows you to track changes, collaborate with others, and manage different versions of your work. GitHub provides a web-based social platform for hosting and sharing Git repositories. GitHub is a popular way to share scientific work and is free for most of the features we need. You can read more about git and its uses from [GitHub documentation page](https://docs.github.com/en/get-started/using-git/about-git).
 
 ### Version Control

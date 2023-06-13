@@ -85,8 +85,8 @@ You should use `kebab-case` (all lower case, using hyphens instead of spaces) to
 {{% /hint %}}
    
 - You can choose if you want your repository to be public or private. Private is a good choice if you're not ready to
-publically publish but you want to get started. See [Step 5](/#step-5-publish-your-recognizer-in-github)
-for more information.
+publically publish but you want to get started. See
+[Step 5. Publish your recognizer in GitHub](#step-5-publish-your-recognizer-in-github) for more information.
  
 - Leave the box that says _include all branches_ unticked.
 - Click _Create repository from template_. 

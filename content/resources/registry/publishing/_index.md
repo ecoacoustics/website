@@ -7,9 +7,11 @@ This guide will walk you through publishing your own recognizer.
 
 ## Why publish your recognizer?
 
-Publishing your recognizer can be a valuable to contribute to open science and help the development of ecoacoustics as a tool for conservation. 
-By sharing your work and making it publicly available, you will promote reproable science enabling others in the scientific community to benefit from and build upon your research.
-We highly appreciate and value your efforts making your data FINDable! 
+Publishing your recognizer can be a valuable to contribute to open science and help the development of ecoacoustics
+as a tool for conservation. 
+By sharing your work and making it publicly available, you will promote reproable science enabling others in the
+scientific community to benefit from and build upon your research.
+We highly appreciate and value your efforts making your data [FINDable](https://ardc.edu.au/resource/fair-data/)! 
 
 ## What is GitHub and why is it great for this purpose?
 
@@ -17,20 +19,27 @@ Git is a version control tool for code and text. Git allows you to track changes
 
 ### Version Control
 
-Version control is a system for recording changes to files over time, allowing you to track any modifications and revert back to previous versions. Version control is great for making collaboration with others seamless and manageable.
+Version control is a system for recording changes to files over time, allowing you to track any modifications and
+revert back to previous versions. Version control is great for making collaboration with others seamless and
+manageable.
 
 ### Zenodo - DOI generation
 
-Zenodo is an open-source project for generating DOIs that integrates well with GitHub. We recommend using Zenodo for generating a permanent DOI (Digital Object Identifier) for your recognizer. A DOI provides a unique and persistent identifier for your work, enabling others to cite it in their publications. Obtaining a DOI through Zenodo enhances the discoverability and visibility of yopur recognizer contributing to the impact and recoginition of your work within the scientific community.
+Zenodo is an open-source project for generating DOIs that integrates well with GitHub. We recommend using Zenodo for
+generating a permanent DOI (Digital Object Identifier) for your recognizer. A DOI provides a unique and persistent
+identifier for your work, enabling others to cite it in their publications. Obtaining a DOI through Zenodo enhances
+the discoverability and visibility of yopur recognizer contributing to the impact and recoginition of your work
+within the scientific community.
 
 ## How to publish your recognizer
 
-We recommend using our [Recognizer Template in GitHub](https://github.com/ecoacoustics/recognizer-template) for publishing your recognizer. If you are familiar with GitHub you can proceed directly to the template. However, if you need more information on how to use it effectively, please continue reading this article.
+We recommend using our [Recognizer Template in GitHub](https://github.com/ecoacoustics/recognizer-template) for
+publishing your recognizer. If you are familiar with GitHub you can proceed directly to the template. However, if you
+need more information on how to use it effectively, please continue reading this article.
 
 ### What goes in the repository?
 
-#### One or more recognizers, which should consist of:
-
+#### One or more recognizers, which should consist of:wo
 - Code to run the recognizers
 - The code that makes the recognizers
 - Test and training data (or instructions on how to access said data)
@@ -46,7 +55,9 @@ We recommend using our [Recognizer Template in GitHub](https://github.com/ecoaco
 
 #### Step 1.  Create a GitHub account or Log in to GitHub
 
-If you don't have a GitHub account yet,  the first step is to create one. You can create an account in [GitHub sign-in page](https://github.com/signup) following the prompts to set up your profile. If you already have a GitHub account, log in. 
+If you don't have a GitHub account yet,  the first step is to create one. You can create an account in
+[GitHub sign-in page](https://github.com/signup) following the prompts to set up your profile. If you already have a
+GitHub account, log in. 
 
 Learn more and get started with Git and Github:
 - [Signing up for a new GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
@@ -73,7 +84,9 @@ You should use `kebab-case` (all lower case, using hyphens instead of spaces) to
 
 {{% /hint %}}
    
- - You can choose if you want your repository to be public or private. Private is a good choice if you're not ready to publically publish but you want to get started. See below <insert link> for more information.
+- You can choose if you want your repository to be public or private. Private is a good choice if you're not ready to
+publically publish but you want to get started. See [Step 5](/#step-5-publish-your-recognizer-in-github)
+for more information.
  
 - Leave the box that says _include all branches_ unticked.
 - Click _Create repository from template_. 
@@ -94,6 +107,7 @@ To generate a DOI for your recognizer go to [Zenodo](https://zenodo.org/login). 
 To make your GitHub recognizer repository easily citable we recommend adding a citation information file (`CITATION.cff`).  We have added a citation file to the recognizer template for your convenience. Simply modify the `CITATION.cff` file in your repository. ![You can edit files by clicking the pen icon.](citation-file-edit.png) Replace the author name, the ORCID, the title and the github link fields with your own details. You can also use [a CITATION.cff generation website](https://citation-file-format.github.io/cff-initializer-javascript/#/) if you require more changes in your citation file.  Once you are happy with your changes, save the file by clicking the green "Commit changes..." button. You can commit your changes directly to the main branch. If you will be collaborating with multiple authors we recommend [learning more about working with branches in GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches). 
 
 #### Step 8. List your recognizer in the registry
+Please see the [Contribute to the registry](/resources/registry/contribute/) page. 
 
 ## FAQ
 

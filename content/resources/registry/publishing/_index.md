@@ -41,7 +41,7 @@ need more information on how to use it effectively, please continue reading this
 
 #### One or more recognizers, which should consist of:
 - Code to run the recognizers (e.g. scripts)
-- The code that makes the recognizers
+- The code for the recognizers or scripts to download and install the software/packages needed
 - Test and training data (or instructions on how to access said data)
 - Models or artifacts (or instructions on how to access said data)
 

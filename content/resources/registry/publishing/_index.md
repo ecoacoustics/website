@@ -95,7 +95,10 @@ publically publish but you want to get started. See
 #### Step 3. Add test and training data
 
 #### Step 4. Add code and models
+If you want to publish __code__ with the recognizer, add it to the `src` folder.
 
+Similarly, if you have __a trained model or other artefacts__ produced while developing your recognizer,
+put them to `artifacts` folder.
 
 #### Step 5. Publish your recognizer in GitHub
 Once you are ready to publish your recognizer you can do so by setting your repository public. 

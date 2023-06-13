@@ -39,13 +39,13 @@ need more information on how to use it effectively, please continue reading this
 
 ### What goes in the repository?
 
-#### One or more recognizers, which should consist of:wo
+#### One or more recognizers, which should consist of:
 - Code to run the recognizers
 - The code that makes the recognizers
 - Test and training data (or instructions on how to access said data)
 - Models or artifacts (or instructions on how to access said data)
 
-#### README-file that describes
+#### README-file that describes:
 
 - What species are detected by the recognizer.
 - The performance of the recognizer.
@@ -152,6 +152,32 @@ Please see the [Contribute to the registry](/resources/registry/contribute/) pag
 
 ### What to do when your training data set is too large?
 
-### How do I keep my recognizer private until I'm ready to publish?
+Storing data in a repository is not always the right choice. In each folder where it is relevant you should include:
 
-Private Embargo 
+1. Small sets of audio samples 
+2. A README.md containing
+  - provenance of any data included
+  - instructions on how to obatain more data
+3. Any scripts needed to download data from remote repositories
+
+__For larger datasets you can use:__
+
+- An ecoacoustics repository
+    - like Ecosounds, the A2O, or ...others...
+- A bioacoustics repository
+    - like Xeno Canto
+- Cloud storage options like DropBox, CloudStor, OneDrive, etc.
+- Commersial services like Amazon S3, Google Cloud Storage, etc.
+
+### How do I keep my recognizer private until I'm ready to publish?
+If you wish to keep your recognizer under a private embargo, you have the option to set the visibility of your repository when you create it, or later from the repository settings.
+
+## How to change the repository settings?
+1. In your repository go to the Settings tab
+2. In the _General_ section, scroll to the bottom "Danger Zone"
+3. Click the button _Change visibility_ and select  _Change to private_. Once you are ready to publish, go to this same setting and select _Change to public._
+![Screenshot of Visibility settings](github-change-visibility.png)
+
+See more in GitHub Documentation:
+[setting repository visibility](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility).
+

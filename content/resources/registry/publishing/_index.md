@@ -172,7 +172,7 @@ __For larger datasets you can use:__
 ### How do I keep my recognizer private until I'm ready to publish?
 If you wish to keep your recognizer under a private embargo, you have the option to set the visibility of your repository when you create it, or later from the repository settings.
 
-## How to change the repository settings?
+#### How to change the repository settings?
 1. In your repository go to the Settings tab
 2. In the _General_ section, scroll to the bottom "Danger Zone"
 3. Click the button _Change visibility_ and select  _Change to private_. Once you are ready to publish, go to this same setting and select _Change to public._

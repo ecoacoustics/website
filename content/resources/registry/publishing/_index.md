@@ -39,7 +39,7 @@ need more information on how to use it effectively, please continue reading this
 
 ### What goes in the repository?
 
-#### One or more recognizers, which should consist of:
+**One or more recognizers, which should consist of:**
 - Code to run the recognizers (e.g. scripts)
 - The code for the recognizers or scripts to download and install the software/packages needed
 - Test and training data (or instructions on how to access said data)

@@ -95,11 +95,15 @@ publically publish but you want to get started. See
 #### Step 3. Add test and training data
 
 #### Step 4. Add code and models
-You can sync content for this from the readme of template
+
 
 #### Step 5. Publish your recognizer in GitHub
-this is basically flip the private switch to public if needed. You can add some text for this.
-
+Once you are ready to publish your recognizer you can do so by setting your repository public. 
+1. In your repository go to the Settings tab
+![Picture of GitHub settings tab](github-settings-tab.png)
+2. In the _General_ section, scroll to the bottom "Danger Zone"
+3. Click the button _Change visibility_ and select _Change to public_
+![Screenshot of Visibility settings](github-change-visibility.png)
 
 #### Step 6. Generate a DOI using Zenodo
 
@@ -123,7 +127,18 @@ We recommend copying the Markdown text and adding it to your README-file in your
 
 #### Step 7. Add or modify a citation information file
 
-To make your GitHub recognizer repository easily citable we recommend adding a citation information file (`CITATION.cff`).  We have added a citation file to the recognizer template for your convenience. Simply modify the `CITATION.cff` file in your repository. ![You can edit files by clicking the pen icon.](citation-file-edit.png) Replace the author name, the ORCID, the title and the github link fields with your own details. You can also use [a CITATION.cff generation website](https://citation-file-format.github.io/cff-initializer-javascript/#/) if you require more changes in your citation file.  Once you are happy with your changes, save the file by clicking the green "Commit changes..." button. You can commit your changes directly to the main branch. If you will be collaborating with multiple authors we recommend [learning more about working with branches in GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches). 
+To make your GitHub recognizer repository easily citable we recommend adding a citation information file (`CITATION.cff`).  We have added a citation file to the recognizer template for your convenience. 
+
+1. Modify the `CITATION.cff` file in your repository.
+![Screenshot of the Citation.cff file.](citation-file-edit.png)
+You can edit files in your browser by clicking the pen icon.
+Replace the author name, the ORCID, the title and the github link fields with your own details.
+2. Alternatively you can use the
+[CITATION.cff generation website](https://citation-file-format.github.io/cff-initializer-javascript/#/) to create the
+`CITATION.cff` file  
+3. Once you are happy with your changes, save the file by clicking
+the "Commit changes..." button. You can commit your changes directly to the main branch. 
+4. If you will be collaborating with multiple authors we recommend [learning more about working with branches in GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches). 
 
 #### Step 8. List your recognizer in the registry
 Please see the [Contribute to the registry](/resources/registry/contribute/) page. 

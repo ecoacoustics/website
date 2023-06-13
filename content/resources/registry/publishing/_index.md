@@ -11,26 +11,48 @@ Publishing your recognizer can be your way to contribute to open science and hel
 By sharing your work and making it publicly available you allow others in the scientific community to benefit from and build upon your research. 
 We highly appreciate and value your contributions! reproable science, and FINDable data.
 
-## How  to publish your recognizer
-
-We recommend using our [Recognizer Template in GitHub](https://github.com/ecoacoustics/recognizer-template) for publishing your recognizer. If you are familiar with GitHub you can proceed directly to the template. However, if you need more information on how to use it effectively, please continue reading this article.
-
-### What is GitHub and why is it great for this purpose?
+## What is GitHub and why is it great for this purpose?
 Git is a version control tool for code and text. Git allows you to track changes, collaborate with others, and manage different versions of your work. GitHub provides a web-based social platform for hosting and sharing Git repositories. GitHub is a popular way to share scientific work and is free for most of the features we need. You can read more about git and its uses from [GitHub documentation page](https://docs.github.com/en/get-started/using-git/about-git).
 
-#### Version Control
+### Version Control
 
 Version control is a system for recording changes to files over time, allowing you to track any modifications and revert back to previous versions. Version control is great for making collaboration with others seamless and manageable.
 
-#### Zenodo - DOI generation
+### Zenodo - DOI generation
 
 Zenodo is an open-source project for generating DOIs that integrates well with GitHub. We recommend using Zenodo for generating a permanent DOI (Digital Object Identifier) for your recognizer. A DOI provides a unique and persistent identifier for your work, enabling others to cite it in their publications. Obtaining a DOI through Zenodo enhances the discoverability and visibility of yopur recognizer contributing to the impact and recoginition of your work within the scientific community.
+
+## How to publish your recognizer
+
+We recommend using our [Recognizer Template in GitHub](https://github.com/ecoacoustics/recognizer-template) for publishing your recognizer. If you are familiar with GitHub you can proceed directly to the template. However, if you need more information on how to use it effectively, please continue reading this article.
+
+### What goes in the repository?
+
+#### One or more recognizers, which should consist of:
+
+- Code to run the recognizers
+- The code that makes the recognizers
+- Test and training data (or instructions on how to access said data)
+- Models or artifacts (or instructions on how to access said data)
+
+#### README-file that describes
+
+- What species are detected by the recognizer.
+- The performance of the recognizer.
+- License and attribution information.
 
 ### How do I use the GitHub template to publish my recognizer?
 
 #### Step 1.  Create a GitHub account or Log in to GitHub
 
-If you don't have a GitHub account yet,  the first step is to create one. You can create an account in [GitHub sign-in page](https://github.com/signup?ref_cta=Sign+up) following the prompts to set up your profile. If you already have a GitHub account, log in. 
+If you don't have a GitHub account yet,  the first step is to create one. You can create an account in [GitHub sign-in page](https://github.com/signup) following the prompts to set up your profile. If you already have a GitHub account, log in. 
+
+Learn more and get started with Git and Github:
+- [Signing up for a new GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
+- [Getting started with your GitHub account](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account)
+- [Hello World - quick tutorial on many GitHub features](https://docs.github.com/en/get-started/quickstart/hello-world)
+- [Set up Git](https://docs.github.com/en/get-started/quickstart/set-up-git)
+- [Getting started with GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop)
 
 #### Step 2. Use the template as a start for a repository
 

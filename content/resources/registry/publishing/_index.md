@@ -45,7 +45,7 @@ need more information on how to use it effectively, please continue reading this
 - Test and training data (or instructions on how to access said data)
 - Models or artifacts (or instructions on how to access said data)
 
-#### README-file that describes:
+** A README.md file that describes:**
 
 - What species are detected by the recognizer.
 - The performance of the recognizer.

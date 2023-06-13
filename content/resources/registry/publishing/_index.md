@@ -34,7 +34,7 @@ If you don't have a GitHub account yet,  the first step is to create one. You ca
 
 #### Step 2. Use the template as a start for a repository
 
-Once you have a GitHub account, go to the [Recognizer Template repository](https://github.com/ecoacoustics/recognizer-template). You can use the template as a base for creating a new repository by clicking the green button that says "Use this template" and selecting "Create a new repository".  
+Once you have a GitHub account, go to the [Recognizer Template repository](https://github.com/ecoacoustics/recognizer-template). You can use the template as a base for creating a new repository by clicking the button that says _Use this template_ and then selecting _Create a new repository_.  
 ![The Use this template -button is located on the top right side of the page.](github-use-template.png) In the following page, input a name for your recognizer. You can choose if you want your repository to be public or private. Leave the the box that says "include all branches" unticked. Click "Create repository from template". For more detailed instructions please refer to the [README file](https://github.com/ecoacoustics/recognizer-template#readme) in the template.
 
 #### Step 3. Add test and training data

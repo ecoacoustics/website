@@ -92,7 +92,8 @@ Similarly, if you have __a trained model or other artefacts__ produced while dev
 put them to `artifacts` folder.
 
 #### Step 5. Publish your recognizer in GitHub
-Once you are ready to publish your recognizer you can do so by setting your repository public. 
+Once you are ready to publish your recognizer you can do so by
+[making your repository public](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-fetures/managing-repository-settings/setting-repository-visibility). 
 1. In your repository go to the Settings tab
 ![Picture of GitHub settings tab](github-settings-tab.png)
 2. In the _General_ section, scroll to the bottom "Danger Zone"
@@ -123,15 +124,14 @@ We recommend copying the Markdown text and adding it to your README-file in your
 
 #### Step 7. Add or modify a citation information file
 
-To make your GitHub recognizer repository easily citable we recommend adding a citation information file (`CITATION.cff`).  We have added a citation file to the recognizer template for your convenience. 
+To make your GitHub recognizer repository easily citable we recommend adding a citation information file (`CITATION.cff`). 
 
-1. Modify the `CITATION.cff` file in your repository.
+1. Please use the
+[CITATION.cff generation website](https://citation-file-format.github.io/cff-initializer-javascript/#/) to create a
+`CITATION.cff` file.
+2. Replace the `CITATION.cff` file in your repository with the file you generated.
 ![Screenshot of the Citation.cff file.](citation-file-edit.png)
 You can edit files in your browser by clicking the pen icon.
-Replace the author name, the ORCID, the title and the github link fields with your own details.
-2. Alternatively you can use the
-[CITATION.cff generation website](https://citation-file-format.github.io/cff-initializer-javascript/#/) to create the
-`CITATION.cff` file  
 3. Once you are happy with your changes, save the file by clicking
 the "Commit changes..." button. You can commit your changes directly to the main branch. 
 4. If you will be collaborating with multiple authors we recommend [learning more about working with branches in GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches). 

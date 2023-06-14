@@ -55,11 +55,11 @@ need more information on how to use it effectively, please continue reading this
 ### How do I use the GitHub template to publish my recognizer?
 
 #### Step 1.  Log in to GitHub
-If you already have a GitHub account, log in. If you are new to GitHub, see [GitHub resources for beginners](github-starter).
+If you already have a GitHub account, [log in](https://github.com/). If you are new to GitHub, see [GitHub resources for beginners](github-starter).
 
 #### Step 2. Use the template as a start for a repository
 
-Once you have a GitHub account, go to the [Recognizer Template repository](https://github.com/ecoacoustics/recognizer-template). You can use the template as a base for creating a new repository by clicking the button that says _Use this template_ and then selecting _Create a new repository_.  
+Once you are logged in, go to the [Recognizer Template repository](https://github.com/ecoacoustics/recognizer-template). You can use the template as a base for creating a new repository by clicking the button that says _Use this template_ and then selecting _Create a new repository_.  
 ![The Use this template button is located on the top right side of the page.](github-use-template.png)
 
 Then, in the following page:

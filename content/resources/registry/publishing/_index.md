@@ -39,18 +39,18 @@ need more information on how to use it effectively, please continue reading this
 
 ### What goes in the repository?
 
-#### One or more recognizers, which should consist of:
-- Code to run the recognizers
-- The code that makes the recognizers
+**One or more recognizers, which should consist of:**
+- Code to run the recognizers (e.g. scripts)
+- The code for the recognizers or scripts to download and install the software/packages needed
 - Test and training data (or instructions on how to access said data)
 - Models or artifacts (or instructions on how to access said data)
 
-#### README-file that describes:
+** A README.md file that describes:**
 
 - What species are detected by the recognizer.
 - The performance of the recognizer.
 - License and attribution information.
-
+- Instructions for setting up and running the recognizer
 ### How do I use the GitHub template to publish my recognizer?
 
 #### Step 1.  Create a GitHub account or Log in to GitHub

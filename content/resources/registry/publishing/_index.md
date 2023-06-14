@@ -54,18 +54,8 @@ need more information on how to use it effectively, please continue reading this
 
 ### How do I use the GitHub template to publish my recognizer?
 
-#### Step 1.  Create a GitHub account or Log in to GitHub
-
-If you don't have a GitHub account yet,  the first step is to create one. You can create an account in
-[GitHub sign-in page](https://github.com/signup) following the prompts to set up your profile. If you already have a
-GitHub account, log in. 
-
-Learn more and get started with Git and Github:
-- [Signing up for a new GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
-- [Getting started with your GitHub account](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account)
-- [Hello World - quick tutorial on many GitHub features](https://docs.github.com/en/get-started/quickstart/hello-world)
-- [Set up Git](https://docs.github.com/en/get-started/quickstart/set-up-git)
-- [Getting started with GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop)
+#### Step 1.  Log in to GitHub
+If you already have a GitHub account, log in. If you are new to GitHub, see [GitHub resources for beginners](github-starter).
 
 #### Step 2. Use the template as a start for a repository
 
@@ -157,8 +147,8 @@ Storing data in a repository is not always the right choice. In each folder wher
 
 1. Small sets of audio samples 
 2. A README.md containing
-  - provenance of any data included
-  - instructions on how to obatain more data
+    - provenance of any data included
+    - instructions on how to obatain more data
 3. Any scripts needed to download data from remote repositories
 
 __For larger datasets you can use:__

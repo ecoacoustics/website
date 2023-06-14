@@ -11,7 +11,7 @@ Publishing your recognizer can be a valuable to contribute to open science and h
 as a tool for conservation. 
 By sharing your work and making it publicly available, you will promote reproable science enabling others in the
 scientific community to benefit from and build upon your research.
-We highly appreciate and value your efforts making your data [FINDable](https://ardc.edu.au/resource/fair-data/)! 
+We highly appreciate and value your efforts making your data [FAIR](https://ardc.edu.au/resource/fair-data/)! 
 
 ## What is GitHub and why is it great for this purpose?
 
@@ -45,12 +45,13 @@ need more information on how to use it effectively, please continue reading this
 - Test and training data (or instructions on how to access said data)
 - Models or artifacts (or instructions on how to access said data)
 
-** A README.md file that describes:**
+**A README.md file that describes:**
 
 - What species are detected by the recognizer.
 - The performance of the recognizer.
 - License and attribution information.
 - Instructions for setting up and running the recognizer
+
 ### How do I use the GitHub template to publish my recognizer?
 
 #### Step 1.  Create a GitHub account or Log in to GitHub

@@ -1,3 +1,8 @@
+---
+title: Why publish your recognizer?
+layout: resources
+---
+
 ## Why publish your recognizer?
 
 Publishing your recognizer can be a valuable way to contribute to open science and help the development of ecoacoustics as a tool for conservation.

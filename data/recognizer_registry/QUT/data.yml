@@ -797,3 +797,178 @@
   doi: 10.5281/zenodo.1188743
   dateReleased: 2020-12-16
   license: Apache-2.0
+  
+  
+  - title: Kookaburra Recognizer
+  description: 
+  targets:
+    - name: Kookaburra
+      binomial: Dacelo
+      variants:
+  datasets:
+    training:
+      summary: 
+      location: 
+      url:
+      performance:
+        # or event
+        criteria:
+        tp:
+        fp:
+        tn:
+        fn:
+    test (segment):
+      summary: 
+      location: 
+      url:
+      performance:
+        # or event
+        criteria: 
+        tp: 
+        fp: 
+        tn: 
+        fn: 
+    test (events):
+      summary: 
+      location: 
+      url:
+      performance:
+        # or event
+        criteria: 
+        tp: 
+        fp: 
+        tn: 
+        fn: 
+
+  repository: https://github.com/QutEcoacoustics/recognizer_workshop/tree/main/artifacts/models/kookaburra
+  organization: QUT Ecoacoustics
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: De Vine
+      givenNames: Lance
+      orcid: 
+  version: 0.0.1
+  doi: 10.5281/zenodo.8045883
+  dateReleased: 2023-06-16
+  license: Creative Commons Attribution-ShareAlike 4.0 International
+  
+  
+  - title: Noisy Pitta Recognizer
+  description: 
+  targets:
+    - name: Noisy Pitta
+      binomial: Pitta versicolor
+      variants:
+  datasets:
+    training:
+      summary: 
+      location: 
+      url:
+      performance:
+        # or event
+        criteria:
+        tp:
+        fp:
+        tn:
+        fn:
+    test (segment):
+      summary: 
+      location: 
+      url:
+      performance:
+        # or event
+        criteria: 
+        tp: 
+        fp: 
+        tn: 
+        fn: 
+    test (events):
+      summary: 
+      location: 
+      url:
+      performance:
+        # or event
+        criteria: 
+        tp: 
+        fp: 
+        tn: 
+        fn: 
+
+  repository: https://github.com/QutEcoacoustics/recognizer_workshop/tree/main/artifacts/models/noisypitta
+  organization: QUT Ecoacoustics
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: De Vine
+      givenNames: Lance
+      orcid: 
+  version: 0.0.1
+  doi: 10.5281/zenodo.8045883
+  dateReleased: 2023-06-16
+  license: Creative Commons Attribution-ShareAlike 4.0 International
+  
+  
+  
+  
+  - title: Rufous Scrub Bird Recognizer
+  description: 
+  targets:
+    - name: Rufous Scrub Bird 
+      binomial: Atrichornis rufescens
+      variants:
+  datasets:
+    training:
+      summary: 
+      location: 
+      url:
+      performance:
+        # or event
+        criteria:
+        tp:
+        fp:
+        tn:
+        fn:
+    test (segment):
+      summary: 
+      location: 
+      url:
+      performance:
+        # or event
+        criteria: 
+        tp: 
+        fp: 
+        tn: 
+        fn: 
+    test (events):
+      summary: 
+      location: 
+      url:
+      performance:
+        # or event
+        criteria: 
+        tp: 
+        fp: 
+        tn: 
+        fn: 
+
+  repository: https://github.com/QutEcoacoustics/recognizer_workshop/tree/main/artifacts/models/rsb
+  organization: QUT Ecoacoustics
+  # https://citation-file-format.github.io/
+  # cff-version: 1.2.0
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: De Vine
+      givenNames: Lance
+      orcid: 
+    - familyNames: Hawkins
+      givenNames: Brian
+      orcid: 
+  version: 0.0.1
+  doi: 10.5281/zenodo.8045883
+  dateReleased: 2023-06-16
+  license: Creative Commons Attribution-ShareAlike 4.0 International
+  
+  

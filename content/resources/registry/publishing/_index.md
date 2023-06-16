@@ -179,3 +179,8 @@ After these concerns have passed it's a great time to publish your recognizer. Y
 See more in GitHub Documentation:
 [setting repository visibility](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility).
 
+### Who owns my recognizer? 
+You! That's one of the reasons we think GitHub is great: you control and own your IP and this guide is just helping you do that.
+
+### Is the template and GitHub still a good choice for a recognizer that will only ever be private? 
+Yes! version control, access control, common pattern for publishing, all other advantages listed in this article.

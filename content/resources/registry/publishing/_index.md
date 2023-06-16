@@ -153,7 +153,7 @@ Storing data in a repository is not always the right choice. In each folder wher
 
 For larger datasets it is not ideal to store the data in the GitHub repository. In this case the test and training data should be stored via a different method. Some options you can use are:
 
-- An ecoacoustics repository
+- [An ecoacoustics repository](/resources/repositories/)
     - like Ecosounds, the A2O, or ...others...
 - A bioacoustics repository
     - like Xeno Canto

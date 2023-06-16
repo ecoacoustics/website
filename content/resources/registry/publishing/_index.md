@@ -7,7 +7,7 @@ This guide will walk you through publishing your own recognizer.
 
 ## Why publish your recognizer?
 
-See the [why Publish your recognizer](/resources/registry/why-publish) page.
+See the [why publish your recognizer](/resources/registry/why-publish) page.
 
 ## What is GitHub and why is it great for this purpose?
 

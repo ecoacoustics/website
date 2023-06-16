@@ -1,1 +1,19 @@
-wide table!
+{{ define "main" }}
+<article class="markdown">
+    <header>
+        <h1>{{.Title}} </h1>
+    </header>
+
+    <div class="mobile-toc">{{ .TableOfContents }}</div>
+
+{{ with .Content }}
+
+// Make this template extra wide
+
+{{ . }}
+{{ end }}
+{{ end }}
+
+{{ define "toc" }}
+    {{ partial "docs/toc" . }}
+{{ end }}

@@ -1,5 +1,6 @@
 ---
-title: Recognizer Registry
-image: images/Maybe-home-page3.jpg
+title: Common Analysis Software
 layout: wide-table
 ---
+
+{{< data-table >}}

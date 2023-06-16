@@ -1,0 +1,326 @@
+headers:
+    - key: ANALYSIS_SOFTWARE
+      text: 'Analysis Software'
+    - key: PAID
+      text: 'Paid'
+    - key: OPEN
+      text: 'Open'
+    - key: LOCATION
+      text: 'Location'
+    - key: INTERACTION
+      text: 'Interaction'
+    - key: DATA_UPLOAD
+      text: 'Data Upload'
+    - key: OUTPUT_FILES
+      text: 'Output Files'
+    - key: OUTPUT_AUDIO
+      text: 'Output Audio'
+    - key: DATA
+      text: 'Data'
+    - key: INSPECTION
+      text: 'Inspection'
+    - key: ANALYSIS
+      text: 'Analysis'
+    - key: ANNOTATION
+      text: 'Annotation'
+    - key: SPECIES_ID
+      text: 'Species ID'
+    - key: BATCH_ANALYSIS
+      text: 'Batch Analysis'
+    - key: RECOGNISER_BUILDING
+      text: 'Regogniser Building'
+    - key: RECOGNISER_TUNING
+      text: 'Recogniser Tuning'
+    - key: PERFORMANCE
+      text: 'Performance'
+    - key: REVIEW_DETECTION
+      text: 'Review Detection'
+    - key: ACOUSTIC_INDICES
+      text: 'Acoustic Indices'
+    - key: REFERENCE
+      text: 'Reference'
+    - key: USER_GUIDE
+      text: 'User Guide'
+    - key: COMPUTING
+      text: 'Computing'
+    - key: DATA_STORAGE
+      text: 'Data Storage'
+    - key: AGGREGATOR
+      text: 'Aggregator' 
+
+rows:
+    -   
+        ANALYSIS_SOFTWARE: 'Kaleidoscope Pro 5 Software'
+        PAID: Yes
+        OPEN: No
+        LOCATION: Local
+        INTERACTION: GUI
+        DATA_UPLOAD: '(1) WAC, WAV, W4V (2) File conversion possible'
+        OUTPUT_FILES: '(1) Extract metadata from files and batch processes to create .csv format files. (2) cluster.csv and cluster .kcs. (3) noisebyfile.csv, noise.csv'
+        OUTPUT_AUDIO: []
+        DATA: 'Folders of field recordings on local device. Metadata goes into Kaleidoscope Pro Metaform. '
+        INSPECTION: 'Spectrogram / waveform viewer'
+        ANALYSIS: '(1) Convert audio file formats (2) Cluster analysis to identify group of similar wildlife vocalisation  (3) Analyse full spectrum recordings for noise analysis. '
+        ANNOTATION: 'No - labelling of clusters. '
+        SPECIES_ID: 'Auto-ID for bat analysis (classifiers from North America, UK, Europe, South Africa) '
+        BATCH_ANALYSIS: '(1) Convert audio file formats (2) Automatically identify and isolate noise (Bat Analysis Mode) (3) Automatically identify bat species (Bat Analysis Mode) (3) Cluster analysis (4) Analyse full spectrum recordings for noise analysis. '
+        RECOGNISER_BUILDING: '(1) Basic clustering: in batch analysis of files, signals of interest are examined from input files (parameters user defined) anf detected signals are analyzed for similarity and grouped into clusters of data (2) Simple classifiers: created from initial dataset which can be used to cluster new recordings based on original labelled recordings '
+        RECOGNISER_TUNING: 'Clusters can be manually reviewed. Can create advanced clustering trained to isolate specific vocalisations (and reduce as many false positives as possible). '
+        PERFORMANCE: No
+        REVIEW_DETECTION: 'Manually verify detected vocalisations and cluster membership. '
+        ACOUSTIC_INDICES: No
+        REFERENCE: []
+        USER_GUIDE: Yes
+        COMPUTING: 'Cloud-based computing for batch processes when connected to Wildlife Acoustics Managed Cloud Account'
+        DATA_STORAGE: 'Wildlife Acoustics Databse (Managed Cloud Account) - user-managed PostgreSQL server (1) Can query database (2) Records of batch processes or manual ID can be uploaded (3) Database can reference full-spectrum and zero-crossing files that exist on remote servers, local drives or both'
+        AGGREGATOR: 'No '
+    -
+        ANALYSIS_SOFTWARE: 'Raven Pro Software'
+        PAID: Yes
+        OPEN: No
+        LOCATION: Local
+        INTERACTION: GUI
+        DATA_UPLOAD: 'WAV, AIF, MP3, FLAC'
+        OUTPUT_FILES: 'Selection tables output .txt format files (including annotation / detection measurements). '
+        OUTPUT_AUDIO: []
+        DATA: 'Can open and save sound files, selection files or workspace files from directories. '
+        INSPECTION: 'Waveform and spectrogram viewer. '
+        ANALYSIS: '(1) Spectrogram analysis (square correlation matrix containing similarity measures for all possible pairs of input sounds). (2) Band-Limited Energy Detector (BLED) (to detect events of specified duration. '
+        ANNOTATION: '(1) Manually draw boxes on spectrograms or other views. (2) 70+ measurements available for rectangular time-frequency selections around signals of interest '
+        SPECIES_ID: 'Assign label '
+        BATCH_ANALYSIS: 'Band-Limited Energy Detector (BLED) '
+        RECOGNISER_BUILDING: 'To build Band-Limited Energy Detector (BLED): specify duration of detected event in user-defined frequency band that exceeds background noise by adjustable threshold. '
+        RECOGNISER_TUNING: 'Band-Limited Energy Detector (BLED) can be run in interactive mode for tine-tuning detection parameters'
+        PERFORMANCE: 'Quantitative assessment of detector performance '
+        REVIEW_DETECTION: 'Selection review interface for automatic detections, matrix of thumbnail images of selections'
+        ACOUSTIC_INDICES: No
+        REFERENCE: []
+        USER_GUIDE: Yes
+        COMPUTING: 'Local '
+        DATA_STORAGE: Local
+        AGGREGATOR: 'No '
+    -
+        ANALYSIS_SOFTWARE: AviaNZ
+        PAID: No
+        OPEN: 'Yes '
+        LOCATION: 'Local '
+        INTERACTION: 'GUI '
+        DATA_UPLOAD: '(1) WAVE, bmp format (2) Import annotations from software in .csv or excel format (3) Import user annotations from Freebird directly. (4) Upload AviaNZ filters to recognise individual species'
+        OUTPUT_FILES: 'Excel file of outputs of program for each sound file (after verification): (1) start and end times of calls (2) presence / absense of species (3) presence / absence of species in defined time intervals. '
+        OUTPUT_AUDIO: []
+        DATA: 'Folders of field recordings on local device. '
+        INSPECTION: 'Spectrogram viewer (able to add metadata about noise, segment audio files)'
+        ANALYSIS: '(1) Can split files. (2) Denoise files (wavelet, bandpass or butterworth) (3) Build and test wavelet and CNN recognisers'
+        ANNOTATION: '(1) Manual interface for manually labelling bird calls (and ID them from DOC species list, all bird species known in New Zealand. Can create new ID if not on list). (2) Drag a box reasonably accurately around the species call (3) Start and stop limited frequency band (4) Start and stop full frequency band'
+        SPECIES_ID: 'Can manually ID select species ID (from DOC list, all bird species known in New Zealand) or can create new ID if not on list. '
+        BATCH_ANALYSIS: 'Yes. Can select a pre-loaded species-specific recogniser to automatically label sounds. '
+        RECOGNISER_BUILDING: 'Wavelet [First level filter]: will cluster labelled training segments into groups of similar sounds. Give names to clusters, correct any errors. A recogniser will be trained on these labelled segments. Option to set parameters (call, length, syllable length, gap between syllable, frequency bounds). ROC generated, can save recogniser.  '
+        RECOGNISER_TUNING: 'Neural Network [Second level filter]: runs over batch of files, can remove false positives, correct segments and input manually annotated recordings. CNN will train, a summary will be provided. '
+        PERFORMANCE: 'Can test recogniser with performance metrics calculations. '
+        REVIEW_DETECTION: 'Review results of automatic processing '
+        ACOUSTIC_INDICES: No
+        REFERENCE: []
+        USER_GUIDE: Yes
+        COMPUTING: 'Local '
+        DATA_STORAGE: 'Local    '
+        AGGREGATOR: 'Unknown '
+    -
+        ANALYSIS_SOFTWARE: 'RFCx ARBIMON'
+        PAID: No
+        OPEN: Yes
+        LOCATION: Cloud
+        INTERACTION: GUI
+        DATA_UPLOAD: '(1) RFCx Uploader: desktop tool for uploading files to RFCx Arbimon (supports files from AudioMoth, Wildlife Acoustics, Arbimon and Swift) (2) Option for bulk upload of files .csv format (3) Advice to convert to FLAC (lossless format) '
+        OUTPUT_FILES: Unknown
+        OUTPUT_AUDIO: []
+        DATA: '(1) Aggregate soundscape recordings at different temporal and spatial scales (2) Create playlists based on site, time of day, species detected, tags and soundscapes '
+        INSPECTION: 'Visualizer to review spectrograms and listen to recordings. Can manually apply filters and gain in viewer. '
+        ANALYSIS: '(1) Pattern matching species identification (2) Random Forest model species identification '
+        ANNOTATION: '(1) Annotate audio using visualiser (rectangular time-frequency box with label) (2) Add soundscape composition classes'
+        SPECIES_ID: 'Search bar, drop down menu for complete and detailed list of all mammals, birds and frogs of the world. Option to request adding of new species. '
+        BATCH_ANALYSIS: No
+        RECOGNISER_BUILDING: '(1) Create training set pattern (call template) for Random Forest recogniser'
+        RECOGNISER_TUNING: No
+        PERFORMANCE: No
+        REVIEW_DETECTION: 'Validate presence / absence with visualiser'
+        ACOUSTIC_INDICES: No
+        REFERENCE: []
+        USER_GUIDE: 'Yes - webpage guides available on website. '
+        COMPUTING: 'Runs most optimally on Firefox or Chrome'
+        DATA_STORAGE: 'In the cloud. Option to make project public or private. '
+        AGGREGATOR: 'Unknown '
+    -
+        ANALYSIS_SOFTWARE: 'Ecosounds (with Acoustic Workbench software package)'
+        PAID: No
+        OPEN: 'Yes '
+        LOCATION: Cloud
+        INTERACTION: 'GUI (Ecosounds), command line analysis (Acousic workbench) '
+        DATA_UPLOAD: 'Recieve audio sent in on hard drives '
+        OUTPUT_FILES: "(1) Can request a download of .csv annotations for a specified project (2) For acoustic indices, images, summary indices .csv file, spectral indices .csv file and metadata files (3) For recogniser events detected .csv file\n\n"
+        OUTPUT_AUDIO: []
+        DATA: '(1) Navigation and visualisation of long duraiton recordings (multiple recordings can be disaplyed on large temporal scales) (2) Creation of project by user via website interface (option for project image, description and location)'
+        INSPECTION: 'Spectrogram viewer'
+        ANALYSIS: 'QUT Ecoacoustics Analysis Programs software package (single file, AnalysisPrograms.exe command line): (1) Calculate summary and acoustic indices (2) Produce long-duration, false-colour, multi-index spectrograms (3) Calculate critical statistics of annotations downloaded from an Acoustic Workbench (4) Run various acoustic event recognisers '
+        ANNOTATION: 'Automatic annotation creation spectrogram selection'
+        SPECIES_ID: 'Species names for mainly Australian species can be entered in Latin or English. '
+        BATCH_ANALYSIS: 'Yes - can run species-specific recogniser on batches of files and can calculate acoustic indices from batch of files. '
+        RECOGNISER_BUILDING: 'With AnalysisPrograms.exe'
+        RECOGNISER_TUNING: 'With AnalysisPrograms.exe'
+        PERFORMANCE: 'With AnalysisPrograms.exe'
+        REVIEW_DETECTION: 'Unknown '
+        ACOUSTIC_INDICES: 'Summary and spectral indices. '
+        REFERENCE: []
+        USER_GUIDE: 'Yes - some workshops / tutorials on website'
+        COMPUTING: '(1) Ecosounds - on website (2) AnalysisPrograms.exe - local'
+        DATA_STORAGE: 'On website. '
+        AGGREGATOR: 'No '
+    -
+        ANALYSIS_SOFTWARE: BioSounds
+        PAID: No
+        OPEN: '?'
+        LOCATION: 'Local (with internet connection) '
+        INTERACTION: GUI
+        DATA_UPLOAD: 'Administrators can upload and manage recordings. '
+        OUTPUT_FILES: '(1) Can download audio through database via administrator '
+        OUTPUT_AUDIO: []
+        DATA: 'Organises audio recordings into ''collections'''
+        INSPECTION: '(1) Spectrogram player (play back sound, filter frequencies, navigate spectrogram) (2) Option for filtering of sound outside of spectrogram view (3) Spectrogram range limited by 300 MB file size'
+        ANALYSIS: '(1) Basic sound measurements in time and frequency '
+        ANNOTATION: 'Can assign selections to animal species or other sound sources. Can perform basic sound analysis. '
+        SPECIES_ID: 'Species names of species mainly from Southeast Asia can be entered in Latin or English. '
+        BATCH_ANALYSIS: No
+        RECOGNISER_BUILDING: No
+        RECOGNISER_TUNING: No
+        PERFORMANCE: N/A
+        REVIEW_DETECTION: 'Species validation possible by users with reviewing priveleges. Annotations can be zoomed. '
+        ACOUSTIC_INDICES: No
+        REFERENCE: []
+        USER_GUIDE: No
+        COMPUTING: 'Cloud   '
+        DATA_STORAGE: 'On the website. Recordings up to 300 MB can be uploaded. '
+        AGGREGATOR: 'Unknown '
+    -
+        ANALYSIS_SOFTWARE: BioAcoustica
+        PAID: No
+        OPEN: Yes
+        LOCATION: Cloud
+        INTERACTION: GUI
+        DATA_UPLOAD: 'Site administrator permission to upload data. (User account to annotate and analyse data) '
+        OUTPUT_FILES: No
+        OUTPUT_AUDIO: []
+        DATA: '(2) bioacousticaR package being developed to query Bioacoustica recordings and annotations within R environment'
+        INSPECTION: '(1) Recordings stored in waveform audio or MP3 format - waveform images of audio files displayed on recording pages (2) Can view basic sound analyses under recordings (3) Specialised comparative analysis view '
+        ANALYSIS: '(1) BioAcoustica default analysis: dominant frequeny, spectrogram, frequency spectrum and acoustic complexity index (for observations / specimens) (2) Sound files on platform can be analysed by researchers on local device or through BioVel platform (3) Analysis performed through Seewave package R (4) bioacousticaR package being developed to query Bioacoustica recordings and annotations within R environment'
+        ANNOTATION: 'Start and end times of following possible annotations (with option for free text description): (1) voice introduction annotation (2) extraneous noise (3) call with extraneous noise (4) clear call. '
+        SPECIES_ID: '(1) The site uses biological classification managed by authors and limited to taxa with content within databse (2) External contributors can request addition of taxa to classification (3) Mass taxa imports checked against current taxonomies in Encyclopedia of Life (EoL) with automated script (4) When annotations saved, type of annotation is verified. If audio section is specified as a call, section is queried for analysis. '
+        BATCH_ANALYSIS: No
+        RECOGNISER_BUILDING: No
+        RECOGNISER_TUNING: No
+        PERFORMANCE: N/A
+        REVIEW_DETECTION: N/A
+        ACOUSTIC_INDICES: No
+        REFERENCE: []
+        USER_GUIDE: 'Yes - help pages / guides available on BioAcoustica website. '
+        COMPUTING: 'Biodiversity Virtual e-Laboratory (BioVel) Portal is used to perform analyses (runs Taverna workflows submitted by users) '
+        DATA_STORAGE: 'On website - specimen / observation recordings only.'
+        AGGREGATOR: '(1) Recordings and metadata shared with Encyclopedia of Life (EoL) through DarwinCore Archive export facility of Scratchpads (2) DarwinCore Archive format allows for sharing of occurrence records with GBIF and DarwinCore Archive compatible mapping services '
+    -
+        ANALYSIS_SOFTWARE: Bugg
+        PAID: Yes
+        OPEN: No
+        LOCATION: Cloud
+        INTERACTION: 'Unknown '
+        DATA_UPLOAD: 'Live transmission of audio recordings from Bugg recorder'
+        OUTPUT_FILES: '(1) Create custom reports from big data'
+        OUTPUT_AUDIO: []
+        DATA: Unknown
+        INSPECTION: 'Audio playback and status monitoring. '
+        ANALYSIS: '(1) Feature extraction (2) Species detection (3) Anomaly detection (4) Scalable platform for custom analyse'
+        ANNOTATION: 'Tag events'
+        SPECIES_ID: Unknown
+        BATCH_ANALYSIS: 'Automated species detection (machine learning) through cloud'
+        RECOGNISER_BUILDING: Unknown
+        RECOGNISER_TUNING: Unknown
+        PERFORMANCE: Unknown
+        REVIEW_DETECTION: 'Unknown '
+        ACOUSTIC_INDICES: Unknown
+        REFERENCE: []
+        USER_GUIDE: N/A
+        COMPUTING: 'Automatic processing of audio data via machine learning algorithms based in the cloud'
+        DATA_STORAGE: Unknown
+        AGGREGATOR: Unknown
+    -
+        ANALYSIS_SOFTWARE: Seewave
+        PAID: No
+        OPEN: No
+        LOCATION: 'Library '
+        INTERACTION: 'Command line (R)'
+        DATA_UPLOAD: '(1) .mp3, .wav, .flac, sometimes .ogg (2) Import audio markers exported by audacity .tx'
+        OUTPUT_FILES: '(1) Export sound data as .txt file (2) Write audio markers to be imported by audacity .txt file'
+        OUTPUT_AUDIO: []
+        DATA: 'Unknown '
+        INSPECTION: '2D and 3D spectrogram views'
+        ANALYSIS: '(1) Functions for analysing, manipulating, displaying, editing and synthesising sound (2) Package processes: time analysis (oscillograms and envelopes), spectral content, resonance quality factor, entropy, cross correlation and autocorrelation, zero-crossing, dominant frequency, analytic signal, frequency coherence and other analyses.'
+        ANNOTATION: 'No    '
+        SPECIES_ID: No
+        BATCH_ANALYSIS: No
+        RECOGNISER_BUILDING: No
+        RECOGNISER_TUNING: N/A
+        PERFORMANCE: N/A
+        REVIEW_DETECTION: N/A
+        ACOUSTIC_INDICES: 'Yes (Acoustic complexity index) '
+        REFERENCE: []
+        USER_GUIDE: 'Yes - reference manual & Vignette '
+        COMPUTING: 'Local '
+        DATA_STORAGE: 'No '
+        AGGREGATOR: 'No '
+    -
+        ANALYSIS_SOFTWARE: MonitoR
+        PAID: No
+        OPEN: No
+        LOCATION: 'Library '
+        INTERACTION: 'Command line (R)'
+        DATA_UPLOAD: '(1) Reads MP3 files in as 16bit PCM data stored in a Wave object (2) Existing template .txt files can be read in '
+        OUTPUT_FILES: '(1) Binary and correlation templates save as .txt file - designed to be portable (2) Templates, results and survey metadata can be downloaded '
+        OUTPUT_AUDIO: []
+        DATA: 'See ''Data Storage (1): Direct database connection that facilitates efficient data management when batch processing''.  Also, database schema for managing recorders in the field + reading metadata from sound files when copied from external media (3)'
+        INSPECTION: '(1) Spectrogram viewing '
+        ANALYSIS: '(1) Template matching (2) Template construction (3) Tools to manipulate recording directly '
+        ANNOTATION: 'Yes - interactively annotate sound files of any length'
+        SPECIES_ID: 'See ''Review Detection'' '
+        BATCH_ANALYSIS: Yes
+        RECOGNISER_BUILDING: '(1) Template matching algorithm: binary point matching (2) Template matching algorithm: spectrogram cross-correlation '
+        RECOGNISER_TUNING: '(1) Apply a threshold to detected scores / events '
+        PERFORMANCE: '(1) Can compare results from template detection to manually annotated spectrogram (2) Can compare performance of multiple templates and evaluate similarity between templates '
+        'REVIEW DETECTION': '(1) In interactive mode of viewing detections, user can add verification data to detections made (2) Tools for extracting results / detections '
+        ACOUSTIC_INDICES: No
+        REFERENCE: []
+        USER_GUIDE: 'Yes - reference manual & Vignette'
+        COMPUTING: 'Local '
+        DATA_STORAGE: '(1) Direct database connection that facilitates efficient data management when batch processing (2) Survey metadata, templates and metadata and results can be stored locally or  uploaded to a MySQL database '
+        AGGREGATOR: 'No '
+    -
+        ANALYSIS_SOFTWARE: 'Edge Impulse'
+        PAID: '*'
+        OPEN: '*'
+        LOCATION: '*'
+        INTERACTION: '*'
+        DATA_UPLOAD: 'Emebbed ML on data from audio device'
+        OUTPUT_FILES: '*'
+        OUTPUT_AUDIO: []
+        DATA: '*'
+        INSPECTION: '*'
+        ANALYSIS: '*'
+        ANNOTATION: '*'
+        SPECIES_ID: '*'
+        BATCH_ANALYSIS: '*'
+        RECOGNISER_BUILDING: '*'
+        RECOGNISER_TUNING: '*'
+        PERFORMANCE: '*'
+        REVIEW_DETECTION: '*'
+        ACOUSTIC_INDICES: '*'
+        REFERENCE: []
+        USER_GUIDE: '*'
+        COMPUTING: '*'
+        DATA_STORAGE: '*'
+        AGGREGATOR: '*'

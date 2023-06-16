@@ -154,14 +154,21 @@ Storing data in a repository is not always the right choice. In each folder wher
 For larger datasets it is not ideal to store the data in the GitHub repository. In this case the test and training data should be stored via a different method. Some options you can use are:
 
 - [An ecoacoustics repository](/resources/repositories/)
-    - like Ecosounds, the A2O, or ...others...
 - A bioacoustics repository
     - like Xeno Canto
 - Cloud storage options like DropBox, CloudStor, OneDrive, etc.
 - Commersial services like Amazon S3, Google Cloud Storage, etc.
 
 ### How do I keep my recognizer private until I'm ready to publish?
-If you wish to keep your recognizer under a private embargo, you have the option to set the visibility of your repository when you create it, or later from the repository settings.
+It is a good idea to set up a repository as soon as you start working on your recognizer, however there are good reasons to keep your repository private until you're ready to publish it. 
+
+__Reasons to keep your repository private:__
+- Waiting to publish the recognizer along with a publication.
+- Keeping sensitive recognizers hidden until it is safe to release them.
+- Allowing you time to develop your work before you release it.
+- GitHub has strong access control mechanisms so you can invite specific people to collaborate with you until you're ready to release the recognizer publicly.
+
+After these concerns have passed it's a great time to publish your recognizer. You can do so by changing the repository settings:
 
 #### How to change the repository settings?
 1. In your repository go to the Settings tab

@@ -151,7 +151,7 @@ Storing data in a repository is not always the right choice. In each folder wher
     - instructions on how to obatain more data
 3. Any scripts needed to download data from remote repositories
 
-__For larger datasets you can use:__
+For larger datasets it is not ideal to store the data in the GitHub repository. In this case the test and training data should be stored via a different method. Some options you can use are:
 
 - An ecoacoustics repository
     - like Ecosounds, the A2O, or ...others...

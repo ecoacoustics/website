@@ -222,7 +222,7 @@
         },
         "Summary": {
             "type": ["null", "string"],
-            "enum": ["30-second segments, manually annotated"],
+            "examples": ["30-second segments, manually annotated"],
             "title": "Summary"
         },
         "License": {

@@ -818,13 +818,10 @@
 
   repository: https://github.com/QutEcoacoustics/recognizer_workshop/tree/main/artifacts/models/noisypitta
   organization: QUT Ecoacoustics
-  # https://citation-file-format.github.io/
-  # cff-version: 1.2.0
   message: "If you use this software, please cite it as below."
   authors:
     - familyNames: De Vine
       givenNames: Lance
-      orcid:
   version: 0.0.1
   doi: 10.5281/zenodo.8045883
   dateReleased: 2023-06-16
@@ -836,12 +833,9 @@
   targets:
     - name: Rufous Scrub Bird
       binomial: Atrichornis rufescens
-      variants:
 
   repository: https://github.com/QutEcoacoustics/recognizer_workshop/tree/main/artifacts/models/rsb
   organization: QUT Ecoacoustics
-  # https://citation-file-format.github.io/
-  # cff-version: 1.2.0
   message: "If you use this software, please cite it as below."
   authors:
     - familyNames: De Vine

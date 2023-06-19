@@ -780,13 +780,13 @@
 
 
 - title: Kookaburra Recognizer
-  description: Recognizer for the Laughing Kookaburra (Dacelo novaeguineae)
+  description: Recognizer for the Laughing Kookaburra
   targets:
-    - name: Kookaburra
-      binomial: Dacelo
+    - name: Laughing Kookaburra
+      binomial: Dacelo novaeguineae
       variants:
 
-  repository: https://github.com/QutEcoacoustics/recognizer_workshop/tree/main/artifacts/models/kookaburra
+  repository: https://github.com/QutEcoacoustics/recognizer_workshop/blob/main/README.md
   organization: QUT Ecoacoustics
   # https://citation-file-format.github.io/
   # cff-version: 1.2.0
@@ -813,10 +813,9 @@
     test (segment):
       summary: 10 positive, 10 negative
       location: Gold Coast hinterland, Qld, Australia
-      performance: 90% accuracy
 
 
-  repository: https://github.com/QutEcoacoustics/recognizer_workshop/tree/main/artifacts/models/noisypitta
+  repository: https://github.com/QutEcoacoustics/recognizer_workshop/blob/main/README.md
   organization: QUT Ecoacoustics
   message: "If you use this software, please cite it as below."
   authors:
@@ -834,7 +833,7 @@
     - name: Rufous Scrub Bird
       binomial: Atrichornis rufescens
 
-  repository: https://github.com/QutEcoacoustics/recognizer_workshop/tree/main/artifacts/models/rsb
+  repository: https://github.com/QutEcoacoustics/recognizer_workshop/blob/main/README.md
   organization: QUT Ecoacoustics
   message: "If you use this software, please cite it as below."
   authors:

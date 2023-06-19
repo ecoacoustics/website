@@ -194,12 +194,12 @@
         },
         "FamilyNames": {
             "type": "string",
-            "enum": ["Towsey", "Truskinger", "Thompson"],
+            "enum": ["Towsey", "Truskinger", "Thompson", "De Vine", "Hawkins"],
             "title": "FamilyNames"
         },
         "GivenNames": {
             "type": "string",
-            "enum": ["Michael", "Anthony", "Kristen"],
+            "enum": ["Michael", "Anthony", "Kristen", "Lance", "Brian"],
             "title": "GivenNames"
         },
         "Orcid": {

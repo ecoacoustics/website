@@ -87,7 +87,7 @@ publically publish but you want to get started. See
 
 Adding your training data makes it very transparent what kind of audio events your recognizers was trained on, which helps others understand how applicable your recognizer is to their situation. Adding testing data makes your reported accuracy results verifiable by others. Both of these will increase the likelihood that other researchers will use your recognizer.  
 
-If your datasets are too large to include in a git repository, which will often be the case, you might like to include a link where they can be downloaded (see [What to do when your training data set is too large](https://deploy-preview-66--open-ecoacoustics.netlify.app/resources/registry/publishing/#what-to-do-when-your-training-data-set-is-too-large)). 
+If your datasets are too large to include in a git repository, which will often be the case, you might like to include a link where they can be downloaded (see [What to do when your training data set is too large](#what-to-do-when-your-training-data-set-is-too-large)). 
 
 #### Step 4. Add code and models
 

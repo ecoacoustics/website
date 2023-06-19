@@ -85,11 +85,20 @@ publically publish but you want to get started. See
 
 #### Step 3. Add test and training data
 
+Adding your training data makes it very transparent what kind of audio events your recognizers was trained on, which helps others understand how applicable your recognizer is to their situation. Adding testing data makes your reported accuracy results verifiable by others. Both of these will increase the likelihood that other researchers will use your recognizer.  
+
+If your datasets are too large to include in a git repository, which will often be the case, you might like to include a link where they can be downloaded (see [What to do when your training data set is too large](https://deploy-preview-66--open-ecoacoustics.netlify.app/resources/registry/publishing/#what-to-do-when-your-training-data-set-is-too-large)). 
+
 #### Step 4. Add code and models
+
 If you want to publish __code__ with the recognizer, add it to the `src` folder.
 
 Similarly, if you have __a trained model or other artefacts__ produced while developing your recognizer,
-put them to `artifacts` folder.
+put them to `artifacts` folder.  Examples of this might be 
+    
+- a configuration file which dictates how the code should be run specifically for the species and model in question, 
+- file which contains the parameters of the function that maps your audio segments to a detection result, such as the weights of a neural network. 
+
 
 #### Step 5. Publish your recognizer in GitHub
 Once you are ready to publish your recognizer you can do so by

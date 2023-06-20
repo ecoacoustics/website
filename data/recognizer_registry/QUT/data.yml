@@ -785,8 +785,8 @@
     - name: Laughing Kookaburra
       binomial: Dacelo novaeguineae
       variants:
-
-  repository: https://github.com/QutEcoacoustics/recognizer_workshop/blob/main/README.md
+  repository: https://github.com/QutEcoacoustics/recognizer_workshop/
+  documentation: https://github.com/QutEcoacoustics/recognizer_workshop/blob/main/README.md
   organization: QUT Ecoacoustics
   # https://citation-file-format.github.io/
   # cff-version: 1.2.0
@@ -794,7 +794,7 @@
   authors:
     - familyNames: De Vine
       givenNames: Lance
-      orcid:
+      orcid: 0000-0002-3728-7397
   version: 0.0.1
   doi: 10.5281/zenodo.8045883
   dateReleased: 2023-06-16
@@ -810,36 +810,35 @@
     training:
       summary: 46 positive, 65 negative
       location: Gold Coast hinterland, Qld, Australia
-    test (segment):
+    test:
       summary: 10 positive, 10 negative
       location: Gold Coast hinterland, Qld, Australia
-
-
-  repository: https://github.com/QutEcoacoustics/recognizer_workshop/blob/main/README.md
+  repository: https://github.com/QutEcoacoustics/recognizer_workshop/
+  documentation: https://github.com/QutEcoacoustics/recognizer_workshop/blob/main/README.md
   organization: QUT Ecoacoustics
   message: "If you use this software, please cite it as below."
   authors:
     - familyNames: De Vine
       givenNames: Lance
+      orcid: 0000-0002-3728-7397
   version: 0.0.1
   doi: 10.5281/zenodo.8045883
   dateReleased: 2023-06-16
   license: Creative Commons Attribution-ShareAlike 4.0 International
-
 
 - title: Rufous Scrub Bird Recognizer
   description: Recognizer for the Rufous Scrub Bird (Atrichornis rufescens)
   targets:
     - name: Rufous Scrub Bird
       binomial: Atrichornis rufescens
-
-  repository: https://github.com/QutEcoacoustics/recognizer_workshop/blob/main/README.md
+  repository: https://github.com/QutEcoacoustics/recognizer_workshop/
+  documentation: https://github.com/QutEcoacoustics/recognizer_workshop/blob/main/README.md
   organization: QUT Ecoacoustics
   message: "If you use this software, please cite it as below."
   authors:
     - familyNames: De Vine
       givenNames: Lance
-      orcid:
+      orcid: 0000-0002-3728-7397
     - familyNames: Hawkins
       givenNames: Brian
       orcid:

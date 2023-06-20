@@ -11,7 +11,10 @@ See the [why publish your recognizer](/resources/registry/why-publish) page.
 
 ## What is GitHub and why is it great for this purpose?
 
-Git is a version control tool for code and text. Git allows you to track changes, collaborate with others, and manage different versions of your work. GitHub provides a web-based social platform for hosting and sharing Git repositories. GitHub is a popular way to share scientific work and is free for most of the features we need. You can read more about git and its uses from [GitHub\'s documentation page](https://docs.github.com/en/get-started/using-git/about-git).
+Git is a version control tool for code and text. Git allows you to track changes, collaborate with others, and manage
+different versions of your work. GitHub provides a web-based social platform for hosting and sharing Git repositories.
+GitHub is a popular way to share scientific work and is free for most of the features we need. You can read more about
+git and its uses from [GitHub’s documentation page](https://docs.github.com/en/get-started/using-git/about-git).
 
 ### Version Control
 
@@ -24,7 +27,7 @@ manageable.
 Zenodo is an open-source project for generating DOIs that integrates well with GitHub. We recommend using Zenodo for
 generating a permanent DOI (Digital Object Identifier) for your recognizer. A DOI provides a unique and persistent
 identifier for your work, enabling others to cite it in their publications. Obtaining a DOI through Zenodo enhances
-the discoverability and visibility of yopur recognizer contributing to the impact and recoginition of your work
+the discoverability and visibility of your recognizer contributing to the impact and recognition of your work
 within the scientific community.
 
 ## How to publish your recognizer
@@ -51,11 +54,16 @@ need more information on how to use it effectively, please continue reading this
 ### How do I use the GitHub template to publish my recognizer?
 
 #### Step 1.  Log in to GitHub
-If you already have a GitHub account, [log in](https://github.com/). If you are new to GitHub, see the help centre page about [GitHub](/resources/help-centre/software/github/).
+
+If you already have a GitHub account, [log in](https://github.com/). If you are new to GitHub, see the help centre page
+about [GitHub](/resources/help-centre/software/github).
 
 #### Step 2. Use the template as a start for a repository
 
-Once you are logged in, go to the [Recognizer Template repository](https://github.com/ecoacoustics/recognizer-template). You can use the template as a base for creating a new repository by clicking the button that says _Use this template_ and then selecting _Create a new repository_.  
+Once you are logged in, go to the [Recognizer Template repository](https://github.com/ecoacoustics/recognizer-template).
+You can use the template as a base for creating a new repository by clicking the button that says _Use this template_
+and then selecting _Create a new repository_.  
+
 ![The Use this template button is located on the top right side of the page.](github-use-template.png)
 
 Then, in the following page:
@@ -63,7 +71,8 @@ Then, in the following page:
 - input a name for your recognizer repository.
 
 {{% hint info%}}
-You should use `kebab-case` (all lower case, using hyphens instead of spaces) to title your repository as this is the convention used for most repositories on GitHub. For example:
+You should use `kebab-case` (all lower case, using hyphens instead of spaces) to title your repository as this is the 
+convention used for most repositories on GitHub. For example:
 
 - A repository that contained a recognizer for a _Red-tailed Black-cockatoo_ might be named `red-tailed-black-cockatoo-recognizer`.
 - a project that detects frogs in SE Queensland might be named `se-queensland-frogs-recognizer`
@@ -72,18 +81,23 @@ You should use `kebab-case` (all lower case, using hyphens instead of spaces) to
 {{% /hint %}}
 
 - You can choose if you want your repository to be public or private. Private is a good choice if you're not ready to
-publically publish but you want to get started. See
+publicly publish but you want to get started. See
 [Step 5. Publish your recognizer in GitHub](#step-5-publish-your-recognizer-in-github) for more information.
 
-- Leave the box that says _include all branches_ unticked.
+- Leave the box that says _include all branches_ unchecked.
 - Click _Create repository from template_.
 - Then review the instructions in the `README.md` file in your new repository
 
 #### Step 3. Add test and training data
 
-Adding your training data makes it very transparent what kind of audio events your recognizers was trained on, which helps others understand how applicable your recognizer is to their situation. Adding testing data makes your reported accuracy results verifiable by others. Both of these will increase the likelihood that other researchers will use your recognizer.  
+Adding your training data makes it very transparent what kind of audio events your recognizers was trained on,
+which helps others understand how applicable your recognizer is to their situation. Adding testing data makes your
+reported accuracy results verifiable by others. Both of these will increase the likelihood that other researchers will
+use your recognizer.  
 
-If your datasets are too large to include in a git repository, which will often be the case, you might like to include a link where they can be downloaded (see [What to do when your training data set is too large](#what-to-do-when-your-training-data-set-is-too-large)). 
+If your datasets are too large to include in a git repository, which will often be the case, you might like to include a
+link where they can be downloaded
+(see [What to do when your training data set is too large](#what-to-do-when-your-training-data-set-is-too-large)). 
 
 #### Step 4. Add code and models
 
@@ -93,10 +107,12 @@ Similarly, if you have __a trained model or other artefacts__ produced while dev
 put them to `artifacts` folder.  Examples of this might be 
     
 - a configuration file which dictates how the code should be run specifically for the species and model in question, 
-- file which contains the parameters of the function that maps your audio segments to a detection result, such as the weights of a neural network. 
+- file which contains the parameters of the function that maps your audio segments to a detection result, such as the
+  weights of a neural network. 
 
 
 #### Step 5. Publish your recognizer in GitHub
+
 Once you are ready to publish your recognizer you can do so by
 [making your repository public](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-fetures/managing-repository-settings/setting-repository-visibility).
 1. In your repository go to the Settings tab
@@ -141,7 +157,8 @@ the _Commit changes..._ button. You can commit your changes directly to the main
 4. If you will be collaborating with multiple authors we recommend [learning more about working with branches in GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches).
 
 #### Step 8. List your recognizer in the registry
-Please see the [Contribute to the registry](/resources/registry/contribute/) page.
+
+Please see the [Contribute to the registry](/resources/registry/contribute) page.
 
 ## FAQ
 
@@ -152,18 +169,19 @@ Storing data in a repository is not always the right choice. In each folder wher
 1. Small sets of audio samples
 2. A README.md containing
     - provenance of any data included
-    - instructions on how to obatain more data
+    - instructions on how to obtain more data
 3. Any scripts needed to download data from remote repositories
 
 For larger datasets it is not ideal to store the data in the GitHub repository. In this case the test and training data should be stored via a different method. Some options you can use are:
 
-- [An ecoacoustics repository](/resources/repositories/)
+- [An ecoacoustics repository](../../software/repositories)
 - A bioacoustics repository
-    - like Xeno Canto
+    - like [Xeno Canto](https://xeno-canto.org/)
 - Cloud storage options like DropBox, CloudStor, OneDrive, etc.
 - Commercial services like Amazon S3, Google Cloud Storage, etc.
 
 ### How do I keep my recognizer private until I'm ready to publish?
+
 It is a good idea to set up a repository as soon as you start working on your recognizer, however there are good reasons to keep your repository private until you're ready to publish it.
 
 __Reasons to keep your repository private:__
@@ -175,6 +193,7 @@ __Reasons to keep your repository private:__
 After these concerns have passed it's a great time to publish your recognizer. You can do so by changing the repository settings:
 
 #### How to change the repository settings?
+
 1. In your repository go to the Settings tab
 2. In the _General_ section, scroll to the bottom of the page to heading  _Danger Zone_
 3. Click the button _Change visibility_ and select  _Change to private_. Once you are ready to publish, go to this same setting and select _Change to public._
@@ -184,7 +203,9 @@ See more in GitHub Documentation:
 [setting repository visibility](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility).
 
 ### Who owns my recognizer?
+
 You! That's one of the reasons we think GitHub is great: you control and own your IP and this guide is just helping you do that.
 
 ### Is the template and GitHub still a good choice for a recognizer that will only ever be private?
+
 Yes! version control, access control, common pattern for publishing, all other advantages listed in this article.

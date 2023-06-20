@@ -1,13 +1,13 @@
-<!-- prettier-ignore -->
 {{/* prettier-ignore */}}
 {{- $href := .Destination -}}
-{{- $local := false -}}
-{{- if not (strings.HasPrefix .Destination "http") -}}
-<a href="{{- $href | safeURL -}}" {{- with .Title -}} title="{{- . -}}" {{- end -}}>{{- .PlainText -}}</a>
-{{- else -}}
-{{- $isInsecure := true -}}
-{{- if strings.HasPrefix .Destination "https" -}}
-{{- $isInsecure = false -}}
+{{- $local := not (strings.HasPrefix $href "http") -}}
+{{/* https://discourse.gohugo.io/t/using-shortcode-inside-render-hook/42038/5 */}}
+{{- $hugo_placeholder := strings.HasPrefix $href "HAHAHUGOSHORTCODE" -}}
+{{- if and $local (not $hugo_placeholder) -}}
+    {{- $href = strings.TrimSuffix "/" $href -}}
+    {{- $href = relref .Page $href -}}
 {{- end -}}
-<a href="{{- $href | safeURL -}}" {{- with .Title -}} title="{{- .Title -}}" {{- end -}} {{- if (or (not ($local)) ($isInsecure) ) }} target="_blank" rel="noopener" {{- end -}}>{{- .PlainText -}}</a>
-{{- end -}}
+<a href="{{- $href | safeURL -}}"
+    {{- with .Title }} title="{{- .Title -}}"{{- end -}}
+    {{- if (not $local) }} target="_blank" rel="noopener" {{- end -}}>
+    {{- .PlainText -}}</a>

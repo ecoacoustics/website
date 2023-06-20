@@ -11,7 +11,7 @@ Difficulty: suitable for beginners
 
 ## Setup
 
-Follow the instructions in the [Requirements](./../requirements) document.
+Follow the instructions in the [Requirements](../requirements) document.
 
 ## Open a Terminal
 

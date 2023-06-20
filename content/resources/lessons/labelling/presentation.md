@@ -122,7 +122,7 @@ Left:: Click, 235 791 Click, 235 791 Return
 
 &nbsp;
 
-Go to the [practical](../practical/).
+Go to the [practical](./practical).
 { .align-center }
 
 {{% /slide %}}

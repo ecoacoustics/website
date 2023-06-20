@@ -1,5 +1,6 @@
 ---
 title: Repositories
+weight: 2
 ---
 
 # List of available repositories

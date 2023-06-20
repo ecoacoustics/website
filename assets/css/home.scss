@@ -26,11 +26,15 @@
 
 .home-page .book-columns {
     text-align: center;
+    justify-content: space-evenly;
 }
 
 .home-page .column {
     text-align: center;
     margin: var(--oe-padding-small);
+    flex-basis: 18em;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 .home-page .column sl-icon {

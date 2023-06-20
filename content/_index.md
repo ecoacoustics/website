@@ -49,7 +49,7 @@ Ecoacoustic monitoring provides a non-invasive, complementary strategy to other 
 
 ### Data
 
-Ecoacoustic data provides a record of soniferous fauna allowing the answering of ecological questions such as species occupancy, abundance, behaviour, species richness, and showing trends over time and space. See examples of [repositories](/resources/repositories/) of Ecoacoustic data.
+Ecoacoustic data provides a record of soniferous fauna allowing the answering of ecological questions such as species occupancy, abundance, behaviour, species richness, and showing trends over time and space. See examples of [repositories](/resources/software/repositories/) of Ecoacoustic data.
 
 <--->
 
@@ -57,7 +57,17 @@ Ecoacoustic data provides a record of soniferous fauna allowing the answering of
 
 ### Tools
 
-Ecoacoustic data collection and analysis is supported by a range of hardware and software, enabling data management and sharing, as well as sense-making by analysts in both the present and the future.
+Ecoacoustic data collection and analysis is supported by a range of hardware and [software](/resources/software)
+enabling data management and sharing, as well as sense-making by analysts in both the present and the future.
+We maintain a [registry](/resources/registry) recognisers for Ecoacoustic data.
+
+<--->
+
+<sl-icon name="journals"></sl-icon>
+
+### Training
+
+Lessons and modules for working with Ecoacoustic data from the basics to making your own automated call recogniser. See our collection of [lessons](/resources/lessons/).
 
 {{< /columns >}}
 {{< /home/section >}}

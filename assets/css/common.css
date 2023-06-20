@@ -27,7 +27,15 @@ pre,
 }
 
 .markdown table tr:nth-child(2n) {
-    background-color: var(--oe-background-color-darker);
+    background-color: var(--oe-pane-background);
+}
+
+.markdown table thead tr {
+    background-color: var(--oe-pane-background);
+}
+
+.markdown table thead tr th {
+    text-align: left;
 }
 
 .markdown header h1 {

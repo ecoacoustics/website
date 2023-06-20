@@ -227,7 +227,7 @@ rows:
       Species names for mainly Australian species can be entered in Latin or
       English. 
     BATCH_ANALYSIS: >-
-      True - can run species-specific recogniser on batches of files and can
+      Yes - can run species-specific recogniser on batches of files and can
       calculate acoustic indices from batch of files. 
     RECOGNISER_BUILDING: With AnalysisPrograms.exe
     RECOGNISER_TUNING: With AnalysisPrograms.exe
@@ -235,7 +235,7 @@ rows:
     REVIEW_DETECTION: 'Unknown '
     ACOUSTIC_INDICES: 'Summary and spectral indices. '
     REFERENCE: []
-    USER_GUIDE: True - some workshops / tutorials on website
+    USER_GUIDE: Yes - some workshops / tutorials on website
     COMPUTING: (1) Ecosounds - on website (2) AnalysisPrograms.exe - local
     DATA_STORAGE: 'On website. '
     AGGREGATOR: 'No'
@@ -406,7 +406,7 @@ rows:
     ANALYSIS: >-
       (1) Template matching (2) Template construction (3) Tools to manipulate
       recording directly 
-    ANNOTATION: True - interactively annotate sound files of any length
+    ANNOTATION: Yes - interactively annotate sound files of any length
     SPECIES_ID: 'See ''Review Detection'' '
     BATCH_ANALYSIS: 'Yes'
     RECOGNISER_BUILDING: >-
@@ -422,7 +422,7 @@ rows:
       data to detections made (2) Tools for extracting results / detections 
     ACOUSTIC_INDICES: 'No'
     REFERENCE: []
-    USER_GUIDE: True - reference manual & Vignette
+    USER_GUIDE: Yes - reference manual & Vignette
     COMPUTING: Local
     DATA_STORAGE: >-
       (1) Direct database connection that facilitates efficient data management

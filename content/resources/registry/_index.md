@@ -5,6 +5,4 @@ layout: resources
 type: registry
 ---
 
-This is a collection of acoustic event recognisers that we know of.
-
-Do you have something to add to this list? Contribute [here](contribute).
+This is a collection of acoustic event recognisers that we know of.  Find out [why publishing recognizers](why-publish) is important, or you can add your own to this list. Add yours on the [contribute to the registry](contribute) page or learn [how to publish a recognizer](/resources/registry/publishing).

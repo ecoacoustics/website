@@ -7,11 +7,7 @@ This guide will walk you through publishing your own recognizer.
 
 ## Why publish your recognizer?
 
-Publishing your recognizer can be a valuable way to contribute to open science and help the development of ecoacoustics
-as a tool for conservation.
-By sharing your work and making it publicly available, you will promote reproable science enabling others in the
-scientific community to benefit from and build upon your research.
-We highly appreciate and value your efforts making your data [FAIR](https://ardc.edu.au/resource/fair-data/)!
+See the [why publish your recognizer](/resources/registry/why-publish) page.
 
 ## What is GitHub and why is it great for this purpose?
 

@@ -552,7 +552,7 @@
   doi: 10.5281/zenodo.1188743
   dateReleased: 2020-12-16
   license: Apache-2.0
-  
+
 - title: Powerful owl recognizer
   description: Developed in partnership with NSW Department of Primary industries
   targets:
@@ -613,7 +613,7 @@
   doi: 10.5281/zenodo.1188743
   dateReleased: 2020-12-16
   license: Apache-2.0
-  
+
 - title: Glossy black cokcatoo
   description: Developed in partnership with NSW Department of Primary industries
   targets:
@@ -736,7 +736,7 @@
   doi: 10.5281/zenodo.1188743
   dateReleased: 2020-12-16
   license: Apache-2.0
-  
+
 - title: Bell miner recognizer
   description: Developed in partnership with NSW Department of Primary industries
   targets:
@@ -778,32 +778,71 @@
         tn: 0
         fn: 3616
 
-  repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.ManorinaMelanophrys.yml
+
+- title: Kookaburra Recognizer
+  description: Recognizer for the Laughing Kookaburra
+  targets:
+    - name: Laughing Kookaburra
+      binomial: Dacelo novaeguineae
+      variants:
+  repository: https://github.com/QutEcoacoustics/recognizer_workshop/
+  documentation: https://github.com/QutEcoacoustics/recognizer_workshop/blob/main/README.md
   organization: QUT Ecoacoustics
   # https://citation-file-format.github.io/
   # cff-version: 1.2.0
   message: "If you use this software, please cite it as below."
   authors:
-    - familyNames: Towsey
-      givenNames: Michael
-      orcid: 0000-0002-8246-7151
-    - familyNames: Truskinger
-      givenNames: Anthony
-      orcid: 0000-0003-1110-1483
-    - familyNames: Thompson
-      givenNames: Kristen
-      orcid:
-  version: 1.0.0
-  doi: 10.5281/zenodo.1188743
-  dateReleased: 2020-12-16
-  license: Apache-2.0
-  
-  
-  - title: Kookaburra Recognizer
-  description: 
-  targets:
-    - name: Kookaburra
-      binomial: Dacelo
-      variants:
+    - familyNames: De Vine
+      givenNames: Lance
+      orcid: 0000-0002-3728-7397
+  version: 0.0.1
+  doi: 10.5281/zenodo.8045883
+  dateReleased: 2023-06-16
+  license: Creative Commons Attribution-ShareAlike 4.0 International
 
-  
+- title: Noisy Pitta Recognizer
+  description: Recognizer for the Noisy Pitta (Pitta versicolor)
+  targets:
+    - name: Noisy Pitta
+      binomial: Pitta versicolor
+      variants:
+  datasets:
+    training:
+      summary: 46 positive, 65 negative
+      location: Gold Coast hinterland, Qld, Australia
+    test:
+      summary: 10 positive, 10 negative
+      location: Gold Coast hinterland, Qld, Australia
+  repository: https://github.com/QutEcoacoustics/recognizer_workshop/
+  documentation: https://github.com/QutEcoacoustics/recognizer_workshop/blob/main/README.md
+  organization: QUT Ecoacoustics
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: De Vine
+      givenNames: Lance
+      orcid: 0000-0002-3728-7397
+  version: 0.0.1
+  doi: 10.5281/zenodo.8045883
+  dateReleased: 2023-06-16
+  license: Creative Commons Attribution-ShareAlike 4.0 International
+
+- title: Rufous Scrub Bird Recognizer
+  description: Recognizer for the Rufous Scrub Bird (Atrichornis rufescens)
+  targets:
+    - name: Rufous Scrub Bird
+      binomial: Atrichornis rufescens
+  repository: https://github.com/QutEcoacoustics/recognizer_workshop/
+  documentation: https://github.com/QutEcoacoustics/recognizer_workshop/blob/main/README.md
+  organization: QUT Ecoacoustics
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: De Vine
+      givenNames: Lance
+      orcid: 0000-0002-3728-7397
+    - familyNames: Hawkins
+      givenNames: Brian
+      orcid:
+  version: 0.0.1
+  doi: 10.5281/zenodo.8045883
+  dateReleased: 2023-06-16
+  license: Creative Commons Attribution-ShareAlike 4.0 International

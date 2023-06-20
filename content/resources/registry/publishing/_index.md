@@ -11,7 +11,7 @@ See the [why publish your recognizer](/resources/registry/why-publish) page.
 
 ## What is GitHub and why is it great for this purpose?
 
-Git is a version control tool for code and text. Git allows you to track changes, collaborate with others, and manage different versions of your work. GitHub provides a web-based social platform for hosting and sharing Git repositories. GitHub is a popular way to share scientific work and is free for most of the features we need. You can read more about git and its uses from [GitHub's documentation page](https://docs.github.com/en/get-started/using-git/about-git).
+Git is a version control tool for code and text. Git allows you to track changes, collaborate with others, and manage different versions of your work. GitHub provides a web-based social platform for hosting and sharing Git repositories. GitHub is a popular way to share scientific work and is free for most of the features we need. You can read more about git and its uses from [GitHub\'s documentation page](https://docs.github.com/en/get-started/using-git/about-git).
 
 ### Version Control
 

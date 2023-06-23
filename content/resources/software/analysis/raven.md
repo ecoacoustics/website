@@ -5,6 +5,7 @@ layout: comparison
 ---
 
 ## Data Upload
+
 WAV, AIF, MP3, FLAC
 
 ## Output Files

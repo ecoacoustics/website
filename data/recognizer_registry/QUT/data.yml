@@ -1,6 +1,5 @@
 - title: Boobook recognizer
   description: Developed in partnership with NSW Department of Primary industries
-
   targets:
     - name: Boobook Owl
       binomial: Ninox boobook
@@ -41,7 +40,7 @@
         fn: 227
 
   repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Towsey.NinoxBoobook.yml
-  documentation:
+  documentation: https://ap.qut.ecoacoustics.info/
   organization: QUT Ecoacoustics
   # https://citation-file-format.github.io/
   # cff-version: 1.2.0
@@ -103,7 +102,7 @@
         fn: 3
 
   repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.PetaurusBreviceps.yml
-  documentation:
+  documentation: https://ap.qut.ecoacoustics.info/
   organization: QUT Ecoacoustics
   # https://citation-file-format.github.io/
   # cff-version: 1.2.0
@@ -165,7 +164,7 @@
         fn: 904
 
   repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.ClimacterisPicumnus.yml
-  documentation:
+  documentation: https://ap.qut.ecoacoustics.info/
   organization: QUT Ecoacoustics
   # https://citation-file-format.github.io/
   # cff-version: 1.2.0
@@ -227,7 +226,7 @@
         fn: 77
 
   repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.NinoxConnivens.yml
-  documentation:
+  documentation: https://ap.qut.ecoacoustics.info/
   organization: QUT Ecoacoustics
   # https://citation-file-format.github.io/
   # cff-version: 1.2.0
@@ -289,7 +288,7 @@
         fn: 23
 
   repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.PetaurusAustralis.yml
-  documentation:
+  documentation: https://ap.qut.ecoacoustics.info/
   organization: QUT Ecoacoustics
   # https://citation-file-format.github.io/
   # cff-version: 1.2.0
@@ -351,6 +350,7 @@
         fn: 316
 
   repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Towsey.PteropusSpecies.yml
+  documentation: https://ap.qut.ecoacoustics.info/
   organization: QUT Ecoacoustics
   # https://citation-file-format.github.io/
   # cff-version: 1.2.0
@@ -412,6 +412,7 @@
         fn: 7
 
   repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.TytoTenebricosa.yml
+  documentation: https://ap.qut.ecoacoustics.info/
   organization: QUT Ecoacoustics
   # https://citation-file-format.github.io/
   # cff-version: 1.2.0
@@ -473,6 +474,7 @@
         fn: 46
 
   repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.TytoNovaehollandiae.yml
+  documentation: https://ap.qut.ecoacoustics.info/
   organization: QUT Ecoacoustics
   # https://citation-file-format.github.io/
   # cff-version: 1.2.0
@@ -534,6 +536,7 @@
         fn: 99
 
   repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.PetaurusNorfolcensis.yml
+  documentation: https://ap.qut.ecoacoustics.info/
   organization: QUT Ecoacoustics
   # https://citation-file-format.github.io/
   # cff-version: 1.2.0
@@ -593,8 +596,8 @@
         fp: 0
         tn: 0
         fn: 160
-
   repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Towsey.NinoxStrenua.yml
+  documentation: https://ap.qut.ecoacoustics.info/
   organization: QUT Ecoacoustics
   # https://citation-file-format.github.io/
   # cff-version: 1.2.0
@@ -654,8 +657,8 @@
         fp: 953
         tn: 0
         fn: 98
-
   repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.CalyptorhynchusLathami.yml
+  documentation: https://ap.qut.ecoacoustics.info/
   organization: QUT Ecoacoustics
   # https://citation-file-format.github.io/
   # cff-version: 1.2.0
@@ -674,7 +677,6 @@
   doi: 10.5281/zenodo.1188743
   dateReleased: 2020-12-16
   license: Apache-2.0
-
 
 - title: Rufous scrub bird recognizer
   description: Developed in partnership with NSW Department of Primary industries
@@ -716,8 +718,8 @@
         fp: 1098
         tn: 0
         fn: 39
-
   repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.AtrichornisRufescens.yml
+  documentation: https://ap.qut.ecoacoustics.info/
   organization: QUT Ecoacoustics
   # https://citation-file-format.github.io/
   # cff-version: 1.2.0
@@ -739,6 +741,8 @@
 
 - title: Bell miner recognizer
   description: Developed in partnership with NSW Department of Primary industries
+  documentation: https://ap.qut.ecoacoustics.info/
+  repository: https://github.com/QutEcoacoustics/audio-analysis/blob/master/src/AnalysisConfigFiles/RecognizerConfigFiles/Truskinger.ManorinaMelanophrys.yml
   targets:
     - name: Bell miner
       binomial: Manorina melanophrys

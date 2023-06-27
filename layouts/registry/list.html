@@ -25,12 +25,14 @@
     {{/* if the first index is an empty string remove it */}}
     {{- if eq (index $fragments 0) "" -}}
     {{- $fragments = after 1 $fragments -}}
-    {{end}}
+    {{- end }}
     {{- warnf "Including data from %s (%s)" . $fragments -}}
     {{- $data_from_file := index $.Site.Data.recognizer_registry $fragments -}}
     {{/* finally concat all the selections together! */}}
-    {{- $data = $data | append $data_from_file -}}
-    {{end}}
+    {{- with $data_from_file -}}
+    {{-     $data = $data | append . -}}
+    {{- end }}
+    {{- end }}
 
     {{/* Grab the data from the data from our above operations */}}
     {{ $string := $data | jsonify }}
@@ -42,7 +44,7 @@
     {{/* note: without referring to the url, our resource would not be output */}}
     {{ $options := (dict "params" (dict "dataUrl" $data.RelPermalink) "format" "esm" "sourceMap" "inline")}}
     {{ $js := resources.Get "js/registry-render.js" | js.Build $options | resources.Fingerprint "sha512" }}
-    {{/* embed a reference and realise our render script */}}
+    {{/* embed a reference and realize our render script */}}
     <script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 
 

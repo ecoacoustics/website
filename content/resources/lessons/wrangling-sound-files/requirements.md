@@ -31,9 +31,9 @@ weight: 1
 
 ### macOS
 
-- Change the settings for [unsigned apps](../../../help-centre/software/unsigned)
+- Change the settings for [unsigned apps](/resources/help-centre/software/unsigned)
 - Install [EMU](https://github.com/QutEcoacoustics/emu/blob/master/docs/installing.md)
   - Release `emu_6.0.0_osx-x64.zip` works on ARM through virtualisation
 - Install [FFmpeg](https://pigtou.com/install-ffmpeg-on-mac/)
-- `brew install FFmpeg`. See [package managers](../../../help-centre/software/package-manager)  for information about _brew_.
+- `brew install FFmpeg`.
 - Install [AnalysisPrograms (AP)](https://ap.qut.ecoacoustics.info/basics/installing.html)

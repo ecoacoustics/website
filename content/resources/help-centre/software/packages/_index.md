@@ -42,7 +42,3 @@ package manager to look for and install a piece of software. If you try to run
 `choco install ffmpeg` on macOS, this will not work. Refer to the relevant
 documentation pages for your package manager if you are ever unsure. 
 
-
-## How to install
-
-

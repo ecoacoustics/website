@@ -14,7 +14,7 @@ if you have difficulty: <https://swcarpentry.github.io/shell-novice/>
 
 ## Setup
 
-Follow the instructions in the [Requirements](./../requirements) document.
+Follow the instructions in the [Requirements](../requirements) document.
 
 ## Open a Terminal
 

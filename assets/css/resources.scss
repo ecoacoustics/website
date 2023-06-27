@@ -9,6 +9,7 @@
         transition-property: var(--oe-transition-properties-movement);
         transition-duration: var(--oe-duration);
         transition-timing-function: var(--oe-timing);
+        padding: var(--oe-padding-smaller);
 
         grid-column: 1;
         grid-row: 2;
@@ -42,7 +43,7 @@
 
     &.side-menu-closed #sideMenu {
         width: 0;
-        transform: translateX(calc(-1 * var(--oe-side-menu-width) - 2em));
+        transform: translateX(calc(-1 * var(--oe-side-menu-width) - 5em));
         overflow: hidden;
     }
 
@@ -70,7 +71,7 @@
             font-family: var(--oe-font);
 
             &:hover {
-                opacity: .5;
+                opacity: 0.5;
             }
         }
     }
@@ -99,7 +100,7 @@
 
     &.toc-menu-closed #toc {
         width: 0;
-        transform: translateX(calc(var(--oe-side-menu-width) + 2em));
+        transform: translateX(calc(var(--oe-side-menu-width) + 5em));
     }
 
     .mobile-toc,
@@ -136,7 +137,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            padding-top: var( --oe-padding-small);
+            padding-top: var(--oe-padding-small);
         }
 
         .nav-links-previous::before {
@@ -159,7 +160,7 @@
 
         sl-divider {
             --spacing: 4rem 0rem;
-          }
+        }
     }
 
     nav ul {
@@ -181,38 +182,38 @@
 }
 
 @media only screen and (max-width: 56rem) {
-  .resources {
-    .menu-toggle,
-    .toc-toggle {
-        display: none;
-    }
-
-    .mobile-toc,
-    .mobile-search {
-        display: block;
-    }
-
-    .mobile-toc nav > ul {
-        padding: 0;
-    }
-
-    .book-search {
-        ul {
-            list-style: none;
-            padding: 0;
-
-            li {
-                margin-top: 1em;
-
-                a {
-                    color: inherit;
-                }
-            }
+    .resources {
+        .menu-toggle,
+        .toc-toggle {
+            display: none;
         }
 
-        small {
+        .mobile-toc,
+        .mobile-search {
             display: block;
         }
+
+        .mobile-toc nav > ul {
+            padding: 0;
+        }
+
+        .book-search {
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin-top: 1em;
+
+                    a {
+                        color: inherit;
+                    }
+                }
+            }
+
+            small {
+                display: block;
+            }
+        }
     }
-  }
 }

@@ -1,3 +1,9 @@
+---
+title: Getting Started
+weight: 1
+draft: true
+---
+
 This section needs to encompase the following at a minimum:
 
 Monitoring objective 
@@ -8,4 +14,5 @@ Existing information inc. Indigenous knowledge; Vocalisations/calls relevant to 
 
 Environmental considerations
 Access to sites; flooding/fire; proximity to roads/waterways; when to pack a canoe; etc.
+
 

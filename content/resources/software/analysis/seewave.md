@@ -4,4 +4,4 @@ datasheet: 'Seewave'
 layout: comparison
 ---
 
-## More information to come
+## Features

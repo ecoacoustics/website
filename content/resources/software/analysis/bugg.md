@@ -4,4 +4,5 @@ datasheet: 'Bugg'
 layout: comparison
 ---
 
-## More information to come
+## Features
+Tag events

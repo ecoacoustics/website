@@ -4,4 +4,5 @@ datasheet: 'MonitoR'
 layout: comparison
 ---
 
-## More information to come
+## Features
+Interactively annotate sound files of any length

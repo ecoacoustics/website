@@ -54,4 +54,4 @@ We recommend the following resources to get started with Git and Github:
 - [Getting started with your GitHub account](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account)
 - [Hello World - quick start guide](https://docs.github.com/en/get-started/quickstart/hello-world)
 - [Set up Git](https://docs.github.com/en/get-started/quickstart/set-up-git)
-- [Getting started with GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-start
+- [Getting started with GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started).

@@ -1,5 +1,6 @@
 ---
 title: Best Practices
+draft: false
 ---
 
 Best practices for Ecoacoustics.

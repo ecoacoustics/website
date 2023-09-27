@@ -1,4 +1,6 @@
+---
 title: Occupancy
+draft: true
 ---
 # Occupancy
 

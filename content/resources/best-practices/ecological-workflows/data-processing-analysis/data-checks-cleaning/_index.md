@@ -1,6 +1,6 @@
 ---
-title: Data Checks & Cleaning
+title: Data Checks and Cleaning
 weight: 1
 draft: true
 ---
-# Data Checks & Cleaning
+# Data Checks and Cleaning

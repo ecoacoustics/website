@@ -1,5 +1,6 @@
 ---
 title: Birds, General
+draft: true
 ---
 # Birds: General
 The following presents special considerations for the study of birds in general.

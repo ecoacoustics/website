@@ -4,7 +4,7 @@ weight: 4
 draft: true
 ---
 
-# Dealing With Sensors
+Dealing With Sensors
 
 This section should cover the following at a minimum:
 a.	How to get a clear GPS signal

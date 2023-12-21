@@ -177,7 +177,7 @@ For larger datasets it is not ideal to store the data in the GitHub repository. 
 - [An ecoacoustics repository](../../software/repositories)
 - A bioacoustics repository
     - like [Xeno Canto](https://xeno-canto.org/)
-- Cloud storage options like DropBox, CloudStor, OneDrive, etc.
+- Cloud storage options like DropBox, OneDrive, etc.
 - Commercial services like Amazon S3, Google Cloud Storage, etc.
 
 ### How do I keep my recognizer private until I'm ready to publish?

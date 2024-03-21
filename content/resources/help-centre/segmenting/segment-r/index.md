@@ -17,7 +17,7 @@ The example code below will look for sound files in the `data` folder of your
 current R working directory. For these first examples, the `data` folder
 contains a single `WAVE` file (`CC1_20171010_125500.wav`), which has a duration
 of just over 1 minute. You can download the practice `WAVE` file
-[here](https://connectqutedu.sharepoint.com/sites/QUTEcoacousticsAnon/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FQUTEcoacousticsAnon%2FShared%20Documents%2Fopen%2Decoacoustics%2Fconverting%2Dwith%2Dr). 
+[here](https://connectqutedu.sharepoint.com/:f:/s/QUTEcoacousticsAnon/Ej2KEt4LLNJKgexv9VTq-aEByN0EtDORxySlQlmNtNNwHw?e=GIn11q). 
 
 As mentioned, the `split_sound_files` function can segment your `WAVE` files
 into specific durations, or into a specific number of segments. In this first

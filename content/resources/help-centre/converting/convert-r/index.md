@@ -16,7 +16,7 @@ Throughout this guide, we will provide examples of how
 to call the various R functions, based on the example R project working
 directory shown below. Three audio files are provided to use in the examples,
 and you can download those files
-[here](https://connectqutedu.sharepoint.com/sites/QUTEcoacousticsAnon/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FQUTEcoacousticsAnon%2FShared%20Documents%2Fopen%2Decoacoustics%2Fconverting%2Dwith%2Dr).
+[here](https://connectqutedu.sharepoint.com/:f:/s/QUTEcoacousticsAnon/Ej2KEt4LLNJKgexv9VTq-aEByN0EtDORxySlQlmNtNNwHw?e=rwmEz5).
 
 ``` markdown
 .

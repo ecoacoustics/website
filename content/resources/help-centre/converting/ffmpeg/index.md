@@ -55,7 +55,7 @@ modify).
 
 In PowerShell (Windows, and Linux/Mac if you have PowerShell installed):
 
-```pwsh
+```powershell
 # Converts .m4a files to .wav, for any .m4a files found in the current directory and all sub directories
 Get-ChildItem *.m4a -Recurse | ForEach-Object { ffmpeg -i $_ ($_ -replace "\..*$", ".wav") }
 

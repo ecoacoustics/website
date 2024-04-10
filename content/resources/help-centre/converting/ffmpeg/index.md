@@ -60,7 +60,7 @@ In PowerShell (Windows, and Linux/Mac if you have PowerShell installed):
 Get-ChildItem *.m4a -Recurse | ForEach-Object { ffmpeg -i $_ ($_ -replace "\..*$", ".wav") }
 
 # Bonus tip: add -parallel to the for each to convert multiple files at the same time
-# (Requires ersion 7 or above of PowerShell)
+# (Requires version 7 or above of PowerShell)
 Get-ChildItem *.m4a -Recurse | ForEach-Object -parallel { ffmpeg -i $_ ($_ -replace "\..*$", ".wav") }
 ```
 

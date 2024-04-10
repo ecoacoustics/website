@@ -18,11 +18,18 @@ returned, such as the version number of FFmpeg you have installed.
 
 ## Installing FFmpeg
 
-{{% tabs "install_ffmpeg" %}}
-{{% tab "macOS" %}} # macOS Content {{% /tab %}}
-{{% tab "Linux" %}} # Linux Content {{% /tab %}}
-{{% tab "Windows" %}} # Windows Content {{% /tab %}}
-{{% /tabs %}}
+You can download ffmpeg from [its website](https://ffmpeg.org/download.html).
+
+You can also use a package amanger to install it:
+
+- Windows
+    - winget: `winget install ffmpeg`
+    - Chocolately: `choco install ffmpeg`
+- MacOS:
+    - brew: `brew install ffmpeg`
+- Linux:
+    - apt: `apt install ffmpeg`
+    - yum: `yum install ffmpeg`
 
 ## Converting audio files
 
@@ -46,8 +53,22 @@ code below will convert all `WAVE` files, into `MP3`. The original file names
 are preserved for the output, and a `_converted` suffix is added (which you can
 modify). 
 
+In PowerShell (Windows, and Linux/Mac if you have PowerShell installed):
+
+```pwsh
+# Converts .m4a files to .wav, for any .m4a files found in the current directory and all sub directories
+Get-ChildItem *.m4a -Recurse | ForEach-Object { ffmpeg -i $_ ($_ -replace "\..*$", ".wav") }
+
+# Bonus tip: add -parallel to the for each to convert multiple files at the same time
+# (Requires ersion 7 or above of PowerShell)
+Get-ChildItem *.m4a -Recurse | ForEach-Object -parallel { ffmpeg -i $_ ($_ -replace "\..*$", ".wav") }
 ```
-for i in *.wav; do ffmpeg -i "$i" -f mp3 "${i%.*}_converted.mp3"; done
+
+
+In bash (for linux or Mac):
+
+```bash
+for i in *.wav; do ffmpeg -i "$i" "${i%.*}.mp3"; done
 ```
 
 ## Output settings

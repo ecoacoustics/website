@@ -4,8 +4,10 @@
     <h3>{{ .name }}</h3>
     <span class="job-title">{{ .jobTitle }}</span>
     <em class="affiliation">{{ .affiliation }}</em>
-
+    
+    {{ if .description }}
     <sl-details summary="Read more about {{ .name }}">
         <p class="description">{{ .description }}</p>
     </sl-details>
+    {{ end }}
 </div>

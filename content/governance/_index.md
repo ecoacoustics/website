@@ -1,5 +1,6 @@
 ---
 Title: Governance
+draft: true
 ---
 
 ## Steering Committee

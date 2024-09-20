@@ -316,6 +316,11 @@ form .g-recpatcha {
   margin-bottom: var(--oe-padding-large);
   color: var(--oe-font-color-bright); }
 
+.page-hero-image > h1 {
+  font-size: 600% !important;
+  padding: 0;
+  margin: 0; }
+
 .resources {
   display: grid;
   grid-template-rows: 0 1fr;

@@ -38,7 +38,7 @@
 <link href="{{ .RelPermalink }}" media="(prefers-color-scheme:dark)" rel="stylesheet" />
 {{ end }}
 {{- $css := resources.Get "css/oe-main.css" }}
-{{- $css = $css | resources.ExecuteAsTemplate "css/oe-main.css" . | resources.ToCSS }}
+{{- $css = $css | resources.ExecuteAsTemplate "css/oe-main.css" . | css.Sass }}
 {{- if hugo.IsProduction }}
 {{- $css = $css | minify | fingerprint | resources.PostProcess }}
 {{- end }}

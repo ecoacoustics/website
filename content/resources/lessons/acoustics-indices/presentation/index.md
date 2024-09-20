@@ -299,9 +299,6 @@ acoustic indices values to biodiversity measures
 
 Now, let's do some practical exercises!
 
-
-Go to the [practical](../practical/).
-
+Go to the [practical](../practical/index.md).
 
 {{% /slide %}}
-

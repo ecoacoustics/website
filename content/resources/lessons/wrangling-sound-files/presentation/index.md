@@ -368,7 +368,7 @@ Lots of ways to achieve the same outcome.
 ```
 
 
-See our [ffmpeg](../../../help-centre/converting/ffmpeg/) guide for more examples.
+See our [ffmpeg](../../../help-centre/converting/ffmpeg/index.md) guide for more examples.
 
 {{% /slide %}}
 {{% slide %}}
@@ -396,7 +396,7 @@ Took 00:01:31.0498711. Done.
 # <...snip...>
 ```
 
-See our [AP cutting](../../../help-centre/segmenting/ap/) guide for more examples.
+See our [AP cutting](../../../help-centre/segmenting/ap/index.md) guide for more examples.
 
 {{% /slide %}}
 
@@ -418,7 +418,7 @@ See our [AP cutting](../../../help-centre/segmenting/ap/) guide for more example
 &nbsp;
 
 
-Next the [practical](../practical/).
+Next the [practical](../practical/index.md).
 {.align-center}
 
 {{% /slide %}}

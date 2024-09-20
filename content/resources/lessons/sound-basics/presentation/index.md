@@ -202,9 +202,8 @@ Function FFT($array){
 }
 ```
 
-
--   20 lines of code that changed human civilization
--   Thanks to Cooley and Tukey in 1965 (or Gauss 1805)
+- 20 lines of code that changed human civilization
+- Thanks to Cooley and Tukey in 1965 (or Gauss 1805)
 
 {{% /row %}}
 {{% /slide %}}
@@ -244,6 +243,6 @@ Spectrogram
 {{% /slide %}}
 {{% slide type="title" %}}
 
-Finished. Next up: [recording and labelling](../../labelling/presentation).
+Finished. Next up: [recording and labelling](../../labelling/presentation/index.md).
 
 {{% /slide %}}

@@ -17,7 +17,7 @@ cascade:
     # we do this over ignoring the readme so we can steal from the readme's
     # with an include if needed
     - _target:
-          path: .*/README\.md$
+          path: .*/README$
           kind: page
       _build:
           render: never

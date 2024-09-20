@@ -8,18 +8,17 @@ weight: 3
 Difficulty: suitable for beginners
 {{% /hint %}}
 
-
 ## Setup
 
-Follow the instructions in the [Requirements](../requirements) document.
+Follow the instructions in the [Requirements](../requirements/index.md) document.
 
 ## Open a Terminal
 
-{{% include "../../shared/open-terminal-Symposium.md" %}}
+{{% include "../shared/open-terminal-symposium.md" %}}
 
 ## Terminal use
 
-{{% include "../../shared/basic-terminal-use.md" %}}
+{{% include "../shared/basic-terminal-use.md" %}}
 
 ## Check where Analysis Programs (AP.exe) is installed
 

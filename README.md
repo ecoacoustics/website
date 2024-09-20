@@ -14,34 +14,34 @@ You can make simple changes right here on GitHub's website.
 
 You'll most likely want to make a change to a file inside the `content` folder.
 
-1.  Find your file
-1.  Click the edit icon (a ✏️)
-1.  Make you changes
-1.  Github will guide you through making a pull request
+1. Find your file
+1. Click the edit icon (a ✏️)
+1. Make you changes
+1. Github will guide you through making a pull request
 
 ## Local Development
 
 Ensure you have the following installed:
 
--   PowerShell
--   Git
--   Git LFS
--   A package manager
-    -   Chocolately on Windows
-    -   Snap on Linux
-    -   HomeBrew on macOS
+- PowerShell
+- Git
+- Git LFS
+- A package manager
+    - Chocolately on Windows
+    - Snap on Linux
+    - HomeBrew on macOS
 
 Then for your first time:
 
-1.  Fork the repository
-1.  Clone your fork
-1.  Run `./setup.ps1` (once only). This script installs hugo-extended.
+1. Fork the repository
+1. Clone your fork
+1. Run `./setup.ps1` (once only). This script installs hugo-extended.
 
 Then before each session:
 
-1.  Update your Fork
-1.  Branch
-1.  Run `hugo server -DEF`
-1.  Commit
-1.  Push
-1.  Create a pull request
+1. Update your Fork
+1. Branch
+1. Run `hugo server -DEF`
+1. Commit
+1. Push
+1. Create a pull request

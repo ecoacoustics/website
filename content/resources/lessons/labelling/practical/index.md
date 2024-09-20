@@ -6,7 +6,7 @@ weight: 3
 
 ## Setup
 
-Follow the instructions in the [Requirements](../requirements) document.
+Follow the instructions in the [Requirements](../requirements/index.md) document.
 
 ## Single Species Annotation
 

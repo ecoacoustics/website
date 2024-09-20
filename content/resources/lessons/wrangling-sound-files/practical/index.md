@@ -11,19 +11,17 @@ We recommend undertaking the Software Carpentry lesson for using the shell
 if you have difficulty: <https://swcarpentry.github.io/shell-novice/>
 {{% /hint %}}
 
-
 ## Setup
 
-Follow the instructions in the [Requirements](../requirements) document.
+Follow the instructions in the [Requirements](../requirements/index.md) document.
 
 ## Open a Terminal
 
-{{% include "../../shared/open-terminal-Symposium.md" %}}
-
+{{% include "../shared/open-terminal-Symposium.md" %}}
 
 ## Terminal use
 
-{{% include "../../shared/basic-terminal-use.md" %}}
+{{% include "../shared/basic-terminal-use.md" %}}
 
 ## Manipulating files with FFmpeg
 

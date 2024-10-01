@@ -8,8 +8,9 @@ imageStyle: "background-position: 0% 40%;"
 
 Open Ecoacoustics is a set of platforms dedicated to continental-scale monitoring
 and management of threatened species and ecosystems in response to Australia's
-biodiversity crisis.  Our goal is to enable open science and conservation by
+biodiversity crisis. We are a part of the [ARDC Machine Observation Data Processing Infrastructure](https://ardc.edu.au/program/machine-observation-data-processing-infrastructure/). Our goal is to enable open science and conservation by
 promoting open access ecoacoustics technologies, methodologies, and standards.
+See our up-to-date project plan on [ARDC Ecoacoustics Project](https://ardc.edu.au/project/open-ecoacoustics/) page.
 
 Our main two projects are [Ecosounds](https://www.ecosounds.org/)
 and the [Australian Acoustic Observatory (A2O)](https://acousticobservatory.org/).
@@ -66,6 +67,7 @@ We support making ecoacoustic data findable, accessible, interoperable and reusa
 ## Team
 
 {{< governance-people-cards groupName="team" >}}
+See our steering committee on the [ARDC MODs page](https://ardc.edu.au/program/machine-observation-data-processing-infrastructure/#news).
 
 ## Cite this web page
 

@@ -10,4 +10,4 @@
 <a href="{{- $href | safeURL -}}"
     {{- with .Title }} title="{{- .Title -}}"{{- end -}}
     {{- if (not $local) }} target="_blank" rel="noopener" {{- end -}}>
-    {{- .PlainText -}}</a>
+    {{- .PlainText -}} {{ if strings.HasPrefix .Destination "http" }}<sl-icon name="box-arrow-up-right"></sl-icon>{{ end }}</a>

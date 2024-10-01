@@ -8,4 +8,9 @@ a > sl-icon[name="box-arrow-up-right"]{
     color: inherit;
     height: 0.7em;
     width: 0.7em;
+    margin-right: 0;
+}
+
+a:visited > sl-icon[name="box-arrow-up-right"]{
+    color: var(--color-visited-link);
 }

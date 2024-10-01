@@ -16,6 +16,8 @@ and share data, analyses and tools.
 Our vision is to enable open science and conservation through the development
 and promotion of open access ecoacoustics technologies, methodologies and standards.
 
+<sl-button href="/get-started" variant="default" outline>Get started</sl-button>
+
 {{< /home/pull >}}
 
 {{< home/pull left >}}
@@ -29,6 +31,8 @@ and third party analyses by moving to flexible workflow technologies (PBS, docke
 We accelerate data analysis by publishing a shared repository of annotated
 datasets and recognisers. We interface to other systems, including TERN, ALA,
 EcoCommons and citizen science sites, through services and shared tools.
+
+<sl-button href="/about" variant="default" outline>Read more about us</sl-button>
 
 {{< /home/pull >}}
 {{< /home/section >}}
@@ -83,6 +87,8 @@ managers. Our community extends to Universities, Museums, Government agencies,
 and Non-Government Organisations such as BirdLife, Australian Wildlife Conservancy,
 Bush Heritage and the Nature Conservancy.
 
+<sl-button href="/about#team" variant="default" outline>Get to know our team</sl-button>
+
 {{< /home/pull >}}
 
 {{< /home/section >}}
@@ -114,8 +120,8 @@ this and recognize these lands have always been places of teaching, researching
 and learning.  We pay our respects to all Aboriginal and Torres Strait Islander
 peoples and we welcome opportunities to learn from them and share our learnings.
 
-_This research/project is supported by the Australian Research Data Commons
-(ARDC). The ARDC is funded by NCRIS._
+_This project is supported by the [Australian Research Data Commons
+(ARDC)](https://ardc.edu.au/project/open-ecoacoustics/). The ARDC is funded by NCRIS._
 
 </div>
 

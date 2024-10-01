@@ -1,3 +1,16 @@
 sl-icon[name="orcid"] {
     height: 100px;
 }
+
+a > sl-icon[name="box-arrow-up-right"]{
+    min-width: auto;
+    min-height: auto;
+    color: inherit;
+    height: 0.7em;
+    width: 0.7em;
+    margin-right: 0;
+}
+
+.markdown a:visited > sl-icon[name="box-arrow-up-right"]{
+    color: var(--color-visited-link);
+}

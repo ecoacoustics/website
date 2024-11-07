@@ -12,6 +12,8 @@ biodiversity crisis. We are a part of the [ARDC Machine Observation Data Process
 promoting open access ecoacoustics technologies, methodologies, and standards.
 See our up-to-date project plan on [ARDC Ecoacoustics Project](https://ardc.edu.au/project/open-ecoacoustics/) page.
 
+_Open Ecoacoustics received investment ([https://doi.org/10.3565/ts8c-ee10](https://doi.org/10.3565/ts8c-ee10)) from the Australian Research Data Commons (ARDC). The ARDC is enabled by the National Collaborative Research Infrastructure Strategy (NCRIS)._
+
 Our main two projects are [Ecosounds](https://www.ecosounds.org/)
 and the [Australian Acoustic Observatory (A2O)](https://acousticobservatory.org/).
 We organise events, talks, and educational resources for the community.

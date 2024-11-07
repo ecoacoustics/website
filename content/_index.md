@@ -120,8 +120,7 @@ this and recognize these lands have always been places of teaching, researching
 and learning.  We pay our respects to all Aboriginal and Torres Strait Islander
 peoples and we welcome opportunities to learn from them and share our learnings.
 
-_This project is supported by the [Australian Research Data Commons
-(ARDC)](https://ardc.edu.au/project/open-ecoacoustics/). The ARDC is funded by NCRIS._
+_Open Ecoacoustics received investment ([https://doi.org/10.3565/ts8c-ee10](https://doi.org/10.3565/ts8c-ee10)) from the Australian Research Data Commons (ARDC). The ARDC is enabled by the National Collaborative Research Infrastructure Strategy (NCRIS)._
 
 </div>
 

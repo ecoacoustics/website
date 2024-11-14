@@ -14,7 +14,7 @@ Perch embedding model and Agile Modelling workflow from Google Deepmind with sup
 from the Australian Research Data Commons.  
 
 This page will be updated closer to the Workshop date, but for now please read over 
-the requirements.
+the [requirements]({{< ref "./requirements" >}}).
 
 <div style="display: flex; gap: 30px; justify-content: space-between; padding: 2em 0em 2em 0em">
    <div style="width: 33%; height: 60px;">

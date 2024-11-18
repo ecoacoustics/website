@@ -13,7 +13,7 @@ ahead of the workshop**. Instructions for this can be found here
 [Uploading Audio to Ecosounds]({{< ref "../../ecosounds/uploading" >}})
 
 We will pre-process this audio for use in the workshop, so please ensure it's uploaded 
-before November 25 2024. 
+before November 28 2024. 
 
 ## Labelled examples
 
@@ -21,8 +21,7 @@ In the workshop you will build a call recogniser using just a few short labelled
 examples. If your search dataset is likely to have plenty of examples of your target 
 species, then just having one or two labelled examples is enough. If your search 
 dataset is likely to have very few or maybe no occurrences of the target species, 
-then you should ideally bring a few more, say 10-20 labelled examples. 
- 
+then you should ideally bring a few more, say 10-20 labelled examples.
 
 ## Open-sourcing your recogniser
 

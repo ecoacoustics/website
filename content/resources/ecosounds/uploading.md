@@ -30,9 +30,7 @@ Before you can upload audio to your project, you must create the sites and point
 ## Enabling recording uploads
 
 Recording Uploads first needs to be enabled. This is done by the Ecosounds admin team. 
-When you have created your project, send a message to the team here
-
-https://www.ecosounds.org/about/contact_us
+When you have created your project, send an email to let the Ecosounds admins know.
 
 Make sure to include who you are (your name and your Ecosounds username), the purpose 
 of the project and the name of the project you created. 

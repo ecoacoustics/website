@@ -33,6 +33,11 @@ or [Raven Lite](https://www.ravensoundsoftware.com/software/raven-lite/)
 
 For the demo datasets, labelled examples will be made available.
 
+## Laptop
+
+You will need to bring a laptop to follow along with the workshop. There are no computers
+in the workshop room. 
+
 ## Google account
 
 We will be using [Google Colab](https://colab.research.google.com/) python notebook environment. 
@@ -65,4 +70,8 @@ the deadline. Any doubts, contact the organisers.
 #### Q. Is the google account linked to the Ecosounds account or anything else?
 No, the google account is completely separate.
 You can create a new google account just for this workshop. 
+
+#### Q. What can I do if I don't have a laptop I can bring?
+Many people will have a laptop, so we encourage you to pair up and work though
+it together. 
 

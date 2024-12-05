@@ -23,11 +23,15 @@ species, then just having one or two labelled examples is enough. If your search
 dataset is likely to have very few or maybe no occurrences of the target species, 
 then you should ideally bring a few more, say 10-20 labelled examples.
 
+**Just bring these examples along with you on the day, no need to supply them in advance.**
+
 These labelled examples should be in short audio files, between 5 and around 20 seconds long. 
 
 If your labelled examples are in longer files, you can use free software 
 like [Audacity](https://www.audacityteam.org/) 
 or [Raven Lite](https://www.ravensoundsoftware.com/software/raven-lite/)
+
+For the demo datasets, labelled examples will be made available.
 
 ## Google account
 
@@ -44,16 +48,21 @@ recogniser to be published in our registry: https://openecoacoustics.org/resourc
 
 ## FAQs
 
-Q. Can I use ultrasonic data
-A. There are some extra steps to make the process work for ultrasonic data, 
+#### Q. Can I use ultrasonic data 
+There are some extra steps to make the process work for ultrasonic data, 
 which are out of scope of the workshop. If you are are working with ultrasonic 
 recordings, you can work with the demo data for the workshop and then adapt the 
 process for ultrasonic data later.
 
-Q. I don't have 100 hours of recordings, what can I do?
-A. 100 hours minimum is not really important. If you don't have that much, 
+#### Q. I don't have 100 hours of recordings, what can I do?
+100 hours minimum is not really important. If you don't have that much, 
 just work with what you have!
 
-Q. What if I am late uploading my recordings to Ecosounds. 
-A. We will do our best to get the preprocessing done in time even if you miss
-the deadline. Any doubts, contact the organisers. 
+#### Q. What if I am late uploading my recordings to Ecosounds. 
+We will do our best to get the preprocessing done in time even if you miss
+the deadline. Any doubts, contact the organisers.
+
+#### Q. Is the google account linked to the Ecosounds account or anything else?
+No, the google account is completely separate.
+You can create a new google account just for this workshop. 
+

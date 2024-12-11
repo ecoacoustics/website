@@ -10,7 +10,7 @@ This lesson will use a python notebook running on Google colab. The steps to get
 
 ## Open the colab notebook
 
-In your browser, navigate to <https://colab.research.google.com/github/QutEcoacoustics/perch/blob/esa-scripts/chirp/projects/agile2/2_agile_modeling_slim.ipynb>
+In your browser, navigate to <https://colab.research.google.com/github/QutEcoacoustics/perch/blob/esa-scripts/chirp/projects/agile2/agile_modeling_workshop.ipynb>
 
 You should see a python notebook consisting of cells of text and python code you can run. 
 

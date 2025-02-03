@@ -1,0 +1,40 @@
+.oe-posts {
+    padding: var(--oe-padding);
+
+    .oe-post {
+        background-color: var(--oe-background-color-darker);
+        margin: var(--oe-padding) 0;
+        min-height: 40px;
+        padding: 30px 40px;
+        width: auto;
+        box-shadow: 0 1px 4px 0 rgba(60, 64, 67, 0.30);
+    
+        &:first-of-type {
+            margin-top: 0;
+        }
+    
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &-footer {
+            margin-top: var(--oe-padding);
+        }
+    }
+}
+
+.oe-post {
+    &-breadcrumb {
+        padding-top: var(--oe-padding);
+    }
+
+    &-meta {
+        display: flex;
+        gap: var(--oe-padding-smaller);
+        padding-bottom: var(--oe-padding-small);
+    }
+
+    &-date {
+        font-weight: bold;
+    }
+}

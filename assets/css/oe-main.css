@@ -11,6 +11,7 @@
 @import "footer";
 @import "registry";
 @import "governance";
+@import "posts";
 @import "presentation";
 @import "shortcodes";
 
@@ -59,3 +60,12 @@
     }
 }
 
+/* Added a class to hide elements meant for screen readers only */
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}

@@ -28,11 +28,9 @@
 
 :root {
     --theme-color: hsl(var(--theme-color-raw));
-
     --oe-theme-color: var(--theme-color);
     /* https://shoelace.style/tokens/spacing */
     --oe-padding: var(--sl-spacing-2x-large);
-
     --oe-padding-large: var(--sl-spacing-4x-large);
     --oe-padding-small: var(--sl-spacing-large);
     --oe-padding-smaller: var(--sl-spacing-medium);
@@ -42,15 +40,14 @@
     --oe-panel-opacity: 0.66;
     --oe-panel-color-with-alpha: hsla(var(--theme-color-raw), var(--oe-panel-opacity));
     --oe-panel-red-with-alpha: rgba(180, 52, 52, 0.66);
-
     --oe-duration: 0.5s;
     --oe-timing: ease-in-out;
     --oe-transition-properties-movement: grid-column, grid-row, width, transform, left, top, right, bottom, margin, padding;
-
     --oe-narrow-display: none;
     --oe-wide-display: inherit;
-
     --oe-side-menu-width: 17em;
+    --oe-box-shadow: 0 1px 4px 0 rgba(0,0,0, 0.3);
+    --oe-box-shadow-hover: 0 1px 6px 0 rgba(0,0,0, 0.8);
 }
 
 @media screen and (max-width: 60em) {

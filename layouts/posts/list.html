@@ -1,0 +1,46 @@
+{{ define "main" }}
+
+<h1>{{.Title}}</h1>
+{{ with .Content }}
+{{ . }}
+{{ end }}
+
+  <div class="oe-posts">
+    {{ range sort .Paginator.Pages }}
+    
+      <article class="markdown book-post oe-post">
+        <a class="oe-post-link" href="{{ .RelPermalink }}"></a>
+
+          {{ if .Params.image }}
+            <div class="oe-post-image">
+              {{ with .Resources.GetMatch .Params.image }}
+                <img src={{ .RelPermalink }} />
+              {{ else }}
+                <img src={{ .Params.image | relURL }} />
+              {{ end }}
+            </div>
+          {{ end }}
+
+          <div class="oe-post-content">
+            <h2>{{ partial "docs/title.html" . }}</h2>
+            {{ partial "docs/post-meta" . }}
+            {{ .Summary }}
+          
+            {{ if .Truncated }}
+              <div class="oe-post-footer">
+                <sl-button href="{{ .RelPermalink }}" variant="text" outline>
+                  <sl-icon slot="prefix" name="arrow-right"></sl-icon>
+                  Continue reading <span class="sr-only">{{ partial "docs/title.html" . }}</span></sl-button>
+              </div>
+            {{ end }}
+          </div> 
+      </article>
+    {{ end }}
+  </div>
+
+  {{ template "_internal/pagination.html" . }}
+  {{ end }}
+
+  {{ define "toc" }}
+    {{ partial "docs/taxonomy" . }}
+  {{ end }}

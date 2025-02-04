@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <article class="markdown oe-post">
+    <nav class="breadcrumbs oe-post-breadcrumb">
+      {{ partial "breadcrumbs" . }}
+    </nav>
+
+    <h1>
+      {{ partial "docs/title.html" . }}
+    </h1>
+
+    {{ partial "docs/post-meta" . }}
+    {{- .Content -}}
+  </article>
+{{ end }}
+
+{{ define "toc" }}
+  {{ partial "docs/toc" . }}
+{{ end }}

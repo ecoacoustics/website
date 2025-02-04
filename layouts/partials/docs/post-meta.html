@@ -1,0 +1,19 @@
+<div class="oe-post-meta">
+  {{ with .Date }}
+    <span class="oe-post-date">{{ partial "docs/date" (dict "Date" . "Format" $.Site.Params.BookDateFormat) }}</span>
+  {{ end }}
+
+  {{ range $taxonomy, $_ := .Site.Taxonomies }}
+    {{ with $terms := $.GetTerms $taxonomy }}
+    <div class="oe-tags">
+      {{ range $n, $term := $terms }}{{ if $n }}, {{ end }}
+      <a class="oe-tag" href="{{ $term.RelPermalink }}">
+        <sl-badge variant="primary" pill>
+          {{ $term.Title }}
+        </sl-badge>
+      </a>
+      {{- end }}
+    </div>
+    {{ end }}
+  {{ end }}
+</div>

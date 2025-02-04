@@ -26,6 +26,6 @@ Our team continued to enhance platform operations, refine the Open Ecoacoustics 
 - 6.7 million recordings downloaded 
 - 196 new users 
 
-## This means that 24% of all of our data was uploaded to the A2O and Ecosounds just last year!
+This means that **24% of all of our data was uploaded to the A2O and Ecosounds just last year**!
 
 Thank you to all our partners, users, and contributors being part of this journey so far. We are excited for 2025!

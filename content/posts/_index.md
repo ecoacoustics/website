@@ -1,5 +1,5 @@
 ---
-title: Posts
+title: Blog
 ---
 
 Read our regular updates here.

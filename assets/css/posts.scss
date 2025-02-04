@@ -32,6 +32,9 @@
         }
 
         &-image {
+            margin:  calc(var(--oe-padding-small) * -1);
+            padding-right: var(--oe-padding-small);
+            
             img {
                 max-width: 100%;
             }
@@ -82,11 +85,18 @@
         margin: calc(var(--oe-padding-smaller) * -1);
 
         .oe-post {
-            padding: var(--oe-padding-small) var(--oe-padding-smaller);
+            padding: var(--oe-padding-smaller);
             flex-direction: column;
 
             &-content {
                 padding: 0;
+            }
+
+            &-image {
+                margin:  calc(var(--oe-padding-smaller) * -1);
+                padding: 0;
+                max-height: 150px;
+                overflow: hidden;
             }
         }
     }
@@ -99,6 +109,13 @@
     max-width: calc(80rem - var(--oe-side-menu-width));
     align-content: center;
     align-self: center;
+    background-color: var(--oe-background-color);
+
+    &-hero {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
 
     &-breadcrumb {
         padding-top: var(--oe-padding);

@@ -1,0 +1,9 @@
+{{ with .Params.image }}
+{{ $image := resources.Get . }}
+{{ with $image }}
+<div class="page-hero-image oe-post-hero" style="background-image: url('{{ .RelPermalink }}');{{ with $.Params.imageStyle }}{{ . | safe.CSS }}{{ end }}">
+</div>
+{{ else }}
+    {{ errorf "Could not find resource for hero image with path: %q" $.Params.image }}
+{{ end }}
+{{ end }}

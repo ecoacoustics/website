@@ -18,7 +18,9 @@ Last year was eventful with the Ecoacoustics Symposium in Melbourne and the "Mak
 
 Our team continued to enhance platform operations, refine the Open Ecoacoustics data pipeline, and incorporate more analyses into analysis containers.  
 
-## In 2024, we achieved significant milestones: 
+## 2024 milestones
+
+ In 2024, we achieved significant growth: 
 
 - 1.8 million recordings uploaded 
 - 132 years of data added

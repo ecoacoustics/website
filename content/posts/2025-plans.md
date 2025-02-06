@@ -22,7 +22,7 @@ Last year we finished the first version of an audio verification component. This
 In addition to launching the Verification Interface tool, some of our other plans for 2025 include: 
 
 - Improving mapping visualisations for clearer data coverage views  
-- Continuing development of the Acoustic Workbench (The software that runs [A2O](https://acousticobservatory.org/) & [Ecosounds](https://www.ecosounds.org/)). Did you knpow Acoustic Workhbench is open source? See the source code in [GitHub](https://github.com/QutEcoacoustics/workbench)
+- Continuing development of the Acoustic Workbench (The software that runs [A2O](https://acousticobservatory.org/) & [Ecosounds](https://www.ecosounds.org/)). Did you know Acoustic Workhbench is open source? See the source code in [GitHub](https://github.com/QutEcoacoustics/workbench)
 - Using our new verification interface for citizen science projects  
 - Improving the [Make Your Own Recogniser](https://openecoacoustics.org/resources/lessons/make-your-own-recognizer/) workshop and training materials
 - Engaging the community through user testing and additional training workshops. Expect us to post an update in the coming months!

@@ -12,13 +12,13 @@
         <a class="oe-post-link" href="{{ .RelPermalink }}"></a>
 
           {{ if .Params.image }}
-            <div class="oe-post-image">
+            <div class="oe-post-image" style="background-image: 
               {{ with .Resources.GetMatch .Params.image }}
-                <img src={{ .RelPermalink }} />
+                url('{{ .RelPermalink }}'); 
               {{ else }}
-                <img src={{ .Params.image | relURL }} />
+              url('{{ .Params.image | relURL }}');
               {{ end }}
-            </div>
+              "></div>
           {{ end }}
 
           <div class="oe-post-content">

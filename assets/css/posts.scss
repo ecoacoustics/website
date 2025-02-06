@@ -32,13 +32,13 @@
         }
 
         &-image {
-            margin:  calc(var(--oe-padding-small) * -1);
+            margin-top:  calc(var(--oe-padding-small) * -1);
+            margin-bottom:  calc(var(--oe-padding-small) * -1);
+            margin-left:  calc(var(--oe-padding-small) * -1);
             padding-right: var(--oe-padding-small);
-            
-            img {
-                max-width: 100%;
-            }
-
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         &-link {

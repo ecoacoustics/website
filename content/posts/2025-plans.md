@@ -12,7 +12,7 @@ I hope your 2025 is off to a great start. We at Open Ecoacoustics are excited to
 
 We are excited to announce the launch of our accounts on [BlueSky](https://bsky.app/profile/openecoacoustics.bsky.social) and [LinkedIn](https://www.linkedin.com/company/open-ecoacoustics/). Follow us to stay in the loop! 
 
-_Cover image of this post and our social media profiles by Prof. Susan Fuller_
+_The cover image of this post and our social media profiles are thanks to Prof. Susan Fuller_
 
 ## New Feature: Audio Verification Interface
 Last year we finished the first version of an audio verification interface. This tool allows you to verify audio tags efficiently. The interface displays tags added to specific audio files, enabling you to quickly determine if these tags accurately match the audio content. For instance, you might have a list of 40 audio snippets labeled as Koalas, but some of the tags are be incorrectly applied to traffic sounds. This tool helps you verify both correct and incorrect tags with ease.

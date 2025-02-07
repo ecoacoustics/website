@@ -1,7 +1,11 @@
 
+{{ define "hero" }}
+    {{/* Hide the title in the hero section */}}
+    {{ .Page.Store.Set "heroHideTitle" true }}
+    {{ partial "hero.html" . }}
+{{ end }}
 {{ define "main" }}
-  {{/* Hide the title in the hero section */}}
-  {{ .Page.Store.Set "heroHideTitle" true }}
+
   <article class="markdown oe-post">
     <nav class="breadcrumbs oe-post-breadcrumb">
       {{ partial "breadcrumbs" . }}

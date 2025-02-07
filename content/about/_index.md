@@ -4,13 +4,13 @@ image: images/phil-a2o-unleashed.jpg
 imageStyle: "background-position: 0% 40%;"
 ---
 
-{{% figure src="./diagram.jpg" width="100%"%}}
-
 Open Ecoacoustics is a set of platforms dedicated to continental-scale monitoring
 and management of threatened species and ecosystems in response to Australia's
 biodiversity crisis. We are a part of the [ARDC Machine Observation Data Processing Infrastructure](https://ardc.edu.au/program/machine-observation-data-processing-infrastructure/). Our goal is to enable open science and conservation by
 promoting open access ecoacoustics technologies, methodologies, and standards.
 See our up-to-date project plan on [ARDC Ecoacoustics Project](https://ardc.edu.au/project/open-ecoacoustics/) page.
+
+{{% figure src="./diagram.jpg" width="100%"%}}
 
 _Open Ecoacoustics received investment ([https://doi.org/10.3565/ts8c-ee10](https://doi.org/10.3565/ts8c-ee10)) from the Australian Research Data Commons (ARDC). The ARDC is enabled by the National Collaborative Research Infrastructure Strategy (NCRIS)._
 

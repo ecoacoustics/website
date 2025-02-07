@@ -1,12 +1,15 @@
 {{ partial "before_main" . }}
 <main class="container flex">
-    <div class="page">
+    <div class="page section-{{ .Section }}">
         <header class="book-header">
             {{ block "header" . }}
             <!-- Mobile layout header -->
             {{end}}
         </header>
+
+        {{ block "hero" . }}
         {{ partial "hero.html" . }}
+        {{ end }}
 
         {{ partial "docs/inject/content-before" . }}
         {{ block "main" . }}

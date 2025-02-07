@@ -13,7 +13,7 @@ dark-mode-toggle {
     word-spacing: 200%;
 }
 
-dark-mode-toggle::part(fieldset){
+dark-mode-toggle::part(fieldset) {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
@@ -21,18 +21,16 @@ dark-mode-toggle::part(fieldset){
     gap: 1em;
 }
 
-// Small screen styles
+/* Small screen styles */
 @media only screen and (max-width: 700px) {
-  .oe-footer {
-    flex-direction: column;
-  }
-  .oe-footer > div {
-    margin-top: --oe-padding-small;
-  }
+    .oe-footer {
+        flex-direction: column;
+    }
+    .oe-footer > div {
+        margin-top: --oe-padding-small;
+    }
 
-  dark-mode-toggle::part(fieldset) {
-     flex-direction: row;
-   }
+    dark-mode-toggle::part(fieldset) {
+        flex-direction: row;
+    }
 }
-
-

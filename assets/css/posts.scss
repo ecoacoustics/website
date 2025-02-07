@@ -15,7 +15,7 @@
         &:first-of-type {
             margin-top: 0;
         }
-    
+
         &:last-of-type {
             margin-bottom: 0;
         }
@@ -64,7 +64,7 @@
             display: flex;
             justify-content: end;
             margin-top: auto;
-            
+
             sl-button::part(base) {
                 color: var(--oe-font-color);
 
@@ -84,7 +84,7 @@
         }
     }
 
-    @media screen and (max-width: 900px) {
+    @media only screen and (max-width: 700px) {
         margin: calc(var(--oe-padding-smaller) * -1);
 
         .oe-post {
@@ -94,15 +94,12 @@
             &-content {
                 padding: 0;
             }
-
-            &-image {
-                margin:  calc(var(--oe-padding-smaller) * -1);
-                padding: 0;
-                max-height: 150px;
-                overflow: hidden;
-            }
         }
     }
+}
+
+.section-posts {
+
 }
 
 .oe-post {
@@ -114,14 +111,8 @@
     align-self: center;
     background-color: var(--oe-background-color);
 
-    &-hero {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
-
     &-breadcrumb {
-        padding-top: var(--oe-padding);
+        margin-top: var(--oe-padding-smaller)
     }
 
     &-meta {
@@ -156,7 +147,7 @@
         }
     }
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 700px) {
         margin: calc(var(--oe-padding-smaller) * -1);
     }
 }

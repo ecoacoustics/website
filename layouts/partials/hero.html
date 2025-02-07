@@ -1,8 +1,20 @@
 {{ with .Params.image }}
 {{ $image := resources.Get . }}
 {{ with $image }}
-<div class="page-hero-image" style="background-image: url('{{ .RelPermalink }}');{{ with $.Params.imageStyle }}{{ . | safe.CSS }}{{ end }}">
-    <h1>{{ $.Page.Title }}</h1>
+<div class="page-hero">
+    <div class="page-hero-image" style="background-image: url('{{ .RelPermalink }}');{{ with $.Params.imageStyle }}{{ . | safe.CSS }}{{ end }}">
+    </div>
+    <div class="page-hero-content">
+        {{ with $.Page.Store.Get "heroHideTitle" }}
+        {{ else }}
+        <h1>{{ $.Page.Title }}</h1>
+        {{ end }}
+        {{ with $.Page.Params.imageCredit }}
+        <span class="image-credit">
+            Image credit: {{ $.Page.Params.imageCredit }}
+        </span>
+        {{ end }}
+    </div>
 </div>
 {{ else }}
     {{ errorf "Could not find resource for hero image with path: %q" $.Params.image }}

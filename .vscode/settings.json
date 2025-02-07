@@ -1,5 +1,9 @@
 {
     "cSpell.words": [
-        "Ecoacoustics"
-    ]
+        "Ecoacoustics",
+        "Ecosounds",
+        "Recogniser",
+        "visualisations"
+    ],
+    "prettier.proseWrap": "always"
 }

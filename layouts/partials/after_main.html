@@ -1,27 +1,45 @@
 {{ partial "docs/inject/body" . }}
 <footer class="oe-footer">
-    <div class="oe-footer-copyright">
-        <p>
-            © {{ now.Format "2006" }} <strong>{{ .Site.Params.Organization }}</strong>
-        </p>
-        <p>
-            <a href="https://doi.org/10.5281/zenodo.7743217"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.7743217.svg" alt="DOI"></a>
-        </p>
+  <div class="container">
+    <div class="oe-footer-upper">
+      <div class="oe-footer-gitinfo">
+          <small><a href="{{ relref . `about#cite-this-web-page` }}">How to cite</a></small>｜
+          {{ with .GitInfo }}
+          <small>
+              Last change by <strong>{{ .AuthorName }}</strong> on {{ (.AuthorDate.Format `2006-01-02T15:04:05-07:00`) }} in
+              <a href="{{ $.Site.Params.GitHubRepo }}/commit/{{ .Hash }}">{{ .AbbreviatedHash }}</a>
+          </small>
+          {{ end }}
+      </div>
     </div>
-    <div class="oe-footer-gitinfo">
-        <small><a href="{{ relref . `about#cite-this-web-page` }}">How to cite</a></small>｜
-        {{ with .GitInfo }}
-        <small>
-            Last change by <strong>{{ .AuthorName }}</strong> on {{ (.AuthorDate.Format `2006-01-02T15:04:05-07:00`) }} in
-            <a href="{{ $.Site.Params.GitHubRepo }}/commit/{{ .Hash }}">{{ .AbbreviatedHash }}</a>
-        </small>
-        {{ end }}
+    <div class="oe-footer-lower">
+      <div class="oe-footer-copyright">
+          <span>
+              © {{ now.Format "2006" }} <strong>{{ .Site.Params.Organization }}</strong>
+          </span>
+      </div>
+
+      <div class="oe-footer-social-media">
+        <sl-button variant="text" size="small">
+            <a href="{{ relref . `newsletter` }}">
+              <sl-icon slot="prefix" name="envelope-at" label="newsletter"></sl-icon>Newsletter
+            </a>
+        </sl-button>
+        <sl-icon-button name="linkedin" label="LinkedIn" href="https://www.linkedin.com/company/open-ecoacoustics/" target="_blank"></sl-icon-button>
+        <sl-icon-button label="BlueSky" src="/images/bluesky-icon.svg" href="https://bsky.app/profile/openecoacoustics.bsky.social" target="_blank"></sl-icon-button>
+      </div>
+
+      <div class="oe-footer-doi">
+        <a href="https://doi.org/10.5281/zenodo.7743217"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.7743217.svg" alt="DOI"></a>
+      </div>
+
+      <div class="oe-footer-themeselector" id="themeSelector">
+          <dark-mode-toggle class="oe-dark-mode-toggle" id="dark-mode-toggle-1" appearance="switch" dark="Dark" light="Light"
+          permanent remember="Remember?"></dark-mode-toggle>
+      </div>
 
     </div>
-    <div class="oe-footer-themeselector" id="themeSelector">
-        <dark-mode-toggle id="dark-mode-toggle-1" appearance="switch" dark="Dark" light="Light"
-        permanent remember="Remember?"></dark-mode-toggle>
-    </div>
+  </div>
 </footer>
 </body>
 

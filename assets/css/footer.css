@@ -1,12 +1,57 @@
 .oe-footer {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
+    flex-direction: column;
+    margin-top: var(--oe-padding-small);
 
-#themeSelector {
-    text-align: right;
+    &-git-info {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+        background-color: blue;
+    }
+
+    &-upper, &-lower {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      margin-bottom: var(--oe-padding-small);
+    }
+
+    &-upper {
+      justify-content: center;
+    }
+
+    &-lower {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &-doi {
+      display: flex;
+    }
+
+    &-doi, &-copyright, &-social-media, &-themeselector {
+      width: 50%;
+      padding-top: var(--oe-padding-smaller);
+    }
+
+    &-social-media {
+      display: flex;
+      justify-content: flex-end;
+
+      sl-icon-button::part(base) {
+        color: var(--color-link);
+      }
+      
+      .button__label {
+        padding: 0 var(--sl-spacing-x-small) 0 0 !important; /* Overriding shoelace button label style to improve spacing */
+      }
+    }
+
+    &-themeselector {
+      text-align: right;
+    }
 }
 
 dark-mode-toggle {
@@ -25,6 +70,16 @@ dark-mode-toggle::part(fieldset) {
 @media only screen and (max-width: 700px) {
     .oe-footer {
         flex-direction: column;
+
+        &-lower {
+          flex-direction: column;
+        }
+
+        &-doi, &-copyright, &-social-media, &-themeselector {
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+        }
     }
     .oe-footer > div {
         margin-top: --oe-padding-small;

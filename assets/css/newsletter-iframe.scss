@@ -1,0 +1,11 @@
+.oe-responsive-newsletter-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+
+  &-container {
+    margin: 0 auto;
+    width: calc(min (100%, 600px));
+    height: 600px;  /* baked into the form in the iframe */
+  }
+}

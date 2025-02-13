@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import "common";
 @import "main_nav";
+@import "footer";
 @import "icons";
 @import "shoelace";
 @import "home";
@@ -8,12 +9,12 @@
 @import "page";
 @import "resources";
 @import "layout";
-@import "footer";
 @import "registry";
 @import "governance";
 @import "posts";
 @import "presentation";
 @import "shortcodes";
+@import "newsletter-iframe";
 
 
 /* Added a second definition to separate templated values from not so syntax

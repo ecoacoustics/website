@@ -1,20 +1,12 @@
-
 .oe-responsive-newsletter-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   width: 100%;
   height: 100%;
   border: none;
 
   &-container {
-    display: flex;
     margin: 0 auto;
-    position: relative;
-    height: 600px; /* height of the content */
-    width: 600px;
+    width: calc(min (100%, 600px));
+    height: 600px;  /* baked into the form in the iframe */
   }
 }
 
@@ -25,7 +17,5 @@
      -moz-transform-origin: 0 0;
      -o-transform: scale(0.65);
      -o-transform-origin: 0 0;
-     -webkit-transform: scale(0.65);
-     -webkit-transform-origin: 0 0;
   }
 }

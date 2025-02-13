@@ -9,13 +9,3 @@
     height: 600px;  /* baked into the form in the iframe */
   }
 }
-
-@media screen and (max-width: 700px) {
-  .oe-responsive-newsletter-iframe {
-    -ms-zoom: 0.75;
-     -moz-transform: scale(0.65);
-     -moz-transform-origin: 0 0;
-     -o-transform: scale(0.65);
-     -o-transform-origin: 0 0;
-  }
-}

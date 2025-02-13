@@ -1,7 +1,6 @@
 .oe-footer {
     display: flex;
     flex-direction: column;
-    background-color: var(--oe-background-color-darker);
     margin-top: var(--oe-padding-small);
 
     &-git-info {
@@ -40,8 +39,13 @@
     &-social-media {
       display: flex;
       justify-content: flex-end;
+
       sl-icon-button::part(base) {
         color: var(--color-link);
+      }
+      
+      .button__label {
+        padding: 0 var(--sl-spacing-x-small) 0 0 !important; /* Overriding shoelace button label style to improve spacing */
       }
     }
 

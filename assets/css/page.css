@@ -12,6 +12,7 @@
 
     margin-top: 0;
     margin-bottom: var(--oe-padding-small);
+    max-height: 40vh;
 }
 
 .page-hero-image {
@@ -47,7 +48,8 @@
 
     color: var(--oe-font-color-bright);
     & > h1 {
-        font-size: calc(clamp(2.25rem, 0.875rem + 6.875vw, 5rem));
+        font-size: var(--oe-font-size-scaling-title);
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
         padding: 0;
         margin: 0;
         width: calc(100% - 2 * var(--oe-padding-large));
@@ -59,12 +61,5 @@
         font-size: x-small;
         align-self: flex-end;
         margin-top: auto;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .page-hero-content > h1 {
-        /* font-size: 300% !important; */
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     }
 }

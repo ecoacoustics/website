@@ -4,6 +4,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 
     /* transition:
         color var(--oe-duration) var(--oe-timing),

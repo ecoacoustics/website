@@ -2,60 +2,52 @@
     display: flex;
     flex-direction: column;
     margin-top: var(--oe-padding-small);
+    width: 100%;
 
     &-git-info {
-      width: 100%;
-      display: flex;
-      justify-content: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
         background-color: blue;
     }
 
-    &-upper, &-lower {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      margin-bottom: var(--oe-padding-small);
+    &-upper,
+    &-lower {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-bottom: var(--oe-padding-small);
+        gap: var(--oe-padding);
+        text-align: center;
     }
 
     &-upper {
-      justify-content: center;
+        justify-content: center;
     }
 
     &-lower {
         justify-content: space-between;
-        width: 100%;
+        align-items: end;
+        align-content: center;
     }
 
-    &-doi {
-      display: flex;
-    }
-
-    &-doi, &-copyright, &-social-media, &-themeselector {
-      width: 50%;
-      padding-top: var(--oe-padding-smaller);
+    & .oe-footer-lower > * {
+        flex-grow: 1;
+        flex-shrink: 0;
     }
 
     &-social-media {
-      display: flex;
-      justify-content: flex-end;
-
-      sl-icon-button::part(base) {
-        color: var(--color-link);
-      }
-      
-      .button__label {
-        padding: 0 var(--sl-spacing-x-small) 0 0 !important; /* Overriding shoelace button label style to improve spacing */
-      }
+        a {
+            height: 16px;
+            display: inline-block;
+            vertical-align: text-top;
+        }
     }
 
     &-themeselector {
-      text-align: right;
+        flex-shrink: 1;
     }
-}
-
-dark-mode-toggle {
-    word-spacing: 200%;
 }
 
 dark-mode-toggle::part(fieldset) {
@@ -64,28 +56,4 @@ dark-mode-toggle::part(fieldset) {
     align-items: baseline;
     flex-direction: row-reverse;
     gap: 1em;
-}
-
-/* Small screen styles */
-@media only screen and (max-width: 700px) {
-    .oe-footer {
-        flex-direction: column;
-
-        &-lower {
-          flex-direction: column;
-        }
-
-        &-doi, &-copyright, &-social-media, &-themeselector {
-          width: 100%;
-          display: flex;
-          justify-content: flex-start;
-        }
-    }
-    .oe-footer > div {
-        margin-top: --oe-padding-small;
-    }
-
-    dark-mode-toggle::part(fieldset) {
-        flex-direction: row;
-    }
 }

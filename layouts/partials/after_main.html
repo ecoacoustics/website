@@ -1,6 +1,5 @@
 {{ partial "docs/inject/body" . }}
-<footer class="oe-footer">
-  <div class="container">
+<footer class="oe-footer container">
     <div class="oe-footer-upper">
       <div class="oe-footer-gitinfo">
           <small><a href="{{ relref . `about#cite-this-web-page` }}">How to cite</a></small>｜
@@ -20,11 +19,10 @@
       </div>
 
       <div class="oe-footer-social-media">
-        <sl-button variant="text" size="small">
-            <a href="{{ relref . `newsletter` }}">
-              <sl-icon slot="prefix" name="envelope-at" label="newsletter"></sl-icon>Newsletter
-            </a>
-        </sl-button>
+        <sl-icon-button name="envelope-at" label="Newsletter" src="/images/newsletter-icon.svg" href="{{ relref . `newsletter` }}" target="_blank"></sl-icon-button>
+        <a href="{{ relref . `newsletter` }}">
+          Newsletter
+        </a>
         <sl-icon-button name="linkedin" label="LinkedIn" href="https://www.linkedin.com/company/open-ecoacoustics/" target="_blank"></sl-icon-button>
         <sl-icon-button label="BlueSky" src="/images/bluesky-icon.svg" href="https://bsky.app/profile/openecoacoustics.bsky.social" target="_blank"></sl-icon-button>
       </div>
@@ -35,11 +33,10 @@
 
       <div class="oe-footer-themeselector" id="themeSelector">
           <dark-mode-toggle class="oe-dark-mode-toggle" id="dark-mode-toggle-1" appearance="switch" dark="Dark" light="Light"
-          permanent remember="Remember?"></dark-mode-toggle>
+          permanent></dark-mode-toggle>
       </div>
 
     </div>
-  </div>
 </footer>
 </body>
 

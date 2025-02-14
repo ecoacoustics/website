@@ -50,6 +50,14 @@
     --oe-box-shadow: 0 1px 4px 0 rgba(0,0,0, 0.3);
     --oe-box-shadow-hover: 0 1px 6px 0 rgba(0,0,0, 0.8);
 
+    /* Use these definitions for font sizes that scale to the size of the viewport */
+    /* Adjust by using the calculator at the link below */
+    /* https://www.fluid-type-scale.com/calculate?minFontSize=16&minWidth=400&minRatio=1.25&maxFontSize=18&maxWidth=1920&maxRatio=1.66&steps=small%2Cnormal%2Clarge%2Ctitle&baseStep=base&prefix=oe-font-size-scaling&useContainerWidth=false&includeFallbacks=false&useRems=true&remValue=16&decimals=2&previewFont=Inter&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground&previewWidth=1920 */
+    --oe-font-size-scaling-small: clamp(1.25rem, 0.65vi + 1.09rem, 1.87rem);
+    --oe-font-size-scaling-normal: clamp(1.56rem, 1.62vi + 1.16rem, 3.1rem);
+    --oe-font-size-scaling-large: clamp(1.95rem, 3.36vi + 1.11rem, 5.15rem);
+    --oe-font-size-scaling-title: clamp(2.44rem, 6.42vi + 0.84rem, 8.54rem);
+
 }
 
 @media screen and (max-width: 60em) {

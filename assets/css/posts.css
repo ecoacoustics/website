@@ -24,7 +24,8 @@
             font-size: inherit;
         }
 
-        &-image, &-content {
+        &-image,
+        &-content {
             flex: 1;
         }
 
@@ -35,9 +36,9 @@
         }
 
         &-image {
-            margin-top:  calc(var(--oe-padding-small) * -1);
-            margin-bottom:  calc(var(--oe-padding-small) * -1);
-            margin-left:  calc(var(--oe-padding-small) * -1);
+            margin-top: calc(var(--oe-padding-small) * -1);
+            margin-bottom: calc(var(--oe-padding-small) * -1);
+            margin-left: calc(var(--oe-padding-small) * -1);
             padding-right: var(--oe-padding-small);
             background-size: cover;
             background-position: center;
@@ -60,7 +61,8 @@
             }
         }
 
-        &-footer {
+        /* AT 2025: We don't have any content affected by this right? Disabling for removal */
+        /* &-footer {
             display: flex;
             justify-content: end;
             margin-top: auto;
@@ -81,7 +83,7 @@
             .button__label {
                 color: var(--oe-font-color);
             }
-        }
+        } */
     }
 
     @media only screen and (max-width: 700px) {
@@ -99,20 +101,17 @@
 }
 
 .section-posts {
-
 }
 
 .oe-post {
     display: flex;
     flex-direction: column;
-    /* 80rem is the container size */
-    max-width: calc(80rem - var(--oe-side-menu-width));
     align-content: center;
     align-self: center;
     background-color: var(--oe-background-color);
 
     &-breadcrumb {
-        margin-top: var(--oe-padding-smaller)
+        margin-top: var(--oe-padding-smaller);
     }
 
     &-meta {

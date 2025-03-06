@@ -20,7 +20,7 @@ main {
 .oe-alert .alert--warning {
     border-top-color: var(--sl-color-warning-600);
     border-bottom-color: var(--sl-color-warning-600);
-    border-bottom-width: calc(var(--sl-panel-border-width)* 3);;
+    border-bottom-width: calc(var(--sl-panel-border-width)* 3);
     border-radius: 0;
 }
 

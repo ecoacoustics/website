@@ -17,6 +17,13 @@ main {
     flex-grow: 1;
 }
 
+.oe-alert .alert--warning {
+    border-top-color: var(--sl-color-warning-600);
+    border-bottom-color: var(--sl-color-warning-600);
+    border-bottom-width: calc(var(--sl-panel-border-width)* 3);;
+    border-radius: 0;
+}
+
 pre,
 .markdown pre {
     color: var(--oe-font-color);

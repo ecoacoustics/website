@@ -60,30 +60,6 @@
                 box-shadow: var(--oe-box-shadow-hover);
             }
         }
-
-        /* AT 2025: We don't have any content affected by this right? Disabling for removal */
-        /* &-footer {
-            display: flex;
-            justify-content: end;
-            margin-top: auto;
-
-            sl-button::part(base) {
-                color: var(--oe-font-color);
-
-                &:hover {
-                    border-color: var(--oe-theme-color);
-                    color: var(--oe-theme-color);
-                }
-            }
-
-            sl-icon {
-                color: var(--oe-font-color);
-            }
-
-            .button__label {
-                color: var(--oe-font-color);
-            }
-        } */
     }
 
     @media only screen and (max-width: 700px) {
@@ -92,15 +68,19 @@
         .oe-post {
             padding: var(--oe-padding-smaller);
             flex-direction: column;
+            height: auto;
+        }
 
-            &-content {
-                padding: 0;
-            }
+        .oe-post-content {
+          padding: 0;
+        }
+
+        .oe-post-image {
+            margin-right: calc(var(--oe-padding-small)*-1);
+            padding: 0;
+            min-height: 9em; /* NH Adding min height so that empty divs render correctly on mobile */
         }
     }
-}
-
-.section-posts {
 }
 
 .oe-post {

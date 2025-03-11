@@ -1,16 +1,16 @@
 ---
 title: "Using the Power of Sound to Tackle Australia’s Biodiversity Crisis"
-date: 2025-02-04T12:18:00+10:00
-image: './case-study-ecoacoustics-feature-image-583-x-345-580x345.jpg'
+date: 2025-03-11T12:18:00+10:00
 draft: true
+image: "/images/case-study-ecoacoustics-feature-image.jpg"
 tags:
 - News
 ---
-*This case study was [originally posted on the ARDC website](https://ardc.edu.au/case-study/using-the-power-of-sound-to-tackle-australias-biodiversity-crisis/).*
-
-**Learn how Open Ecoacoustics is helping researchers listen to the land to preserve Australia’s native animals and ecosystems.**
-
+Learn how Open Ecoacoustics is helping researchers listen to the land to preserve Australia’s native animals and ecosystems.
+<!--more-->
 Australia’s bushland has a voice. Every chirp, croak and howl tells a story about our native wildlife; a rich source of information about the health of our ecosystems. But as biodiversity continues to decline, nature’s voice is changing. Now, scientists are turning to the power of sound to listen to the land and help preserve our wildlife.
+
+{{% figure src="/images/case-study-ecoacoustics-feature-image.jpg" caption="Dr Liz Znidersic uses Open Ecoacoustics in her project, Eavesdropping on Wetland Birds. Image: Liz Znidersic."%}}
 
 ## Monitoring Biodiversity Through Sound
 Many animals use sound to communicate, navigate, and interact with their environment. These acoustic signals provide valuable data about population size, an animal’s location, and what they’re doing. As a result, acoustic monitoring has become a powerful tool for understanding ecosystem health.
@@ -32,7 +32,7 @@ Professor Paul Roe, project leader at the Queensland University of Technology (Q
 
 “While the Open Ecoacoustics project is about a platform, it’s equally about the people in the partnerships. They’re the ones on the ground doing the good work,” said Prof Roe.
 
-{{% figure src="./liz-znidersic_wetlands-2-web-1024x683.jpg" caption="Dr Liz Znidersic uses Open Ecoacoustics in her project, Eavesdropping on Wetland Birds. Image: Liz Znidersic." width="50%"%}}
+{{% figure src="./liz-znidersic_wetlands-2-web-1024x683.jpg" caption="Dr Liz Znidersic uses Open Ecoacoustics in her project, Eavesdropping on Wetland Birds. Image: Liz Znidersic."%}}
 
 ## Insights from the Wetlands
 Dr Liz Znidersic, a post-doctoral researcher from the Gulbali Institute at Charles Sturt University, uses Open Ecoacoustics in her project Eavesdropping on Wetland Birds. Dr Znidersic and her team do what she calls “detective work” to find species that are seldom seen. They do this by recording thousands of hours of wetland sounds to understand the distribution and presence of some of Australia’s most secretive bird species by their calls (including rails, crakes and bitterns) in south-eastern Australia and Tasmania.
@@ -45,7 +45,7 @@ Her team uses Open Ecoacoustics to store, manage and process the acoustic data. 
 
 “Open Ecoacoustics will give us the ability to go backwards in time,” said Dr Znidersic, “We’ve got recordings from almost 10 years ago – an extraordinary acoustic library, which will enable researchers to critically review ecosystems and single species movements and changes.”
 
-{{% figure src=".npws_eastern-pygmy-possum-web-1024x720.jpg" caption="Eastern Pygmy possum, Cercartetus nanus, captured by a camera trap. Image: NSW National Parks and Wildlife Service." width="50%"%}}
+{{% figure src="./npws_eastern-pygmy-possum-web-1024x720.jpg" caption="Eastern Pygmy possum, Cercartetus nanus, captured by a camera trap. Image: NSW National Parks and Wildlife Service."%}}
 
 ## Listening to the Health of our National Parks
 Further north, the NSW National Parks and Wildlife Service use Open Ecoacoustics in their [Ecological Health Performance Scorecards program](https://www2.environment.nsw.gov.au/topics/parks-reserves-and-protected-areas/park-management/ecological-health-performance-scorecards) to track the changing health of NSW national parks, providing important information about native plants, animals, and natural resources.
@@ -66,3 +66,5 @@ Hamish Holewa, Director of the ARDC’s Planet Research Data Commons, said, “T
 *Open Ecoacoustics received co-investment ([doi.org/10.3565/ts8c-ee10](https://doi.org/10.3565/ts8c-ee10)) from the ARDC. The ARDC is enabled by the National Collaborative Research Infrastructure Strategy (NCRIS).*
 
 Written by Dr Cintya Dharmayanti, Scientell. Reviewed by Prof Paul Roe (QUT), Danielle Stokeld (NSW National Parks and Wildlife Service), Dr Liz Znidersic (Charles Sturt University), Hamish Holewa (ARDC).
+
+**This case study was [originally posted on the ARDC website](https://ardc.edu.au/case-study/using-the-power-of-sound-to-tackle-australias-biodiversity-crisis/).**

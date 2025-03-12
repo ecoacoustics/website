@@ -27,7 +27,7 @@
 
             {{ if .Truncated }}
               <div class="oe-post-footer">
-                <sl-button href="{{ .RelPermalink }}" variant="text" outline>
+                <a href="{{ .RelPermalink }}" class="oe-post-read-more button button--text button--medium button--outline button--has-label button--has-prefix">
                   <sl-icon slot="prefix" name="arrow-right"></sl-icon>
                   Continue reading <span class="sr-only">{{ partial "docs/title.html" . }}</span></sl-button>
               </div>

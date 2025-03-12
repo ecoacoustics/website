@@ -1,7 +1,7 @@
 ---
 title: "Using the Power of Sound to Tackle Australia’s Biodiversity Crisis"
 date: 2025-03-11T12:18:00+10:00
-draft: true
+draft: false
 image: "/images/case-study-ecoacoustics-feature-image.jpg"
 tags:
 - News

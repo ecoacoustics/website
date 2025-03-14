@@ -1,8 +1,8 @@
 ---
 title: "Breaking Changes to Ecosounds & A2O Authentication"
-date: 2025-03-14T12:19:00+10:00
-image: "/images/authentication-token-code.png"
-imageCredit: "Professor Susan Fuller"
+date: 2025-03-14T14:20:00+10:00
+image: "/images/ecosounds-banner-image.jpg"
+imageCredit: "QUT Ecoacoustics Staff"
 tags:
     - News
     - Technical

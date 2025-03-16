@@ -12,7 +12,7 @@ The Acoustic Workbench software that powers sites such as [Ecosounds](https://ww
 [A2O](https://data.acousticobservatory.org/) has been upgraded with enhanced security features.
 These changes will break existing workflows and automated scripts that depend on authentication token.
 
-## Effected Users
+## Affected Users and Uses
 
 If you are using the Ecosounds or the A2O through the website interface, you will not be effected by these changes.
 
@@ -23,18 +23,16 @@ These authentication changes will effect the following (but not limited to) user
 - HPC scripts
 - Automated workflow scripts
 
-Effected users may not experience the breaking changes immediately, as they are likely to arise when scripts run across
-the _00:00+UTC_ boundary.
-Meaning that effected users are **strongly advised** to update their scripts
-to prevent intermittent failures.
+Effected users are **strongly advised** to update their scripts
+to prevent failures.
 
 ## Expiring Authentication Tokens
 
-Authentication tokens now last for 24 hours.
-Every day at midnight ([00:00 UTC](https://dateful.com/convert/utc?t=12am)) all authentication tokens will expire and
-can no longer be used to perform actions such as download audio or access projects.
+Authentication tokens now last for 24 hours after the last sign-in to the Ecosounds or A2O platform.
+Re-authenticating yourself using the Ecosounds or A2O will generate a new authentication token, meaning that all
+ongoing authentication tokens can no longer be used.
 
-If you are using, scripts or programs to access Ecosounds or A2O data, you will be effected by these changes and will
+If you are using scripts or programs to access Ecosounds or A2O data, you will be effected by these changes and will
 start to notice `401 Unauthorized` responses.
 
 ### Suggested Changes (expiring tokens)
@@ -43,6 +41,7 @@ Effected users are **strongly advised** to update their scripts to either
 
 - Prompt for an authentication token when a 401 response is received
 - Use a username and password to fetch a new authentication token when a `401 Unauthorized` response is received
+- (Coming soon) Authenticate using a json web token (JWT)
 
 ## Changes to Authentication Token Format
 

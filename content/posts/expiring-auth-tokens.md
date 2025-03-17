@@ -16,7 +16,7 @@ These changes will break existing workflows and automated scripts that depend on
 
 If you are using the Ecosounds or the A2O through the website interface, you will not be affected by these changes.
 
-These authentication changes will effect the following (but not limited to) users who run automated scripts such as:
+These authentication changes will affect users who run automated scripts such as:
 
 - R scripts
 - Powershell scripts
@@ -28,9 +28,10 @@ to prevent failures.
 
 ## Expiring Authentication Tokens
 
-Authentication tokens now last for 24 hours after the last sign-in to the Ecosounds or A2O platform.
-Logging in to Ecosounds or the A2O will generate a new authentication token, meaning that previously generated tokens
-will not work.
+Authentication tokens now last for 24 hours after their last use.
+
+If a token has expires, logging in to the website that issued it (either
+Ecosounds or the A2O) will generate a new authentication token you can use.
 
 If you are using scripts or programs to access Ecosounds or A2O data, you will be affected by these changes and will
 start to notice `401 Unauthorized` responses.

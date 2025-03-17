@@ -45,8 +45,10 @@ Effected users are **strongly advised** to update their scripts to either
 
 ## Changes to Authentication Token Format
 
-Using the authentication token in the HTTP `Authentication` header now requires you to explicitly add quotation marks
-around the authentication token.
+Using the authentication token in the HTTP `Authentication` header always 
+expected the token to be quoted with double quotes.
+However, the quotes weren't required. Now the quotes are required and you may
+need to add quotation marks around the authentication token in your scripts.
 
 ### Suggested Changes (Authentication Token Format)
 
@@ -57,3 +59,8 @@ sent in the HTTP `Authentication` header.
 - Authentication: Bearer token=AAAAAAAAAAAAAAAA-AAAAAAAAAAAAAAAAAAAAAAAAAA
 + Authentication: Bearer token="AAAAAAAAAAAAAAAA-AAAAAAAAAAAAAAAAAAAAAAAAAA"
 ```
+
+## Support
+
+If you need any help adapting your scripts, please reach out and we'll do the 
+best we can to support you.

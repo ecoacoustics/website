@@ -14,7 +14,7 @@ These changes will break existing workflows and automated scripts that depend on
 
 ## Affected Users and Uses
 
-If you are using the Ecosounds or the A2O through the website interface, you will not be effected by these changes.
+If you are using the Ecosounds or the A2O through the website interface, you will not be affected by these changes.
 
 These authentication changes will effect the following (but not limited to) users who run automated scripts such as:
 
@@ -23,7 +23,7 @@ These authentication changes will effect the following (but not limited to) user
 - HPC scripts
 - Automated workflow scripts
 
-Effected users are **strongly advised** to update their scripts
+Affected users are **strongly advised** to update their scripts
 to prevent failures.
 
 ## Expiring Authentication Tokens
@@ -32,12 +32,12 @@ Authentication tokens now last for 24 hours after the last sign-in to the Ecosou
 Logging in to Ecosounds or the A2O will generate a new authentication token, meaning that previously generated tokens
 will not work.
 
-If you are using scripts or programs to access Ecosounds or A2O data, you will be effected by these changes and will
+If you are using scripts or programs to access Ecosounds or A2O data, you will be affected by these changes and will
 start to notice `401 Unauthorized` responses.
 
 ### Suggested Changes (expiring tokens)
 
-Effected users are **strongly advised** to update their scripts to either
+Affected users are **strongly advised** to update their scripts to either
 
 - Prompt for an authentication token when a 401 response is received
 - Use a username and password to fetch a new authentication token when a `401 Unauthorized` response is received

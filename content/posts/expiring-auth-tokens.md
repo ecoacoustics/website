@@ -45,8 +45,7 @@ Affected users are **strongly advised** to update their scripts to either
 
 ## Changes to Authentication Token Format
 
-Using the authentication token in the HTTP `Authentication` header always 
-expected the token to be quoted with double quotes.
+We always expected the token to be quoted with double quotes.
 However, the quotes weren't required. Now the quotes are required and you may
 need to add quotation marks around the authentication token in your scripts.
 

@@ -29,8 +29,8 @@ to prevent failures.
 ## Expiring Authentication Tokens
 
 Authentication tokens now last for 24 hours after the last sign-in to the Ecosounds or A2O platform.
-Re-authenticating yourself using the Ecosounds or A2O will generate a new authentication token, meaning that all
-ongoing authentication tokens can no longer be used.
+Logging in to Ecosounds or the A2O will generate a new authentication token, meaning that previously generated tokens
+will not work.
 
 If you are using scripts or programs to access Ecosounds or A2O data, you will be effected by these changes and will
 start to notice `401 Unauthorized` responses.
@@ -45,7 +45,7 @@ Effected users are **strongly advised** to update their scripts to either
 
 ## Changes to Authentication Token Format
 
-Using the authentication token in HTTP `Authentication` header now requires you to explicitly add quotation marks
+Using the authentication token in the HTTP `Authentication` header now requires you to explicitly add quotation marks
 around the authentication token.
 
 ### Suggested Changes (Authentication Token Format)

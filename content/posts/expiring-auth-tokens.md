@@ -11,7 +11,7 @@ tags:
 The Acoustic Workbench software that powers sites such as [Ecosounds](https://www.ecosounds.org/) and
 [A2O](https://data.acousticobservatory.org/) has been upgraded with enhanced security features.
 These changes will break existing workflows and automated scripts that depend on authentication token.
-
+<!--more-->
 ## Affected Users and Uses
 
 If you are using the Ecosounds or the A2O through the website interface, you will not be affected by these changes.
@@ -62,5 +62,5 @@ sent in the HTTP `Authentication` header.
 
 ## Support
 
-If you need any help adapting your scripts, please reach out and we'll do the 
+If you need any help adapting your scripts, please reach out and we'll do the
 best we can to support you.

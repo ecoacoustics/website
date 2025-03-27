@@ -1,6 +1,6 @@
 ---
 title: "Portable Spectrograms and Verification Interface"
-date: 2025-03-27:20:00+10:00
+date: 2025-03-27T22:00:00+10:00
 image: "/images/ecosounds-banner-image.jpg"
 imageCredit: "QUT Ecoacoustics Staff"
 tags:
@@ -37,7 +37,11 @@ I have created a small underpowered stackblitz workspace so that you can
 experiment with the web components without worrying about the technical details
 of setting up a server.
 
-<iframe src="https://stackblitz.com/edit/oe-web-components-basic?file=index.html" height="600" style="border-style: none;"></iframe>
+<iframe
+    src="https://stackblitz.com/edit/oe-web-components-basic?file=index.html"
+    height="600"
+    style="border-style: none;"
+></iframe>
 
 <https://stackblitz.com/edit/oe-web-components-basic?file=index.html>
 

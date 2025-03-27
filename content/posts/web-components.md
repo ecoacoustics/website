@@ -27,7 +27,7 @@ Australian Acoustic Observatory (A2O).
 You can use this verification grid to verify annotations that you have uploaded.
 
 As an example, you can search and verify all annotations on the A2O
-[https://data.acousticobservatory.org/projects/1/annotations](here).
+[here](https://data.acousticobservatory.org/projects/1/annotations).
 
 ## Technical Information
 
@@ -72,6 +72,12 @@ done through the following code.
     <oe-data-source slot="data-source" for="verification-grid" local></oe-data-source>
 </oe-verification-grid>
 ```
+
+## Support
+
+If you find any issues with the web components, please report them via our
+GitHub issue tracker
+[here](https://github.com/ecoacoustics/web-components/issues).
 
 ## Learn More
 

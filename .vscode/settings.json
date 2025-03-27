@@ -3,6 +3,7 @@
         "Ecoacoustics",
         "Ecosounds",
         "Recogniser",
+        "stackblitz",
         "visualisations"
     ],
     "prettier.proseWrap": "always"

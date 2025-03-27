@@ -37,11 +37,7 @@ I have created a small underpowered stackblitz workspace so that you can
 experiment with the web components without worrying about the technical details
 of setting up a server.
 
-<iframe
-    src="https://stackblitz.com/edit/oe-web-components-basic?file=index.html"
-    height="600"
-    style="border-style: none;"
-></iframe>
+<iframe src="https://stackblitz.com/edit/oe-web-components-basic?file=index.html" height="600" style="border-style: none;"></iframe>
 
 <https://stackblitz.com/edit/oe-web-components-basic?file=index.html>
 

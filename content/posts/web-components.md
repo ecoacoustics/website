@@ -26,6 +26,9 @@ Australian Acoustic Observatory (A2O).
 
 You can use this verification grid to verify annotations that you have uploaded.
 
+As an example, you can search and verify all annotations on the A2O
+[https://data.acousticobservatory.org/projects/1/annotations](here).
+
 ## Technical Information
 
 ### Spectrograms
@@ -34,7 +37,11 @@ I have created a small underpowered stackblitz workspace so that you can
 experiment with the web components without worrying about the technical details
 of setting up a server.
 
-<iframe src="https://stackblitz.com/edit/oe-web-components-basic?file=index.html"></iframe>
+<iframe
+    src="https://stackblitz.com/edit/oe-web-components-basic?file=index.html"
+    height="600"
+    style="border-style: none;"
+></iframe>
 
 <https://stackblitz.com/edit/oe-web-components-basic?file=index.html>
 

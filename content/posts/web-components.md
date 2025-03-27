@@ -10,34 +10,45 @@ tags:
 
 Open Ecoacoustics have recently published portable web components that can be
 embedded into any website.
+The web components provide Ecoacoustic tools such as spectrograms, annotation
+viewers, and customizable verification grids.
 <!--more-->
 
-These web components provide audio visualization and verification tools such as
-spectrograms, annotation viewers, and customizable verification grids.
-
-You can play around with the spectrogram components options using the
+You can tinker with a demonstration spectrogram components options using the
 [spectrogram creator](https://oe-web-components.netlify.app/spectrogram-creator/)
 available on the web components documentation website.
+When changing the options the webpage will provide you with a code snippet that
+you can copy and paste into your website.
 
 ## Ecosounds and A2O integration
 
-A "yes", "no" verification grid has been deployed to both Ecosounds and the
-Australian Acoustic Observatory (A2O).
-
-You can use this verification grid to verify annotations that you have uploaded.
+A "yes", "no" verification grid has been deployed to all Ecosounds and
+Australian Acoustic Observatory (A2O) project, sites, and points.
+You can use this verification grid to verify annotations that you have created
+or uploaded through the new
+[annotation import page](https://www.ecosounds.org/batch_annotations)
 
 As an example, you can search and verify all annotations on the A2O
 [here](https://data.acousticobservatory.org/projects/1/annotations).
+Or refine your verification to a species of your expertise using the filter
+settings provided.
 
 ## Technical Information
 
 ### Spectrograms
 
-I have created a small underpowered stackblitz workspace so that you can
-experiment with the web components without worrying about the technical details
-of setting up a server.
+For demonstration purposes, I have created a small underpowered stackblitz
+workspace so that you can experiment with the web components without worrying
+about the technical details of setting up a server.
 
+<!--
+    On mobile (or small) devices, an embedded stackblitz frame is not large
+    enough to use effectively.
+    Therefore, I remove the redundant space on mobile devices and only have the
+    link to the stackblitz workspace.
+-->
 <iframe
+    class="hide-on-mobile"
     src="https://stackblitz.com/edit/oe-web-components-basic?file=index.html"
     height="600"
     style="border-style: none;"
@@ -45,7 +56,8 @@ of setting up a server.
 
 <https://stackblitz.com/edit/oe-web-components-basic?file=index.html>
 
-Adding a spectrogram to your website is now as easy as.
+As shown in the example, adding a spectrogram to your website can now be done
+with minimal effort.
 
 ```html
 <script type="module" src="https://cdn.jsdelivr.net/npm/@ecoacoustics/web-components/dist/components.js"></script>
@@ -56,10 +68,11 @@ Adding a spectrogram to your website is now as easy as.
 </oe-axes>
 ```
 
-### Verification Grid
+### Verification Grids
 
-The new web components come packaged with a verification and classification
-grid component.
+The new web components come packaged with a verification grid component.
+This component is used by ecologists to verify that existing tags in a dataset
+are correct.
 
 Creating a custom verification grid outside of Ecosounds or the A2O can now be
 done through the following code.

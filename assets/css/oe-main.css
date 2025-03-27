@@ -67,6 +67,20 @@
     }
 }
 
+/*
+    TODO: our hugo theme contains scss breakpoints for mobile devices but they
+    are not used throughout the rest of the website where 700px is hard coded
+    as the mobile breakpoint.
+
+    We should probably unify these breakpoints so that there is only one mobile
+    breakpoint throughout the website.
+*/
+@media screen and (max-width: 700px) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
+
 /* Added a class to hide elements meant for screen readers only */
 .sr-only {
     position:absolute;

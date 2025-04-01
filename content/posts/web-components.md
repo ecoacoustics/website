@@ -8,7 +8,7 @@ tags:
     - Technical
 ---
 
-Open Ecoacoustics have recently published portable web components that can be
+Open Ecoacoustics have recently published reusable web components that can be
 embedded into any website.
 The web components provide Ecoacoustic tools such as spectrograms, annotation
 viewers, and customizable verification grids.

@@ -22,7 +22,7 @@ you can copy and paste into your website.
 
 ## Ecosounds and A2O integration
 
-A "yes", "no" verification grid has been deployed to all Ecosounds and
+A "yes" or "no" verification grid has been deployed to all Ecosounds and
 Australian Acoustic Observatory (A2O) project, sites, and points.
 You can use this verification grid to verify annotations that you have created
 or uploaded through the new

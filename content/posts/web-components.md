@@ -5,7 +5,6 @@ image: "/images/ecosounds-banner-image.jpg"
 imageCredit: "QUT Ecoacoustics Staff"
 tags:
     - News
-    - Technical
 ---
 
 Open Ecoacoustics have recently published reusable web components that can be
@@ -89,8 +88,8 @@ done through the following code.
 ## Support
 
 If you find any issues with the web components, please report them via our
-GitHub issue tracker
-[here](https://github.com/ecoacoustics/web-components/issues).
+[GitHub issue tracker](https://github.com/ecoacoustics/web-components/issues),
+or contact us through the [contact form](/contact).
 
 ## Learn More
 

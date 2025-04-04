@@ -89,7 +89,6 @@
     align-content: center;
     align-self: center;
     background-color: var(--oe-background-color);
-    max-width: 100%;
 
     &-breadcrumb {
         margin-top: var(--oe-padding-smaller);

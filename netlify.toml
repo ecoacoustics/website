@@ -8,3 +8,10 @@
 
 [context.deploy-preview]
   command = "hugo --buildDrafts --buildFuture"
+
+# needed to embed stackblitz as an iframe because they rely on SharedArrayBuffer
+[[headers]]
+  for = "/posts/web-components"
+    [headers.values]
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Embedder-Policy = "require-corp"

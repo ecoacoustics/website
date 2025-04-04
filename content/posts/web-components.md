@@ -1,7 +1,8 @@
 ---
 title: "Portable Spectrograms and Verification Interface"
 date: 2025-04-04T12:00:00+10:00
-image: "/images/ecoacoustic-verification.jpg"
+image: "/images/frog.jpg"
+imageCredit: "Professor Susan Fuller"
 tags:
     - News
 ---
@@ -141,7 +142,7 @@ are correct.
 > [Cooloola Ecosounds project](https://www.ecosounds.org/projects/1029)
 > under the Creative Commons by Attribution 4.0 license.
 
-> Phillips, Yvonne (2018): Environmental long-duration audio recordings: Gympie and Woondum National Park . Queensland University of Technology. (Sound) https://doi.org/10.4225/09/5a7297ee4b893
+> Phillips, Yvonne (2018): Environmental long-duration audio recordings: Gympie and Woondum National Park . Queensland University of Technology. (Sound) <https://doi.org/10.4225/09/5a7297ee4b893>
 
 While it is recommended to use the Ecosounds or A2O verification workflow, the
 nature of these web components being portable means that they are fully

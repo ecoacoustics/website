@@ -85,17 +85,13 @@ about the technical details of setting up a server.
 
 <https://stackblitz.com/edit/oe-web-components-basic?file=index.html>
 
-As shown in the example, adding a spectrogram to your website can now be done
-with minimal effort.
+{{% figure src="./spectrogram-variants.png" caption="Spectrogram variants" width="50%" %}}
 
-```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/@ecoacoustics/web-components/dist/components.js"></script>
-<oe-axes>
-    <oe-indicator>
-        <oe-spectrogram src="/example.flac"></oe-spectrogram>
-    </oe-indicator>
-</oe-axes>
-```
+[Spectrogram Variants](https://stackblitz.com/edit/oe-web-components-basic?file=examples%2Fspectrogram-variants.html)
+
+{{% figure src="./spectrogram-annotations.png" caption="Spectrogram variants" width="50%" %}}
+
+[Annotations](https://stackblitz.com/edit/oe-web-components-basic?file=examples%2Fannotations.html)
 
 ### Verification Grids
 
@@ -106,14 +102,7 @@ are correct.
 Creating a custom verification grid outside of Ecosounds or the A2O can now be
 done through the following code.
 
-```html
-<oe-verification-grid id="verification-grid">
-    <oe-verification verified="true" shortcut="Y"></oe-verification>
-    <oe-verification verified="false" shortcut="N"></oe-verification>
-
-    <oe-data-source slot="data-source" for="verification-grid" local></oe-data-source>
-</oe-verification-grid>
-```
+[Verification Grid Example](https://stackblitz.com/edit/oe-web-components-basic?file=examples%2Fverification-grid.html)
 
 ## Support
 

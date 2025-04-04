@@ -1,13 +1,13 @@
 ---
 title: "Portable Spectrograms and Verification Interface"
-date: 2025-04-01T12:00:00+10:00
+date: 2025-04-04T12:00:00+10:00
 image: "/images/ecoacoustic-verification.jpg"
 tags:
     - News
 ---
 
-Open Ecoacoustics have recently published reusable web components that can be
-embedded into any website.
+Open Ecoacoustics have recently published reusable ecoacoustic tools as web
+components that can be embedded into any website.
 <!--more-->
 
 ## What are Ecoacoustic web components
@@ -62,9 +62,7 @@ As an example, you can search and verify all annotations on the A2O
 Or refine your verification to a species of your expertise using the filter
 settings provided.
 
-## Technical Information
-
-### Spectrograms
+## Demonstration
 
 For demonstration purposes, I have created a small underpowered stackblitz
 workspace so that you can experiment with the web components without worrying
@@ -85,13 +83,46 @@ about the technical details of setting up a server.
 
 <https://stackblitz.com/edit/oe-web-components-basic?file=index.html>
 
-{{% figure src="./spectrogram-variants.png" caption="Spectrogram variants" width="50%" %}}
+### Spectrogram Variants
 
-[Spectrogram Variants](https://stackblitz.com/edit/oe-web-components-basic?file=examples%2Fspectrogram-variants.html)
+Great care has been given to the reusability of the web components.
+Each component has several options that can be adapted to the theme of your
+website or use case.
 
-{{% figure src="./spectrogram-annotations.png" caption="Spectrogram variants" width="50%" %}}
+A complete list of options available for each component can be found
+[here](https://oe-web-components.netlify.app/components/).
 
-[Annotations](https://stackblitz.com/edit/oe-web-components-basic?file=examples%2Fannotations.html)
+{{%
+    figure
+    src="./spectrogram-variants.png"
+    caption="Four variants of spectrograms with different colours, window sizes, and scales"
+    width="50%"
+%}}
+
+[Stackblitz: Spectrogram Variants](https://stackblitz.com/edit/oe-web-components-basic?file=examples%2Fspectrogram-variants.html)
+
+In the example above, I have rendered the same audio file with a variety of
+options that can be easily modified without any programming knowledge.
+In the image above, I have modified the each spectrograms color by simply using
+the `color-map` keyword.
+I have also demonstrated using a mel-scale in the bottom right spectrogram by
+simply adding the `mel-scale` keyword.
+
+### Event Annotations
+
+Adding bounding boxes to label areas of interest is a common part of
+Ecoacoustic workflows.
+For this reason, an annotation viewer included in the Open Ecoacoustics web
+components.
+
+{{%
+    figure
+    src="./spectrogram-annotations.png"
+    caption="Spectrogram variants"
+    width="50%"
+%}}
+
+[Stackblitz: Annotation Example](https://stackblitz.com/edit/oe-web-components-basic?file=examples%2Fannotations.html)
 
 ### Verification Grids
 
@@ -99,8 +130,30 @@ The new web components come packaged with a verification grid component.
 This component is used by ecologists to verify that existing tags in a dataset
 are correct.
 
-Creating a custom verification grid outside of Ecosounds or the A2O can now be
-done through the following code.
+{{%
+    figure
+    src="./verification-grid.png"
+    caption="A verification grid deployed on Ecosounds"
+    width="90%"
+%}}
+
+> Annotations shown in the Verification above were sourced from the
+> [Cooloola Ecosounds project](https://www.ecosounds.org/projects/1029)
+> under the Creative Commons by Attribution 4.0 license.
+
+> Phillips, Yvonne (2018): Environmental long-duration audio recordings: Gympie and Woondum National Park . Queensland University of Technology. (Sound) https://doi.org/10.4225/09/5a7297ee4b893
+
+While it is recommended to use the Ecosounds or A2O verification workflow, the
+nature of these web components being portable means that they are fully
+customizable and can be embedded for any task outside of Ecosounds or the A2O
+and supports a wide variety of data formats.
+
+Creating your own verification grid also allows easy customization of the
+verification task.
+For example, if your dataset does not include labeled species, we support
+tagging audio through the
+[classification](https://oe-web-components.netlify.app/examples/verification/classification/)
+variant of the `oe-verification-grid` web component.
 
 [Verification Grid Example](https://stackblitz.com/edit/oe-web-components-basic?file=examples%2Fverification-grid.html)
 
@@ -114,4 +167,4 @@ or contact us through the [contact form](/contact).
 ## Learn More
 
 - [Online documentation](https://oe-web-components.netlify.app/)
-- [Source Code](https://github.com/ecoacoustics/web-components)
+- [Web Component Source Code](https://github.com/ecoacoustics/web-components)

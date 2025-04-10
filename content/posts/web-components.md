@@ -13,15 +13,14 @@ components that can be embedded into any website.
 
 ## What are Ecoacoustic web components
 
-A web components is a standardised way to create a reusable part of a
+A web component is a standardised way to create a reusable part of a
 website.
 
 In the past, when someone wanted to add a spectrogram to their website, they
 would have to recreate spectrogram rendering from scratch, and if the underlying
 technology used to build the website changed, the work would have to be
-repeated.
-This is an inefficient process and lead duplicated work that has been repeated
-by many ecoacoustic groups.
+repeated. This is an inefficient process and lead duplicated work that has been
+repeated by many ecoacoustic groups.
 
 By choosing to create these tools as web components, Open Ecoacoustics is
 backing ecoacoustic tools with innovative new web standards.
@@ -38,6 +37,13 @@ available on the web components documentation website.
 When changing the options the webpage will provide you with a code snippet that
 you can copy and paste into your website.
 
+{{%
+    figure
+    src="./spectrogram-creator.png"
+    caption="A preview of the spectrogram creator webpage"
+    width="50%"
+%}}
+
 The open source nature of these web components means that anyone can read the
 underlying source code can be read and modified to meet your specific needs.
 The open source nature of these components also allows anyone to contribute code
@@ -53,7 +59,7 @@ A "yes" or "no" verification grid has been deployed to all Ecosounds and
 Australian Acoustic Observatory (A2O) projects, sites, and points.
 You can use this verification grid to verify annotations that you have created
 or uploaded through the new
-[annotation import page](https://www.ecosounds.org/batch_annotations)
+[annotation import page](https://www.ecosounds.org/batch_annotations).
 
 This verification grid is now available to all users and welcomes the
 collaboration of experts and citizen scientists to verify annotations.

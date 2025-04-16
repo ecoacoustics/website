@@ -22,16 +22,19 @@ technology used to build the website changed, the work would have to be
 repeated. This is an inefficient process and lead duplicated work that has been
 repeated by many ecoacoustic groups.
 
-By choosing to create these tools as web components, Open Ecoacoustics is
-backing ecoacoustic tools with innovative new web standards.
-Backing ecoacoustic tooling with web standards ensures their longevity,
-reusability, and increases the accessability of high-quality; open source
-ecoacoustic tooling.
+In the past, when someone wanted to add a spectrogram to their website, they
+would have to recreate spectrogram rendering from scratch, and if the underlying
+technology used to build the website changed, the work would have to be
+repeated. This is an inefficient process and lead duplicated work that has been
+repeated by many ecoacoustic groups. By choosing to create these tools as web
+components, Open Ecoacoustics is backing ecoacoustic tools with innovative new
+web standards. Backing ecoacoustic tooling with web standards ensures their
+longevity, reusability, and increases the accessability of high-quality; open
+source ecoacoustic tooling.
 
 The new web components provide Ecoacoustic tools such as spectrograms,
-annotation viewers, and customizable verification grids.
-
-You can tinker with a demonstration spectrogram components options using the
+annotation viewers, and customizable verification grids. You can tinker with a
+demonstration spectrogram components options using the
 [spectrogram creator](https://oe-web-components.netlify.app/spectrogram-creator/)
 available on the web components documentation website.
 When changing the options the webpage will provide you with a code snippet that
@@ -41,7 +44,7 @@ you can copy and paste into your website.
     figure
     src="./spectrogram-creator.png"
     caption="A preview of the spectrogram creator webpage"
-    width="50%"
+    width="85%"
 %}}
 
 The open source nature of these web components means that anyone can read the
@@ -62,18 +65,17 @@ or uploaded through the new
 [annotation import page](https://www.ecosounds.org/batch_annotations).
 
 This verification grid is now available to all users and welcomes the
-collaboration of experts and citizen scientists to verify annotations.
-
-As an example, you can search and verify all annotations on the A2O
+collaboration of experts and citizen scientists to verify annotations. As an
+example, you can search and verify all annotations on the A2O
 [here](https://data.acousticobservatory.org/projects/1/annotations).
 Or refine your verification to a species of your expertise using the filter
 settings provided.
 
 ## Spectrogram Variants
 
-Great care has been given to the reusability of the web components.
-Each component has several options that can be adapted to the theme of your
-website or use case.
+Great care has been given to the reusability of the web components. Each
+component has several options that can be adapted to the theme of your website
+or use case.
 
 A complete list of options available for each web component can be found
 [here](https://oe-web-components.netlify.app/components/).
@@ -88,18 +90,16 @@ A complete list of options available for each web component can be found
 [Stackblitz: Spectrogram Variants](https://stackblitz.com/edit/oe-web-components-basic?file=examples%2Fspectrogram-variants.html)
 
 In the example above, I have rendered the same audio file with a variety of
-options that can be easily modified with minimal programming knowledge.
-In the image above, I have modified the each spectrograms color by simply using
-the `color-map` keyword.
-I have also demonstrated using a mel-scale in the bottom right spectrogram by
-simply adding the `mel-scale` keyword.
+options that can be easily modified with minimal programming knowledge. In the
+image above, I have modified the each spectrograms color by simply using the
+`color-map` keyword. I have also demonstrated using a mel-scale in the bottom
+right spectrogram by simply adding the `mel-scale` keyword.
 
 ## Event Annotations
 
-Adding bounding boxes to label areas of interest is a common part of
-Ecoacoustic workflows.
-For this reason, an annotation viewer included in the Open Ecoacoustics web
-components.
+Adding bounding boxes to label areas of interest is a common part of Ecoacoustic
+workflows. For this reason, an annotation viewer included in the Open
+Ecoacoustics web components.
 
 {{%
     figure
@@ -112,9 +112,9 @@ components.
 
 ## Verification Grids
 
-The new web components come packaged with a verification grid component.
-This component is used by ecologists to verify that existing tags in a dataset
-are correct.
+The new web components come packaged with a verification grid component. This
+component is used by ecologists to verify that existing tags in a dataset are
+correct.
 
 {{%
     figure
@@ -135,9 +135,8 @@ customizable and can be embedded for any task outside of Ecosounds or the A2O
 and supports a wide variety of data formats.
 
 Creating your own verification grid also allows easy customization of the
-verification task.
-For example, if your dataset does not include labeled species, we support
-tagging audio through the
+verification task. For example, if your dataset does not include labeled
+species, we support tagging audio through the
 [classification](https://oe-web-components.netlify.app/examples/verification/classification/)
 variant of the `oe-verification-grid` web component.
 

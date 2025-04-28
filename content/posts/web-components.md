@@ -150,7 +150,7 @@ You can experiment with this example in [this StackBlitz](https://stackblitz.com
 
 ## Conclusion
 
-If you find any issues with the web components, or have and feedback please
+If you find any issues with the web components, or have any feedback please
 report them via our
 [GitHub issue tracker](https://github.com/ecoacoustics/web-components/issues),
 or contact us through the [contact form](/contact).

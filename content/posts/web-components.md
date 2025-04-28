@@ -10,8 +10,7 @@ tags:
 
 We are excited to announce our new reusable, open source, user interface
 components that can be embedded into any website. It's now easier than ever to add
-spectrograms to your your own websites!
-
+spectrograms to your own websites!
 <!--more-->
 
 ## What are web components

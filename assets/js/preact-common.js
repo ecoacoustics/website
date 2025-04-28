@@ -16,7 +16,7 @@ import {
     useCallback,
     useReducer,
     useMemo,
-} from "https://cdn.skypack.dev/preact/hooks@10.26.4";
+} from "https://cdn.skypack.dev/preact@10.26.4/hooks";
 
 import htm from "https://cdn.skypack.dev/htm@3.1.1";
 

@@ -20,10 +20,10 @@ website.
 
 In the past, when someone wanted to add a spectrogram to their website, they
 would have to recreate the spectrogram image, the grid lines, axes, and other
-interactive elements like playback indicators, from scratch. If the website's underlying
+interactive elements like playback indicators, from scratch. If the underlying
 technology used to build the website changed, the work would have to be
-repeated. This is an inefficient process and has led to duplicated work that has been
-repeated by many people. Our team have themselves recreated spectrogram
+repeated for a new website. This is an inefficient process and has led to many people 
+repeating the same work. Our team themselves have recreated spectrogram
 components upwards of four times for different projects!
 
 With the web components standard, and new web browser technologies, we can now make

@@ -117,7 +117,7 @@ variant of the `oe-verification-grid` web component. See the
 
 ## Ecosounds and A2O integration
 
-We are using the spectrogram component in some parts of Ecosounds and the A2O already.
+We are already using the spectrogram component in some parts of Ecosounds and the A2O.
 We'll be rolling out more of these components to the Ecosounds and A2O
 websites in the coming months.
 

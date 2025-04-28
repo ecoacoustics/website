@@ -47,8 +47,8 @@ you can copy and paste into your website.
     caption="A preview of the spectrogram creator webpage"
 %}}
 
-The these components are all open source, so we encourage reuse and contribution!
-However the project is still new: bugs exist and some features are
+These components are all open source, so we encourage reuse and contribution!
+However, the project is still new: bugs exist, and some features are
 not yet implemented. We appreciate feedback from our community of early testers.
 
 ## The Spectrogram Component

@@ -67,7 +67,7 @@ There are many options available to customise the spectrogram to your liking.
 The example above shows the same audio file with various
 options that can be easily modified with minimal programming knowledge. The example
 shows different `color-map` options and uses the `mel-scale` option to
-change the spectrogram scale. You can play with this example at [Stackblitz: Spectrogram Variants](https://stackblitz.com/edit/oe-web-components-basic?file=examples%2Fspectrogram-variants.html). Complete list of options available can be found in the [documentation](https://oe-web-components.netlify.app/components/oe-spectrogram/).
+change the spectrogram scale. You can play with this example at [Stackblitz: Spectrogram Variants](https://stackblitz.com/edit/oe-web-components-basic?file=examples%2Fspectrogram-variants.html). A complete list of options available can be found in the [documentation](https://oe-web-components.netlify.app/components/oe-spectrogram/).
 
 ## The Annotation Component
 
@@ -81,7 +81,7 @@ workflows. This component stacks on top of the spectrogram component.
 %}}
 
 The annotation viewer is currently read-only, which is great for showing examples
-in blog posts or libraries of calls. In future work, we'll make the annotation viewer interactive, allowing
+in blog posts or in libraries of calls. In future work, we'll make the annotation viewer interactive, allowing
 users to add, edit, and remove annotations. You can play with this example at
 [Stackblitz: Annotation Example](https://stackblitz.com/edit/oe-web-components-basic?file=examples%2Fannotations.html).
 

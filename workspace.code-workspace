@@ -84,8 +84,6 @@
             "activityBarBadge.background": "#ccf3df",
             "activityBarBadge.foreground": "#15202b",
             "sash.hoverBorder": "#d79757",
-            "statusBar.background": "#cb7e30",
-            "statusBar.foreground": "#15202b",
             "statusBarItem.hoverBackground": "#a26426",
             "statusBarItem.remoteBackground": "#cb7e30",
             "statusBarItem.remoteForeground": "#15202b",
@@ -126,7 +124,12 @@
             "recognisers",
             "specialising",
             "standardised",
-            "Zenodo"
+            "Zenodo",
+            "Ecoacoustics",
+            "Ecosounds",
+            "Recogniser",
+            "stackblitz",
+            "visualisations"
         ]
     },
     "extensions": {

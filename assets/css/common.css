@@ -57,6 +57,14 @@ h6 {
     margin-bottom: 0.5em;
 }
 
+hr,
+.markdown hr {
+    border: none;
+    border-top: 2px solid var(--oe-theme-color);
+    margin: 2em 0;
+    width: 100%;
+}
+
 .pull {
     display: flex;
     flex-direction: row;

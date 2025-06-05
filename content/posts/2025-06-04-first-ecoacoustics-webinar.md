@@ -10,11 +10,11 @@ tags:
 
 We recently kicked off the 2025 **Open Ecoacoustics Webinar Series** with a vibrant
 and inspiring session showcasing how ecoacoustics is being used to tackle real-world
-conservation challenges across Australia. From endangered cockatoos to fire-affected
+conservation challenges across Australia. <!--more--> From endangered cockatoos to fire-affected
 forests, our speakers shared powerful examples of how sound-based monitoring is
 transforming ecological research and biodiversity management.
 
-<!--more-->
+
 
 ## Watch the recording
 

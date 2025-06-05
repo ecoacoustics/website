@@ -24,6 +24,13 @@ cascade:
           list: never
 # ignoreFiles:
 #     - .*README\.md$
+frontMatter:
+    # this allows hugo to parse the posts date from the filename
+    # and anything after the date turns into the slug.
+    # This is good because it allows a natural sorting
+    # of the posts in the filesystem by date while still
+    # allowing the slug to be human readable.
+    date: [":filename", ":default"]
 params:
     GitHubRepo: https://github.com/ecoacoustics/website
     BookSection: resources

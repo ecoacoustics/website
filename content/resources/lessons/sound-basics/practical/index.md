@@ -34,7 +34,7 @@ spectrograms, which affects what information your spectrograms will show.
    This is the number of samples that are used to calculate each frame of the spectrogram.
    Recall from the presentation that temporal and frequency resolution of the
    spectrogram is related to the window size, which results in a trade-off
-   between frequency versus temporal resolution. The larger the window size, the
+   between frequency and temporal resolution. The larger the window size, the
    more samples are used to calculate the spectrogram, and the more frequency
    resolution you will have. However, the smaller the window size, the more
    temporal resolution you will have.

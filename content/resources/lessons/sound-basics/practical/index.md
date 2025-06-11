@@ -7,7 +7,7 @@ This is a simple exercise to help you become familiar with changing
 spectrogram settings (like the window size of the FFT used to make a
 spectrogram) in Audacity. This will help you to understand how
 changing the window size can alter the frequency and temporal resolution of your
-spectrograms, and affect how your spectrograms will look visually.
+spectrograms, which affects what information your spectrograms will show.
 
 1. Find `20220421T100000+1000_SEQP-Samford-Wet-B_644370.flac` in the `2022
    Ecoacoustics Symposium/SERF Data` folder.

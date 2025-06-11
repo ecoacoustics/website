@@ -3,8 +3,9 @@ title: Practical
 weight: 3
 ---
 
-This is a simple exercise to help you become familiar with changing the window
-size of a sound file using Audacity. This will help you to understand how
+This is a simple exercise to help you become familiar with changing 
+spectrogram settings (like the window size of the FFT used to make a
+spectrogram) in Audacity. This will help you to understand how
 changing the window size can alter the frequency and temporal resolution of your
 spectrograms, and affect how your spectrograms will look visually.
 

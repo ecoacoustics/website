@@ -38,7 +38,7 @@ spectrograms, which affects what information your spectrograms will show.
    more samples are used to calculate the spectrogram, and the more frequency
    resolution you will have. However, the smaller the window size, the more
    temporal resolution you will have.
-7. Question: Set the window length value to 2048. What is the temporal
+7. Question: Set the window length value to `2048`. What is the temporal
    and frequency resolution for this file at this setting? See the following
    formulas for help, or refer back to the [presentation]({{% relref
    "presentation" %}}) for more information.

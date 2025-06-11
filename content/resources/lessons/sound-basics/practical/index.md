@@ -31,7 +31,7 @@ spectrograms, which affects what information your spectrograms will show.
        of the sampling frequency. This file was recorded with a sampling
        frequency of 22050 Hz, and therefore has a Nyquist Frequency of 11025 Hz.
 6. Moving on to the algorithm settings, take particular note of the window size.
-   This is the number of samples that are used to calculate the spectrogram.
+   This is the number of samples that are used to calculate each frame of the spectrogram.
    Recall from the presentation that temporal and frequency resolution of the
    spectrogram is related to the window size, which results in a trade-off
    between frequency versus temporal resolution. The larger the window size, the

@@ -51,7 +51,7 @@ spectrograms, which affects what information your spectrograms will show.
 Temporal resolution = 0.093 seconds, Frequency resolution = 10.767 Hz.
 </details>
 
-8. Now, change the window size to 256. Click on the _Window size_ input
+8. Now, change the window size to `256`. Click on the _Window size_ input
    box, and select the new value.
    ![Changing window size in spectrogram settings view](20221206113827.png)
 9. Question: Calculate the new temporal and frequency resolution values - did they

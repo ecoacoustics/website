@@ -19,7 +19,6 @@ The session was recorded and you can watch it below:
 
 {{< youtube aml3nXn9Ilw >}}
 
-
 ## Speakers
 
 ### Dr Philip Eichinski (QUT)
@@ -28,15 +27,18 @@ Phil opened the talks with a basic introduction to machine learning and BirdNET'
 convolutional neural network design. He explained how “embeddings” are generated,
 how Birdnet uses them for classification, and how user-controlled parameters,
 such as sensitivity and location-based species lists filter these results.
- 
+
 ### Dr Nina Scarpelli (CSIRO & Museums Victoria)
 
 Nina then shared her experiences in developing custom classifiers for target species,
 including a mammal that BirdNET was not trained on, emphasising the most effective
-strategies for building a labelled training set for best results. She also shared some insights on using species lists and technical considerations that might influence the results.
+strategies for building a labelled training set for best results. She also shared
+some insights on using species lists and technical considerations that might
+influence the results.
 
-An interesting insight was that when using Birdnet off-the-shelf, they pelicans make
-splashing noises when they are near water. This resulted in Birdnet detecting pelicans near water with any water splashing sound.
+An interesting insight was that when using BirdNET off-the-shelf, they pelicans make
+splashing noises when they are near water. This resulted in BirdNET detecting
+pelicans near water with any water splashing sound.
 
 ### Callan Alexander (QUT)
 

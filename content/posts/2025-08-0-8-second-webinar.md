@@ -33,12 +33,10 @@ such as sensitivity and location-based species lists filter these results.
 
 Nina then shared her experiences in developing custom classifiers for target species,
 including a mammal that BirdNET was not trained on, emphasising the most effective
-strategies for building a labelled training set for best results.
+strategies for building a labelled training set for best results. She also shared some insights on using species lists and technical considerations that might influence the results.
 
-An interesting insight was that feral pigs make
-splashing noises when they are near water. This resulted in classifiers
-for pig vocalisations that would get confused with bird vocalisations, because both
-feature water splashing sounds.
+An interesting insight was that when using Birdnet off-the-shelf, they pelicans make
+splashing noises when they are near water. This resulted in Birdnet detecting pelicans near water with any water splashing sound.
 
 ### Callan Alexander (QUT)
 

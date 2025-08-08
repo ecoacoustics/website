@@ -36,7 +36,7 @@ strategies for building a labelled training set for best results. She also share
 some insights on using species lists and technical considerations that might
 influence the results.
 
-An interesting insight was that when using BirdNET off-the-shelf, they pelicans make
+An interesting insight was that when using BirdNET off-the-shelf, pelicans make
 splashing noises when they are near water. This resulted in BirdNET detecting
 pelicans near water with any water splashing sound.
 

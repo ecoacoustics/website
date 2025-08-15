@@ -7,6 +7,7 @@
             margin: 0 0.1em;
         }
     </style>
+
     <table>
         <thead>
             {{ with $data.headers }}
@@ -19,19 +20,32 @@
         </thead>
         <tbody>
             {{ range $data.rows }}
+            
             <tr>
                 {{ $row := . }}
-                {{ range $data.headers }}
+                {{ range $data.headers }}                  
                     {{ $value := index $row .key }}
-                    <td>
-                        {{ if eq $value true }}
-                            <sl-icon name="check-lg" style="font-size: 130%"></sl-icon>
-                        {{ else if eq $value false }}
-                            <sl-icon name="x-lg"></sl-icon>
-                        {{ else }}
-                            {{ $value }}
-                        {{ end }}
-                    </td>
+                   <!-- this doesnt work: --> 
+                    {{ $index := index (first 1 $data.headers ) 0 }}
+                    {{ if eq $index 0 }}
+                    <!-- /this doesnt work --> 
+                        <td>
+                            {{ $link := relref $ (index $row "REF") }}
+                            <a href="{{ $link }}">
+                                {{ $value }}
+                            </a>
+                        </td>
+                    {{ else}}
+                        <td>
+                            {{ if eq $value true }}
+                                <sl-icon name="check-lg" style="font-size: 130%"></sl-icon>
+                            {{ else if eq $value false }}
+                                <sl-icon name="x-lg"></sl-icon>
+                            {{ else }}
+                                {{ $value }}
+                            {{ end }}
+                        </td>
+                    {{ end }}
                 {{ end }}
             </tr>
             {{ end }}

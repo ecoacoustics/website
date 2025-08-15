@@ -1,0 +1,19 @@
+{{ $data := index site.Data.common_analysis_software }}
+
+{{ $name :=  .Params.datasheet }}
+{{ $key := string "ANALYSIS_SOFTWARE" }}
+
+<ul class="data-table-single__list">
+    {{ range where $data.rows $key $name }}
+        {{ $row := . }}
+        {{ $value :=  index $row $key }}
+        {{ range $data.headers }}
+            <li>
+            <span class="data-table-single__label">
+                {{ .text }}:</span>
+                {{ $text := index $row .key }}
+                    <span class="data-table-single__info">{{ $text }}</span>
+            </li>               
+        {{ end }}
+    {{ end }}
+</ul>

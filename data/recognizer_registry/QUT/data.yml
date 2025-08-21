@@ -850,3 +850,21 @@
   doi: 10.5281/zenodo.8045883
   dateReleased: 2023-06-16
   license: Creative Commons Attribution-ShareAlike 4.0 International
+
+- title: Plains Wanderer
+  description: Recognizer for the Plains Wanderer
+  targets:
+    - name: Plains Wanderer
+      binomial: Pedionomus torquatus
+  repository: https://github.com/QutEcoacoustics/perch-runner/
+  documentation: https://github.com/QutEcoacoustics/perch-runner/blob/main/scripts/Readme.md
+  organization: QUT Ecoacoustics
+  message: "If you use this software, please cite it as below."
+  authors:
+    - familyNames: Eichinski
+      givenNames: Phil
+      orcid: 
+  version: 0.0.1
+  dateReleased: 2024-01-01
+  license: Creative Commons Attribution-ShareAlike 4.0 International
+

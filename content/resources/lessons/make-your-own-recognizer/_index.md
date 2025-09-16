@@ -3,18 +3,15 @@ title: Make Your Own Recogniser
 weight: 5
 ---
 
-As part of the 2024 Conference of the Ecological Society of Austalia we are running 
-a workshop for building automated call recognisers. The goal of this workshop was for 
+As part of the 2025 Australian Acoustic Society Conference we are running 
+a workshop for building automated call recognisers. The goal of this workshop is for 
 each participant to leave with a working call recogniser for a single species-call of 
-their choice. It covered some basic theory and practice of building a call recogniser 
-based on embeddings produced by a convolutional neural network. 
+their choice. It covers some basic theory of convolutional neural networks, embeddings and 
+embedding based classifiers. We are using [Perch](https://deepmind.google/discover/blog/how-ai-is-helping-advance-the-science-of-bioacoustics-to-save-endangered-species/) embeddings, and [Ecosounds](https://www.ecosounds.org/) for serving audio and verifying detections. 
 
-This is a collaboration between the QUT ecoacoustics group and The developers of the 
-Perch embedding model and Agile Modelling workflow from Google Deepmind with support 
-from the Australian Research Data Commons.  
+This workshop is run by QUT ecoacoustics group with support from the Australian Research Data Commons,
+and from Google Deepmind, the developers of the Perch embedding model and Agile Modelling workflow.
 
-This page will be updated closer to the Workshop date, but for now please read over 
-the [requirements]({{< ref "./requirements" >}}).
 
 <div style="display: flex; gap: 30px; justify-content: space-between; padding: 2em 0em 2em 0em">
    <div style="width: 33%; height: 60px;">
@@ -31,6 +28,4 @@ the [requirements]({{< ref "./requirements" >}}).
    </div>
 </div>
 
-
-Note: This workshop replaces the deprecated [2022 workshop](https://github.com/ecoacoustics/website/tree/cf422761360302ac9efed87bfa5a4d2716204bf9/content/resources/lessons/make-your-own-recognizer).
 

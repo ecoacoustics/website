@@ -3,7 +3,7 @@ title: Requirements
 weight: 1
 ---
 
-Requirements for the Make Your Own Call Recogniser 2024 Workshop
+Requirements for the Make Your Own Call Recogniser 2025 Workshop
 
 ## Dataset
 
@@ -12,8 +12,10 @@ and 1000 hours. **This must be uploaded to [Ecosounds](https://www.ecosounds.org
 ahead of the workshop**. Instructions for this can be found here 
 [Uploading Audio to Ecosounds]({{< ref "../../ecosounds/uploading" >}})
 
-We will pre-process this audio for use in the workshop, so please ensure it's uploaded 
-before November 28 2024. 
+We will pre-process this audio for use in the workshop, so ideally ensure it's uploaded 
+before October 1 2025.
+
+If you don't have your own dataset, you can use a demo set provided by us. 
 
 ## Labelled examples
 
@@ -25,7 +27,7 @@ then you should ideally bring a few more, say 10-20 labelled examples.
 
 **Just bring these examples along with you on the day, no need to supply them in advance.**
 
-These labelled examples should be in short audio files, between 5 and around 20 seconds long. 
+These labelled examples should be in short audio files, between 3 and around 20 seconds long. 
 
 If your labelled examples are in longer files, you can use free software 
 like [Audacity](https://www.audacityteam.org/) 
@@ -35,13 +37,7 @@ For the demo datasets, labelled examples will be made available.
 
 ## Laptop
 
-You will need to bring a laptop to follow along with the workshop. There are no computers
-in the workshop room. 
-
-## Google account
-
-We will be using [Google Colab](https://colab.research.google.com/) python notebook environment. 
-For this you will need a google account. You can create a free account for the workshop. 
+Bring your own laptop to follow along with the workshop. 
 
 ## Open-sourcing your recogniser
 
@@ -65,11 +61,7 @@ just work with what you have!
 
 #### Q. What if I am late uploading my recordings to Ecosounds. 
 We will do our best to get the preprocessing done in time even if you miss
-the deadline. Any doubts, contact the organisers.
-
-#### Q. Is the google account linked to the Ecosounds account or anything else?
-No, the google account is completely separate.
-You can create a new google account just for this workshop. 
+the deadline. Any doubts, contact the organisers. 
 
 #### Q. What can I do if I don't have a laptop I can bring?
 Many people will have a laptop, so we encourage you to pair up and work though

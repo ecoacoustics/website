@@ -13,7 +13,7 @@ ahead of the workshop**. Instructions for this can be found here
 [Uploading Audio to Ecosounds]({{< ref "../../ecosounds/uploading" >}})
 
 We will pre-process this audio for use in the workshop, so ideally ensure it's uploaded 
-before October 1 2025.
+before October 15 2025.
 
 If you don't have your own dataset, you can use a demo set provided by us. 
 

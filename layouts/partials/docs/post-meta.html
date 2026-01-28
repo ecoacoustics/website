@@ -2,7 +2,6 @@
   {{ with .Date }}
     <span class="oe-post-date">{{ partial "docs/date" (dict "Date" . "Format" $.Site.Params.BookDateFormat) }}</span>
   {{ end }}
-
   {{ range $taxonomy, $_ := .Site.Taxonomies }}
     {{ with $terms := $.GetTerms $taxonomy }}
     <div class="oe-tags">
@@ -16,4 +15,16 @@
     </div>
     {{ end }}
   {{ end }}
+
+  {{ with .Params.authors }}
+    <div class="oe-post-authors">
+      by {{ range $i, $author := . }}
+      {{ if $i }}
+      {{ if eq $i (sub (len $.Params.authors) 1) }}, and {{ else }}, {{ end }}
+      {{ end }}
+      <span class="oe-post-author">{{ $author }}</span>
+      {{ end }}
+    </div>
+  {{ end }}
+
 </div>

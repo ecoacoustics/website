@@ -49,10 +49,10 @@ Run the following command:
 
 
 ```bash
-> ffmpeg -i './SERF Data/20220421T100000+1000_SEQP-Samford-Wet-B_644370.flac' ./ffmpeg-output/20220421T100000+1000_SEQP-Samford-Wet-B_644370.wav 
+> ffmpeg -i './SERF Data/20220421T100000+1000_SEQP-Samford-Wet-B_644370.flac' ./ffmpeg-output/20220421T100000+1000_SEQP-Samford-Wet-B_644370.wav
 ```
 
-Open the `C:\2022 Ecoacoustics Symposium\ffmpeg-output` and have a look at your 
+Open the `C:\2022 Ecoacoustics Symposium\ffmpeg-output` and have a look at your
 brand new WAVE file!
 
 Try the following exercises as well:
@@ -63,13 +63,13 @@ Try the following exercises as well:
 ### Cut out the 10th minute
 
 ```bash
-> ffmpeg -i './SERF Data/20220421T100000+1000_SEQP-Samford-Wet-B_644370.flac' -ss 300 -t 60 ./ffmpeg-output/20220421T100000+1000_SEQP-Samford-Wet-B_644370_360-420.wav 
+> ffmpeg -i './SERF Data/20220421T100000+1000_SEQP-Samford-Wet-B_644370.flac' -ss 300 -t 60 ./ffmpeg-output/20220421T100000+1000_SEQP-Samford-Wet-B_644370_360-420.wav
 ```
 
 ### Mix down multiple channels into one single channel
 
 ```bash
-> ffmpeg -i './SERF Data/20220421T100000+1000_SEQP-Samford-Wet-B_644370.flac' -ac 1 ./ffmpeg-output/20220421T100000+1000_SEQP-Samford-Wet-B_644370_mixdown.wav 
+> ffmpeg -i './SERF Data/20220421T100000+1000_SEQP-Samford-Wet-B_644370.flac' -ac 1 ./ffmpeg-output/20220421T100000+1000_SEQP-Samford-Wet-B_644370_mixdown.wav
 ```
 
 Note: there is only one channel in our source data. You won't see any difference in the output.
@@ -78,13 +78,13 @@ Note: there is only one channel in our source data. You won't see any difference
 ### Down-sample to a different frequency (8000 Hz)
 
 ```bash
-> ffmpeg -i './SERF Data/20220421T100000+1000_SEQP-Samford-Wet-B_644370.flac' -ar 8000 ./ffmpeg-output/20220421T100000+1000_SEQP-Samford-Wet-B_644370_down_sample.wav 
+> ffmpeg -i './SERF Data/20220421T100000+1000_SEQP-Samford-Wet-B_644370.flac' -ar 8000 ./ffmpeg-output/20220421T100000+1000_SEQP-Samford-Wet-B_644370_down_sample.wav
 ```
 
 ### Putting it all together
 
 ```bash
-> ffmpeg -i './SERF Data/20220421T100000+1000_SEQP-Samford-Wet-B_644370.flac' -ss 3600 -t 60 -ac 1 -ar 8000 ./ffmpeg-output/20220421T100000+1000_SEQP-Samford-Wet-B_644370_3600-3660.wav 
+> ffmpeg -i './SERF Data/20220421T100000+1000_SEQP-Samford-Wet-B_644370.flac' -ss 3600 -t 60 -ac 1 -ar 8000 ./ffmpeg-output/20220421T100000+1000_SEQP-Samford-Wet-B_644370_3600-3660.wav
 ```
 
 The above command cuts out one minute, starting from one hour (3600 seconds) into
@@ -102,12 +102,12 @@ You can find all the options above described in full in the [FFmpeg documentatio
 
 ## Using the AnalysisPrograms (AP) audio cutter
 
-AP uses FFmpeg itself. If you're comfortable with FFmpeg then you don't need to 
+AP uses FFmpeg itself. If you're comfortable with FFmpeg then you don't need to
 use AP. However if you want one single command that segments an entire file at
 once, with options that are useful for common ecoacoustics analyses, then give
 the cutter a go.
 
-The basic syntax is 
+The basic syntax is
 
 ```
 AnalysisPrograms.exe AudioCutter [options] <InputFile> <OutputDir>
@@ -144,7 +144,7 @@ You may want to put the results into a different folder.
 
 ### A Scenario
 
-Oh no! Something funny happened in my files. Have a look in the 
+Oh no! Something funny happened in my files. Have a look in the
 `C:\2022 Ecoacoustics Symposium\EMU Examples` folder. All the files are empty...
 or nearly empty. Time for some EMU.
 
@@ -155,7 +155,7 @@ or nearly empty. Time for some EMU.
 {{< figure src="./DALLE_an_comic_book_emu_wearing_a_superman_costume_and_flying_fast_over_the_city.png" caption="A DALL-E (a deep learning text prompt image generator) image of an emu in a superman costume." >}}
 
 
-First let's find all the files in the folder; we want to simulate an analysis 
+First let's find all the files in the folder; we want to simulate an analysis
 looking for source files.
 
 {{< tabs "find-command" >}}
@@ -166,7 +166,7 @@ looking for source files.
 ```
 
 {{< /tab >}}
-{{< tab "macOS" >}} 
+{{< tab "macOS" >}}
 
 ```bash
 > find EMU\ Examples/ -name *.wav -or -name *.flac
@@ -181,7 +181,7 @@ looking for source files.
 {{< /tab >}}
 {{< /tabs >}}
 
-Using wildcard filters we can see all the files returned. Wouldn't be better 
+Using wildcard filters we can see all the files returned. Wouldn't be better
 if we could filter out the bad files?
 
 {{% hint warning %}}
@@ -203,7 +203,7 @@ Let's see what EMU can do for us, run the following command:
 ```
 
 {{< /tab >}}
-{{< tab "macOS" >}} 
+{{< tab "macOS" >}}
 
 ```bash
 > /emu/emu --help
@@ -241,7 +241,7 @@ Let's see what the `fix` command does, and further `list` the available fixes:
 ```
 
 {{< /tab >}}
-{{< tab "macOS" >}} 
+{{< tab "macOS" >}}
 
 ```bash
 > /emu/emu fix --help
@@ -282,7 +282,7 @@ to see if a potentially dangerous action will have the intended affect.
 ```
 
 {{< /tab >}}
-{{< tab "macOS" >}} 
+{{< tab "macOS" >}}
 
 ```bash
 > /emu/emu fix apply -f OE004 -f FL001 -f WA002 --dry-run './EMU Examples/'
@@ -297,7 +297,7 @@ to see if a potentially dangerous action will have the intended affect.
 {{< /tab >}}
 {{< /tabs >}}
 
-Read through the output. If you're happy EMU will do the correct thing, remove 
+Read through the output. If you're happy EMU will do the correct thing, remove
 the `--dry-run` argument and run the command again to fix the files.
 
 After EMU is done, we should now see all of our empty files renamed to have a non-audio extension.
@@ -311,7 +311,7 @@ This allows them to be easily filtered out. Try running our find command again:
 ```
 
 {{< /tab >}}
-{{< tab "macOS" >}} 
+{{< tab "macOS" >}}
 
 ```bash
 > find EMU\ Examples/ -name *.wav -or -name *.flac
@@ -351,7 +351,7 @@ Try this:
 ```
 
 {{< /tab >}}
-{{< tab "macOS" >}} 
+{{< tab "macOS" >}}
 
 ```bash
 > /emu/emu metadata './SERF Data/'
@@ -379,7 +379,7 @@ results to a file.
 ```
 
 {{< /tab >}}
-{{< tab "macOS" >}} 
+{{< tab "macOS" >}}
 
 ```bash
 > /emu/emu metadata  -F CSV -o SERF_metadata.csv './SERF Data/'

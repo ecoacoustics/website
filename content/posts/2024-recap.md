@@ -2,6 +2,8 @@
 title: "Open Ecoacoustics 2024 Recap"
 date: 2025-02-04T12:18:00+10:00
 image: 'images/phil-a2o-unleashed.jpg'
+authors:
+  - Dr Nelli Holopainen
 tags: 
 - News
 

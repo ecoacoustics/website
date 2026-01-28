@@ -1,5 +1,10 @@
 {{ with .Params.image }}
+{{/* Try to get the image from the site resources first */}}
 {{ $image := resources.Get . }}
+{{/* If not found, try to get it from the page resources */}}
+{{ if ($image | not) }}
+{{ $image =  $.Resources.Get . }}
+{{ end }}
 {{ with $image }}
 <div class="page-hero">
     <div class="page-hero-image" style="background-image: url('{{ .RelPermalink }}');{{ with $.Params.imageStyle }}{{ . | safe.CSS }}{{ end }}">

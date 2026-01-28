@@ -3,6 +3,9 @@ title: "Reusable Spectrogram and Verification Web Components"
 date: 2025-04-04T12:00:00+10:00
 image: "/images/frog.jpg"
 imageCredit: "Professor Susan Fuller"
+authors:
+  - Hudson Newey
+  - Dr Nelli Holopainen
 tags:
     - News
     - Technical

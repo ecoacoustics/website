@@ -4,6 +4,8 @@ date: 2025-06-04T16:27:45+10:00
 image: "/images/kookaburra.png"
 imageStyle: "background-position: 0% 20%;"
 draft: false
+authors:
+  - Dr Nelli Holopainen
 tags:
 - News
 ---

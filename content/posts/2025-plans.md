@@ -3,6 +3,9 @@ title: "Open Ecoacoustics 2025 Plans"
 date: 2025-02-06T12:19:00+10:00
 image: "/images/sensor-occupant.png"
 imageCredit: "Professor Susan Fuller"
+authors:
+  - Dr Nelli Holopainen
+  - Dr Anthony Truskinger
 tags:
     - News
 ---

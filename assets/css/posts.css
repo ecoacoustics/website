@@ -35,6 +35,10 @@
             flex-direction: column;
         }
 
+        & .oe-post-content h2 {
+            margin-top: 0;
+        }
+
         &-image {
             margin-top: calc(var(--oe-padding-small) * -1);
             margin-bottom: calc(var(--oe-padding-small) * -1);
@@ -72,11 +76,11 @@
         }
 
         .oe-post-content {
-          padding: 0;
+            padding: 0;
         }
 
         .oe-post-image {
-            margin-right: calc(var(--oe-padding-small)*-1);
+            margin-right: calc(var(--oe-padding-small) * -1);
             padding: 0;
             min-height: 9em; /* NH Adding min height so that empty divs render correctly on mobile */
         }
@@ -97,12 +101,23 @@
 
     &-meta {
         display: flex;
-        gap: var(--oe-padding-smaller);
+        gap: 1em;
         padding-bottom: var(--oe-padding-small);
+        flex-wrap: wrap;
+        row-gap: 0.5em;
     }
 
     &-date {
         font-weight: bold;
+    }
+
+    & .oe-post-authors {
+        /* ensure it's on its own line */
+        flex-basis: 100%;
+        font-size: smaller;
+    }
+
+    & .oe-post-author {
     }
 
     p {

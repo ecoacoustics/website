@@ -1,8 +1,10 @@
 ---
-title: "Using the Power of Sound to Tackle Australia’s Biodiversity Crisis"
+title: "Using the Power of Sound to Tackle Australia's Biodiversity Crisis"
 date: 2025-03-11T12:18:00+10:00
 draft: false
 image: "/images/case-study-ecoacoustics-feature-image.jpg"
+authors:
+  - Dr Nelli Holopainen
 tags:
 - News
 ---

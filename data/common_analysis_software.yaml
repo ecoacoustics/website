@@ -15,8 +15,10 @@ headers:
       text: Acoustic Indices
     - key: USER_GUIDE
       text: User Guide
+
 rows:
     - ANALYSIS_SOFTWARE: Kaleidoscope Pro 5
+      REF: kaleidoscope-pro-5
       PAID: true
       OPEN: false
       LOCATION: Local
@@ -68,6 +70,7 @@ rows:
           zero-crossing files that exist on remote servers, local drives or both
       AGGREGATOR: false
     - ANALYSIS_SOFTWARE: Raven Pro
+      REF: raven
       PAID: true
       OPEN: false
       LOCATION: Local
@@ -109,6 +112,7 @@ rows:
       DATA_STORAGE: Local
       AGGREGATOR: false
     - ANALYSIS_SOFTWARE: AviaNZ
+      REF: avianz
       PAID: false
       OPEN: true
       LOCATION: Local
@@ -199,6 +203,7 @@ rows:
       DATA_STORAGE: "In the cloud. Option to make project public or private. "
       AGGREGATOR: "Unknown "
     - ANALYSIS_SOFTWARE: Ecosounds
+      REF: ecosounds
       PAID: false
       OPEN: true
       LOCATION: Cloud
@@ -234,6 +239,7 @@ rows:
       DATA_STORAGE: Cloud
       AGGREGATOR: false
     - ANALYSIS_SOFTWARE: QUT Ecoacoustics Analysis Programs
+      REF: qut-ecoacoustics-analysis-programs
       PAID: false
       OPEN: true
       LOCATION: Local
@@ -266,6 +272,7 @@ rows:
       DATA_STORAGE: N/A
       AGGREGATOR: false
     - ANALYSIS_SOFTWARE: BioSounds
+      REF: biosounds
       PAID: false
       OPEN: "?"
       LOCATION: "Local (with internet connection) "
@@ -299,6 +306,7 @@ rows:
       DATA_STORAGE: "On the website. Recordings up to 300 MB can be uploaded. "
       AGGREGATOR: "Unknown "
     - ANALYSIS_SOFTWARE: BioAcoustica
+      REF: bioacoustica
       PAID: false
       OPEN: true
       LOCATION: Cloud
@@ -351,6 +359,7 @@ rows:
           format allows for sharing of occurrence records with GBIF and DarwinCore
           Archive compatible mapping services
     - ANALYSIS_SOFTWARE: Bugg
+      REF: bugg
       PAID: true
       OPEN: false
       LOCATION: Cloud
@@ -379,6 +388,7 @@ rows:
       DATA_STORAGE: Unknown
       AGGREGATOR: Unknown
     - ANALYSIS_SOFTWARE: Seewave
+      REF: seewave
       PAID: false
       OPEN: false
       LOCATION: "Library "
@@ -412,6 +422,7 @@ rows:
       DATA_STORAGE: false
       AGGREGATOR: false
     - ANALYSIS_SOFTWARE: MonitoR
+      REF: monitor
       PAID: false
       OPEN: false
       LOCATION: "Library "

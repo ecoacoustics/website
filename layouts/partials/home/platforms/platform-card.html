@@ -1,0 +1,8 @@
+<sl-card class="platform-card{{ if .Params.highlighted }} is-highlighted{{ end }}">
+  {{ $imagePath := path.Join "static" (strings.TrimPrefix "/" .Params.image) }}
+  <div class="platform-card-logo{{ with .Params.image_class }} {{ . }}{{ end }}" role="img"
+    aria-label="{{ .Params.alt }}">
+    {{ readFile $imagePath | safeHTML }}
+  </div>
+  {{ .Content }}
+</sl-card>

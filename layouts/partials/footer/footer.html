@@ -1,0 +1,46 @@
+<footer class="site-footer">
+  <div class="container footer-links">
+    {{ with index (where .section.Pages "Params.type" "community") 0 }}
+    <div class="community">
+      {{ .Content }}
+    </div>
+    {{ end }}
+
+    {{ range .params.columns }}
+    <div>
+      <h4>{{ .title }}</h4>
+      {{ range .links }}
+      <p><a href="{{ .href }}">{{ .label }}</a></p>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+
+  <div class="container partner-logos" aria-label="Project partners">
+    {{ range .params.partners }}
+    {{ if strings.HasSuffix (lower .image) ".svg" }}
+    {{ $imagePath := printf "static/%s" (strings.TrimPrefix "/" .image) }}
+    <div class="partner-logo-svg{{ with .logo_shape }} partner-logo-svg--{{ . }}{{ end }}" role="img" aria-label="{{ .alt }}">
+      <template shadowrootmode="open">
+        {{ readFile $imagePath | safeHTML }}
+      </template>
+    </div>
+    {{ else }}
+    <img src="{{ .image }}" alt="{{ .alt }}">
+    {{ end }}
+    {{ end }}
+  </div>
+
+  <div class="footer-meta type-small">
+    {{ .content }}
+    <p>© {{ now.Format "2006" }} Open Ecoacoustics | <a href="/about/#cite-this-web-page">How to cite</a>{{ with
+      .page.GitInfo }} | Last change by <strong>{{ .AuthorName }}</strong> on {{ .AuthorDate.Format
+      `2006-01-02T15:04:05-07:00` }} in <a href="{{ site.Params.GitHubRepo }}/commit/{{ .Hash }}">{{ .AbbreviatedHash
+        }}</a>{{ end }}</p>
+    <div class="theme-switcher" id="themeSelector">
+      <span>Theme</span>
+      <dark-mode-toggle class="dark-mode-toggle" id="dark-mode-toggle" appearance="switch" dark="Dark" light="Light"
+        permanent></dark-mode-toggle>
+    </div>
+  </div>
+</footer>

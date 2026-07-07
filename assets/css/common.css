@@ -118,3 +118,19 @@ ol > li {
 sup {
     top: initial;
 }
+
+/* Links */
+a:not(.oe-button) {
+    color: var(--color-link);
+    text-decoration: underline;
+}
+
+a:not(.oe-button):hover {
+    color: var(--color-visited-link);
+    text-decoration-thickness: 2px;
+}
+
+:where(a, button):focus-visible {
+    outline: 2px solid var(--color-link);
+    outline-offset: 3px;
+}

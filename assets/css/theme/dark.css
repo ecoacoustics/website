@@ -1,13 +1,22 @@
+/*
+ * Open Ecoacoustics design system dark color theme.
+ */
 :root {
-    --oe-color-logo: #ffffff;
-    --oe-font-color: #fff;
-    --oe-font-color-bright: #fff;
-    --oe-font-color-toned: #666;
-    --oe-inverse-color: #000;
-    --oe-background-color: #1d1d1d;
+    --oe-font-color: #e9e1d7;
+    --oe-font-heading-color: #f7f3ec;
+    --oe-font-color-toned: #b9aea2;
+    --oe-background-color: #2b2722;
     --oe-background-color-darker: #1a1a1a;
-    --oe-pane-background: #070707;
-    --color-link: #2e8cff;
-    --color-visited-link: #a36aff;
+    --oe-pane-background: #2b2722;
     --oe-inline-code-bg-color: #274462;
+    --color-link: #f0b36d;
+    --color-visited-link: #f8d7ad;
+    --oe-color-border: #4a423a;
+    --oe-color-surface: #35312d;
+    --oe-color-button-hover: #f0b36d;
+    --oe-color-bg-overlay: rgba(10, 10, 10, 0.72);
+
+    --qut-logo-color: #003b62;
+    --logo-invert-color:#ffffff;
+    --logo-transparent: transparent;
 }

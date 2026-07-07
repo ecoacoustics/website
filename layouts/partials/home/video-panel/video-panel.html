@@ -1,0 +1,15 @@
+{{ $videoID := .params.video_id }}
+{{ if and (not $videoID) .params.video_href }}
+{{ $videoID = replaceRE `^.*(?:v=|youtu\.be/|embed/)([A-Za-z0-9_-]+).*$` "$1" .params.video_href }}
+{{ end }}
+<section class="video-panel container">
+  <div class="video-preview" aria-label="{{ .params.video_label }}">
+    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen="allowfullscreen" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+      src="https://www.youtube.com/embed/{{ $videoID }}?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0"
+      title="{{ .params.video_label }}"></iframe>
+  </div>
+  <div class="video-panel-content type-body-large">
+    {{ .content }}
+  </div>
+</section>

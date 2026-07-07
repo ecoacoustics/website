@@ -31,11 +31,19 @@
 
 
 {{/* Our custom CSS */}}
+{{ range slice
+    "css/theme/defaults.css"
+    "css/theme/typography.css"
+}}
+{{ with resources.Get . }}
+<link href="{{ .RelPermalink }}" rel="stylesheet" />
+{{ end }}
+{{ end }}
 {{ with resources.Get "css/theme/light.css" }}
-<link href="{{ .RelPermalink }}" media="(prefers-color-scheme:light)" rel="stylesheet" />
+<link href="{{ .RelPermalink }}" media="(prefers-color-scheme:light)" rel="stylesheet" data-theme-toggle="light" />
 {{ end }}
 {{ with resources.Get "css/theme/dark.css" }}
-<link href="{{ .RelPermalink }}" media="(prefers-color-scheme:dark)" rel="stylesheet" />
+<link href="{{ .RelPermalink }}" media="(prefers-color-scheme:dark)" rel="stylesheet" data-theme-toggle="dark" />
 {{ end }}
 {{- $css := resources.Get "css/oe-main.css" }}
 {{- $css = $css | resources.ExecuteAsTemplate "css/oe-main.css" . | css.Sass }}

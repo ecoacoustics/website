@@ -22,6 +22,14 @@ cascade:
       _build:
           render: never
           list: never
+    - _target:
+          path: /footer/**
+      _build:
+          render: never
+    - _target:
+          path: /home/**
+      _build:
+          render: never
 # ignoreFiles:
 #     - .*README\.md$
 frontMatter:

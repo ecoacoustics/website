@@ -1,0 +1,13 @@
+<section class="related-projects">
+  <div class="container">
+    {{ .content }}
+    <div class="project-grid">
+      {{ range where .section.Pages "Params.type" "!=" "project-more" }}
+      {{ partial "home/projects/project-card.html" . }}
+      {{ end }}
+    </div>
+    {{ with index (where .section.Pages "Params.type" "project-more") 0 }}
+    {{ .Content }}
+    {{ end }}
+  </div>
+</section>

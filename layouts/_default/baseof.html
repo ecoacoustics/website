@@ -24,12 +24,10 @@
         {{ end }}
 
         <label for="menu-control" class="hidden book-menu-overlay"></label>
-        <footer class="book-footer">
-            {{ block "footer" . }}
-            <!-- Footer under page content -->
-            {{ end }}
-            {{ partial "docs/inject/footer" . }}
-        </footer>
+        {{ block "footer" . }}
+        <!-- Footer scripts under page content -->
+        {{ end }}
+        {{ partial "docs/inject/footer" . }}
     </div>
 </main>
 

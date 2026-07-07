@@ -15,6 +15,9 @@
 @import "presentation";
 @import "shortcodes";
 @import "newsletter-iframe";
+@import "button";
+@import "theme-switcher";
+@import "typography";
 
 
 /* Added a second definition to separate templated values from not so syntax
@@ -30,9 +33,12 @@
 :root {
     --theme-color: hsl(var(--theme-color-raw));
     --oe-theme-color: var(--theme-color);
+    --oe-font-color-bright: #ffffff;
+    --oe-inverse-color: #000000;
     /* https://shoelace.style/tokens/spacing */
     --oe-padding: var(--sl-spacing-2x-large);
     --oe-padding-large: var(--sl-spacing-4x-large);
+    --oe-padding-medium: var(--sl-spacing-3x-large);
     --oe-padding-small: var(--sl-spacing-large);
     --oe-padding-smaller: var(--sl-spacing-medium);
     --oe-font: 'Roboto', sans-serif;
@@ -58,6 +64,16 @@
     --oe-font-size-scaling-large: clamp(1.95rem, 3.36vi + 1.11rem, 5.15rem);
     --oe-font-size-scaling-title: clamp(2.44rem, 6.42vi + 0.84rem, 8.54rem);
 
+    --oe-radius-control: 0.5rem;
+    --oe-radius-card: 0.875rem;
+    --oe-radius-panel: 1rem;
+    --oe-radius-pill: 999px;
+    --oe-border-control: 2px;
+    --oe-shadow-raised: 0 1px 4px rgba(26, 26, 26, 0.12);
+    --oe-transition: 160ms ease;
+
+    --oe-content-width-narrow: 30rem;
+    --oe-content-width-medium: 45rem;
 }
 
 @media screen and (max-width: 60em) {

@@ -1,40 +1,32 @@
+<div class="container site-navbar">
+  <a class="site-navbar-logo" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ .Site.Title }} home">
+    {{ readFile (printf "static/%s" .Site.Params.Logo) | safeHTML }}
+  </a>
 
-<nav class="flex align-center justify-between navbar">
-    <div class="brand">
-        <a title="{{ .Site.Title }}" class="logo-large" href="{{ .Site.Home.RelPermalink  }}">
-            {{  readFile (printf "static/%s" .Site.Params.Logo ) | safeHTML }}
-        </a>
-    </div>
+  <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+    <span></span><span></span><span></span>
+    <span class="sr-only">Toggle navigation</span>
+  </button>
 
+  <nav id="site-menu" aria-label="Main navigation">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
-    <a class="nav-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{end}} normal-nav" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    <a class="{{ if or ($currentPage.IsMenuCurrent " main" .) ($currentPage.HasMenuCurrent "main" .) }}is-active{{ end
+      }}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
     {{ end }}
+  </nav>
+</div>
 
-    <sl-icon-button name="list" class="main-menu-button nav-item" ></sl-icon-button>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const drawer = document.querySelector('.nav-drawer');
-            const openButton = document.querySelector('.main-menu-button');
-
-            openButton.addEventListener('click', () => {
-                if (drawer.open) {
-                    drawer.hide();
-                    openButton.toggleAttribute('open', false);
-                }
-                else {
-                    drawer.show();
-                    openButton.toggleAttribute('open', true);
-                }
-            });
-        });
-      </script>
-</nav>
-<sl-drawer class="nav-drawer" no-header>
-    <nav class="flex align-center justify-between navbar">
-        {{ range .Site.Menus.main }}
-        <a class="nav-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
-        {{ end }}
-    </nav>
-</sl-drawer>
+<script>
+  (() => {
+    const button = document.querySelector('.site-menu-toggle');
+    const menu = document.querySelector('#site-menu');
+    if (!button || !menu) return;
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!open));
+      menu.classList.toggle('is-open', !open);
+    });
+    document.documentElement.classList.add('js-enabled');
+  })();
+</script>

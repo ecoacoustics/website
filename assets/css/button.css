@@ -1,0 +1,41 @@
+/* Button styles */
+.oe-button {
+  margin-right: 1rem;
+}
+
+.oe-button.is-filled::part(base) {
+  background: var(--oe-theme-color);
+}
+
+.oe-button sl-icon {
+  color: currentColor;
+  transform: translate(-0.5rem, -0.1rem);
+}
+
+.oe-button:hover::part(base),
+.oe-button.is-filled:hover::part(base),
+.oe-button:active::part(base) {
+  background: var(--oe-color-button-hover);
+  border-color: var(--oe-color-button-hover);
+  color: var(--oe-font-color-bright);
+}
+
+.oe-button::part(base) {
+  align-items: center;
+  background: var(--oe-background-color);
+  border: var(--oe-border-control) solid var(--oe-theme-color);
+  border-radius: var(--oe-radius-control);
+  color: var(--oe-font-heading-color);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--oe-font-sans);
+  font-size: var(--oe-font-size-body);
+  font-weight: var(--oe-weight-semibold);
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  min-height: 42px;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  transition: background-color var(--oe-transition), border-color var(--oe-transition), color var(--oe-transition);
+}

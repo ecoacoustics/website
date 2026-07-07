@@ -1,0 +1,19 @@
+<section class="hero">
+  <div class="container hero-layout">
+    <div class="hero-content type-body-large">
+      {{ .content }}
+    </div>
+    <div class="hero-art" aria-label="{{ .params.audio_label }}">
+      <svg class="waveform" viewBox="668 190 750 497" aria-hidden="true">
+        <defs>
+          <clipPath id="hero-vector" clipPathUnits="userSpaceOnUse">
+            <use href="/images/home/hero-vector.svg?v=3#hero-vector" />
+          </clipPath>
+        </defs>
+        <foreignObject x="668" y="190" width="750" height="497" clip-path="url(#hero-vector)">
+          <div class="waveform-image" xmlns="http://www.w3.org/1999/xhtml"></div>
+        </foreignObject>
+      </svg>
+    </div>
+  </div>
+</section>

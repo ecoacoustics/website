@@ -1,6 +1,9 @@
 ---
 title: Get Started
 image: images/Buffel-Grass-pasture-botanical-survey-at-Cungelella-cropped.PNG
+_build:
+  render: never
+  list: never
 ---
 
 ## Are you looking for data?

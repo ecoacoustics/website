@@ -1,0 +1,13 @@
+{{- $classes := slice "oe-button" -}}
+{{- with .Get "class" -}}
+  {{- $classes = $classes | append . -}}
+{{- end -}}
+{{- if eq (.Get "filled") "true" -}}
+  {{- $classes = $classes | append "is-filled" -}}
+{{- end -}}
+<sl-button class="{{ delimit $classes " " }}" href="{{ .Get "href" }}">
+  {{- trim .Inner " \n\r\t" -}}
+  {{- with .Get "icon" -}}
+    <sl-icon slot="suffix" name="{{ . }}"></sl-icon>
+  {{- end -}}
+</sl-button>

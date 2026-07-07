@@ -1,6 +1,27 @@
 {{ define "main" }}
+  {{ $hero := .Site.GetPage "/home/hero" }}
+  {{ $platforms := .Site.GetPage "/home/platforms" }}
+  {{ $videoPanel := .Site.GetPage "/home/video-panel" }}
+  {{ $projects := .Site.GetPage "/home/projects" }}
+  {{ $features := .Site.GetPage "/home/features" }}
 
-<!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
-{{.Content}}
+  {{ with $hero }}
+    {{ partial "home/hero/hero.html" (dict "page" $ "content" .Content "params" .Params) }}
+  {{ end }}
 
+  {{ with $platforms }}
+    {{ partial "home/platforms/platforms.html" (dict "page" $ "section" . "content" .Content "params" .Params) }}
+  {{ end }}
+
+  {{ with $videoPanel }}
+    {{ partial "home/video-panel/video-panel.html" (dict "page" $ "content" .Content "params" .Params) }}
+  {{ end }}
+
+  {{ with $projects }}
+    {{ partial "home/projects/projects.html" (dict "page" $ "section" . "content" .Content "params" .Params) }}
+  {{ end }}
+
+  {{ with $features }}
+    {{ partial "home/features/features.html" (dict "page" $ "content" .Content "params" .Params) }}
+  {{ end }}
 {{ end }}

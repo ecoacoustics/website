@@ -1,0 +1,20 @@
+.theme-switcher {
+    align-items: center;
+    display: flex;
+    gap: 0.25rem;
+    justify-content: center;
+}
+
+.theme-switcher>span {
+    color: var(--oe-font-color-toned);
+    font-size: var(--oe-font-size-small);
+    font-weight: var(--oe-weight-medium);
+}
+
+.dark-mode-toggle::part(fieldset) {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.25rem;
+    justify-content: flex-start;
+}

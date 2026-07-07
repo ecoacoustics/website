@@ -1,5 +1,7 @@
 ---
 title: Resources
+aliases:
+    - /get-started/
 ---
 
 

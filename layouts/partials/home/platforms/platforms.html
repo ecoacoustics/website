@@ -1,0 +1,23 @@
+<section class="platforms container" id="platforms">
+  {{ .content }}
+
+  <div class="platform-grid">
+    {{ $platformCards := where .section.Pages "Params.type" "platform-card" }}
+    {{ range $index, $page := $platformCards }}
+    {{ partial "home/platforms/platform-card.html" $page }}
+    {{ if lt $index (sub (len $platformCards) 1) }}
+    <svg class="platform-card-connector" viewBox="0 0 56 8" fill="none" aria-hidden="true" focusable="false">
+      <line class="platform-card-connector-line" x1="4" y1="4" x2="52" y2="4" />
+      <circle class="platform-card-connector-circle" cx="3" cy="4" r="2.5" />
+      <circle class="platform-card-connector-circle" cx="53" cy="4" r="2.5" />
+    </svg>
+    {{ end }}
+    {{ end }}
+  </div>
+
+  <div class="platform-help">
+    {{ range where .section.Pages "Params.type" "platform-help" }}
+    {{ partial "home/platforms/help.html" . }}
+    {{ end }}
+  </div>
+</section>

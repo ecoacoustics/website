@@ -29,6 +29,9 @@ columns:
 partners:
   - alt: TERN
     image: /images/TERN-web-Logo-Primary-RGB-150x150.png
+  - alt: JCU
+    image: /images/v1-JCU-Logo-Shield-CMYK.svg
+    logo_shape: compact
   - alt: QUT
     image: /images/QUT_logo.svg
     logo_shape: compact

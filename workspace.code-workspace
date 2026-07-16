@@ -1,8 +1,8 @@
 {
     "folders": [
         {
-            "path": "."
-        }
+            "path": ".",
+        },
     ],
     "settings": {
         "files.exclude": {
@@ -13,31 +13,31 @@
             "**/.DS_Store": true,
             "**/Thumbs.db": true,
             "**/.ruby-lsp": true,
-            "public": true
+            "public": true,
         },
         "search.exclude": {
             "**/node_modules": true,
             "**/bower_components": true,
             "**/*.code-search": true,
             "**/.ruby-lsp": true,
-            "public": true
+            "public": true,
         },
         "markdownlint.config": {
             "MD028": false,
             "MD025": {
-                "front_matter_title": ""
+                "front_matter_title": "",
             },
-            "MD033": false
+            "MD033": false,
         },
         "json.schemas": [
             {
                 "fileMatch": ["data/recognizer_registry/**/*.json"],
-                "url": "file:static/registry_schema.json"
-            }
+                "url": "file:static/registry_schema.json",
+            },
         ],
         "yaml.schemaStore.enable": true,
         "yaml.schemas": {
-            "static/registry_schema.json": "data/recognizer_registry/**/*.yml"
+            "static/registry_schema.json": "data/recognizer_registry/**/*.yml",
         },
         "editor.defaultFormatter": "esbenp.prettier-vscode",
 
@@ -58,7 +58,7 @@
             // "editor.defaultFormatter": "GitHub.vscode-pull-request-github",
             "editor.defaultFormatter": "esbenp.prettier-vscode",
             "files.insertFinalNewline": false,
-            "files.trimFinalNewlines": true
+            "files.trimFinalNewlines": true,
         },
         "[yaml]": {
             "editor.insertSpaces": true,
@@ -67,13 +67,13 @@
             "editor.quickSuggestions": {
                 "other": true,
                 "comments": false,
-                "strings": true
+                "strings": true,
             },
-            "editor.defaultFormatter": "esbenp.prettier-vscode"
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
         },
         "[javascript]": {
             "editor.maxTokenizationLineLength": 2500,
-            "editor.defaultFormatter": "esbenp.prettier-vscode"
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
         },
         "workbench.colorCustomizations": {
             "activityBar.activeBackground": "#d79757",
@@ -91,7 +91,7 @@
             "titleBar.activeForeground": "#15202b",
             "titleBar.inactiveBackground": "#cb7e3099",
             "titleBar.inactiveForeground": "#15202b99",
-            "commandCenter.border": "#15202b99"
+            "commandCenter.border": "#15202b99",
         },
         "peacock.color": "#CB7E30",
         "[markdown]": {
@@ -99,8 +99,8 @@
             "editor.quickSuggestions": {
                 "comments": "on",
                 "strings": "on",
-                "other": "on"
-            }
+                "other": "on",
+            },
         },
         "cSpell.words": [
             "analyse",
@@ -129,8 +129,12 @@
             "Ecosounds",
             "Recogniser",
             "stackblitz",
-            "visualisations"
-        ]
+            "visualisations",
+        ],
+        "svg.preview.background": "transparent",
+        "[svg]": {
+            "editor.defaultFormatter": "jock.svg",
+        },
     },
     "extensions": {
         "recommendations": [
@@ -138,7 +142,7 @@
             "editorconfig.editorconfig",
             "budparr.language-hugo-vscode",
             "bierner.lit-html",
-            "streetsidesoftware.code-spell-checker"
-        ]
-    }
+            "streetsidesoftware.code-spell-checker",
+        ],
+    },
 }

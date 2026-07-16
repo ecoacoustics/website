@@ -16,5 +16,13 @@
     --oe-color-button-hover: #774b1c;
     --oe-color-bg-overlay: rgba(62, 62, 62, 0.82);
 
-    --qut-logo-color: #ffffff;
+    --qut-logo-bg-color: #003b62;
+    --qut-logo-text-color: #ffffff;
+
+    --jcu-logo-text-color: #231f20;
+    --jcu-logo-shield-color: #003b62;
+    --jcu-logo-sun-color: #fdb913;
+
+    --ecosounds-logo-wave-color: #666;
+    --ecosounds-logo-bird-color: #231f20;
 }

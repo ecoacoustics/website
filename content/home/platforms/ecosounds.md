@@ -5,6 +5,7 @@ weight: 10
 image: /images/ecosounds-logo.svg
 image_class: ecosounds-logo
 alt: Ecosounds
+border_color: var(--oe-platform-ecosounds-color)
 ---
 
 #### Ecosounds

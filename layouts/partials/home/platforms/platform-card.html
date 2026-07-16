@@ -1,4 +1,5 @@
-<sl-card class="platform-card{{ if .Params.highlighted }} is-highlighted{{ end }}">
+<sl-card class="platform-card"
+    style="{{ with .Params.border_color }}--border-color: {{ . | safe.CSS }} !important;{{ end }}">
   {{ $imagePath := path.Join "static" (strings.TrimPrefix "/" .Params.image) }}
   <div class="platform-card-logo{{ with .Params.image_class }} {{ . }}{{ end }}" role="img"
     aria-label="{{ .Params.alt }}">

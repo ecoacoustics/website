@@ -6,9 +6,10 @@ image: /oe-logo.svg
 image_class: oe-logo
 alt: Open Ecoacoustics
 highlighted: true
+border_color: var(--oe-theme-color)
 ---
 
-#### Open Ecoacoustics
+#### Learning & Community
 
 - Learning resources & support
 - Community guides

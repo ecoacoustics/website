@@ -35,6 +35,10 @@
     --oe-theme-color: var(--theme-color);
     --oe-font-color-bright: #ffffff;
     --oe-inverse-color: #000000;
+
+    --oe-platform-ecosounds-color: #003b62;
+    --oe-platform-a2o-color: #304f3b;
+
     /* https://shoelace.style/tokens/spacing */
     --oe-padding: var(--sl-spacing-2x-large);
     --oe-padding-large: var(--sl-spacing-4x-large);

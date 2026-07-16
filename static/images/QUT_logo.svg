@@ -8,10 +8,46 @@
    width="800"
    height="800"
    viewBox="0 0 800 800"
-   style="display:block;height:100%;width:100%;"
+    class="qut-logo-root"
    id="svg2">
   <defs
-     id="defs4" />
+       id="defs4">
+      <style type="text/css"><![CDATA[
+         .qut-logo-root {
+            display: block;
+            height: 100%;
+            width: 100%;
+         }
+
+         .qut-logo-background {
+            opacity: 1;
+            fill: var(--qut-logo-bg-color, #003b62);
+            fill-opacity: 1;
+            fill-rule: nonzero;
+            stroke: none;
+            stroke-width: 9;
+            stroke-linecap: square;
+            stroke-linejoin: miter;
+            stroke-miterlimit: 3.9000001;
+            stroke-dasharray: none;
+            stroke-opacity: 1;
+         }
+
+         .qut-logo-mark {
+            opacity: 1;
+            fill: var(--qut-logo-text-color, #ffffff);
+            fill-opacity: 1;
+            fill-rule: evenodd;
+            stroke: none;
+            stroke-width: 9;
+            stroke-linecap: butt;
+            stroke-linejoin: miter;
+            stroke-miterlimit: 4;
+            stroke-dasharray: none;
+            stroke-opacity: 1;
+         }
+      ]]></style>
+   </defs>
   <rect
      width="790.90912"
      height="790.90912"
@@ -19,9 +55,9 @@
      y="5.1948042"
      transform="matrix(0,-1,1,0,0,0)"
      id="rect3592"
-     style="opacity:1;fill:var(--logo-invert-color,#003b62);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:9;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.9000001;stroke-dasharray:none;stroke-opacity:1" />
+       class="qut-logo-background" />
   <path
      d="M 509.05694,85.261166 C 542.41495,118.61918 568.43199,144.63621 580.23876,156.44298 L 629.48337,156.44298 L 629.48337,377.65037 L 700.66519,377.65037 L 700.66519,156.44298 L 764.43222,156.44298 L 764.43222,85.261166 L 509.05694,85.261166 z M 353.90098,85.508325 L 353.90098,279.03389 C 353.90098,339.15414 403.51938,388.77245 463.63962,388.77253 C 523.75986,388.77253 573.13102,339.15414 573.1311,279.03389 L 573.1311,172.83703 L 501.94928,101.65521 L 501.94928,279.03389 C 501.94928,300.9507 485.55642,317.59071 463.63962,317.59071 C 441.72274,317.59071 425.0828,300.9507 425.0828,279.03389 L 425.0828,85.508325 L 353.90098,85.508325 z M 189.29303,73.644688 C 102.76678,73.644688 31.605526,144.80586 31.605526,231.33219 C 31.605526,317.85843 102.7667,388.77253 189.29303,388.77253 C 216.65168,388.77253 242.44014,381.67285 264.92371,369.24696 L 203.13394,307.45719 C 198.65684,308.24177 194.02037,308.69298 189.29303,308.69298 C 146.10124,308.69306 111.68507,274.52397 111.68507,231.33219 C 111.68507,188.14041 146.10124,153.97139 189.29303,153.97139 C 232.48489,153.97139 266.65382,188.14041 266.65382,231.33219 C 266.65382,238.95426 265.43535,246.16782 263.44075,253.08219 L 245.89246,235.53389 L 145.29871,235.53389 L 286.42655,376.66173 L 387.0203,376.66173 L 323.25325,312.89469 C 337.9432,289.0521 346.73337,261.22009 346.73337,231.33219 C 346.73337,144.80594 275.81943,73.644688 189.29303,73.644688 z"
      id="path3533"
-     style="opacity:1;fill:var(--qut-logo-color);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+   class="qut-logo-mark" />
 </svg>

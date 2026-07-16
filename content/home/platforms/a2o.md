@@ -5,6 +5,7 @@ weight: 30
 image: /images/home/a2o-logo.svg
 image_class: a2o-logo
 alt: Australia Acoustic Observatory
+border_color: var(--oe-platform-a2o-color)
 ---
 
 #### Australia Acoustic Observatory (A2O)

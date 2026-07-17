@@ -18,6 +18,7 @@
 
   <div class="container partner-logos" aria-label="Project partners">
     {{ range .params.partners }}
+    {{ if .break_before }}<div class="partner-logos-break"></div>{{ end }}
     {{ if strings.HasSuffix (lower .image) ".svg" }}
     {{ $imagePath := printf "static/%s" (strings.TrimPrefix "/" .image) }}
     <div class="partner-logo-svg{{ with .logo_shape }} partner-logo-svg--{{ . }}{{ end }}" role="img" aria-label="{{ .alt }}">

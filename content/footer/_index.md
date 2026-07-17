@@ -41,6 +41,7 @@ partners:
     image: /images/ALA_logo.svg
   - alt: Australian Research Data Commons
     image: /images/ARDC_logo.svg
+    break_before: true
   - alt: NCRIS
     image: /images/NCRIS_logo.svg
     logo_shape: compact

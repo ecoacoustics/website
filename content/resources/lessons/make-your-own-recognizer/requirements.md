@@ -3,7 +3,7 @@ title: Requirements
 weight: 1
 ---
 
-Requirements for the Make Your Own Call Recogniser 2025 Workshop
+Requirements for the Make Your Own Call Recogniser 2026 Workshop
 
 ## Dataset
 
@@ -13,7 +13,7 @@ ahead of the workshop**. Instructions for this can be found here
 [Uploading Audio to Ecosounds]({{< ref "../../ecosounds/uploading" >}})
 
 We will pre-process this audio for use in the workshop, so ideally ensure it's uploaded 
-before October 15 2025.
+before September 05 2026.
 
 If you don't have your own dataset, you can use a demo set provided by us. 
 
@@ -56,8 +56,8 @@ recordings, you can work with the demo data for the workshop and then adapt the
 process for ultrasonic data later.
 
 #### Q. I don't have 100 hours of recordings, what can I do?
-100 hours minimum is not really important. If you don't have that much, 
-just work with what you have!
+The minimum amount of audio depends a bit on how prevalent your target call is in that audio. 
+If you don't have 100 hours don't let it stop you doing the workshop, just work with what you have! 
 
 #### Q. What if I am late uploading my recordings to Ecosounds. 
 We will do our best to get the preprocessing done in time even if you miss

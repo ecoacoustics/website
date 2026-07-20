@@ -3,8 +3,8 @@ title: Make Your Own Recogniser
 weight: 5
 ---
 
-As part of the 2025 Australian Acoustic Society Conference we are running 
-a workshop for building automated call recognisers. The goal of this workshop is for 
+As part of the 2026 World Ecoacoustics Congress we are running 
+a workshop for building and automated call recognisers within the Ecosounds. The goal of this workshop is for 
 each participant to leave with a working call recogniser for a single species-call of 
 their choice. It covers some basic theory of convolutional neural networks, embeddings and 
 embedding based classifiers. We are using [Perch](https://deepmind.google/discover/blog/how-ai-is-helping-advance-the-science-of-bioacoustics-to-save-endangered-species/) embeddings, and [Ecosounds](https://www.ecosounds.org/) for serving audio and verifying detections. 

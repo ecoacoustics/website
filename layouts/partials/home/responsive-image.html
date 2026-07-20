@@ -1,0 +1,24 @@
+{{- $source := resources.Get (strings.TrimPrefix "/" .src) -}}
+{{- $quality := default 75 .quality -}}
+{{- $widths := slice 480 960 -}}
+{{- $srcset := slice -}}
+{{- range $width := $widths -}}
+  {{- if le $width $source.Width -}}
+    {{- $resized := $source.Resize (printf "%dx webp q%d" $width $quality) -}}
+    {{- $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink $width) -}}
+  {{- end -}}
+{{- end -}}
+{{- $fallbackWidth := 960 -}}
+{{- if lt $source.Width $fallbackWidth -}}
+  {{- $fallbackWidth = $source.Width -}}
+{{- end -}}
+{{- $fallback := $source.Resize (printf "%dx webp q%d" $fallbackWidth $quality) -}}
+<img
+  src="{{ $fallback.RelPermalink }}"
+  srcset="{{ delimit $srcset ", " }}"
+  sizes="{{ .sizes }}"
+  width="{{ $source.Width }}"
+  height="{{ $source.Height }}"
+  alt="{{ .alt }}"
+  loading="lazy"
+  decoding="async">

@@ -77,12 +77,20 @@
 }
 
 .waveform-image {
-    background-image: url("/images/Buffel-Grass-pasture-botanical-survey-at-Cungelella-1-1.jpg");
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    background-size: 150% auto;
     height: 100%;
+    overflow: hidden;
+    position: relative;
     width: 100%;
+
+    img {
+        bottom: 0;
+        display: block;
+        height: auto;
+        left: 0;
+        max-width: none;
+        position: absolute;
+        width: 150%;
+    }
 }
 
 /* Platform section styles */

@@ -1,5 +1,10 @@
 <sl-card class="project-card">
-  <img src="{{ .Params.image }}" alt="{{ .Params.alt }}">
+  {{ partial "home/responsive-image.html" (dict
+    "src" .Params.image
+    "alt" .Params.alt
+    "sizes" "(max-width: 1024px) 50vw, 17vw"
+    "quality" .Params.image_quality
+  ) }}
   <div>
     {{ .Content }}
   </div>

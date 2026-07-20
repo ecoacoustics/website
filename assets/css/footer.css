@@ -87,6 +87,12 @@
 }
 
 @media (max-width: 680px) {
+    .footer-links a:not(.oe-button) {
+        align-items: center;
+        display: inline-flex;
+        min-height: var(--oe-min-tap-target-size);
+    }
+
     .footer-links {
         grid-template-columns: 1fr;
         max-width: var(--oe-content-width-narrow);

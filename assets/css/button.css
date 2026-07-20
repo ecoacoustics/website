@@ -34,7 +34,7 @@
   justify-content: center;
   line-height: 1;
   margin: 0;
-  min-height: 42px;
+  min-height: var(--oe-min-tap-target-size);
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   transition: background-color var(--oe-transition), border-color var(--oe-transition), color var(--oe-transition);

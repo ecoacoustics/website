@@ -1,3 +1,7 @@
+:not(:defined) {
+    visibility: hidden;
+}
+
 sl-icon {
     color: var(--oe-theme-color);
     display: inline-block;

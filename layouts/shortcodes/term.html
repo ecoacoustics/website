@@ -1,0 +1,17 @@
+{{- $name := .Get 0 -}}
+{{- if not $name -}}
+  {{- errorf "%q: the term shortcode requires a glossary term, for example {{< term \"FAIR data\" >}}" .Page.Path -}}
+{{- end -}}
+{{- $id := $name | urlize -}}
+{{- $text := .Get 1 | default $name -}}
+{{- partial "docs/glossary-terms.html" $.Page -}}
+{{- $glossaryItems := $.Page.Scratch.Get "glossary_items" -}}
+{{- $termInfo := $glossaryItems.GetMatch (printf "%s.md" $id) -}}
+{{- if not $termInfo -}}
+  {{- errorf "%q: %q is not a valid glossary term; see content/resources/glossary/" .Page.Path $name -}}
+{{- end -}}
+{{- with $termInfo -}}
+  {{- $tooltip := trim (.Summary | plainify) " \n" -}}
+  {{- $href := printf "%s#term-%s" ("resources/glossary/" | relURL) $id -}}
+<a class="glossary-tooltip" data-tooltip="{{ $tooltip }}" href="{{ $href }}" aria-label="{{ $text }}: {{ $tooltip }}">{{ $text }}</a>
+{{- end -}}

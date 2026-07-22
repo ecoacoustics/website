@@ -1,0 +1,6 @@
+{{- $glossaryBundle := site.GetPage "page" "resources/glossary" -}}
+{{- if $glossaryBundle -}}
+  {{- $.Scratch.Set "glossary_items" ($glossaryBundle.Resources.ByType "page") -}}
+{{- else -}}
+  {{- errorf "Glossary bundle not found at content/resources/glossary/index.md" -}}
+{{- end -}}

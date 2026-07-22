@@ -1,0 +1,25 @@
+{{ define "main" }}
+<article class="markdown glossary-page">
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  {{ with .Content }}
+    <div class="glossary-introduction">{{ . }}</div>
+  {{ end }}
+
+  <dl class="glossary-list">
+    {{ range sort (.Resources.ByType "page") "Title" }}
+      {{ $id := .Params.id | default .File.ContentBaseName }}
+      <div class="glossary-entry" id="term-{{ $id }}">
+        <dt>
+          {{ .Title }}
+        </dt>
+        <dd class="glossary-description">{{ .Content }}</dd>
+      </div>
+    {{ end }}
+  </dl>
+</article>
+{{ end }}
+
+{{ define "toc" }}{{ end }}

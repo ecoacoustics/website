@@ -1,6 +1,6 @@
 ---
 title: New Features Coming Soon
-image: /images/home/budgerigars.avif
+image: /images/home/budgerigars.webp
 alt: Three budgerigars perched together
 headless: true
 ---

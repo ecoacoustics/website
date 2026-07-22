@@ -27,7 +27,7 @@
       </template>
     </div>
     {{ else }}
-    <img src="{{ .image }}" alt="{{ .alt }}">
+    <img src="{{ .image }}" alt="{{ .alt }}" loading="lazy" decoding="async">
     {{ end }}
     {{ end }}
   </div>

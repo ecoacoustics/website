@@ -1,6 +1,13 @@
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+
+{{/* Preload the primary Montserrat weights */}}
+<link rel="preload"
+    href="https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2"
+    as="font" type="font/woff2" crossorigin>
+
 {{/* Theme switcher component */}}
 <link rel="modulepreload" href="https://unpkg.com/dark-mode-toggle" crossorigin>
-<script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
 <script type="module">
     import * as DarkModeToggle from 'https://unpkg.com/dark-mode-toggle';
     // defined in after-main.html
@@ -54,21 +61,6 @@
 
 {{/* Shoelace */}}
 
-<script type="module">
-    // Wait for all components to be registered.
-    await Promise.allSettled([
-      customElements.whenDefined('sl-button'),
-      customElements.whenDefined('sl-card'),
-      customElements.whenDefined('sl-tree'),
-      customElements.whenDefined('sl-tree-item'),
-      customElements.whenDefined('sl-drawer')
-    ]);
-
-    // Button, card, and tree are registered, add
-    // the `ready` class so body, so the UI fades in.
-    document.body.classList.add('ready');
-  </script>
-
 <link rel="stylesheet" media="(prefers-color-scheme:light)"
     href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.86/dist/themes/light.css" />
 <link rel="stylesheet" media="(prefers-color-scheme:dark)"
@@ -77,10 +69,6 @@
 
 <script type="module"
     src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.86/dist/shoelace.js"></script>
-<script type="module"
-    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.86/dist/components/icon/icon.js"></script>
-<script type="module"
-    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.86/dist/utilities/form.js"></script>
 
 <script type="module">
     import { registerIconLibrary } from "https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.86/dist/utilities/icon-library.js";
@@ -93,8 +81,7 @@
 </script>
 
 {{/*  Asciinema  */}}
+{{ if .HasShortcode "asciinema" }}
 <script src="https://unpkg.com/asciinema-player@3.0.1/dist/bundle/asciinema-player.min.js"></script>
 <link href="https://unpkg.com/asciinema-player@3.0.1/dist/bundle/asciinema-player.css" rel="stylesheet" />
-
-{{/*  Google Analytics  */}}
-{{ template "_internal/google_analytics.html" . }}
+{{ end }}

@@ -3,6 +3,10 @@
     {{ .content }}
   </div>
   <div class="features-image">
-    <img src="{{ .params.image }}" alt="{{ .params.alt }}">
+    {{ partial "home/responsive-image.html" (dict
+      "src" .params.image
+      "alt" .params.alt
+      "sizes" "(max-width: 1024px) 100vw, 33vw"
+    ) }}
   </div>
 </section>

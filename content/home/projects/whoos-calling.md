@@ -1,7 +1,7 @@
 ---
 title: Whoo’s Calling
 weight: 30
-image: /images/home/whoos-calling.avif
+image: /images/home/whoos-calling.webp
 alt: Whoo’s Calling project thumbnail
 ---
 

@@ -1,15 +1,7 @@
-// https://shoelace.style/getting-started/usage?id=waiting-for-components-to-load
-// Body start with opacity 0
-body {
-    opacity: 0;
+/* https://shoelace.style/getting-started/usage?id=waiting-for-components-to-load#waiting-for-components-to-load */
+:not(:defined) {
+    visibility: hidden;
 }
-
-// When body is ready, set opacity to 1
-body.ready {
-    opacity: 1;
-    transition: 0.25s opacity;
-}
-
 
 sl-icon {
     color: var(--oe-theme-color);
@@ -27,6 +19,8 @@ sl-icon.textColor {
 
 sl-icon-button::part(base) {
     color: var(--oe-theme-color);
+    min-height: var(--oe-min-tap-target-size);
+    min-width: var(--oe-min-tap-target-size);
 }
 
 sl-icon-button.bordered {

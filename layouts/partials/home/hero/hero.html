@@ -1,3 +1,5 @@
+{{- $heroImage := resources.Get "images/Buffel-Grass-pasture-botanical-survey-at-Cungelella-1-1.webp" -}}
+{{- $heroImage = $heroImage.Process "webp q70" -}}
 <section class="hero">
   <div class="container hero-layout">
     <div class="hero-content type-body-large">
@@ -11,7 +13,15 @@
           </clipPath>
         </defs>
         <foreignObject x="668" y="190" width="750" height="497" clip-path="url(#hero-vector)">
-          <div class="waveform-image" xmlns="http://www.w3.org/1999/xhtml"></div>
+          <div class="waveform-image" xmlns="http://www.w3.org/1999/xhtml">
+            <img
+              src="{{ $heroImage.RelPermalink }}"
+              width="2000"
+              height="1500"
+              alt=""
+              fetchpriority="high"
+              decoding="async">
+          </div>
         </foreignObject>
       </svg>
     </div>

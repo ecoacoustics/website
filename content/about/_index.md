@@ -25,7 +25,8 @@ tools and big data, to enable ecologists to make better decisions.
 
 ## FAIR
 
-We support making ecoacoustic data findable, accessible, interoperable and reusable (FAIR).
+We support making ecoacoustic data findable, accessible, interoperable and
+reusable ({{< glossary_tooltip "FAIR data" "FAIR" >}}).
 
 {{< columns >}}
 

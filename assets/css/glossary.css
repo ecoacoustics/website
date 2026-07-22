@@ -1,0 +1,111 @@
+.glossary-page {
+    & .glossary-introduction {
+        margin-bottom: var(--oe-padding);
+    }
+
+    & .glossary-list {
+        margin: 0;
+    }
+
+    & .glossary-entry {
+        border-top: var(--oe-border-control) solid var(--oe-color-border);
+        padding: var(--oe-padding-small) 0;
+        scroll-margin-top: var(--oe-padding-smaller);
+    }
+
+    & dt {
+        font-weight: var(--oe-weight-bold);
+    }
+
+    & .glossary-short-description,
+    & .glossary-long-description {
+        &> :first-child {
+            margin-top: 0;
+        }
+
+        &> :last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    & .glossary-short-description,
+    & .glossary-short-description>p {
+        display: inline;
+    }
+
+    & .glossary-details {
+        border: 0;
+        border-radius: 0;
+        display: inline;
+        padding: 0;
+
+        & summary {
+            color: var(--color-link);
+            cursor: pointer;
+            display: inline-block;
+            line-height: inherit;
+            list-style: none;
+            margin: 0 0 0 var(--oe-padding-xsmall);
+            padding: 0;
+
+            &::-webkit-details-marker {
+                display: none;
+            }
+        }
+
+        &[open] {
+            & summary {
+                margin: 0 0 0 var(--oe-padding-xsmall);
+            }
+
+            & .glossary-expand::before {
+                content: "[-]";
+            }
+        }
+    }
+
+    & .glossary-expand::before {
+        content: "[+]";
+    }
+
+    & .glossary-long-description {
+        margin-top: var(--oe-padding-smaller);
+    }
+}
+
+.glossary-tooltip {
+    --glossary-tooltip-max-width: 80vw;
+    --glossary-tooltip-width: 22rem;
+
+    border-bottom: var(--oe-border-control) dotted currentColor;
+    position: relative;
+
+    &::after {
+        background: var(--oe-background-color-darker);
+        border-radius: var(--oe-radius-control);
+        bottom: calc(100% + var(--oe-padding-xsmall));
+        color: var(--oe-font-color);
+        content: attr(data-tooltip);
+        font-size: var(--oe-font-size-small);
+        font-weight: var(--oe-weight-regular);
+        left: 50%;
+        line-height: var(--oe-line-height-small);
+        max-width: var(--glossary-tooltip-max-width);
+        opacity: 0;
+        padding: var(--oe-padding-xsmall) var(--oe-padding-smaller);
+        pointer-events: none;
+        position: absolute;
+        transform: translate(-50%, calc(var(--oe-padding-small) / 4));
+        transition: opacity var(--oe-transition), transform var(--oe-transition);
+        visibility: hidden;
+        width: var(--glossary-tooltip-width);
+        z-index: var(--oe-z-index-tooltip);
+    }
+
+    &:hover::after,
+    &:focus-visible::after {
+        opacity: 1;
+        transform: translate(-50%, 0);
+        visibility: visible;
+    }
+}

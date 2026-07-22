@@ -8,6 +8,7 @@
 @import "contact";
 @import "page";
 @import "resources";
+@import "glossary";
 @import "layout";
 @import "registry";
 @import "governance";
@@ -45,6 +46,7 @@
     --oe-padding-medium: var(--sl-spacing-3x-large);
     --oe-padding-small: var(--sl-spacing-large);
     --oe-padding-smaller: var(--sl-spacing-medium);
+    --oe-padding-xsmall: var(--sl-spacing-x-small);
     --oe-font: 'Roboto', sans-serif;
     --oe-fancy-font: 'Montserrat', sans-serif;
     --oe-navbar-height: 5em;
@@ -73,6 +75,7 @@
     --oe-radius-panel: 1rem;
     --oe-radius-pill: 999px;
     --oe-border-control: 2px;
+    --oe-z-index-tooltip: 20;
     --oe-shadow-raised: 0 1px 4px rgba(26, 26, 26, 0.12);
     --oe-transition: 160ms ease;
 

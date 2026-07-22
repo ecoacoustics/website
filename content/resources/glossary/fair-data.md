@@ -1,9 +1,9 @@
 ---
 title: FAIR data
 id: fair-data
-short_description: >
-  Data managed so that people and computers can find, access, combine, and reuse it.
 ---
+
+Data managed so that people and computers can find, access, combine, and reuse it.
 
 <!--more-->
 

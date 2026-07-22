@@ -30,7 +30,7 @@ Dr Michael Towsey
 2. Clipping & gain
 3. ADC: Sample rate & bit depth
 4. Fast Fourier Transform (FFT)
-5. {{< glossary_tooltip "Spectrogram" "Spectrograms" >}}: time/frequency trade-off
+5. {{< term "Spectrogram" "Spectrograms" >}}: time/frequency trade-off
 
 {{% /slide %}}
 {{% slide %}}

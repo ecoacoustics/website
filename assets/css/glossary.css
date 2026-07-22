@@ -13,12 +13,7 @@
         scroll-margin-top: var(--oe-padding-smaller);
     }
 
-    & dt {
-        font-weight: var(--oe-weight-bold);
-    }
-
-    & .glossary-short-description,
-    & .glossary-long-description {
+    & .glossary-description {
         &> :first-child {
             margin-top: 0;
         }
@@ -26,50 +21,6 @@
         &> :last-child {
             margin-bottom: 0;
         }
-    }
-
-    & .glossary-short-description,
-    & .glossary-short-description>p {
-        display: inline;
-    }
-
-    & .glossary-details {
-        border: 0;
-        border-radius: 0;
-        display: inline;
-        padding: 0;
-
-        & summary {
-            color: var(--color-link);
-            cursor: pointer;
-            display: inline-block;
-            line-height: inherit;
-            list-style: none;
-            margin: 0 0 0 var(--oe-padding-xsmall);
-            padding: 0;
-
-            &::-webkit-details-marker {
-                display: none;
-            }
-        }
-
-        &[open] {
-            & summary {
-                margin: 0 0 0 var(--oe-padding-xsmall);
-            }
-
-            & .glossary-expand::before {
-                content: "[-]";
-            }
-        }
-    }
-
-    & .glossary-expand::before {
-        content: "[+]";
-    }
-
-    & .glossary-long-description {
-        margin-top: var(--oe-padding-smaller);
     }
 }
 
@@ -81,7 +32,7 @@
     position: relative;
 
     &::after {
-        background: var(--oe-background-color-darker);
+        background: var(--oe-color-surface);
         border-radius: var(--oe-radius-control);
         bottom: calc(100% + var(--oe-padding-xsmall));
         color: var(--oe-font-color);

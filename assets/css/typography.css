@@ -78,3 +78,7 @@ small {
   font-weight: var(--oe-weight-regular);
   line-height: var(--oe-line-height-large);
 }
+
+dt {
+  font-weight: var(--oe-weight-bold);
+}

@@ -1,9 +1,9 @@
 ---
 title: Spectrogram
 id: spectrogram
-short_description: >
-  A picture of sound that shows how its frequencies change over time.
 ---
+
+A picture of sound that shows how its frequencies change over time.
 
 <!--more-->
 

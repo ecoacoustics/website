@@ -11,23 +11,11 @@
   <dl class="glossary-list">
     {{ range sort (.Resources.ByType "page") "Title" }}
       {{ $id := .Params.id | default .File.ContentBaseName }}
-      {{ $termTitle := .Title }}
-      {{ $longDescription := .ContentWithoutSummary }}
       <div class="glossary-entry" id="term-{{ $id }}">
         <dt>
           {{ .Title }}
         </dt>
-        <dd>
-          <div class="glossary-short-description">{{ .Params.short_description | markdownify }}</div>
-          {{ with $longDescription }}
-            <details class="glossary-details">
-              <summary aria-label="Expand the definition of {{ $termTitle }}">
-                <span class="glossary-expand" aria-hidden="true"></span>
-              </summary>
-              <div class="glossary-long-description">{{ . }}</div>
-            </details>
-          {{ end }}
-        </dd>
+        <dd class="glossary-description">{{ .Content }}</dd>
       </div>
     {{ end }}
   </dl>

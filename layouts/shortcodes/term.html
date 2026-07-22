@@ -1,6 +1,6 @@
 {{- $name := .Get 0 -}}
 {{- if not $name -}}
-  {{- errorf "%q: the glossary_tooltip shortcode requires a glossary term, for example {{< glossary_tooltip \"FAIR data\" >}}" .Page.Path -}}
+  {{- errorf "%q: the term shortcode requires a glossary term, for example {{< term \"FAIR data\" >}}" .Page.Path -}}
 {{- end -}}
 {{- $id := $name | urlize -}}
 {{- $text := .Get 1 | default $name -}}
@@ -11,7 +11,7 @@
   {{- errorf "%q: %q is not a valid glossary term; see content/resources/glossary/" .Page.Path $name -}}
 {{- end -}}
 {{- with $termInfo -}}
-  {{- $tooltip := trim (.Params.short_description | plainify) " \n" -}}
+  {{- $tooltip := trim (.Summary | plainify) " \n" -}}
   {{- $href := printf "%s#term-%s" ("resources/glossary/" | relURL) $id -}}
 <a class="glossary-tooltip" data-tooltip="{{ $tooltip }}" href="{{ $href }}" aria-label="{{ $text }}: {{ $tooltip }}">{{ $text }}</a>
 {{- end -}}

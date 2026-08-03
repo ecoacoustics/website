@@ -76,23 +76,6 @@
     z-index: 1;
 }
 
-.waveform-image {
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-
-    img {
-        bottom: 0;
-        display: block;
-        height: auto;
-        left: 0;
-        max-width: none;
-        position: absolute;
-        width: 150%;
-    }
-}
-
 /* Platform section styles */
 .platforms,
 .features {
@@ -123,6 +106,7 @@
 
     /* keeping the shoelace border variable makes it easier to override the border color for highlighted cards */
     --border-color: var(--oe-color-border);
+
     &::part(base) {
         background: var(--oe-background-color);
         border-width: 1.5px;
@@ -146,11 +130,11 @@
         margin: 0 0 0 18px;
     }
 
-    > p {
+    >p {
         margin: 1rem 0 0;
     }
 
-    > p a {
+    >p a {
         position: static;
     }
 
@@ -205,11 +189,11 @@
         margin: 0 0 1.25rem;
     }
 
-    article > p:last-child {
+    article>p:last-child {
         margin: auto 0 0;
     }
 
-    article > .oe-button {
+    article>.oe-button {
         margin-top: auto;
         width: max-content;
     }

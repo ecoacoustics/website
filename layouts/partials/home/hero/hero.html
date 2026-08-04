@@ -1,28 +1,23 @@
 {{- $heroImage := resources.Get "images/Buffel-Grass-pasture-botanical-survey-at-Cungelella-1-1.webp" -}}
 {{- $heroImage = $heroImage.Process "webp q70" -}}
-{{- $heroVector := readFile "static/images/home/hero-vector.svg" -}}
-{{- $heroVector = replaceRE `(?s).*<path id="hero-vector" d="([^"]+)".*` "$1" $heroVector -}}
 <section class="hero">
   <div class="container hero-layout">
     <div class="hero-content type-body-large">
       {{ .content }}
     </div>
     <div class="hero-art" aria-label="{{ .params.audio_label }}">
-      <svg class="waveform" viewBox="668 190 750 497" aria-hidden="true">
-        <defs>
-          <clipPath id="hero-vector" clipPathUnits="userSpaceOnUse">
-            <path d="{{ $heroVector }}" />
-          </clipPath>
-        </defs>
-        <image
-          x="668"
-          y="-156.75"
-          width="1125"
-          height="843.75"
-          href="{{ $heroImage.RelPermalink }}"
-          preserveAspectRatio="none"
-          clip-path="url(#hero-vector)" />
-      </svg>
+      <div class="waveform" aria-hidden="true">
+        <!-- object-position and width chosen for aesthetic reasons, vary with different hero images -->
+        <img
+          class="waveform-image"
+          style="object-position: left bottom; width: 150%;"
+          src="{{ $heroImage.RelPermalink }}"
+          width="2000"
+          height="1500"
+          alt=""
+          fetchpriority="high"
+          decoding="async">
+      </div>
     </div>
   </div>
 </section>

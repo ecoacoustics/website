@@ -73,7 +73,21 @@
     overflow: visible;
     position: absolute;
     width: 750px;
+    -webkit-mask-image: url("/images/home/hero-vector.svg");
+    -webkit-mask-position: 0 0;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-image: url("/images/home/hero-vector.svg");
+    mask-position: 0 0;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
     z-index: 1;
+}
+
+.waveform-image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Platform section styles */
@@ -130,11 +144,11 @@
         margin: 0 0 0 18px;
     }
 
-    >p {
+    > p {
         margin: 1rem 0 0;
     }
 
-    >p a {
+    > p a {
         position: static;
     }
 
@@ -189,11 +203,11 @@
         margin: 0 0 1.25rem;
     }
 
-    article>p:last-child {
+    article > p:last-child {
         margin: auto 0 0;
     }
 
-    article>.oe-button {
+    article > .oe-button {
         margin-top: auto;
         width: max-content;
     }

@@ -4,7 +4,10 @@
         <h1>{{.Title}} </h1>
     </header>
 
-    <div class="mobile-toc">{{ .TableOfContents }}</div>
+    <div class="mobile-toc">{{ .TableOfContents }}</div>    
+    
+
+{{ partial "data-table-single.html" . .Params.datasheet }}
 
 {{ with .Content }}
 

@@ -11,8 +11,13 @@
   <nav id="site-menu" aria-label="Main navigation">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
-    <a class="{{ if or ($currentPage.IsMenuCurrent " main" .) ($currentPage.HasMenuCurrent "main" .) }}is-active{{ end
-      }}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    {{ $isCurrent := $currentPage.IsMenuCurrent "main" . }}
+    {{ $isActive := or $isCurrent ($currentPage.HasMenuCurrent "main" .) }}
+    <a
+      {{ if $isActive }}class="is-active"{{ end }}
+      {{ if $isCurrent }}aria-current="page"{{ end }}
+      href="{{ .URL }}"
+    >{{ .Name }}</a>
     {{ end }}
   </nav>
 </div>

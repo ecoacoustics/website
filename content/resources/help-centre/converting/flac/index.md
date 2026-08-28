@@ -39,4 +39,4 @@ file will not be removed.
 ```
 flac -d "D:\Recording_Check\64\253\20200117T000000+1000.flac"
 ```
-![flac-converting-flac](flac-converting-flac.JPG)
+![flac-converting-flac](flac-converting-flac.webp)

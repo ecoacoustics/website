@@ -2,7 +2,7 @@
 title: "Open Ecoacoustics Takes Flight in Perth"
 date: 2026-01-27T10:00:00+10:00
 draft: false
-image: "aas-recogniser-workshop.jpg"
+image: "aas-recogniser-workshop.webp"
 imageStyle: "background-position: 50% 10%;"
 authors:
   - Dr Rob Clemens (ARDC)

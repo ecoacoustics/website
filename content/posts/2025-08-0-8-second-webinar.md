@@ -1,7 +1,7 @@
 ---
 title: "Second Ecoacoustics Webinar: BirdNET Tips and Tricks"
 date: 2025-08-08T12:00:00+10:00
-image: "/images/kookaburra.png"
+image: "/images/kookaburra.webp"
 imageStyle: "background-position: 0% 20%;"
 draft: false
 tags:
@@ -17,7 +17,7 @@ This session was packed with insights from experts who are pushing the boundarie
 
 The session was recorded and you can watch it below:
 
-{{< youtube aml3nXn9Ilw >}}
+{{< youtube id="aml3nXn9Ilw" loading="lazy" >}}
 
 ## Speakers
 

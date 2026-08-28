@@ -13,10 +13,10 @@ Dr Michael Towsey
 
 {{% row %}}
 
-![deployed sensor](./image3.jpeg)
+![deployed sensor](./image3.webp)
 { .image-fill }
 
-![spectrogram](./image2.png)
+![spectrogram](./image2.webp)
 {.image-100-percent style="height:100%" }
 {{% /row %}}
 
@@ -124,7 +124,7 @@ $$
 {.align-center}
 
 {{% row %}}
-![diagram of sampling and quantization](./image12.PNG)
+![diagram of sampling and quantization](./image12.webp)
 {.align-center}
 
 -   **Sample rate** = samples/second
@@ -148,7 +148,7 @@ $$
 -   A sound wave can be represented as the sum of a series of sine waves
 -   We can convert from time domain to frequency domain
 
-![fourier transform](./image13.PNG)  
+![fourier transform](./image13.webp)
 { style="width: 50%" }
 
 {{% /row %}}
@@ -161,7 +161,7 @@ $$
 <object type="image/svg+xml" style="width: 70%;" data="./flow-decibels.drawio.svg"></object>
 {.align-center}
 
-![maximum frequency in spectrograms](./image14.png)
+![maximum frequency in spectrograms](./image14.webp)
 {.align-center style="scale: 150%" }
 
 Maximum frequency in spectrograms = sample rate / 2 = <mark>Nyquist</mark>
@@ -221,14 +221,14 @@ Waveform
 
 Spectrogram
 
-![waveform](./image9.PNG)
+![waveform](./image9.webp)
 
-![spectrogram](./image2.png)
+![spectrogram](./image2.webp)
 
 </div>
 <div style="position: absolute;text-align: center;left: 850px;top: 800px;  transform:translate(-50%,-50%)">STFT<br>➡️</div>
 {{% fragment %}}
-![audacity settings](./image15.PNG)
+![audacity settings](./image15.webp)
 { style="scale: 150%" }
 {{% /fragment %}}
 {{% /stack %}}

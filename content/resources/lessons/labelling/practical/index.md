@@ -10,24 +10,24 @@ Follow the instructions in the [Requirements](../requirements/index.md) document
 
 ## Single Species Annotation
 
-![open a sound file in raven](./raven-open-entire-sound.png)
+![open a sound file in raven](./raven-open-entire-sound.webp)
 
  - Open Raven and import `C:\2022 Ecoacoustics Symposium\Annotation Examples\powerfulowl.WAV`
      - You can leave the Window Preset on default for now. 
      - If your computer struggles to handle a full-hour file, you can click 'Page Sound' and this will break the file down into smaller segments of whichever time you specify
 
-![the default view in raven](raven-default-view.png)
+![the default view in raven](raven-default-view.webp)
 
  - Spectrogram Settings 
     - Zoom in on both the X and Y axis on the spectrogram. You will notice that the image is quite blurry. Note you can choose to view only the spectrogram rather than the waveform by deselecting the waveform in the 'views' tab. 
 
-![spectrogram settings](./raven-spectrogram-settings.png)
+![spectrogram settings](./raven-spectrogram-settings.webp)
 
 - Change the focus (spectrogram window size) to `2132` and adjust the brightness and contrast to taste. You can also select a different colour setting if desired.
 - Move through the file using the horizontal axis until you find some Powerful Owl vocalisations
 - When you find some, draw a box around the vocalisation and type 'Powerful Owl' in the annotation box and hit enter. Click 'use specified value as default'. 
 
-![using an annotation as default](./raven-use-annotation-as-default.png)
+![using an annotation as default](./raven-use-annotation-as-default.webp)
 
     
 - For efficient tagging when you don't need to be extremely accurate (for rapidly collecting annotations for deep learning or similar) you can 'copy' and 'paste' your annotation boundaries. 
@@ -45,7 +45,7 @@ Follow the instructions in the [Requirements](../requirements/index.md) document
       - Multiple vocalisations from the same species
   - This is where Raven Pro can be useful as you can add multiple columns in your annotation table. It can be useful to tag 'Noisy' 'Overlap' 'Faint' or similar to easily filter out data later. You can bypass this in raven lite by using underscores, eg. 'PowerfulOwl_Faint' but this can make data wrangling later a bit more complex. 
 
-![multiple annotations](./raven-multiple-annotations.png)
+![multiple annotations](./raven-multiple-annotations.webp)
 
 ## Combining Annotations and Generating Images 
 

@@ -152,7 +152,7 @@ or nearly empty. Time for some EMU.
 > folder all be faulty.
 
 
-{{< figure src="./DALLE_an_comic_book_emu_wearing_a_superman_costume_and_flying_fast_over_the_city.png" caption="A DALL-E (a deep learning text prompt image generator) image of an emu in a superman costume." >}}
+{{< figure src="./DALLE_an_comic_book_emu_wearing_a_superman_costume_and_flying_fast_over_the_city.webp" caption="A DALL-E (a deep learning text prompt image generator) image of an emu in a superman costume." >}}
 
 
 First let's find all the files in the folder; we want to simulate an analysis
@@ -328,7 +328,7 @@ This allows them to be easily filtered out. Try running our find command again:
 
 You should see no files now! You can look at the files in your file explorer too:
 
-![renamed stub file](./renamed-stub-file.png)
+![renamed stub file](./renamed-stub-file.webp)
 
 {{% hint info %}}
 
@@ -396,7 +396,7 @@ results to a file.
 
 Open the metadata file (`C:\2022 Ecoacoustics Symposium\SERF_metadata.csv`) and have a look at the results:
 
-![emu metadata output](emu-metadata-output.png)
+![emu metadata output](emu-metadata-output.webp)
 
 
 ### More examples

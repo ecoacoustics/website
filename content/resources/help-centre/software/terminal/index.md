@@ -32,9 +32,9 @@ over the default Windows Console Host. Windows Terminal includes a range of
 great features such as tabs, zooming, themes, profiles, split panes, accuracy,
 colors, and most importantly emoji.
 
-{{< figure src="./conhost.png" caption="conhost.exe." >}}
+{{< figure src="./conhost.webp" caption="conhost.exe." >}}
 
-{{< figure src="./windows-terminal.png" caption="Windows Terminal" >}}
+{{< figure src="./windows-terminal.webp" caption="Windows Terminal" >}}
 
 The shell we recommend using on Windows is [PowerShell]({{% relref "powershell"
 %}}). 
@@ -51,4 +51,3 @@ and
 ## How do I use it?
 
 {{% include "resources/lessons/shared/basic-terminal-use.md" %}}
-

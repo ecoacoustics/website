@@ -157,7 +157,7 @@ The _Ecoacoustics Metadata Utility_.
 -   [QutEcoacoustics/emu](https://github.com/QutEcoacoustics/emu)
 { .align-left style="width:40%" }
 
-![emu help page](./emu-help.png)
+![emu help page](./emu-help.webp)
 {{% /row %}}
 
 {{% /slide %}}

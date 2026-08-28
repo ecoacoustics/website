@@ -1,7 +1,7 @@
 ---
 title: "Ecoacoustics in Action: Real-World Applications and Insights from the Field"
 date: 2025-06-04T16:27:45+10:00
-image: "/images/kookaburra.png"
+image: "/images/kookaburra.webp"
 imageStyle: "background-position: 0% 20%;"
 draft: false
 authors:
@@ -20,7 +20,7 @@ transforming ecological research and biodiversity management.
 
 ## Watch the recording
 
-{{< youtube WBaz4mCIsjE >}}
+{{< youtube id="WBaz4mCIsjE" loading="lazy" >}}
 
 ## Speakers
 

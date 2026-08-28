@@ -1,7 +1,7 @@
 ---
 title: "Breaking Changes to Ecosounds & A2O Authentication"
 date: 2025-03-14T14:20:00+10:00
-image: "/images/ecosounds-banner-image.jpg"
+image: "/images/ecosounds-banner-image.webp"
 imageCredit: "QUT Ecoacoustics Staff"
 authors:
   - Hudson Newey

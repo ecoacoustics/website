@@ -37,35 +37,70 @@
 </script>
 
 
-{{/* Our custom CSS */}}
-{{ range slice
-    "css/theme/defaults.css"
-    "css/theme/typography.css"
-}}
-{{ with resources.Get . }}
-<link href="{{ .RelPermalink }}" rel="stylesheet" />
-{{ end }}
-{{ end }}
-{{ with resources.Get "css/theme/light.css" }}
-<link href="{{ .RelPermalink }}" media="(prefers-color-scheme:light)" rel="stylesheet" data-theme-toggle="light" />
-{{ end }}
-{{ with resources.Get "css/theme/dark.css" }}
-<link href="{{ .RelPermalink }}" media="(prefers-color-scheme:dark)" rel="stylesheet" data-theme-toggle="dark" />
-{{ end }}
+{{/* Build the complete site stylesheet once; it is linked asynchronously below. */}}
 {{- $css := resources.Get "css/oe-main.css" }}
-{{- $css = $css | resources.ExecuteAsTemplate "css/oe-main.css" . | css.Sass }}
+{{- $css = $css | resources.ExecuteAsTemplate "css/oe-main.css" . }}
+{{- $rootVariables := first 2 (findRE `(?s):root\s*\{[^}]*\}` $css.Content) }}
+{{- $css = $css | css.Sass }}
 {{- if hugo.IsProduction }}
 {{- $css = $css | minify | fingerprint | resources.PostProcess }}
 {{- end }}
-<link href="{{ $css.RelPermalink }}" rel="stylesheet" />
+
+{{/* Inline the existing style groups needed for the current page's first paint. */}}
+{{ with resources.Get "css/theme/light.css" }}
+<style media="(prefers-color-scheme:light)" data-theme-toggle="light">{{ .Content | safeCSS }}</style>
+{{ end }}
+{{ with resources.Get "css/theme/dark.css" }}
+<style media="(prefers-color-scheme:dark)" data-theme-toggle="dark">{{ .Content | safeCSS }}</style>
+{{ end }}
+{{- $criticalFiles := slice "css/common.css" "css/main_nav.css" "css/layout.css" "css/page.css" "css/button.css" "css/typography.css" }}
+{{- $criticalVariant := "page" }}
+{{- if .IsHome }}
+  {{- $criticalFiles = $criticalFiles | append "css/home.css" }}
+  {{- $criticalVariant = "home" }}
+{{- else if eq .Section "resources" }}
+  {{- $criticalFiles = $criticalFiles | append "css/resources.scss" "css/registry.scss" "css/glossary.css" }}
+  {{- $criticalVariant = "resources" }}
+{{- else if eq .Section "posts" }}
+  {{- $criticalFiles = $criticalFiles | append "css/posts.css" }}
+  {{- $criticalVariant = "posts" }}
+{{- else if eq .Section "contact" }}
+  {{- $criticalFiles = $criticalFiles | append "css/contact.css" }}
+  {{- $criticalVariant = "contact" }}
+{{- end }}
+{{- $criticalResources := slice }}
+{{- range $criticalFiles }}
+  {{- $part := resources.Get . }}
+  {{- $part = resources.FromString (printf "css/inline-parts/%s.scss" (path.BaseName .)) $part.Content }}
+  {{- $criticalResources = $criticalResources | append $part }}
+{{- end }}
+{{- $critical := $criticalResources | resources.Concat (printf "css/inline-%s.scss" $criticalVariant) | css.Sass }}
+{{- if hugo.IsProduction }}
+{{- $critical = $critical | minify }}
+{{- end }}
+<style>{{ delimit $rootVariables "" | safeCSS }}{{ $critical.Content | safeCSS }}</style>
+
+{{/* Load the non-critical site styles without blocking first paint. */}}
+<link rel="preload" href="{{ $css.RelPermalink }}" as="style">
+<link href="{{ $css.RelPermalink }}" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
+<noscript><link href="{{ $css.RelPermalink }}" rel="stylesheet"></noscript>
 
 {{/* Shoelace */}}
 
-<link rel="stylesheet" media="(prefers-color-scheme:light)"
+<link rel="stylesheet" media="print"
+    onload="this.onload=null;if(this.media==='print')this.media='(prefers-color-scheme:light)'"
+    data-theme-toggle="light"
     href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.86/dist/themes/light.css" />
-<link rel="stylesheet" media="(prefers-color-scheme:dark)"
+<link rel="stylesheet" media="print"
+    data-theme-toggle="dark"
     href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.86/dist/themes/dark.css"
-    onload="document.documentElement.classList.add('sl-theme-dark');" />
+    onload="this.onload=null;if(this.media==='print')this.media='(prefers-color-scheme:dark)';document.documentElement.classList.add('sl-theme-dark');" />
+<noscript>
+    <link rel="stylesheet" media="(prefers-color-scheme:light)"
+        href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.86/dist/themes/light.css">
+    <link rel="stylesheet" media="(prefers-color-scheme:dark)"
+        href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.86/dist/themes/dark.css">
+</noscript>
 
 <script type="module"
     src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.86/dist/shoelace.js"></script>
@@ -82,6 +117,6 @@
 
 {{/*  Asciinema  */}}
 {{ if .HasShortcode "asciinema" }}
-<script src="https://unpkg.com/asciinema-player@3.0.1/dist/bundle/asciinema-player.min.js"></script>
+<script defer src="https://unpkg.com/asciinema-player@3.0.1/dist/bundle/asciinema-player.min.js"></script>
 <link href="https://unpkg.com/asciinema-player@3.0.1/dist/bundle/asciinema-player.css" rel="stylesheet" />
 {{ end }}

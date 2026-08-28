@@ -26,7 +26,7 @@ data [(Guerin et al. 2020)](https://esajournals.onlinelibrary.wiley.com/doi/full
 and those advantages directly apply to questions looking to predict a species
 distribution.
 
-{{% figure src="./hoot_detective.png" caption="Figure 1: Hoot Detective website." width="50%"%}}
+{{% figure src="./hoot_detective.webp" caption="Figure 1: Hoot Detective website." width="50%"%}}
 
 First, occurrence data for most fauna in Australia are not systematically
 collected at geographic scales. Most data for species that vocalise are highly
@@ -108,7 +108,7 @@ were summarised in R to get occurrence data for each species, which included
 determining if at any point the target species was recorded (presence) or was
 absent from recordings (absence).
 
-{{% figure src="./hoot_segments_per_day.png" caption="Figure 2: Histogram demonstrating total frequency of annotated audio segments per day in the Hoot Detective data set." width="100%"%}}
+{{% figure src="./hoot_segments_per_day.webp" caption="Figure 2: Histogram demonstrating total frequency of annotated audio segments per day in the Hoot Detective data set." width="100%"%}}
 
 A Powerful Owl presence was recorded in Western Australia, which is quite far
 outside of the recognised distribution. Therefore, Powerful Owl records were
@@ -165,7 +165,7 @@ data. Nonetheless, the presence-only model MaxEnt proved to be the best at
 approaching predictions of the actual distribution of Powerful Owl in eastern
 Australia (Figure 3).
 
-{{% figure src="./gg_powl_maxent_stack1_prediction.png" caption="Figure 3: MaxEnt prediction of environmental suitability using Powerful Owl prescence data and five environmental layers. Prescenes are marked with blue circles (note that some records are overlapping due to the scale)." width="100%"%}}
+{{% figure src="./gg_powl_maxent_stack1_prediction.webp" caption="Figure 3: MaxEnt prediction of environmental suitability using Powerful Owl prescence data and five environmental layers. Prescenes are marked with blue circles (note that some records are overlapping due to the scale)." width="100%"%}}
 
 When comparing presence only data with presence / absence data, again results
 varied by species, but were most interesting for a species that had close to the
@@ -178,9 +178,9 @@ Artificial Neural Network model, the predictions included all of northern
 Australia (Figure 5) and were much more closely aligned to the known continental
 distribution of Masked Owl.
 
-{{% figure src="./maskedowl_BIOCLIM.png" caption="Figure 4: Masked Owl distribution prediction using a Bioclim model (presence only), generated on the EcoCommons platform." width="50%"%}}
+{{% figure src="./maskedowl_BIOCLIM.webp" caption="Figure 4: Masked Owl distribution prediction using a Bioclim model (presence only), generated on the EcoCommons platform." width="50%"%}}
 
-{{% figure src="./maskedowl_ANN_w_absence_data.png" caption="Figure 5: Masked Owl distribution prediction using a Artificial Neural Network model (presence / absence data), generated on the EcoCommons platform." width="50%"%}}
+{{% figure src="./maskedowl_ANN_w_absence_data.webp" caption="Figure 5: Masked Owl distribution prediction using a Artificial Neural Network model (presence / absence data), generated on the EcoCommons platform." width="50%"%}}
 
 The mapped frequency of Southern Boobook suggests that it would be possible to
 predict areas where these owls call more (Figure 6). The results demonstrated
@@ -190,7 +190,7 @@ outback deserts. The high call frequency in SW WA also looked reasonable, but
 the lack of similar high call frequency areas in much of eastern Australia are
 likely due to insufficient sampling in this region.
 
-{{% figure src="./boobook_frequency.png" caption="Figure 6: Predicted call frequency (number of calls) of the Southern Boobook, using a Boosted Regression Tree." width="100%"%}}
+{{% figure src="./boobook_frequency.webp" caption="Figure 6: Predicted call frequency (number of calls) of the Southern Boobook, using a Boosted Regression Tree." width="100%"%}}
 
 ## Discussion
 

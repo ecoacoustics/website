@@ -27,7 +27,7 @@ able to type `AP` and press <kbd>Enter</kbd> in the Terminal.
 
 If successful it should look like this:
 
-![check-ap-installed](./check-ap-installed.png)
+![check-ap-installed](./check-ap-installed.webp)
 
 If successful, move to the next section. Otherwise, we'll need to find where
 AP is installed and copy the path to the program.
@@ -41,7 +41,7 @@ To do this:
 
 For example, AP is normally installed to  `C:\Users\%USERNAME%\AP`.
 
-![ap-path](./ap-copy-path.png)
+![ap-path](./ap-copy-path.webp)
 
 You should end up with a path like `"C:\Users\Anthony\AP\AnalysisPrograms.exe"`.
 Paste this somewhere for use later (like in Notepad).
@@ -63,7 +63,7 @@ Inside the symposium folder, we have our data which we downloaded. Then we'll
 add one folder called with an identifying name like `indices-output`. Like this:
 
 
-![folder-names](./folder-names.png)
+![folder-names](./folder-names.webp)
 
 
 Inside my `indices-output` folder, I'll always make sure each recording has it's own folder 
@@ -127,7 +127,7 @@ probably something missing that you didn't even realise.
 
 Copy the command and paste it into the terminal. It will look like this in your terminal:
 
-![terminal-command](./terminal-command.PNG)
+![terminal-command](./terminal-command.webp)
 
 {{% hint info %}}
 You can paste a command with <kbd>Ctrl+Shift+V</kbd> or by right-clicking on the
@@ -136,18 +136,18 @@ terminal surface.
 
 Now press <kbd>Enter</kbd> to run this command and it will look something like this:
 
-![running-ap](./running-ap.PNG)
+![running-ap](./running-ap.webp)
 
 
 The command will take about two to three minutes to run. When it's done it will
 look like this:
 
-![ap-done](./ap-done.PNG)
+![ap-done](./ap-done.webp)
 
 
 Check if the results are in the output folder. It should look like this:
 
-![output-folder](./output-folder.PNG)
+![output-folder](./output-folder.webp)
 
 The results should be in the `C:\2022 Ecoacoustics Symposium\indices-output\20220421T100000+1000_SEQP-Samford-Wet-B_644370\Towsey.Acoustic` folder.
 
@@ -220,11 +220,11 @@ to identify features in the recording. So, if you know that ACI, for example,
 is very good to detect the birds in the environment you're interested, you can
 check the file with the `ACI.png` suffix and see if you have lot's of activity, like this
 
-![ACI-active](./20220421T160000%2B1000_SEQP-Samford-Wet-B_644347__ACI.png)
+![ACI-active](./20220421T160000%2B1000_SEQP-Samford-Wet-B_644347__ACI.webp)
 
 or, a file with less activity, like this
 
-![ACI-quiet](./20220421T140000%2B1000_SEQP-Samford-Wet-B_644351__ACI.png)
+![ACI-quiet](./20220421T140000%2B1000_SEQP-Samford-Wet-B_644351__ACI.webp)
 
 Alternatively, you might be interested in looking into the False-Colour Spetrograms
 (FCS) and how the combination of indices is looking in your recordings, how well

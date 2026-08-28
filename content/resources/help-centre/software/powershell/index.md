@@ -13,7 +13,7 @@ There are two distinct PowerShell runtimes:
 - Versions 1 through 5 were installed standard with different versions of Windows
 - Versions 6 and up are _optional_ installs that need to be installed by themselves
 
-{{< figure src="./powershell-versions-start-menu.png" caption="Always choose version 7." >}}
+{{< figure src="./powershell-versions-start-menu.webp" caption="Always choose version 7." >}}
 
 From version 6, PowerShell has become cross platform---it can run on Windows,
 macOS, and Linux. If you need a script that runs cross-platform, PowerShell
@@ -25,12 +25,12 @@ is a good choice.
 
 - Go to Installing [PowerShell on Windows](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows) guide
 - Choose the MSI package, and choose the `x64` version
-  {{< figure src="./msi-x64-package.png" caption="Choose the x64 verion" >}}
+  {{< figure src="./msi-x64-package.webp" caption="Choose the x64 verion" >}}
 - Download the file and start the install
 - When you reach the _Optional Actions_stage make your you select the following options:
   - ✅ _Add 'Open here' context menus to Explorer_
   - ✅ _Add 'Run with PowerShell 7' context menu for PowerShell files_
-{{< figure src="./powershell-install-extra-options.png" caption="Make sure you select the highlighted options." >}}
+{{< figure src="./powershell-install-extra-options.webp" caption="Make sure you select the highlighted options." >}}
 
 {{% hint info %}}
 **Running commands as _Administrator_**
@@ -39,7 +39,7 @@ If you need to run a command as an _Administrator_ (for example to
 install new software), the right-click on a PowerShell icon 
 and choose the _Run as Administrator_ option.
 
-![run as Administrator](./powershell-run-as-admin.png)
+![run as Administrator](./powershell-run-as-admin.webp)
 
 {{% /hint %}}
 

@@ -413,10 +413,6 @@
         max-width: var(--oe-content-width-narrow);
     }
 
-    .platform-card-connector {
-        display: none;
-    }
-
     .video-panel {
         max-width: var(--oe-content-width-medium);
     }

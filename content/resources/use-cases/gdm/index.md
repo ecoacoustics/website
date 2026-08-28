@@ -84,7 +84,7 @@ days, and all bird species were manually identified from their calls and
 annotated on the [Ecosounds](https://www.ecosounds.org/) website (project:
 "Cunnamulla").
 
-{{% figure src="./GDM_fig1.jpg" caption="Figure 1: Study site locations represented by pins (yellow: new regrowth, green: intermediate regrowth, red: old growth). Inset map of Australia indicates location of the study area." width="100%"%}}
+{{% figure src="./GDM_fig1.webp" caption="Figure 1: Study site locations represented by pins (yellow: new regrowth, green: intermediate regrowth, red: old growth). Inset map of Australia indicates location of the study area." width="100%"%}}
 
 For the current project, we demonstrate how an existing annotated acoustic
 dataset, along with study site environmental data, can be used to model
@@ -129,7 +129,7 @@ permutation assessment showed that the model was not statistically significant
 (p = 0.370). The intercept of the model was 0.206, which represents the expected
 dissimilarity between sites when the environmental predictors are equal.
 
-{{% figure src="./GDM_fig2.png" caption="Figure 2: Main output plots of the GDM. A: observed compositional dissimilarity as a function of predicted ecological distance, where each point represents a site pair, and the line represents the GDM-predicted dissimilarity. B: Observed compositional dissimilarity as a function of predicted compositional dissimilarity, where the line represents a line of equality. C -- F: Plotted GDM spline functions for each environmental predictor variable." width="100%"%}}
+{{% figure src="./GDM_fig2.webp" caption="Figure 2: Main output plots of the GDM. A: observed compositional dissimilarity as a function of predicted ecological distance, where each point represents a site pair, and the line represents the GDM-predicted dissimilarity. B: Observed compositional dissimilarity as a function of predicted compositional dissimilarity, where the line represents a line of equality. C -- F: Plotted GDM spline functions for each environmental predictor variable." width="100%"%}}
 
 ## Discussion
 

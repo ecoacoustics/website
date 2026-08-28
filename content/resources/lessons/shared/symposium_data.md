@@ -14,9 +14,9 @@ The total size of the shared data is ≈1.8 GB.
 
 <sl-details summary="Windows Example">
 
-![extracting](/resources/lessons/shared/extract-shared-data.png)
+![extracting](/resources/lessons/shared/extract-shared-data.webp)
 
-![extract destination](/resources/lessons/shared/extract-shared-data-save-path.png)
+![extract destination](/resources/lessons/shared/extract-shared-data-save-path.webp)
 
 </sl-details>
 

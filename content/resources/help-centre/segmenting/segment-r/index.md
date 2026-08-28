@@ -206,7 +206,7 @@ library(seewave)
 spectro(waves_list[[1]], main = names(waves_list)[1], fastdisp = TRUE)
 ```
 
-![spectrogram_waves_list_1](spectrogram_1.png)
+![spectrogram_waves_list_1](spectrogram_1.webp)
 
 Success! Our `WAVE` files have been imported, without the first and last 5 seconds
 of audio, and are stored as `Wave` objects ready for analysis. Try running the

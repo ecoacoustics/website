@@ -12,7 +12,7 @@ weight: 2
 Marina D. A. Scarpelli - PhD candidate at QUT  
 [@ScarpelliNina](https://twitter.com/ScarpelliNina)
 
-![FCS](./258_20201027__2Maps.png)
+![FCS](./258_20201027__2Maps.webp)
 
 {{% /slide %}}
 {{% slide %}}
@@ -25,7 +25,7 @@ Marina D. A. Scarpelli - PhD candidate at QUT
 sender and receiver
     - Usually called **bioacoustics**
 
-![Communication1to1](./communication-1-1.png)
+![Communication1to1](./communication-1-1.webp)
 
 
 -  Communication structure is more similar to a network (Sueur, 2014)
@@ -36,7 +36,7 @@ sender and receiver
     and ecological cues
 
 
-![Communicationnetwork](./communication-network.png)
+![Communicationnetwork](./communication-network.webp)
 
 </div>
 
@@ -59,7 +59,7 @@ of more comprehensive questions, enabling research on:
     - Upscaling bioacoustics questions: temporal and spatially
 - However analytical tools still needed to be improved
 
-![sensor2](./Pasted%20image%2020220916114126.png)  
+![sensor2](./Pasted%20image%2020220916114126.webp)
 { .image-150-percent  }
 
 {{% /row %}}
@@ -75,7 +75,7 @@ of more comprehensive questions, enabling research on:
 -   Acoustic indices (AI): summarising information
     -   More than 69 existing indices (Alcocer et al., 2022)
 
-![sugai-et-al-2019](./Pasted%20image%2020220915141421.png)
+![sugai-et-al-2019](./Pasted%20image%2020220915141421.webp)
 {{% /row %}}
 
 <div class="footnotes">
@@ -113,7 +113,7 @@ Review and Perspectives. BioScience 69:5–11.
 and time averaging
 - They usually miss information on frequency and temporal patterns of soundscapes
 
-![towsey-et-al-2014](./towsey-et-al-2014.PNG)
+![towsey-et-al-2014](./towsey-et-al-2014.webp)
 {.align-center}
 
 > Notes:
@@ -130,7 +130,7 @@ and time averaging
 complexity of the soundscape
 - Heterogeneity would be a proxy of animal acoustic activity
 
-![pieretti-et-al-2011](./pieretti-et-al-2011.PNG) 
+![pieretti-et-al-2011](./pieretti-et-al-2011.webp)
 {.align-center}
 
 > Notes:
@@ -150,7 +150,7 @@ relation to technophony and geophony
   - 2 to 8kHz = biophony
   - geophony: occupies the entire spectrum
 
-![gage-and-axel-2014](./gage-and-axel-2014.PNG)
+![gage-and-axel-2014](./gage-and-axel-2014.webp)
 {.align-center}
 
 > Notes:
@@ -168,7 +168,7 @@ relation to technophony and geophony
 Sometimes it works...
 
 Technophony
-![technophony-example](./technophony-example.PNG)
+![technophony-example](./technophony-example.webp)
 {.align-center}
 
 {{% /slide %}}
@@ -181,7 +181,7 @@ Technophony
 Sometimes it works...
 
 Biophony
-![biophony-example](./biophony-example.PNG)
+![biophony-example](./biophony-example.webp)
 {.align-center}
 
 {{% /slide %}}
@@ -194,7 +194,7 @@ Biophony
 Sometimes it works...
 
 Geophony
-![geophony-example](./geophony-example.PNG)
+![geophony-example](./geophony-example.webp)
 {.align-center}
 
 {{% /slide %}}
@@ -207,7 +207,7 @@ Geophony
 Sometimes it does not work...
 
 Geophony
- ![rustling-example](./rustling-example.PNG)
+ ![rustling-example](./rustling-example.webp)
  {.align-center}
 
 {{% /slide %}}
@@ -220,7 +220,7 @@ Geophony
 Sometimes it does not work...
 
 Biophony
-![boobook-example](./boobook-example.PNG)
+![boobook-example](./boobook-example.webp)
 {.align-center}
 
 {{% /slide %}}
@@ -233,7 +233,7 @@ Biophony
 Sometimes it does not work...
 
 Biophony
-![birds-example](./birds-example.PNG)
+![birds-example](./birds-example.webp)
 {.align-center}
 
 {{% /slide %}}
@@ -261,7 +261,7 @@ Biophony
 
 ## Acoustic indices measuring biodiversity
 
-![Pasted image 20220915145342.png](./Pasted%20image%2020220915145342.png)
+![Pasted image 20220915145342.webp](./Pasted%20image%2020220915145342.webp)
 
 > Notes:
 > This is a meta-analysis that just came out this year and they did a very thorough 
@@ -272,7 +272,7 @@ Biophony
 
 ## Summary of meta-analysis
 {{% row %}} 
-![Pasted image 20220920125409.png](./Pasted%20image%2020220920125409.png)
+![Pasted image 20220920125409.webp](./Pasted%20image%2020220920125409.webp)
 { .image-150-percent }
 
 -   AI had an overall moderate positive correlation with biodiversity
@@ -285,7 +285,7 @@ Biophony
 
 ## Summary of meta-analysis
 {{% row %}} 
-![Pasted image 20220920125409.png](./Pasted%20image%2020220920125409.png)
+![Pasted image 20220920125409.webp](./Pasted%20image%2020220920125409.webp)
 { .image-150-percent }
 
 -   Majority of studies investigated terrestrial habitats and birds are the main 

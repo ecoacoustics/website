@@ -1,5 +1,5 @@
 [build]
-  command = "hugo"
+  command = "hugo --minify"
   publish = "public"
 
 [build.environment]
@@ -7,4 +7,39 @@
   HUGO_ENABLEGITINFO = "true"
 
 [context.deploy-preview]
-  command = "hugo --buildDrafts --buildFuture"
+  command = "hugo --minify --buildDrafts --buildFuture"
+
+[[headers]]
+  for = "/book.min.*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/css/oe-main.min.*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.search.min.*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/registry-form.*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/registry-render.*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*_hu*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/home/*_hu*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

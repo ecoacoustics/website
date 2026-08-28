@@ -27,7 +27,9 @@
       </template>
     </div>
     {{ else }}
-    <img src="{{ .image }}" alt="{{ .alt }}" loading="lazy" decoding="async">
+    {{ $imagePath := printf "static/%s" (strings.TrimPrefix "/" .image) }}
+    {{ $image := imageConfig $imagePath }}
+    <img src="{{ .image }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ .alt }}" loading="lazy" decoding="async">
     {{ end }}
     {{ end }}
   </div>

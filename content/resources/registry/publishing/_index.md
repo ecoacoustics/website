@@ -64,7 +64,7 @@ Once you are logged in, go to the [Recognizer Template repository](https://githu
 You can use the template as a base for creating a new repository by clicking the button that says _Use this template_
 and then selecting _Create a new repository_.  
 
-![The Use this template button is located on the top right side of the page.](github-use-template.png)
+![The Use this template button is located on the top right side of the page.](github-use-template.webp)
 
 Then, in the following page:
 
@@ -116,10 +116,10 @@ put them to `artifacts` folder.  Examples of this might be
 Once you are ready to publish your recognizer you can do so by
 [making your repository public](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-fetures/managing-repository-settings/setting-repository-visibility).
 1. In your repository go to the Settings tab
-![Picture of GitHub settings tab](github-settings-tab.png)
+![Picture of GitHub settings tab](github-settings-tab.webp)
 2. In the _General_ section, scroll to the bottom _Danger Zone_
 3. Click the button _Change visibility_ and select _Change to public_
-![Screenshot of Visibility settings](github-change-visibility.png)
+![Screenshot of Visibility settings](github-change-visibility.webp)
 
 #### Step 6. Generate a DOI using Zenodo
 
@@ -130,16 +130,16 @@ enabling others in the scientific community reference and build upon your work.
 2. Use your GitHub account to log in.
 3. Once you are logged in, choose _Github_ from the drop-down menu by clicking the arrow next to your email address
 in the top right-hand side menu.
-![Picture of Zenodo drop down menu](zenodo-github-page.png)
+![Picture of Zenodo drop down menu](zenodo-github-page.webp)
 4. On this page you will see a list of your repositories. Flip the switch next to the recognizer repository you created to the _ON-position_.
-![Picture of Zenodo repository switch](zenodo-repo-switch.png)
+![Picture of Zenodo repository switch](zenodo-repo-switch.webp)
 5. Go to Github and [create a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository).
 Zenodo will automatically generate a DOI for this release which you should now see in Zenodo GitHub page.
 Zenodo will generate a new DOI version for each release.
 [Read about Zenodo Versioning](https://help.zenodo.org/#versioning).
 6. Go to your Zenodo page for your repository.
 7. Finally, you can copy the DOI-badge from the DOI-page by clicking the DOI-badge on the side panel.
-![Picture of Zenodo DOI-badge in the side panel](zenodo-doi-badge.png)
+![Picture of Zenodo DOI-badge in the side panel](zenodo-doi-badge.webp)
 We recommend copying the Markdown text and adding it to your README-file in your GitHub recognizer repository.
 
 #### Step 7. Add or modify a citation information file
@@ -150,7 +150,7 @@ To make your GitHub recognizer repository easily citable we recommend adding a c
 [CITATION.cff generation website](https://citation-file-format.github.io/cff-initializer-javascript/#/) to create a
 `CITATION.cff` file.
 2. Replace the `CITATION.cff` file in your repository with the file you generated.
-![Screenshot of the Citation.cff file.](citation-file-edit.png)
+![Screenshot of the Citation.cff file.](citation-file-edit.webp)
 You can edit files in your browser by clicking the pen icon.
 3. Once you are happy with your changes, save the file by clicking
 the _Commit changes..._ button. You can commit your changes directly to the main branch.
@@ -197,7 +197,7 @@ After these concerns have passed it's a great time to publish your recognizer. Y
 1. In your repository go to the Settings tab
 2. In the _General_ section, scroll to the bottom of the page to heading  _Danger Zone_
 3. Click the button _Change visibility_ and select  _Change to private_. Once you are ready to publish, go to this same setting and select _Change to public._
-![Screenshot of Visibility settings](github-change-visibility.png)
+![Screenshot of Visibility settings](github-change-visibility.webp)
 
 See more in GitHub Documentation:
 [setting repository visibility](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility).

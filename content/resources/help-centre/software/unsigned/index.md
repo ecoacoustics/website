@@ -8,7 +8,7 @@ payment to be made, which is not always feasible for developers to do.
 Therefore, you may have difficulties when trying to run programs downloaded from
 the internet that aren't notarised, and see some kind of error message:
 
-{{< figure src="./2022-11-15-14-51-39.png" alt="unsigned_error" width="40%">}}
+{{< figure src="./2022-11-15-14-51-39.webp" alt="unsigned_error" width="40%">}}
 
 This is a security feature of the Gatekeeper software on macOS, and this issue
 is known to occur for programs such as [Ecoacoustics Metadata Utility](https://github.com/QutEcoacoustics/emu), or
@@ -23,7 +23,7 @@ System Preferences > Security and Privacy > Privacy
 Then select _Developer Tools_ on the left hand side menu. Click the
 unlock button, and then tick Terminal:
 
-![terminal-setting](./terminalsetting.png)
+![terminal-setting](./terminalsetting.webp)
 
 Now the terminal will be able to run programs that do not meet the security
 policy. 
@@ -93,4 +93,3 @@ after you re-enable the protection.
 should always be cautious when downloading and running programs from the
 internet, and make sure they have been created by developers you can trust. 
 {{% /hint %}}
-

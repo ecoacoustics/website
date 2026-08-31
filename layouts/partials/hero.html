@@ -1,6 +1,8 @@
 {{ with .Params.image }}
+{{/* Try to get the image from the site resources first */}}
 {{ $imagePath := strings.TrimPrefix "/" . }}
 {{ $image := resources.Get $imagePath }}
+{{/* If not found, try to get it from the page resources */}}
 {{ if not $image }}{{ $image = $.Resources.GetMatch $imagePath }}{{ end }}
 {{ if not $image }}{{ $image = $.Resources.GetMatch (path.Base $imagePath) }}{{ end }}
 {{ with $image }}

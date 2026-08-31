@@ -1,3 +1,11 @@
+{{/*
+  Local PNG and JPEG images are converted to responsive WebP images. Other
+  image types and images Hugo cannot find are rendered unchanged.
+    Required params: src and alt.
+    Optional params: page, sizes, class, style, title, and loading.
+*/}}
+
+{{/* Resolve local images from page bundles, assets, shared content, or static. */}}
 {{- $resource := false -}}
 {{- $url := urls.Parse .src -}}
 {{- if not (or $url.IsAbs (strings.HasPrefix .src "//")) -}}
@@ -26,6 +34,7 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
+{{/* Convert PNG/JPEG sources to WebP without generating widths larger than the original. */}}
 {{- $processable := and $resource (or (eq $resource.MediaType.SubType "jpeg") (eq $resource.MediaType.SubType "png")) -}}
 {{- if $processable -}}
   {{- $candidates := slice -}}
@@ -38,7 +47,9 @@
   {{- $src := index $candidates (sub (len $candidates) 1) -}}
   <img src="{{ $src.RelPermalink }}" srcset="{{ range $index, $image := $candidates }}{{ if $index }}, {{ end }}{{ $image.RelPermalink }} {{ $image.Width }}w{{ end }}" sizes="{{ .sizes | default "(max-width: 800px) 100vw, 800px" }}" width="{{ $resource.Width }}" height="{{ $resource.Height }}" alt="{{ .alt }}"{{ with .class }} class="{{ . }}"{{ end }}{{ with .style }} style="{{ . | safeCSS }}"{{ end }}{{ with .title }} title="{{ . }}"{{ end }} loading="{{ .loading | default "lazy" }}" decoding="async">
 {{- else if $resource -}}
+  {{/* Preserve processable metadata for formats such as SVG and GIF. */}}
   <img src="{{ $resource.RelPermalink }}" width="{{ $resource.Width }}" height="{{ $resource.Height }}" alt="{{ .alt }}"{{ with .class }} class="{{ . }}"{{ end }}{{ with .style }} style="{{ . | safeCSS }}"{{ end }}{{ with .title }} title="{{ . }}"{{ end }} loading="{{ .loading | default "lazy" }}" decoding="async">
 {{- else -}}
+  {{/* Leave remote or unresolved sources unchanged. */}}
   <img src="{{ .src | safeURL }}" alt="{{ .alt }}"{{ with .class }} class="{{ . }}"{{ end }}{{ with .style }} style="{{ . | safeCSS }}"{{ end }}{{ with .title }} title="{{ . }}"{{ end }} loading="{{ .loading | default "lazy" }}" decoding="async">
 {{- end -}}

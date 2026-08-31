@@ -37,49 +37,27 @@
 </script>
 
 
-{{/* Build the complete site stylesheet once; it is linked asynchronously below. */}}
-{{- $css := resources.Get "css/oe-main.css" }}
-{{- $css = $css | resources.ExecuteAsTemplate "css/oe-main.css" . }}
-{{- $rootVariables := first 2 (findRE `(?s):root\s*\{[^}]*\}` $css.Content) }}
-{{- $css = $css | css.Sass }}
-{{- if hugo.IsProduction }}
-{{- $css = $css | minify | fingerprint | resources.PostProcess }}
-{{- end }}
-
-{{/* Inline the existing style groups needed for the current page's first paint. */}}
+{{/* Our custom CSS */}}
+{{ range slice
+    "css/theme/defaults.css"
+    "css/theme/typography.css"
+}}
+{{ with resources.Get . }}
+<link href="{{ .RelPermalink }}" rel="stylesheet" />
+{{ end }}
+{{ end }}
 {{ with resources.Get "css/theme/light.css" }}
 <style media="(prefers-color-scheme:light)" data-theme-toggle="light">{{ .Content | safeCSS }}</style>
 {{ end }}
 {{ with resources.Get "css/theme/dark.css" }}
 <style media="(prefers-color-scheme:dark)" data-theme-toggle="dark">{{ .Content | safeCSS }}</style>
 {{ end }}
-{{- $criticalFiles := slice "css/common.css" "css/main_nav.css" "css/layout.css" "css/page.css" "css/button.css" "css/typography.css" }}
-{{- if .IsHome }}
-  {{- $criticalFiles = $criticalFiles | append "css/home.css" }}
-{{- else if eq .Section "resources" }}
-  {{- $criticalFiles = $criticalFiles | append "css/resources.scss" "css/registry.scss" "css/glossary.css" }}
-{{- else if eq .Section "posts" }}
-  {{- $criticalFiles = $criticalFiles | append "css/posts.css" }}
-{{- else if eq .Section "contact" }}
-  {{- $criticalFiles = $criticalFiles | append "css/contact.css" }}
-{{- end }}
-{{- $criticalResources := slice }}
-{{- range $criticalFiles }}
-  {{- $part := resources.Get . }}
-  {{- $part = resources.FromString (printf "css/inline-parts/%s.scss" (path.BaseName .)) $part.Content }}
-  {{- $criticalResources = $criticalResources | append $part }}
-{{- end }}
-{{- $criticalKey := cond .IsHome "home" (.Section | default "page") }}
-{{- $critical := $criticalResources | resources.Concat (printf "css/critical-%s.scss" $criticalKey) | css.Sass }}
+{{- $css := resources.Get "css/oe-main.css" }}
+{{- $css = $css | resources.ExecuteAsTemplate "css/oe-main.css" . | css.Sass }}
 {{- if hugo.IsProduction }}
-{{- $critical = $critical | minify }}
+{{- $css = $css | minify | fingerprint | resources.PostProcess }}
 {{- end }}
-<style>{{ delimit $rootVariables "" | safeCSS }}{{ $critical.Content | safeCSS }}</style>
-
-{{/* Load the non-critical site styles without blocking first paint. */}}
-<link rel="preload" href="{{ $css.RelPermalink }}" as="style">
-<link href="{{ $css.RelPermalink }}" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
-<noscript><link href="{{ $css.RelPermalink }}" rel="stylesheet"></noscript>
+<link href="{{ $css.RelPermalink }}" rel="stylesheet" />
 
 {{/* Shoelace */}}
 

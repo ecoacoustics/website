@@ -1,0 +1,16 @@
+{{- $src := .Get "src" -}}
+{{- $width := .Get "width" -}}
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+  {{- with .Get "link" }}<a href="{{ . | safeURL }}">{{ end -}}
+  {{- partial "responsive-image.html" (dict
+    "page" .Page
+    "src" $src
+    "alt" (.Get "alt" | default (.Get "caption"))
+    "title" (.Get "title")
+    "style" (cond (and (ne $width "") (strings.HasSuffix $width "%")) (printf "width: %s" $width) "")
+  ) -}}
+  {{- if .Get "link" }}</a>{{ end -}}
+  {{- with .Get "caption" }}
+    <figcaption>{{ . | markdownify }}</figcaption>
+  {{- end }}
+</figure>

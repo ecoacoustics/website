@@ -2,7 +2,10 @@
 
 {{/* get a reference to our render script, but also inject the url to our data */}}
 {{/* note: without referring to the url, our resource would not be output */}}
-{{ $options := (dict "format" "esm" "sourceMap" "inline")}}
+{{ $options := (dict "format" "esm" "minify" hugo.IsProduction) }}
+{{ if not hugo.IsProduction }}
+{{ $options = merge $options (dict "sourceMap" "inline") }}
+{{ end }}
 {{ $js := resources.Get "js/registry-form.js" | js.Build $options }}
 {{ if hugo.IsProduction }}
 {{ $js = $js | resources.Fingerprint "sha512" }}

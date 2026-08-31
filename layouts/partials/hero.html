@@ -1,13 +1,14 @@
 {{ with .Params.image }}
-{{/* Try to get the image from the site resources first */}}
-{{ $image := resources.Get . }}
-{{/* If not found, try to get it from the page resources */}}
-{{ if ($image | not) }}
-{{ $image =  $.Resources.Get . }}
-{{ end }}
+{{ $imagePath := strings.TrimPrefix "/" . }}
+{{ $image := resources.Get $imagePath }}
+{{ if not $image }}{{ $image = $.Resources.GetMatch $imagePath }}{{ end }}
+{{ if not $image }}{{ $image = $.Resources.GetMatch (path.Base $imagePath) }}{{ end }}
 {{ with $image }}
+{{ $heroWidth := 1600 }}
+{{ if lt .Width $heroWidth }}{{ $heroWidth = .Width }}{{ end }}
+{{ $heroImage := .Resize (printf "%dx webp q75" $heroWidth) }}
 <div class="page-hero">
-    <div class="page-hero-image" style="background-image: url('{{ .RelPermalink }}');{{ with $.Params.imageStyle }}{{ . | safe.CSS }}{{ end }}">
+    <div class="page-hero-image" style="background-image: url('{{ $heroImage.RelPermalink }}');{{ with $.Params.imageStyle }}{{ . | safe.CSS }}{{ end }}">
     </div>
     <div class="page-hero-content">
         {{ with $.Page.Store.Get "heroHideTitle" }}

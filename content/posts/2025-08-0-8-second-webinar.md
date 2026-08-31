@@ -17,7 +17,7 @@ This session was packed with insights from experts who are pushing the boundarie
 
 The session was recorded and you can watch it below:
 
-{{< youtube aml3nXn9Ilw >}}
+{{< youtube id="aml3nXn9Ilw" loading="lazy" >}}
 
 ## Speakers
 

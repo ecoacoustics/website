@@ -1,5 +1,8 @@
-{{- $heroImage := resources.Get "images/Buffel-Grass-pasture-botanical-survey-at-Cungelella-1-1.webp" -}}
-{{- $heroImage = $heroImage.Process "webp q70" -}}
+{{- $heroSource := resources.Get "images/Buffel-Grass-pasture-botanical-survey-at-Cungelella-1-1.webp" -}}
+{{- $heroImage := $heroSource.Process "webp q70" -}}
+{{- $heroSmall := $heroSource.Resize "640x webp q70" -}}
+{{- $heroMedium := $heroSource.Resize "960x webp q70" -}}
+{{- $heroLarge := $heroSource.Resize "1440x webp q70" -}}
 <section class="hero">
   <div class="container hero-layout">
     <div class="hero-content type-body-large">
@@ -12,6 +15,8 @@
           class="waveform-image"
           style="object-position: left bottom; width: 150%;"
           src="{{ $heroImage.RelPermalink }}"
+          srcset="{{ $heroSmall.RelPermalink }} 640w, {{ $heroMedium.RelPermalink }} 960w, {{ $heroLarge.RelPermalink }} 1440w, {{ $heroImage.RelPermalink }} 2000w"
+          sizes="(max-width: 680px) 150vw, 750px"
           width="2000"
           height="1500"
           alt=""

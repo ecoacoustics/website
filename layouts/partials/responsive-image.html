@@ -1,0 +1,44 @@
+{{- $resource := false -}}
+{{- $url := urls.Parse .src -}}
+{{- if not (or $url.IsAbs (strings.HasPrefix .src "//")) -}}
+  {{- $resourcePath := strings.TrimPrefix "/" (path.Clean $url.Path) -}}
+  {{- with .page -}}
+    {{- with .Resources.GetMatch $resourcePath -}}
+      {{- $resource = . -}}
+    {{- else -}}
+      {{- with $.page.Resources.GetMatch (path.Base $resourcePath) -}}
+        {{- $resource = . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $resource -}}
+    {{- $resource = resources.Get $resourcePath -}}
+  {{- end -}}
+  {{- if not $resource -}}
+    {{- with site.GetPage (path.Dir $resourcePath) -}}
+      {{- $resource = .Resources.GetMatch (path.Base $resourcePath) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $resource -}}
+    {{- $staticPath := printf "static/%s" $resourcePath -}}
+    {{- if fileExists $staticPath -}}
+      {{- $resource = resources.FromString $resourcePath (readFile $staticPath) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $processable := and $resource (or (eq $resource.MediaType.SubType "jpeg") (eq $resource.MediaType.SubType "png")) -}}
+{{- if $processable -}}
+  {{- $candidates := slice -}}
+  {{- range slice 480 800 1200 -}}
+    {{- if lt . $resource.Width -}}
+      {{- $candidates = $candidates | append ($resource.Resize (printf "%dx webp q82" .)) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $candidates = $candidates | append ($resource.Process "webp q82") -}}
+  {{- $src := index $candidates (sub (len $candidates) 1) -}}
+  <img src="{{ $src.RelPermalink }}" srcset="{{ range $index, $image := $candidates }}{{ if $index }}, {{ end }}{{ $image.RelPermalink }} {{ $image.Width }}w{{ end }}" sizes="{{ .sizes | default "(max-width: 800px) 100vw, 800px" }}" width="{{ $resource.Width }}" height="{{ $resource.Height }}" alt="{{ .alt }}"{{ with .class }} class="{{ . }}"{{ end }}{{ with .style }} style="{{ . | safeCSS }}"{{ end }}{{ with .title }} title="{{ . }}"{{ end }} loading="{{ .loading | default "lazy" }}" decoding="async">
+{{- else if $resource -}}
+  <img src="{{ $resource.RelPermalink }}" width="{{ $resource.Width }}" height="{{ $resource.Height }}" alt="{{ .alt }}"{{ with .class }} class="{{ . }}"{{ end }}{{ with .style }} style="{{ . | safeCSS }}"{{ end }}{{ with .title }} title="{{ . }}"{{ end }} loading="{{ .loading | default "lazy" }}" decoding="async">
+{{- else -}}
+  <img src="{{ .src | safeURL }}" alt="{{ .alt }}"{{ with .class }} class="{{ . }}"{{ end }}{{ with .style }} style="{{ . | safeCSS }}"{{ end }}{{ with .title }} title="{{ . }}"{{ end }} loading="{{ .loading | default "lazy" }}" decoding="async">
+{{- end -}}

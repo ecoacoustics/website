@@ -15,17 +15,15 @@ and from Google Deepmind, the developers of the Perch embedding model and Agile 
 
 <div style="display: flex; gap: 30px; justify-content: space-between; padding: 2em 0em 2em 0em">
    <div style="width: 33%; height: 60px;">
-       <img src="/images/ARDC_logo_RGB-250x82.png" alt="Australian Research Data Commons" 
+       <img src="/images/ARDC_logo.svg" width="284" height="92" alt="Australian Research Data Commons" loading="lazy" decoding="async"
        style="width: 100%; height: 100%; box-shadow: none; object-fit: contain;">
    </div>
    <div style="width: 33%; height: 60px;">
-       <img src="/images/Google_DeepMind_logo.svg" alt="Google Deepmind" style="width: 100%; 
+       <img src="/images/Google_DeepMind_logo.svg" width="2201" height="363" alt="Google Deepmind" loading="lazy" decoding="async" style="width: 100%;
        height: 100%; box-shadow: none; object-fit: contain;">
    </div>
    <div style="width: 33%; height: 60px;">
-       <img src="/images/QUT-logo-–-Blue-–-RGB-–-PNG-110x110.png" alt="Australian 
-       Data Research Commons" style="width: 100%; height: 100%; box-shadow: none; object-fit: contain;">
+       <img src="/images/QUT_logo.svg" width="800" height="800" alt="Queensland University of Technology" loading="lazy" decoding="async"
+       style="width: 100%; height: 100%; box-shadow: none; object-fit: contain;">
    </div>
 </div>
-
-

@@ -11,9 +11,15 @@
         <a class="oe-post-link" href="{{ .RelPermalink }}"></a>
 
           {{ if .Params.image }}
+            {{ $imagePath := strings.TrimPrefix "/" .Params.image }}
+            {{ $image := .Resources.GetMatch $imagePath }}
+            {{ if not $image }}{{ $image = resources.Get $imagePath }}{{ end }}
             <div class="oe-post-image" style="background-image:
-              {{ with .Resources.GetMatch .Params.image }}
-                url('{{ .RelPermalink }}');
+              {{ with $image }}
+                {{ $cardWidth := 800 }}
+                {{ if lt .Width $cardWidth }}{{ $cardWidth = .Width }}{{ end }}
+                {{ $cardImage := .Resize (printf "%dx webp q75" $cardWidth) }}
+                url('{{ $cardImage.RelPermalink }}');
               {{ else }}
               url('{{ .Params.image | relURL }}');
               {{ end }}

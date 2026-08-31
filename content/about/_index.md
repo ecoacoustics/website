@@ -25,7 +25,7 @@ We organise events, talks, and educational resources for the community.
 Simply put, our goal is to make sense of environmental sound, through training,
 tools and big data, to enable ecologists to make better decisions.
 
-{{< youtube hxk1zpLiGn4 >}}
+{{< youtube id="hxk1zpLiGn4" loading="lazy" >}}
 
 ## FAIR
 

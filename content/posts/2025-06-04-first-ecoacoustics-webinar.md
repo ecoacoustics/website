@@ -20,7 +20,7 @@ transforming ecological research and biodiversity management.
 
 ## Watch the recording
 
-{{< youtube WBaz4mCIsjE >}}
+{{< youtube id="WBaz4mCIsjE" loading="lazy" >}}
 
 ## Speakers
 

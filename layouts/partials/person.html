@@ -1,5 +1,11 @@
 <div class="flex-3-row column person-card">
-    <img class="profile-img {{if not .imgSquare }}circle{{ end }}" src="{{ .imgUrl }}" alt="Picture of {{ .name }}" />
+    {{- partial "responsive-image.html" (dict
+        "page" .page
+        "src" .imgUrl
+        "alt" (printf "Picture of %s" .name)
+        "class" (cond (not .imgSquare) "profile-img circle" "profile-img")
+        "sizes" "(max-width: 700px) 100vw, 320px"
+    ) }}
 
     <h3>{{ .name }}</h3>
     <span class="job-title">{{ .jobTitle }}</span>

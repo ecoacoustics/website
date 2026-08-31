@@ -27,7 +27,7 @@
       </template>
     </div>
     {{ else }}
-    <img src="{{ .image }}" alt="{{ .alt }}" loading="lazy" decoding="async">
+    {{ partial "responsive-image.html" (dict "page" $.page "src" .image "alt" .alt "sizes" "150px") }}
     {{ end }}
     {{ end }}
   </div>

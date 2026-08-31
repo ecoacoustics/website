@@ -6,12 +6,26 @@
 {{- $src_dark := $data.image_dark -}}
 {{- $fallback := cond ($src_dark  | not | not ) "" "shortcode-logo-fallback-background" -}}
 {{- $tag := cond ($data.href | not | not) "a" "div" -}}
+{{- $lightPath := strings.TrimPrefix "/" $src_light -}}
+{{- $lightResource := resources.FromString $lightPath (readFile (printf "static/%s" $lightPath)) -}}
+{{- $lightImage := $lightResource -}}
+{{- if and $lightResource (or (eq $lightResource.MediaType.SubType "jpeg") (eq $lightResource.MediaType.SubType "png")) -}}
+    {{- $lightImage = $lightResource.Process "webp q82" -}}
+{{- end -}}
+{{- $darkImage := false -}}
+{{- with $src_dark -}}
+    {{- $darkPath := strings.TrimPrefix "/" . -}}
+    {{- $darkImage = resources.FromString $darkPath (readFile (printf "static/%s" $darkPath)) -}}
+    {{- if and $darkImage (or (eq $darkImage.MediaType.SubType "jpeg") (eq $darkImage.MediaType.SubType "png")) -}}
+        {{- $darkImage = $darkImage.Process "webp q82" -}}
+    {{- end -}}
+{{- end -}}
 {{- (printf `<%s href="%s"` $tag (cond ($data.href |not |not) $data.href "")) | safeHTML }} class="shortcode-logo {{ $fallback }}">
     <picture>
-        <source srcset="{{ $src_light | relURL }}" data-theme-toggle="light" media="(prefers-color-scheme:light)">
-        {{- with $src_dark -}}
-        <source srcset="{{ . | relURL }}" data-theme-toggle="dark" media="(prefers-color-scheme:dark)">
+        <source srcset="{{ $lightImage.RelPermalink }}" data-theme-toggle="light" media="(prefers-color-scheme:light)">
+        {{- with $darkImage -}}
+        <source srcset="{{ .RelPermalink }}" data-theme-toggle="dark" media="(prefers-color-scheme:dark)">
         {{- end -}}
-        <img src="{{ $src_light | relURL }}" alt="{{ .Get `name` }}" />
+        <img src="{{ $lightImage.RelPermalink }}" width="{{ $lightImage.Width }}" height="{{ $lightImage.Height }}" alt="{{ .Get `name` }}" loading="lazy" decoding="async" />
     </picture>
 {{- (printf `</%s>` $tag) | safeHTML -}}

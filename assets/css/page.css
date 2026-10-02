@@ -9,11 +9,15 @@
 }
 
 .page-hero {
-    display: flex;
+    display: grid;
 
     margin-top: 0;
     margin-bottom: var(--oe-padding-small);
     max-height: 40vh;
+
+    & > * {
+        grid-area: 1 / 1;
+    }
 }
 
 .page-hero-image {

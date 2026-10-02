@@ -19,6 +19,7 @@
 .page-hero-image {
     width: 100lvw;
     height: auto;
+    max-height: 40vh;
     position: relative;
     top: 0;
     left: 50%;

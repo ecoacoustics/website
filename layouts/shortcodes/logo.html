@@ -1,4 +1,4 @@
-{{- $data := index .Site.Data.logos (.Get 0 | lower) -}}
+{{- $data := index hugo.Data.logos (.Get 0 | lower) -}}
 {{- if ($data | not) -}}
 {{- errorf "Unknown logo name: `%s`. Context: %s" (.Get 0) .Position -}}
 {{- end -}}
@@ -10,6 +10,7 @@
 {{- $lightResource := resources.FromString $lightPath (readFile (printf "static/%s" $lightPath)) -}}
 {{- $lightImage := $lightResource -}}
 {{- if and $lightResource (or (eq $lightResource.MediaType.SubType "jpeg") (eq $lightResource.MediaType.SubType "png")) -}}
+    {{- warnf "[webp] Process %q (%dx%d) -> webp q82" $lightPath $lightResource.Width $lightResource.Height -}}
     {{- $lightImage = $lightResource.Process "webp q82" -}}
 {{- end -}}
 {{- $darkImage := false -}}
@@ -17,6 +18,7 @@
     {{- $darkPath := strings.TrimPrefix "/" . -}}
     {{- $darkImage = resources.FromString $darkPath (readFile (printf "static/%s" $darkPath)) -}}
     {{- if and $darkImage (or (eq $darkImage.MediaType.SubType "jpeg") (eq $darkImage.MediaType.SubType "png")) -}}
+        {{- warnf "[webp] Process %q (%dx%d) -> webp q82" $darkPath $darkImage.Width $darkImage.Height -}}
         {{- $darkImage = $darkImage.Process "webp q82" -}}
     {{- end -}}
 {{- end -}}

@@ -6,11 +6,15 @@
 {{ if not $image }}{{ $image = $.Resources.GetMatch $imagePath }}{{ end }}
 {{ if not $image }}{{ $image = $.Resources.GetMatch (path.Base $imagePath) }}{{ end }}
 {{ with $image }}
-{{ $heroWidth := 1600 }}
-{{ if lt .Width $heroWidth }}{{ $heroWidth = .Width }}{{ end }}
-{{ $heroImage := .Resize (printf "%dx webp q75" $heroWidth) }}
+{{/* 1x for standard displays, 2x for high-DPI; never upscale beyond the source. */}}
+{{ $width1x := cond (lt .Width 1920) .Width 1920 }}
+{{ $width2x := cond (lt .Width 3840) .Width 3840 }}
+{{ warnf "[webp] Resize %q (%dx%d) -> %dx webp q82" $imagePath .Width .Height $width1x }}
+{{ $hero1x := .Resize (printf "%dx webp q82" $width1x) }}
+{{ warnf "[webp] Resize %q (%dx%d) -> %dx webp q82" $imagePath .Width .Height $width2x }}
+{{ $hero2x := .Resize (printf "%dx webp q82" $width2x) }}
 <div class="page-hero">
-    <div class="page-hero-image" style="background-image: url('{{ $heroImage.RelPermalink }}');{{ with $.Params.imageStyle }}{{ . | safe.CSS }}{{ end }}">
+    <div class="page-hero-image" style="background-image: url('{{ $hero1x.RelPermalink }}'); background-image: image-set(url('{{ $hero1x.RelPermalink }}') 1x, url('{{ $hero2x.RelPermalink }}') 2x);{{ with $.Params.imageStyle }}{{ . | safe.CSS }}{{ end }}">
     </div>
     <div class="page-hero-content">
         {{ with $.Page.Store.Get "heroHideTitle" }}

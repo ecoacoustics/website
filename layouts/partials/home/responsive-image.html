@@ -4,6 +4,7 @@
 {{- $srcset := slice -}}
 {{- range $width := $widths -}}
   {{- if le $width $source.Width -}}
+    {{- warnf "[webp] Resize %q (%dx%d) -> %dx webp q%d" $source.Name $source.Width $source.Height $width $quality -}}
     {{- $resized := $source.Resize (printf "%dx webp q%d" $width $quality) -}}
     {{- $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink $width) -}}
   {{- end -}}
@@ -12,6 +13,7 @@
 {{- if lt $source.Width $fallbackWidth -}}
   {{- $fallbackWidth = $source.Width -}}
 {{- end -}}
+{{- warnf "[webp] Resize %q (%dx%d) -> %dx webp q%d" $source.Name $source.Width $source.Height $fallbackWidth $quality -}}
 {{- $fallback := $source.Resize (printf "%dx webp q%d" $fallbackWidth $quality) -}}
 <img
   src="{{ $fallback.RelPermalink }}"

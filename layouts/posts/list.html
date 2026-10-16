@@ -18,6 +18,7 @@
               {{ with $image }}
                 {{ $cardWidth := 800 }}
                 {{ if lt .Width $cardWidth }}{{ $cardWidth = .Width }}{{ end }}
+                {{ warnf "[webp] Resize %q (%dx%d) -> %dx webp q75" $imagePath .Width .Height $cardWidth }}
                 {{ $cardImage := .Resize (printf "%dx webp q75" $cardWidth) }}
                 url('{{ $cardImage.RelPermalink }}');
               {{ else }}

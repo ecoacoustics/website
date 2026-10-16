@@ -27,7 +27,7 @@
     {{- $fragments = after 1 $fragments -}}
     {{- end }}
     {{- warnf "Including data from %s (%s)" . $fragments -}}
-    {{- $data_from_file := index $.Site.Data.recognizer_registry $fragments -}}
+    {{- $data_from_file := index hugo.Data.recognizer_registry $fragments -}}
     {{/* finally concat all the selections together! */}}
     {{- with $data_from_file -}}
     {{-     $data = $data | append . -}}

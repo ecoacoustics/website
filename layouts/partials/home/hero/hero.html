@@ -1,7 +1,11 @@
 {{- $heroSource := resources.Get "images/Buffel-Grass-pasture-botanical-survey-at-Cungelella-1-1.webp" -}}
+{{- warnf "[webp] Process %q (%dx%d) -> webp q70" $heroSource.Name $heroSource.Width $heroSource.Height -}}
 {{- $heroImage := $heroSource.Process "webp q70" -}}
+{{- warnf "[webp] Resize %q (%dx%d) -> 640x webp q70" $heroSource.Name $heroSource.Width $heroSource.Height -}}
 {{- $heroSmall := $heroSource.Resize "640x webp q70" -}}
+{{- warnf "[webp] Resize %q (%dx%d) -> 960x webp q70" $heroSource.Name $heroSource.Width $heroSource.Height -}}
 {{- $heroMedium := $heroSource.Resize "960x webp q70" -}}
+{{- warnf "[webp] Resize %q (%dx%d) -> 1440x webp q70" $heroSource.Name $heroSource.Width $heroSource.Height -}}
 {{- $heroLarge := $heroSource.Resize "1440x webp q70" -}}
 <section class="hero">
   <div class="container hero-layout">

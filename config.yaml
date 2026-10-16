@@ -17,19 +17,19 @@ markup:
 cascade:
     # we do this over ignoring the readme so we can steal from the readme's
     # with an include if needed
-    - _target:
+    - target:
           path: .*/README$
           kind: page
-      _build:
+      build:
           render: never
           list: never
-    - _target:
+    - target:
           path: /footer/**
-      _build:
+      build:
           render: never
-    - _target:
+    - target:
           path: /home/**
-      _build:
+      build:
           render: never
 # ignoreFiles:
 #     - .*README\.md$

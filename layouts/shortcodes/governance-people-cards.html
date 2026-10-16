@@ -1,4 +1,4 @@
-{{ $data := index $.Site.Data.governance (.Get "groupName") }}
+{{ $data := index hugo.Data.governance (.Get "groupName") }}
 
 <div class="flex flex-wrap person-cards">
     {{ range $data }}

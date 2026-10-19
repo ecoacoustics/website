@@ -12,7 +12,7 @@ tags:
 
 Researchers and ecologists at the World Ecoacoustics Congress are using audio data and open digital infrastructure to monitor biodiversity and protect Australia's changing ecosystems. <!--more-->
 
-{{% figure src="listening-to-the-planet-feature-image.png" caption="World ecoacoustics conference 2026." %}}
+{{% figure src="listening-to-the-planet-feature-image.png" caption="World Ecoacoustics Congress 2026." %}}
 
 From forest soundscapes and threatened bird calls to the subtle audio cues of changing landscapes, ecoacoustics is transforming how we monitor biodiversity. At the recent World Ecoacoustics Congress (WEC), held in Cairns (Gimuy) from 17 to 20 August 2026, acoustic researchers, data scientists, field ecologists and conservationists gathered to share cutting-edge research and explore how audio data can help protect our environment.
 
@@ -27,7 +27,7 @@ Hands-on workshops were a major highlight of WEC, equipping delegates with pract
 
 Broader technical and ethical workshops at the congress provided delegates with practical skills across the entire ecoacoustic research lifecycle:
 
-- **Acoustic Localisation:** Specialised technical sessions introduced state-of-the-art methods for 3D acoustic localisation. Frontier labs’ Kieran Al led participants in learning how multi-microphone arrays and spatial algorithms pinpoint exact wildlife positions in dense terrestrial and aquatic environments.
+- **Acoustic Localisation:** Specialised technical sessions introduced state-of-the-art methods for 3D acoustic localisation. Frontier labs’ Kieran Aland led participants in learning how multi-microphone arrays and spatial algorithms pinpoint exact wildlife positions in dense terrestrial and aquatic environments.
 - **Listening on Country and Ecoacoustic Ethics:** Dr Leah Barclay (University of the Sunshine Coast) led the workshop *Dandhigu Yimbana: Listening on Country and the Ethics of Ecoacoustics* that explored First Nations co-design, Indigenous Data Governance, and the Collective Benefit, Authority to Control, Responsibility, and Ethics (CARE) principles. Delegates discussed how to align bioacoustic research with community priorities and respect First Nations sovereignty over ecological and cultural knowledge.
 - **Best Practice Guidelines:** May-Le Ng (Ecoacoustics Guidelines Australia) and Dr Kristen Thompson (Queensland Government Department of the Environment, Tourism, Science and Innovation) led interactive sessions focused on establishing standardised ecoacoustic surveys and data guidelines for Australia.
 - **Global Networks:** Professor John Quinn (Furman University) led participants in a discussion about building a global bioacoustics “network of networks” to harmonise acoustic data formats and boost international research collaboration.

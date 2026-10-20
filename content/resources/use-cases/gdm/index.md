@@ -7,7 +7,7 @@ By [Dr Andrew Schwenke](https://orcid.org/0000-0002-5281-0115)
 
 Developed in a collaboration between Open Ecoacoustics & EcoCommons.
 
-{{% logo "ecocommons" %}}
+{{< logo src="/images/EcoCommonsLogo.svg" alt="EcoCommons" href="https://www.ecocommons.org.au/" >}}
 
 ## Summary
 

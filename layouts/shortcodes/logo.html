@@ -1,33 +1,26 @@
-{{- $data := index hugo.Data.logos (.Get 0 | lower) -}}
-{{- if ($data | not) -}}
-{{- errorf "Unknown logo name: `%s`. Context: %s" (.Get 0) .Position -}}
+{{/*
+  Usage: {{< logo src="/images/example.svg" alt="Example" href="https://example.org/" >}}
+  src and alt are required; href is optional.
+
+  SVGs are referenced with <use> rather than <img>, so CSS custom properties
+  from the page (e.g. --ec-logo-text-color) are inherited into the logo.
+  The SVG's root element must have id="logo" and a viewBox.
+  PNG/JPEG images use responsive WebP.
+*/}}
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- if not (and $src $alt) -}}
+    {{- errorf "The logo shortcode requires src and alt. Context: %s" .Position -}}
 {{- end -}}
-{{- $src_light := $data.image_light -}}
-{{- $src_dark := $data.image_dark -}}
-{{- $fallback := cond ($src_dark  | not | not ) "" "shortcode-logo-fallback-background" -}}
-{{- $tag := cond ($data.href | not | not) "a" "div" -}}
-{{- $lightPath := strings.TrimPrefix "/" $src_light -}}
-{{- $lightResource := resources.FromString $lightPath (readFile (printf "static/%s" $lightPath)) -}}
-{{- $lightImage := $lightResource -}}
-{{- if and $lightResource (or (eq $lightResource.MediaType.SubType "jpeg") (eq $lightResource.MediaType.SubType "png")) -}}
-    {{- warnf "[webp] Process %q (%dx%d) -> webp q82" $lightPath $lightResource.Width $lightResource.Height -}}
-    {{- $lightImage = $lightResource.Process "webp q82" -}}
-{{- end -}}
-{{- $darkImage := false -}}
-{{- with $src_dark -}}
-    {{- $darkPath := strings.TrimPrefix "/" . -}}
-    {{- $darkImage = resources.FromString $darkPath (readFile (printf "static/%s" $darkPath)) -}}
-    {{- if and $darkImage (or (eq $darkImage.MediaType.SubType "jpeg") (eq $darkImage.MediaType.SubType "png")) -}}
-        {{- warnf "[webp] Process %q (%dx%d) -> webp q82" $darkPath $darkImage.Width $darkImage.Height -}}
-        {{- $darkImage = $darkImage.Process "webp q82" -}}
+<div class="shortcode-logo">
+    {{- with .Get "href" }}<a href="{{ . }}">{{ end -}}
+    {{- if eq (lower (path.Ext (urls.Parse $src).Path)) ".svg" -}}
+        {{- /* Only the viewBox is read, so the outer <svg> keeps the logo's aspect ratio. */ -}}
+        {{- $svg := readFile (path.Join "static" (strings.TrimPrefix "/" $src)) -}}
+        {{- $viewBox := index (findRESubmatch `<svg[^>]*\sviewBox="([^"]+)"` $svg 1) 0 1 -}}
+        <svg viewBox="{{ $viewBox }}" role="img" aria-label="{{ $alt }}"><use href="{{ $src }}#logo" /></svg>
+    {{- else -}}
+        {{- partial "responsive-image.html" (dict "page" .Page "src" $src "alt" $alt) | strings.TrimSpace | safeHTML -}}
     {{- end -}}
-{{- end -}}
-{{- (printf `<%s href="%s"` $tag (cond ($data.href |not |not) $data.href "")) | safeHTML }} class="shortcode-logo {{ $fallback }}">
-    <picture>
-        <source srcset="{{ $lightImage.RelPermalink }}" data-theme-toggle="light" media="(prefers-color-scheme:light)">
-        {{- with $darkImage -}}
-        <source srcset="{{ .RelPermalink }}" data-theme-toggle="dark" media="(prefers-color-scheme:dark)">
-        {{- end -}}
-        <img src="{{ $lightImage.RelPermalink }}" width="{{ $lightImage.Width }}" height="{{ $lightImage.Height }}" alt="{{ .Get `name` }}" loading="lazy" decoding="async" />
-    </picture>
-{{- (printf `</%s>` $tag) | safeHTML -}}
+    {{- if .Get "href" }}</a>{{ end -}}
+</div>

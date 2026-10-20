@@ -23,16 +23,14 @@
     padding-top: 1em;
     padding-bottom: 1em;
     background-color: var(--oe-background-color);
-}
-
-.shortcode-logo-fallback-background {
-    background-color: white;
-     /* the container is either a div or an a, and the a needs to be rendered as a block  */
+    /* the container is either a div or an a, and the a needs to be rendered as a block  */
     display: block;
 }
 
-.shortcode-logo img {
+.shortcode-logo img,
+.shortcode-logo svg {
+    display: block;
     width: 100%;
+    height: auto;
     box-shadow: none;
-
 }

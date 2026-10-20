@@ -21,8 +21,12 @@
     {{ if .break_before }}<div class="partner-logos-break"></div>{{ end }}
     {{ if strings.HasSuffix (lower .image) ".svg" }}
     {{ $imagePath := printf "static/%s" (strings.TrimPrefix "/" .image) }}
-    <div class="partner-logo-svg{{ with .logo_shape }} partner-logo-svg--{{ . }}{{ end }}" role="img" aria-label="{{ .alt }}">
+    <div role="img" aria-label="{{ .alt }}">
       <template shadowrootmode="open">
+        <style>
+          /* Override sizing embedded in the source SVGs, including inline styles. */
+          :host > svg { display: block; height: var(--partner-logo-height) !important; width: auto !important; }
+        </style>
         {{ readFile $imagePath | safeHTML }}
       </template>
     </div>
